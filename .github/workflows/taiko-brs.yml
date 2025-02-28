@@ -1,0 +1,35 @@
+name: UI - CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-and-test:
+    uses: ./.github/workflows/taiko-brs-ci.yml
+
+  deploy_preview:
+    if: ${{ github.event_name == 'pull_request' }}
+    needs: build-and-test
+    uses: ./.github/workflows/repo--vercel-deploy.yml
+    with:
+      environment: "preview"
+      flags: ""
+    secrets:
+      vercel_project_id: ${{ secrets.VERCEL_PROJECT_ID_BRS }}
+      vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+      vercel_token: ${{ secrets.VERCEL_TOKEN }}
+
+  deploy_production:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    needs: build-and-test
+    uses: ./.github/workflows/repo--vercel-deploy.yml
+    with:
+      environment: "production"
+      flags: "--prod"
+    secrets:
+      vercel_project_id: ${{ secrets.VERCEL_PROJECT_ID_BRS}}
+      vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+      vercel_token: ${{ secrets.VERCEL_TOKEN }}
