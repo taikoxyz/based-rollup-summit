@@ -1,9 +1,11 @@
 {
-    "tabWidth": 4,
     "semi": true,
-    "printWidth": 100,
-    "trailingComma": "es5",
-    "singleQuote": false,
+    "tabWidth": 2,
+    "useTabs": false,
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSameLine": true,
     "importOrder": [
         "(^react/?(.*)$)",
         "(^next/?(.*)$)",
@@ -23,5 +25,7 @@
         ".(png|svg|webp|jpe?g|gif|webw|mp4|mp3|avi)$"
     ],
     "importOrderSortSpecifiers": true,
-    "plugins": ["@trivago/prettier-plugin-sort-imports"]
+    "plugins": [
+        "@trivago/prettier-plugin-sort-imports"
+    ]
 }
