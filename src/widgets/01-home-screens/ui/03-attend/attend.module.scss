@@ -1,0 +1,246 @@
+.attend {
+    height: 80vh;
+    overflow: hidden;
+    background-color: #f8f8f8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &._animated {
+        .attend_grid {
+            &::after,
+            &::before {
+                transform: translate(0, -51%);
+            }
+        }
+    }
+}
+
+.attend_wrapper {
+    max-width: 1120px;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attend_grid {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1512px;
+
+    mask: linear-gradient(to right, transparent, black 2%, black, black 98%, transparent);
+
+    svg {
+        stroke: rgba(#000, 0.12);
+        path {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+        }
+    }
+
+    img {
+        display: none;
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        width: 7.87%;
+        aspect-ratio: 1 / 3.235;
+        position: absolute;
+        background: url("/img/home-new/attend-lines.svg");
+        opacity: 0.12;
+        transition: transform 1500ms ease 1000ms;
+    }
+    &::before {
+        top: 50%;
+        left: 0;
+        transform: translate(-100%, -51%);
+    }
+    &::after {
+        top: 50%;
+        right: 0;
+        transform: translate(100%, -51%);
+    }
+}
+
+.attend_label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 110%;
+
+    @include setFontPublicSans600(14px, 1.2, 0.04em, getColorPink());
+    text-transform: uppercase;
+}
+
+.attend_title {
+    max-width: 14.5em;
+    text-align: center;
+    color: #c8047d;
+    @include setFontClashGrotest500(55px, 0.9, -0.02em);
+}
+
+.attend_text {
+    text-align: center;
+    @include setFontClashGrotest500(55px, 1.255, -0.01em, getColorBlack());
+}
+
+@include -screen-xxxl {
+    .attend_grid {
+        width: 1360px;
+    }
+    .attend_title {
+        font-size: 56px;
+    }
+    .attend_label {
+        bottom: 137%;
+    }
+}
+
+@include -screen-lg {
+    .attend_grid {
+        width: 1100px;
+    }
+    .attend_title {
+        font-size: 48px;
+    }
+    .attend_label {
+        bottom: 131%;
+    }
+    .attend_text {
+        margin-top: 20px;
+    }
+}
+
+@include -screen-md {
+    .attend_grid {
+        width: 133%;
+
+        svg {
+            display: none;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .attend_label {
+        position: relative;
+        inset: auto;
+        text-align: center;
+        transform: none;
+    }
+    .attend_title {
+        margin-top: 24px;
+    }
+}
+
+@include -screen-sm {
+    .attend_title {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .attend_title {
+        font-size: 36px;
+    }
+    .attend_text {
+        font-size: 14px;
+    }
+}
+
+.cards_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+
+    @media (min-width: 1400px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 463px;
+    height: 270px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.topHeading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 5px;
+}
+
+.icon {
+    height: 16px;
+    width: 16px;
+}
+
+.card_title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    @include setFontClashGrotest500(35px, 0.9, -0.02em);
+}
+
+.card_description {
+    color: #444a55; // Tailwind's gray-600
+    @include setFontPublicSans400(16px, 1.2, 0.04em);
+    margin-top: 0.5rem; // Added slight margin-top for additional spacing
+}
+
+@media (max-width: 560px) {
+    .card {
+        width: 90%; // Adjust width for smaller screens
+        height: auto; // Allow dynamic height
+        padding: 1rem; // Reduce padding
+
+        &:hover {
+            transform: none; // Disable hover effect for small screens
+        }
+    }
+
+    .card_title {
+        font-size: 1.1rem; // Reduce title size
+    }
+
+    .card_description {
+        font-size: 0.9rem; // Reduce description size
+    }
+
+    .topHeading {
+        margin-bottom: 2rem; // Adjust spacing
+    }
+
+    .icon {
+        height: 12px; // Decrease icon size
+        width: 12px;
+    }
+}

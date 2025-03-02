@@ -3,15 +3,10 @@ import "./Preconfirmation.scss";
 
 export const Preconfirmation: React.FC = () => {
     return (
-        <svg
-            className="prcf"
-            viewBox="0 0 269 269"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className="prcf" viewBox="0 0 269 269" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask
                 id="mask0_2038_2214"
-                style={{ maskType: 'alpha' }}
+                style={{ maskType: "alpha" }}
                 maskUnits="userSpaceOnUse"
                 x="0"
                 y="0"

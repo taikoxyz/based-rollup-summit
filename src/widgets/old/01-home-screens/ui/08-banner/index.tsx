@@ -1,12 +1,12 @@
-import { useTranslation } from "next-i18next";
 import React from "react";
+import { useTranslation } from "next-i18next";
 import { HomeScreensEnum } from "widgets/old/01-home-screens/lib/types";
-import css from "./trailblazer.module.scss";
-import { TrailblazerBanner } from "shared/components/trailblazer";
-import { GrantsBanner } from "shared/components/grants";
 import { Button } from "shared/components/@buttons/button";
+import { GrantsBanner } from "shared/components/grants";
+import { TrailblazerBanner } from "shared/components/trailblazer";
 import Carousel from "./BannerCarousel";
 import type { Slide } from "./BannerCarousel";
+import css from "./trailblazer.module.scss";
 
 const Trailblazer: React.FC = () => {
     const { t } = useTranslation("home");
@@ -55,12 +55,7 @@ const Trailblazer: React.FC = () => {
     return (
         <section className={css.trailblazer} id={HomeScreensEnum.TRAILBLAZER}>
             <div className="container">
-                <Carousel
-                    slides={slides}
-                    interval={5000}
-                    transitionDuration={700}
-                    withDots
-                />
+                <Carousel slides={slides} interval={5000} transitionDuration={700} withDots />
             </div>
         </section>
     );

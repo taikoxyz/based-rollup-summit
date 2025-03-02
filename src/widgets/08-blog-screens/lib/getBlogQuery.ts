@@ -1,9 +1,9 @@
-import queryString from 'qs';
-import { getCoreConfig } from 'shared/lib/config';
-import { IBlogFilter } from '../provider/types';
+import { IBlogFilter } from "../provider/types";
+import queryString from "qs";
+import { getCoreConfig } from "shared/lib/config";
 
 export const getBlogQuery = (
-    query: Record<string,any>, 
+    query: Record<string, any>,
     page?: number,
     extraParams?: IBlogFilter
 ) => {
@@ -13,10 +13,8 @@ export const getBlogQuery = (
     return queryString.stringify({
         page: page || query.page || 1,
         _limit: getCoreConfig().postsPerPage,
-        categoryId: extraParams?.topic.value === 'all' 
-            ? undefined
-            : extraParams?.topic.value,
-        'date[from]': from ? from.split('T')[0] : undefined,
-        'date[to]': to ? to.split('T')[0] : undefined
+        categoryId: extraParams?.topic.value === "all" ? undefined : extraParams?.topic.value,
+        "date[from]": from ? from.split("T")[0] : undefined,
+        "date[to]": to ? to.split("T")[0] : undefined,
     });
-}
+};

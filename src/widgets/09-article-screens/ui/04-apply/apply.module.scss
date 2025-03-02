@@ -1,19 +1,19 @@
 .apply {
     padding: 40px 36px;
     border-radius: 30px;
-    background: linear-gradient(90deg, #EA36A4 -9.56%, #F997D0 100%);
+    background: linear-gradient(90deg, #ea36a4 -9.56%, #f997d0 100%);
 }
 
 .title {
     font: 500 28px/1 $kFontClashGrotesk;
-    letter-spacing: -.01em;
-    color: #FFF;
+    letter-spacing: -0.01em;
+    color: #fff;
 }
 
 .text {
     margin-top: 28px;
 
-    color: rgba(#FFF, .9);
+    color: rgba(#fff, 0.9);
 }
 
 @media screen and (max-width: $kLaptopM) {

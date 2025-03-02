@@ -10,7 +10,7 @@ export interface IBrandColor {
     items: {
         name: string;
         color: string;
-    }[]
+    }[];
 }
 
 export interface IBrandTopography {

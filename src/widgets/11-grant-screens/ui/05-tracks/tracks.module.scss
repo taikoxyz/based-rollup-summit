@@ -14,7 +14,7 @@
 
     &:hover {
         .list_item {
-            opacity: .4;
+            opacity: 0.4;
         }
     }
 }
@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
 
-    transition: opacity .4s ease;
+    transition: opacity 0.4s ease;
 
     &:hover {
         opacity: 1 !important;
@@ -62,7 +62,6 @@
 }
 
 .content_column {
-
 }
 
 .content_title {
@@ -88,9 +87,10 @@
 .content_text {
     margin-top: 28px;
     font: 400 16px/1.2 $kFontPublicSans;
-    color: rgba($kColorBlack, .6);
+    color: rgba($kColorBlack, 0.6);
 
-    b, strong {
+    b,
+    strong {
         color: $kColorBlack;
         font-weight: 500;
     }
@@ -100,7 +100,7 @@
     margin: auto 10px 10px;
     border-radius: 16px;
     padding: 28px 32px;
-    background: #F8F8F8;
+    background: #f8f8f8;
 
     display: flex;
     align-items: center;
@@ -109,16 +109,17 @@
 }
 
 .footer_title {
-    font: 500 22px/.95 $kFontClashGrotesk;
+    font: 500 22px/0.95 $kFontClashGrotesk;
     color: $kColorBlack;
 }
 
 .footer_text {
     max-width: 420px;
     font: 400 16px/1.2 $kFontPublicSans;
-    color: rgba($kColorBlack, .6);
+    color: rgba($kColorBlack, 0.6);
 
-    b, strong {
+    b,
+    strong {
         font-weight: 500;
         color: $kColorBlack;
     }

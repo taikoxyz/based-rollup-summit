@@ -1,43 +1,40 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'next-i18next';
-import clsx from 'clsx';
-import { Button } from 'shared/components/@buttons/button';
-import { useTranslationObject } from 'shared/lib/hooks/use-translation-object';
-import { IBrandLogo } from 'widgets/03-brand-screens/lib/types';
-import { MediaQuery } from 'shared/ui/media-query';
-import css from './logo.module.scss';
+import React, { useState } from "react";
+import { useTranslation } from "next-i18next";
+import clsx from "clsx";
+import { IBrandLogo } from "widgets/03-brand-screens/lib/types";
+import { Button } from "shared/components/@buttons/button";
+import { useTranslationObject } from "shared/lib/hooks/use-translation-object";
+import { MediaQuery } from "shared/ui/media-query";
+import css from "./logo.module.scss";
 
 export const Logo: React.FC = () => {
-    const logos = useTranslationObject<IBrandLogo[]>('logo.logos', 'brand-assets');
+    const logos = useTranslationObject<IBrandLogo[]>("logo.logos", "brand-assets");
     const [activeLogo, setActiveLogo] = useState(logos[0]);
-    const { t } = useTranslation('brand-assets');
+    const { t } = useTranslation("brand-assets");
 
     const getBackground = (background: string) => {
-        const key = background.includes('url') ? 'backgroundImage' : 'backgroundColor';
+        const key = background.includes("url") ? "backgroundImage" : "backgroundColor";
 
         return {
             [key]: background,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover'  
-        }
-    }
-    
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+        };
+    };
+
     return (
         <section className={css.logo}>
             <div className="container">
                 <div className={css.wrapper}>
-
                     <div className={css.header}>
-                        <h2 className={css.suptitle}>
-                            {t('logo.suptitle')}
-                        </h2>
+                        <h2 className={css.suptitle}>{t("logo.suptitle")}</h2>
 
-                        <MediaQuery 
+                        <MediaQuery
                             query="(min-width: 566px)"
                             children={
-                                <Button 
+                                <Button
                                     className={css.button}
-                                    text={t('logo.button')}
+                                    text={t("logo.button")}
                                     variant="pink-outlined"
                                     href="/img/brand/taiko.zip"
                                     component="a"
@@ -51,7 +48,7 @@ export const Logo: React.FC = () => {
                         <div className={css.content_left}>
                             <ul className={css.list}>
                                 {logos.map((item) => (
-                                    <li 
+                                    <li
                                         className={clsx(
                                             css.list_item,
                                             item.id === activeLogo.id && css.list_itemActive
@@ -60,35 +57,29 @@ export const Logo: React.FC = () => {
                                         onClick={() => setActiveLogo(item)}
                                         key={item.id}
                                     >
-                                        <img 
-                                            className={css.list_logo} 
-                                            src={item.img} 
-                                            alt="" 
-                                        />
+                                        <img className={css.list_logo} src={item.img} alt="" />
                                     </li>
                                 ))}
                             </ul>
                         </div>
 
-                        <div 
+                        <div
                             className={css.content_right}
-                            style={getBackground(activeLogo.backgroundImage || activeLogo.background)}
+                            style={getBackground(
+                                activeLogo.backgroundImage || activeLogo.background
+                            )}
                         >
-                            <img 
-                                className={css.logoActive} 
-                                src={activeLogo.img} 
-                                alt="" 
-                            />
+                            <img className={css.logoActive} src={activeLogo.img} alt="" />
                         </div>
                     </div>
 
-                    <MediaQuery 
+                    <MediaQuery
                         query="(max-width: 565px)"
                         children={
                             <div className={css.centered}>
-                                <Button 
+                                <Button
                                     className={css.button}
-                                    text={t('logo.button')}
+                                    text={t("logo.button")}
                                     variant="pink-outlined"
                                     href={activeLogo.img}
                                     component="a"
@@ -97,9 +88,8 @@ export const Logo: React.FC = () => {
                             </div>
                         }
                     />
-
                 </div>
             </div>
         </section>
     );
-}
+};

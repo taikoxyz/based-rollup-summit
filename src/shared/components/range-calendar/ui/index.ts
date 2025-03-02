@@ -1,1 +1,1 @@
-export { RangeCalendar } from './range-calendar';
+export { RangeCalendar } from "./range-calendar";

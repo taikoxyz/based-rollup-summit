@@ -1,7 +1,7 @@
-import clsx from 'clsx';
-import React, { useEffect, useMemo, useState } from 'react';
-import Sprite from '../sprite';
-import css from './share-button.module.scss';
+import React, { useEffect, useMemo, useState } from "react";
+import clsx from "clsx";
+import Sprite from "../sprite";
+import css from "./share-button.module.scss";
 
 interface Props {
     type: "facebook" | "twitter" | "linkedin";
@@ -10,50 +10,36 @@ interface Props {
     className?: string;
 }
 
-export const ShareButton: React.FC<Props> = ({
-    type,
-    href,
-    origin,
-    className,
-}) => {
+export const ShareButton: React.FC<Props> = ({ type, href, origin, className }) => {
     const [rendered, setRendered] = useState(false);
 
-    const url = useMemo(
-        () => {
-            let url = decodeURIComponent(href);
-            const basepath = (origin && rendered) 
-                ? window.location.origin
-                : '';
-                
-            url = [basepath, url.replace(/^\//, '')].join('/');
+    const url = useMemo(() => {
+        let url = decodeURIComponent(href);
+        const basepath = origin && rendered ? window.location.origin : "";
 
-            if(type === 'facebook') {
-                return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-            }
+        url = [basepath, url.replace(/^\//, "")].join("/");
 
-            if(type === 'twitter') {
-                return `https://twitter.com/intent/tweet?url=${url}`;
-            }
+        if (type === "facebook") {
+            return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        }
 
-            if(type === 'linkedin') {
-                return `https://www.linkedin.com/sharing/share-offsite/?url={${url}}`
-            }
+        if (type === "twitter") {
+            return `https://twitter.com/intent/tweet?url=${url}`;
+        }
 
-            return "";
-        }, 
-        [href, type, rendered]
-    );
+        if (type === "linkedin") {
+            return `https://www.linkedin.com/sharing/share-offsite/?url={${url}}`;
+        }
+
+        return "";
+    }, [href, type, rendered]);
 
     useEffect(() => setRendered(true), []);
 
     return (
-        <a 
-            className={clsx(css.share, className)}
-            href={url}
-            target="_blank"
-        >
+        <a className={clsx(css.share, className)} href={url} target="_blank">
             {type}
             <Sprite.Default icon={`share:${type}`} />
         </a>
     );
-}
+};

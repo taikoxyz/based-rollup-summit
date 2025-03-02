@@ -16,11 +16,11 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({
-                                               slides,
-                                               interval = 4000,
-                                               transitionDuration = 400,
-                                               withDots = false,
-                                           }) => {
+    slides,
+    interval = 4000,
+    transitionDuration = 400,
+    withDots = false,
+}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
 
@@ -74,11 +74,7 @@ const Carousel: React.FC<CarouselProps> = ({
             </div>
 
             {slides.length > 1 && withDots && (
-                <div
-                    style={styles.dotContainer}
-                    role="tablist"
-                    aria-label="Slide navigation"
-                >
+                <div style={styles.dotContainer} role="tablist" aria-label="Slide navigation">
                     {slides.map((_, index) => (
                         <button
                             key={index}

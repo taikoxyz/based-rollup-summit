@@ -1,6 +1,6 @@
 import React from "react";
-import css from "./AboutTemplate.module.scss";
 import Image from "shared/ui/image";
+import css from "./AboutTemplate.module.scss";
 
 interface Props {
     title: string;
@@ -8,11 +8,7 @@ interface Props {
     subtext: string;
 }
 
-export const AboutTemplate: React.FC<Props> = ({
-    subtext,
-    text,
-    title
-}) => {
+export const AboutTemplate: React.FC<Props> = ({ subtext, text, title }) => {
     return (
         <div className={css.about}>
             <div className="container">
@@ -23,11 +19,8 @@ export const AboutTemplate: React.FC<Props> = ({
                     </div>
                     <div className={css.about_taiko}>
                         <div className={css.about_taiko_inner}>
-                            <div className={css.about_taiko_img} >
-                                <Image.Default 
-                                    src="/img/home-new/taiko.webp" 
-                                    alt="" 
-                                />
+                            <div className={css.about_taiko_img}>
+                                <Image.Default src="/img/home-new/taiko.webp" alt="" />
                             </div>
                         </div>
                     </div>

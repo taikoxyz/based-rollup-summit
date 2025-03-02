@@ -14,7 +14,7 @@
     padding: 40px 36px;
     padding-right: 85px;
     border-radius: 30px;
-    background: #FFF;
+    background: #fff;
 
     display: flex;
     align-items: center;
@@ -26,15 +26,15 @@
     padding-top: 52px;
     text-transform: uppercase;
     font: 600 12px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .6);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.6);
 }
 
 .title {
     max-width: 480px;
 
     font: 500 36px/1 $kFontClashGrotesk;
-    letter-spacing: -.02em;
+    letter-spacing: -0.02em;
     color: $kColorBlack;
 
     span {
@@ -50,8 +50,8 @@
     max-width: 420px;
 
     font: 400 16px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .8);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.8);
 
     p + p {
         margin-top: 1.255em;
@@ -65,7 +65,7 @@
 
     .right {
         width: calc(100% - 225px);
-        padding-right: 36px
+        padding-right: 36px;
     }
 }
 
@@ -74,7 +74,7 @@
         flex-direction: column;
         padding: 32px;
         border-radius: 30px;
-        background: #FFF;
+        background: #fff;
         gap: 35px;
     }
 
@@ -103,7 +103,7 @@
     .right {
         flex-direction: column;
         gap: 30px;
-    
+
         align-items: flex-start;
     }
 
@@ -127,7 +127,7 @@
     .wrapper {
         gap: 20px;
     }
-    
+
     .title {
         font-size: 24px;
     }

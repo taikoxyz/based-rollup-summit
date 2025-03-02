@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import clsx from 'clsx';
+import React, { useState } from "react";
+import clsx from "clsx";
 
 type ChildrenProps = (props: { isOver: boolean }) => React.ReactNode;
 
@@ -35,15 +35,15 @@ const DragFile: React.FC<DragFileProps> = ({
     const onDrop = (ev: React.DragEvent<HTMLDivElement>) => {
         ev.preventDefault();
         if (disabled) return;
-        const allowFileExt = (accept || '').split(',');
+        const allowFileExt = (accept || "").split(",");
 
-        if(allowFileExt.length === 0) {
+        if (allowFileExt.length === 0) {
             onChange?.([...ev.dataTransfer.files], ev);
         } else {
             const files: File[] = [];
 
-            for(const file of ev.dataTransfer.files) {
-                if(!allowFileExt.some((ext) => file.name.endsWith(ext))) {
+            for (const file of ev.dataTransfer.files) {
+                if (!allowFileExt.some((ext) => file.name.endsWith(ext))) {
                     continue;
                 }
 
@@ -64,7 +64,7 @@ const DragFile: React.FC<DragFileProps> = ({
             onDragLeave={onDragLeave}
             onDrop={onDrop}
         >
-            {typeof children === 'function' ? children({ isOver }) : children}
+            {typeof children === "function" ? children({ isOver }) : children}
         </div>
     );
 };

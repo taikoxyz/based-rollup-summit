@@ -11,7 +11,6 @@
         .adec-block {
             animation: adecOpacity 3s linear infinite;
         }
-
     }
     @include screen-lg {
         &:hover .adec-block {
@@ -21,6 +20,14 @@
 }
 
 @keyframes adecOpacity {
-    0%, 10%, 90%, 100% { opacity: 0; }
-    40%, 60% { opacity: 1; }
+    0%,
+    10%,
+    90%,
+    100% {
+        opacity: 0;
+    }
+    40%,
+    60% {
+        opacity: 1;
+    }
 }

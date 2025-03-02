@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 export interface InputClasses {
     root?: string;
@@ -19,16 +19,15 @@ export interface InputBaseProps {
 }
 
 export interface TextAreaComponentProps extends InputBaseProps {
-    component?: 'textarea';
+    component?: "textarea";
     autoHeight?: boolean;
 }
 
 export interface InputComponentProps extends InputBaseProps {
-    component?: 'input';
+    component?: "input";
 }
 
-export type InputAttributes = 
-    Omit<React.InputHTMLAttributes<HTMLInputElement>, 'className'> &
-    Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'className'>;
+export type InputAttributes = Omit<React.InputHTMLAttributes<HTMLInputElement>, "className"> &
+    Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, "className">;
 
 export type InputProps = InputAttributes & (TextAreaComponentProps | InputComponentProps);

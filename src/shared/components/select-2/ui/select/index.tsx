@@ -1,17 +1,17 @@
 import React from "react";
-import clsx from "clsx";
-import { ISelectDefaultItem, ISelectProps } from "../../types";
-import { WithSelect } from "../../provider/with-select";
-import { SelectLabel } from "../select-label";
-import { SelectDropdown } from "../select-dropdown";
-import { SelectContainer } from "../select-container";
 import { useSelect } from "../../provider";
+import { WithSelect } from "../../provider/with-select";
+import { ISelectDefaultItem, ISelectProps } from "../../types";
+import { SelectContainer } from "../select-container";
+import { SelectDropdown } from "../select-dropdown";
+import { SelectLabel } from "../select-label";
+import clsx from "clsx";
 import { useClickOutside } from "shared/lib/hooks/use-click-outside";
 import css from "./select.module.scss";
 
 export const SelectWrapper = <T extends ISelectDefaultItem | object>({
-    renderKey = 'value',
-    renderName = 'name',
+    renderKey = "value",
+    renderName = "name",
     ...props
 }: ISelectProps<T>) => {
     const { setState } = useSelect();
@@ -24,12 +24,12 @@ export const SelectWrapper = <T extends ISelectDefaultItem | object>({
     } as any;
 
     return (
-        <div 
+        <div
             className={clsx(
                 css.root,
                 props.classNames?.root || css.default,
                 props.disabled && css.disabled
-            )} 
+            )}
             ref={ref}
             data-select
         >
@@ -42,6 +42,6 @@ export const SelectWrapper = <T extends ISelectDefaultItem | object>({
 
 export const Select = <T extends ISelectDefaultItem | object>(props: ISelectProps<T>) => (
     <WithSelect>
-        <SelectWrapper {...props as any} />
+        <SelectWrapper {...(props as any)} />
     </WithSelect>
-)
+);

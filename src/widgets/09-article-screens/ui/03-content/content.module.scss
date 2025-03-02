@@ -1,14 +1,14 @@
 .content {
     padding: 40px 36px;
     border-radius: 30px;
-    background: #FFF;
+    background: #fff;
 }
 
 .nav {
     padding-bottom: 24px;
     margin-bottom: 40px;
 
-    border-bottom: 1px solid rgba(#000, .15);
+    border-bottom: 1px solid rgba(#000, 0.15);
 }
 
 .text {
@@ -17,7 +17,7 @@
     h4,
     h5 {
         font: 600 26px/1.255 $kFontClashGrotesk;
-        letter-spacing: -.01em;
+        letter-spacing: -0.01em;
     }
 
     strong {

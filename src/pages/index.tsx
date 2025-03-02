@@ -1,19 +1,19 @@
 import { useTranslation } from "react-i18next";
 import { GetServerSideProps } from "next";
 import dynamic from "next/dynamic";
+import { QueryClient, dehydrate } from "@tanstack/react-query";
 import clsx from "clsx";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { withTranslation } from "app/providers/withTranslation";
 import { Screens } from "widgets/01-home-screens";
-import MainLayout from "widgets/layouts/main-layout";
-import { MediaQuery } from "shared/ui/media-query";
 import { WrapSVG } from "widgets/01-home-screens/components/WrapSVG";
-import css from "./home.module.scss";
-import { QueryClient, dehydrate } from "@tanstack/react-query";
+import { DefaultLayout } from "widgets/layouts/default-layout";
+import MainLayout from "widgets/layouts/main-layout";
 import { pagesApi } from "shared/lib/api/pages.api";
 import { partialApi } from "shared/lib/api/partials.api";
-import { DefaultLayout } from "widgets/layouts/default-layout";
+import { MediaQuery } from "shared/ui/media-query";
+import css from "./home.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,21 +28,25 @@ function Home() {
         <MainLayout
             className={clsx(css.root)}
             meta={{
-                title: t("Home - Taiko"),
+                title: t("Based Rollup Summit - Taiko"),
                 description: t(
-                    "Taiko is a fully permissionless, Ethereum-equivalent based rollup. Inspired, secured, and sequenced by Ethereum."
+                    "Based Rollup Summit 2025 is the first-ever gathering dedicated to truly decentralized scaling solutions for Ethereum."
                 ),
                 image: "/img/og-image.png",
-                url: "https://taiko.xyz/",
+                url: "https://brs.taiko.xyz/",
             }}
-            title="Home – Taiko"
+            title="Based Rollup Summit - Taiko"
         >
             <DefaultLayout>
-                <MediaQuery 
-                    query="(min-width: 991px)" 
-                    children={<HomePagination />} 
-                />
+                <MediaQuery query="(min-width: 991px)" children={<HomePagination />} />
                 <Screens.Hero />
+                <Screens.About />
+                <Screens.Attend />
+                <Screens.Topics />
+                <Screens.Speakers />
+                <Screens.Schedule />
+                <Screens.Future />
+                <Screens.Cloud />
                 <Screens.Subscribe />
             </DefaultLayout>
         </MainLayout>

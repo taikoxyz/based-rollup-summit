@@ -16,11 +16,7 @@ const Ecosystem: NextPage = () => {
     const { t } = useTranslation("ecosystem");
 
     return (
-        <MainLayout
-            title="Ecosystem – Taiko"
-            description={t('title')}
-            className={css.root}
-        >
+        <MainLayout title="Ecosystem – Taiko" description={t("title")} className={css.root}>
             <DefaultLayout>
                 <div className={css.gap}>
                     <EcosystemFilters>

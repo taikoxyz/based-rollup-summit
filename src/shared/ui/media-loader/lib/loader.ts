@@ -1,4 +1,4 @@
-type IFunction = () => any; 
+type IFunction = () => any;
 
 interface CallbackType {
     src: string;
@@ -8,7 +8,7 @@ interface CallbackType {
 }
 
 const loadImage = (src: string, successCb: IFunction, errCb?: IFunction) => {
-    const img = document.createElement('img');
+    const img = document.createElement("img");
     img.src = src;
 
     img.onload = () => successCb();
@@ -18,7 +18,7 @@ const loadImage = (src: string, successCb: IFunction, errCb?: IFunction) => {
 };
 
 const loadVideo = (src: string, successCb: IFunction) => {
-    const video = document.createElement('video');
+    const video = document.createElement("video");
 
     video.oncanplaythrough = () => successCb();
 
@@ -45,7 +45,7 @@ const Loader = () => {
 
         const callback = () => {
             if (!done) {
-                if(cb) {
+                if (cb) {
                     cb();
                 }
                 inWork = false;
@@ -54,7 +54,7 @@ const Loader = () => {
             }
         };
 
-        if(timeout) {
+        if (timeout) {
             setTimeout(callback, timeout);
         }
 

@@ -1,32 +1,25 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useTranslationObject } from "shared/lib/hooks/use-translation-object";
-import { IHomeAdvantage } from "widgets/old/01-home-screens/lib/types";
-import css from "./gradient-fill.module.scss";
 import { scrollGradient } from "./lib/scroll-gradient";
+import { IHomeAdvantage } from "widgets/old/01-home-screens/lib/types";
+import { useTranslationObject } from "shared/lib/hooks/use-translation-object";
+import css from "./gradient-fill.module.scss";
 
-const FillCircle: React.FC<IHomeAdvantage> = ({
-    id,
-    colors
-}) => {
+const FillCircle: React.FC<IHomeAdvantage> = ({ id, colors }) => {
     const [active, setActive] = useState(false);
     const instance = useRef<ReturnType<typeof scrollGradient>>();
     const ref = useRef<HTMLDivElement>(null);
 
     const scroll = () => {
-        if(window.pageYOffset > window.innerHeight * 0.2) {
+        if (window.pageYOffset > window.innerHeight * 0.2) {
             setActive(true);
         }
-    }
+    };
 
     useEffect(() => {
         const dest = document.getElementById(id);
 
-        if(dest && ref.current) {
-            instance.current = scrollGradient(
-                ref.current, 
-                dest, 
-                colors.background
-            );
+        if (dest && ref.current) {
+            instance.current = scrollGradient(ref.current, dest, colors.background);
 
             return () => instance.current?.destroy();
         }
@@ -38,40 +31,27 @@ const FillCircle: React.FC<IHomeAdvantage> = ({
     });
 
     useEffect(() => {
-        if(active) {
+        if (active) {
             instance.current?.run();
         }
     }, [active]);
 
-    return (
-        <div 
-            className={css.circle} 
-            style={{ background: colors.background }}
-            ref={ref}
-        />
-    )
-}
+    return <div className={css.circle} style={{ background: colors.background }} ref={ref} />;
+};
 
-const GradientFill: React.FC<{ children: React.ReactNode }> = ({
-    children
-}) => {
-    const advantages = useTranslationObject<IHomeAdvantage[]>('advantages', 'home');
-    
+const GradientFill: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const advantages = useTranslationObject<IHomeAdvantage[]>("advantages", "home");
+
     return (
         <div className={css.root}>
             <ul className={css.circles}>
                 {advantages.map((item) => (
-                    <li 
-                        className={css.circles_item} 
-                        key={item.id}
-                    >
+                    <li className={css.circles_item} key={item.id}>
                         <FillCircle {...item} />
                     </li>
                 ))}
             </ul>
-            <div className={css.content}>
-                {children}
-            </div>
+            <div className={css.content}>{children}</div>
         </div>
     );
 };

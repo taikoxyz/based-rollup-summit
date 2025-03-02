@@ -16,8 +16,8 @@ export const formatDate = (date: string) => {
         if (dayjs(date).diff() < -3600000) {
             return {
                 date: dayjs(date).format("H:mm A"),
-                today: false
-            }
+                today: false,
+            };
         }
         return {
             date: dayjs(date).fromNow(),

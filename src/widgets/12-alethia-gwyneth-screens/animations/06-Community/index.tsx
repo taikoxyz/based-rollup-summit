@@ -1,5 +1,5 @@
 import React from "react";
-import  "./Community.scss";
+import "./Community.scss";
 
 export const Community: React.FC = () => {
     return (

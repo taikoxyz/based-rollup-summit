@@ -1,7 +1,7 @@
 .side {
     padding: 32px 8px 8px;
     border-radius: 25px;
-    background: #FFF;
+    background: #fff;
 }
 
 .headers {
@@ -13,14 +13,14 @@
 }
 
 .title {
-    font: 500 28px/.85 $kFontClashGrotesk;
-    color: #22282B; 
+    font: 500 28px/0.85 $kFontClashGrotesk;
+    color: #22282b;
 }
 
 .resetBtn {
-    font: 600 16px/1.255  $kFontPublicSans;
-    letter-spacing: -.02em;
-    color: rgba(#000, .4);
+    font: 600 16px/1.255 $kFontPublicSans;
+    letter-spacing: -0.02em;
+    color: rgba(#000, 0.4);
 }
 
 .filters {

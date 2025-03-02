@@ -1,4 +1,4 @@
-import { IFileObject } from './file';
+import { IFileObject } from "./file";
 
 export interface ISeo {
     keywords?: string;
@@ -30,4 +30,4 @@ export interface IBaseFields {
 export type IServerResponse<T> = {
     results: T[];
     meta: IMetadata;
-}
+};

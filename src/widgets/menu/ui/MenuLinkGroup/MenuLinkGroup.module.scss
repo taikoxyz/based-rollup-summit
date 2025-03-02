@@ -22,12 +22,13 @@
         height: 33px;
         border-radius: 100px;
 
-        background: linear-gradient(
+        background:
+            linear-gradient(
                 to right,
                 transparent 0,
                 transparent 6.25px,
-                #292D32 6.25px,
-                #292D32 7.75px,
+                #292d32 6.25px,
+                #292d32 7.75px,
                 transparent 7.75px,
                 transparent 100%
             ),
@@ -35,8 +36,8 @@
                 to bottom,
                 transparent 0,
                 transparent 6.25px,
-                #292D32 6.25px,
-                #292D32 7.75px,
+                #292d32 6.25px,
+                #292d32 7.75px,
                 transparent 7.75px,
                 transparent 100%
             );
@@ -104,7 +105,8 @@
         flex-shrink: 0;
         stroke: getColorPink();
     }
-}.accordion_root {
+}
+.accordion_root {
     width: 100%;
 }
 
@@ -143,5 +145,5 @@
 }
 
 .accordion_sublink_desc {
-    @include setFontPublicSans400(12px, 1.25, 0.01em, #444A55);
+    @include setFontPublicSans400(12px, 1.25, 0.01em, #444a55);
 }

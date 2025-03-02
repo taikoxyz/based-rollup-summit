@@ -1,7 +1,7 @@
 .hero {
     padding: 12px 22px 28px;
     border-radius: 20px;
-    background: #FFFFFF;
+    background: #ffffff;
 
     display: flex;
     align-items: flex-start;
@@ -13,11 +13,11 @@
     margin-left: -10px;
     padding: 4px 10px;
     border-radius: 100px;
-    background: #F8F8F8;
+    background: #f8f8f8;
 
     font: 600 12px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .4);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.4);
 
     text-transform: uppercase;
 }
@@ -25,7 +25,7 @@
 .title {
     max-width: 1050px;
     font: 500 40px/1 $kFontClashGrotesk;
-    color: #22282B;
+    color: #22282b;
 }
 
 .info {
@@ -43,13 +43,13 @@
         width: 18px;
         height: 18px;
         flex-shrink: 0;
-        stroke: #909DA2;
+        stroke: #909da2;
     }
 
     span {
         font: 500 16px/1.4 $kFontPublicSans;
-        letter-spacing: -.02em;
-        color: #909DA2;
+        letter-spacing: -0.02em;
+        color: #909da2;
     }
 }
 

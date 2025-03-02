@@ -1,7 +1,7 @@
 export enum PositionApiEnum {
-    POSITION = "position"
+    POSITION = "position",
 }
 
 export enum PositionModalEnum {
-    APPLY_POS = "apply-pos"
+    APPLY_POS = "apply-pos",
 }

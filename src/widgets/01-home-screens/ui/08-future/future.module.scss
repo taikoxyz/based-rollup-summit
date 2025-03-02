@@ -1,6 +1,7 @@
-.about {
-    height: 100vh;
+.future {
+    height: 80vh;
     overflow: hidden;
+    background-color: #f8f8f8;
 
     display: flex;
     justify-content: center;
@@ -8,7 +9,7 @@
     flex-direction: column;
 
     &._animated {
-        .about_grid {
+        .future_grid {
             &::after,
             &::before {
                 transform: translate(0, -51%);
@@ -17,7 +18,7 @@
     }
 }
 
-.about_wrapper {
+.future_wrapper {
     max-width: 1120px;
     width: 100%;
     padding: 0 40px;
@@ -30,7 +31,7 @@
     align-items: center;
 }
 
-.about_grid {
+.future_grid {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -58,7 +59,7 @@
         width: 7.87%;
         aspect-ratio: 1 / 3.235;
         position: absolute;
-        background: url("/img/home-new/about-lines.svg");
+        background: url("/img/home-new/future-lines.svg");
         opacity: 0.12;
         transition: transform 1500ms ease 1000ms;
     }
@@ -74,62 +75,56 @@
     }
 }
 
-.about_label {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 134%;
-
+.future_label {
     @include setFontPublicSans600(14px, 1.2, 0.04em, getColorPink());
     text-transform: uppercase;
+    margin-bottom: 50px;
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
 }
 
-.about_title {
-    max-width: 11.5em;
+.future_title {
+    max-width: 14.5em;
     text-align: center;
-    @include setFontClashGrotest500(70px, 0.9, -0.02em, getColorBlack());
-
-    :global(.about-span) span {
-        opacity: 0.2;
-    }
+    color: #c8047d;
+    @include setFontClashGrotest500(55px, 0.9, -0.02em);
 }
 
-.about_text {
-    margin-top: 32px;
-    max-width: 568px;
+.future_text {
     text-align: center;
-    @include setFontPublicSans400(16px, 1.255, -0.01em, getColorBlack());
+    @include setFontClashGrotest500(55px, 1.255, -0.01em, getColorBlack());
 }
 
 @include -screen-xxxl {
-    .about_grid {
+    .future_grid {
         width: 1360px;
     }
-    .about_title {
+    .future_title {
         font-size: 56px;
     }
-    .about_label {
+    .future_label {
         bottom: 137%;
     }
 }
 
 @include -screen-lg {
-    .about_grid {
+    .future_grid {
         width: 1100px;
     }
-    .about_title {
+    .future_title {
         font-size: 48px;
     }
-    .about_label {
+    .future_label {
         bottom: 131%;
     }
-    .about_text {
+    .future_text {
         margin-top: 20px;
     }
 }
 
 @include -screen-md {
-    .about_grid {
+    .future_grid {
         width: 133%;
 
         svg {
@@ -140,28 +135,40 @@
             width: 100%;
         }
     }
-    .about_label {
+    .future_label {
         position: relative;
         inset: auto;
         text-align: center;
         transform: none;
     }
-    .about_title {
+    .future_title {
         margin-top: 24px;
     }
 }
 
 @include -screen-sm {
-    .about_title {
+    .future_title {
         font-size: 44px;
     }
 }
 
 @media screen and (max-width: 360px) {
-    .about_title {
+    .future_title {
         font-size: 36px;
     }
-    .about_text {
+    .future_text {
         font-size: 14px;
     }
+}
+
+.heading {
+    color: #191e28;
+    @include setFontClashGrotest500(55px, 1.255, -0.01em);
+}
+
+.text {
+    color: #444a55;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    @include setFontPublicSans400(18px, 1.2, 0.04em);
 }

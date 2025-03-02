@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useObjectState } from './use-object-state';
+import { useEffect } from "react";
+import { useObjectState } from "./use-object-state";
 
 export const useMediaQuery = () => {
     const [mediaQuery, setMediaQuery] = useObjectState({
@@ -7,7 +7,7 @@ export const useMediaQuery = () => {
             width: 9999,
             height: 9999,
         },
-        aspectRatio: {}
+        aspectRatio: {},
     });
 
     const onResize = () => {
@@ -21,8 +21,8 @@ export const useMediaQuery = () => {
 
     useEffect(() => {
         onResize();
-        window.addEventListener('resize', onResize);
-        return () => window.removeEventListener('resize', onResize);
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
     }, []);
 
     return mediaQuery;

@@ -14,11 +14,7 @@ export const HeroTemplate: React.FC<Props> = ({ logo, text, title }) => {
             <div className={css.hero_wrapper}>
                 <div className={css.hero_container}>
                     <div className={css.hero_logo}>
-                        <Image.Default 
-                            className={css.hero_logo_image} 
-                            src={logo} 
-                            alt="" 
-                        />
+                        <Image.Default className={css.hero_logo_image} src={logo} alt="" />
                     </div>
                     <div className={css.hero_content}>
                         <h1

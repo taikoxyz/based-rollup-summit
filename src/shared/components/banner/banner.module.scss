@@ -3,7 +3,7 @@
     border-radius: 32px;
     @include setStrokeGradient(
         linear-gradient($kColorThemeWhite, $kColorThemeWhite),
-        linear-gradient(to right, #EA36A4, #F997D0)
+        linear-gradient(to right, #ea36a4, #f997d0)
     );
     border-width: 3px;
 
@@ -22,7 +22,7 @@
 
     button,
     a {
-        white-space: nowrap; 
+        white-space: nowrap;
     }
 }
 
@@ -54,7 +54,7 @@
         position: absolute;
         left: 50%;
         top: 0;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
     .text {

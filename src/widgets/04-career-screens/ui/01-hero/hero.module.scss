@@ -1,7 +1,7 @@
 .wrapper {
     padding: 160px 22px 46px;
     border-radius: 20px;
-    background: #FFF;
+    background: #fff;
 
     display: flex;
     align-items: flex-end;
@@ -10,9 +10,9 @@
 }
 
 .title {
-    font: 500 75px/.85 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: #22282B;
+    font: 500 75px/0.85 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
+    color: #22282b;
 
     display: flex;
     flex-direction: column;

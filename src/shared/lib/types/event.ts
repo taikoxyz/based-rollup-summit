@@ -1,5 +1,5 @@
-import { IFileObject } from './file';
-import { IBaseFields, IServerResponse } from './global';
+import { IFileObject } from "./file";
+import { IBaseFields, IServerResponse } from "./global";
 
 export interface IEvent extends IBaseFields {
     title: string;

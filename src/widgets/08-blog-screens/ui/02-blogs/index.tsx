@@ -9,8 +9,8 @@ import { BlogItem } from "entities/article";
 import { Button } from "shared/components/@buttons/button";
 import { blogApi } from "shared/lib/api";
 import { IBlogsResponse } from "shared/lib/types";
-import css from "./blogs.module.scss";
 import { fileServerPath } from "shared/lib/utils/file-server-path";
+import css from "./blogs.module.scss";
 
 export const Blogs: React.FC = () => {
     const { t } = useTranslation();

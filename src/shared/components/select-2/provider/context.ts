@@ -1,9 +1,9 @@
-import { createContext, useContext, useRef, useState } from 'react';
-import { ISelectContextType, ISelectContextValue, ISelectContextValueOptional } from './types';
+import { createContext, useContext, useRef, useState } from "react";
+import { ISelectContextType, ISelectContextValue, ISelectContextValueOptional } from "./types";
 
 export const SelectContext = createContext<ISelectContextType>({
     state: {
-        inputValue: '',
+        inputValue: "",
         active: false,
     },
     refs: {
@@ -14,7 +14,7 @@ export const SelectContext = createContext<ISelectContextType>({
 
 export const useSelectInitial = () => {
     const [state, setStateValues] = useState<ISelectContextValue>({
-        inputValue: '',
+        inputValue: "",
         active: false,
     });
 
@@ -33,4 +33,4 @@ export const useSelectInitial = () => {
 
 export const useSelect = () => {
     return useContext(SelectContext);
-} 
+};

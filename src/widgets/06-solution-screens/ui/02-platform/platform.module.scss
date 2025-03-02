@@ -1,9 +1,10 @@
-.platform {}
+.platform {
+}
 
 .suptitle {
     font: 600 14px/1.2 $kFontPublicSans;
     letter-spacing: 0.04em;
-    color:#000000;
+    color: #000000;
     text-transform: uppercase;
 }
 
@@ -16,13 +17,12 @@
 }
 
 .title {
-    font: 500 75px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
+    font: 500 75px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
     max-width: 7.7em;
 }
 
 .button {
-
 }
 
 .list {
@@ -34,7 +34,7 @@
 
 .list_item {
     border-radius: 30px;
-    background: #FFF;
+    background: #fff;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -62,17 +62,17 @@
 .list_title {
     margin-top: 56px;
 
-    font: 500 40px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: #22282B;
+    font: 500 40px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
+    color: #22282b;
 }
 
 .list_text {
     margin-top: 28px;
 
     font: 500 16px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .5);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.5);
 }
 
 .list_button {
@@ -117,7 +117,7 @@
     .row {
         padding: 0;
     }
-    
+
     .title {
         font-size: 52px;
     }

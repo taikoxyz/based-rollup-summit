@@ -1,9 +1,11 @@
-import { IBaseFields, IProject, IProjectCategoriesResponse, IProjectsResponse } from "../types";
 import { instance } from "../utils/instance";
+import { IBaseFields, IProject, IProjectCategoriesResponse, IProjectsResponse } from "../types";
 
 export const projectApi = {
     async getAll(query?: string) {
-        const { data } = await instance.get<IProjectsResponse>('/ecosystems' + (query ? `?${query}` : ''));
+        const { data } = await instance.get<IProjectsResponse>(
+            "/ecosystems" + (query ? `?${query}` : "")
+        );
         return data;
     },
 
@@ -13,12 +15,12 @@ export const projectApi = {
     },
 
     async getLast() {
-        const { data } = await instance.get<IBaseFields>('/ecosystems/last');
+        const { data } = await instance.get<IBaseFields>("/ecosystems/last");
         return data;
     },
 
     async getCategories() {
-        const { data } = await instance.get<IProjectCategoriesResponse>('/project-categories');
+        const { data } = await instance.get<IProjectCategoriesResponse>("/project-categories");
         return data;
-    }
+    },
 };

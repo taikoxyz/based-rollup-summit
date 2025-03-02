@@ -88,7 +88,7 @@
         border-radius: 14px;
         background: #f8f8f8;
 
-        &[data-not-empty='true'] {
+        &[data-not-empty="true"] {
             .input_input {
                 padding-top: 7px;
             }
@@ -111,7 +111,7 @@
 
 .textarea {
     .input_field {
-        &[data-not-empty='true'] {
+        &[data-not-empty="true"] {
             .input_input {
                 padding-top: 28px;
             }

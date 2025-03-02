@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
-import clsx from "clsx";
-import { useBlogFilter } from "widgets/08-blog-screens/provider";
 import { useTranslation } from "next-i18next";
 import { BlogFilter } from "../blog-filter";
-import { IBlogCategory } from "shared/lib/types";
-import { blogCategoryApi } from "shared/lib/api";
+import clsx from "clsx";
 import { transformCategory } from "widgets/08-blog-screens/lib/transform-filters";
+import { useBlogFilter } from "widgets/08-blog-screens/provider";
+import { blogCategoryApi } from "shared/lib/api";
+import { IBlogCategory } from "shared/lib/types";
 import { SelectItem } from "shared/ui/select";
 import css from "./filter-category.module.scss";
 
@@ -18,25 +18,20 @@ export const FilterCategory: React.FC = () => {
     const onChange = (topic: SelectItem) => {
         setState({ topic });
         setActive(false);
-    }
+    };
 
     useEffect(() => {
-        blogCategoryApi
-            .getAll()
-            .then((data) => setData(data.results));
+        blogCategoryApi.getAll().then((data) => setData(data.results));
     }, []);
 
-    const categories = useMemo(
-        () => transformCategory(data),
-        [data]
-    );
-    
+    const categories = useMemo(() => transformCategory(data), [data]);
+
     return (
         <div className={css.root}>
             <BlogFilter
                 active={active}
                 setActive={setActive}
-                title={t('topic')}
+                title={t("topic")}
                 placeholder={state.topic.name.toString()}
                 children={
                     <div className={css.content}>

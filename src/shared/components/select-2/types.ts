@@ -29,15 +29,15 @@ export type ISelectBaseProps<T extends ISelectDefaultItem | object> = {
         arrow?: () => JSX.Element;
         label?: () => JSX.Element;
         option?: (data: T, active: boolean) => JSX.Element;
-    }
+    };
     onChangeInput?: (value: string) => void;
     onChange?: (value: T | null) => void;
 };
 
 export type iSelectParams<T extends ISelectDefaultItem | object> = T extends ISelectDefaultItem
     ? {
-        renderName?: 'name';
-        renderKey?: 'value';
+          renderName?: "name";
+          renderKey?: "value";
       }
     : {
           renderKey: keyof T;

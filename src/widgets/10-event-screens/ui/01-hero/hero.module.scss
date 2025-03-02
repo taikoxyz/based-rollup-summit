@@ -40,21 +40,21 @@
 .suptitle {
     font: 600 14px/1.2 $kFontPublicSans;
     letter-spacing: 0.04em;
-    color: #FFF;
+    color: #fff;
     text-transform: uppercase;
 }
 
 .title {
     margin-top: 44px;
     font: 500 42px/1 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: #FFF;
+    letter-spacing: -0.02em;
+    color: #fff;
 }
 
 .card {
     padding: 27px 24px 24px;
     border-radius: 27px;
-    background: rgba(#FFF, .95);
+    background: rgba(#fff, 0.95);
     backdrop-filter: blur(100px);
 
     display: flex;
@@ -69,7 +69,7 @@
 .card_text {
     margin-top: 20px;
     font: 400 16px/1.255 $kFontPublicSans;
-    color: rgba($kColorBlack, .8);
+    color: rgba($kColorBlack, 0.8);
 }
 
 .card_button {

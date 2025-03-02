@@ -1,4 +1,4 @@
-import { useMemo, useRef, useEffect } from 'react';
+import { useEffect, useMemo, useRef } from "react";
 
 interface Props {
     offset?: number | string;
@@ -7,28 +7,28 @@ interface Props {
 
 const defaultProps = {
     offset: 0,
-    handler: () => null
-}
+    handler: () => null,
+};
 
 export const useScrollProgress = (props: Props = {}) => {
     const ref = useRef<any>(null);
-    
+
     const options = useMemo(() => Object.assign({ ...defaultProps }, props), [props]);
 
     const getOffset = () => {
-        if(typeof props.offset === 'string' && props.offset.includes('%')) {
+        if (typeof props.offset === "string" && props.offset.includes("%")) {
             const percent = parseFloat(props.offset) / 100;
             return window.innerHeight * percent;
-        } 
-        if(typeof props.offset === 'number') {
+        }
+        if (typeof props.offset === "number") {
             return props.offset;
         }
         return 0;
-    }
+    };
 
     const scroll = () => {
         const el = ref.current as HTMLElement | null;
-        if(!el) return;
+        if (!el) return;
         const offset = getOffset();
         const { top, height } = el.getBoundingClientRect();
         const scrollBottom = window.pageYOffset + (window.innerHeight - offset);
@@ -36,11 +36,11 @@ export const useScrollProgress = (props: Props = {}) => {
         // const elHeight = height - options.offset;
 
         let progress = (scrollBottom - elTop) / height;
-        if(progress < 0) progress = 0;
-        if(progress > 1) progress = 1;
-        
+        if (progress < 0) progress = 0;
+        if (progress > 1) progress = 1;
+
         options.handler(progress);
-    }
+    };
 
     useEffect(() => {
         window.addEventListener("scroll", scroll);
@@ -52,4 +52,4 @@ export const useScrollProgress = (props: Props = {}) => {
     }, []);
 
     return ref;
-}
+};

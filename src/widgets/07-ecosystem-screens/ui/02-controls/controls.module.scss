@@ -62,11 +62,11 @@
         max-width: 100%;
         width: 100%;
 
-        [data-class='select'] {
+        [data-class="select"] {
             width: 50%;
         }
 
-        [data-class='select-container'] {
+        [data-class="select-container"] {
             justify-content: space-between;
         }
     }
@@ -76,7 +76,7 @@
     .selects {
         flex-direction: column;
 
-        [data-class='select'] {
+        [data-class="select"] {
             width: 100%;
         }
     }

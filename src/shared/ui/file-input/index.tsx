@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import clsx from 'clsx';
-import styles from './file-input.module.scss';
+import React, { useRef } from "react";
+import clsx from "clsx";
+import styles from "./file-input.module.scss";
 
 interface FileInputProps {
     className?: string;
     children?: React.ReactNode;
     name?: string;
     multiple?: boolean;
-    accept?: HTMLInputElement['accept'];
+    accept?: HTMLInputElement["accept"];
     disabled?: boolean;
     onChange?: (files: File[]) => void;
 }
@@ -25,7 +25,7 @@ const FileInput: React.FC<FileInputProps> = ({
 
     const handleClick = (ev: React.MouseEvent) => {
         const target = ev.target as HTMLDivElement;
-        if (disabled || target.closest('[data-prevent-upload]')) return;
+        if (disabled || target.closest("[data-prevent-upload]")) return;
         if (inputRef.current) {
             inputRef.current.click();
         }
@@ -46,7 +46,7 @@ const FileInput: React.FC<FileInputProps> = ({
         >
             <input
                 ref={inputRef}
-                name={name || 'file'}
+                name={name || "file"}
                 type="file"
                 className={styles.input}
                 multiple={multiple}

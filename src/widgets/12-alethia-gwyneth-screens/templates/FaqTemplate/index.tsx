@@ -1,9 +1,9 @@
 import React from "react";
-import css from "./FaqTemplate.module.scss";
-import Accordion from "shared/ui/Accordion";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import clsx from "clsx";
 import { FaqData } from "shared/lib/types/alethia-gwyneth.types";
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import Accordion from "shared/ui/Accordion";
+import css from "./FaqTemplate.module.scss";
 
 interface Props {
     title: string;
@@ -11,11 +11,7 @@ interface Props {
     questions: FaqData[];
 }
 
-export const FaqTemplate: React.FC<Props> = ({
-    questions,
-    text,
-    title
-}) => {
+export const FaqTemplate: React.FC<Props> = ({ questions, text, title }) => {
     return (
         <div className={css.faq}>
             <div className="container">
@@ -26,7 +22,7 @@ export const FaqTemplate: React.FC<Props> = ({
                     </div>
                     <div className={css.faq_questions}>
                         {questions.map((question) => (
-                            <Accordion 
+                            <Accordion
                                 className={css.question}
                                 key={question.question + question.answer}
                                 closeOnClickOut
@@ -35,7 +31,12 @@ export const FaqTemplate: React.FC<Props> = ({
                                 {({ active }) => (
                                     <React.Fragment>
                                         <Accordion.Button>
-                                            <button className={clsx(css.question_button, active && css._active)}>
+                                            <button
+                                                className={clsx(
+                                                    css.question_button,
+                                                    active && css._active
+                                                )}
+                                            >
                                                 {question.question}
                                                 <span></span>
                                             </button>
@@ -54,4 +55,4 @@ export const FaqTemplate: React.FC<Props> = ({
             </div>
         </div>
     );
-};    
+};

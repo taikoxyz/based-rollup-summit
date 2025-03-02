@@ -1,5 +1,5 @@
-import { UseFormErrors, UseFormProps } from './../types';
-import * as yup from 'yup';
+import { UseFormErrors, UseFormProps } from "./../types";
+import * as yup from "yup";
 
 export const validate = function <F extends object>(
     values: F,
@@ -17,7 +17,7 @@ export const validate = function <F extends object>(
     } catch (err) {
         const typeErr = err as yup.ValidationError;
         for (const { path, message, value } of typeErr.inner) {
-            if (validateAllFields || value !== '') {
+            if (validateAllFields || value !== "") {
                 validationErrors[path as keyof typeof validationErrors] = message;
                 hasErrors = true;
             }

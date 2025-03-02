@@ -1,7 +1,7 @@
 .root {
     font-size: 16px;
-    background: #FFF;
-    padding: .5em .5em 1.5em;
+    background: #fff;
+    padding: 0.5em 0.5em 1.5em;
     border-radius: 2.0625em;
 
     display: flex;
@@ -37,11 +37,11 @@
     z-index: 2;
     padding: 4px 10px;
     border-radius: 100px;
-    background: #FFFFFF;
+    background: #ffffff;
 
-    font: 600 .75em/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .4);
+    font: 600 0.75em/1.255 $kFontPublicSans;
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.4);
 
     text-transform: uppercase;
     user-select: none;
@@ -56,8 +56,8 @@
 
 .title {
     font: 500 1.75em/1 $kFontClashGrotesk;
-    letter-spacing: -.01em;
-    color: #22282B;
+    letter-spacing: -0.01em;
+    color: #22282b;
 
     @include setTextLinesOverflow(3);
 }
@@ -69,13 +69,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: .9375em;
+    gap: 0.9375em;
 }
 
 .info_item {
     display: flex;
     align-items: center;
-    gap: .5em;
+    gap: 0.5em;
 }
 
 .info_icon {
@@ -83,11 +83,11 @@
     width: 1.125em;
     height: 1.125em;
     flex-shrink: 0;
-    stroke: #909DA2;
+    stroke: #909da2;
 }
 
 .info_value {
     font: 500 1em/1.4 $kFontPublicSans;
-    letter-spacing: -.02em;
-    color: #909DA2;
+    letter-spacing: -0.02em;
+    color: #909da2;
 }

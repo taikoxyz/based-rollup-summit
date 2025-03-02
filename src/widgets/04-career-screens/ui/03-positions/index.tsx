@@ -1,26 +1,26 @@
-import React, { useMemo } from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { useTranslation } from 'next-i18next';
-import Sprite from 'shared/ui/sprite';
-import { CareerList } from 'entities/career';
-import { CareerApiEnum } from 'widgets/04-career-screens/lib/types';
-import { ICareer, ICareersResponse } from 'shared/lib/types';
-import { MediaQuery } from 'shared/ui/media-query';
-import { TaikoSelect } from 'shared/components/taiko-select';
-import { useObjectState } from 'shared/lib/hooks/use-object-state';
-import { SelectItem } from 'shared/ui/select';
-import css from './positions.module.scss';
+import React, { useMemo } from "react";
+import { useTranslation } from "next-i18next";
+import { useQuery } from "@tanstack/react-query";
+import { CareerApiEnum } from "widgets/04-career-screens/lib/types";
+import { CareerList } from "entities/career";
+import { TaikoSelect } from "shared/components/taiko-select";
+import { useObjectState } from "shared/lib/hooks/use-object-state";
+import { ICareer, ICareersResponse } from "shared/lib/types";
+import { MediaQuery } from "shared/ui/media-query";
+import { SelectItem } from "shared/ui/select";
+import Sprite from "shared/ui/sprite";
+import css from "./positions.module.scss";
 
 const sortLocation = [
-    { name: 'ALL', value: 'ALL' },
-    { name: 'Remote', value: 'remote' },
-    { name: 'Office', value: 'office' },
+    { name: "ALL", value: "ALL" },
+    { name: "Remote", value: "remote" },
+    { name: "Office", value: "office" },
 ];
 
 const sortTypes = [
-    { name: 'ALL', value: 'ALL' },
-    { name: 'Full-Time', value: 'full-time' },
-    { name: 'Part-Time', value: 'part-time' },
+    { name: "ALL", value: "ALL" },
+    { name: "Full-Time", value: "full-time" },
+    { name: "Part-Time", value: "part-time" },
 ];
 
 interface State {
@@ -32,7 +32,7 @@ export const Positions: React.FC = () => {
     const { data } = useQuery<ICareersResponse>({
         queryKey: [CareerApiEnum.ALL_POSITIONS],
     });
-    const { t } = useTranslation('careers');
+    const { t } = useTranslation("careers");
 
     const [values, , { setStateValue }] = useObjectState<State>({
         type: sortTypes[0],
@@ -44,14 +44,14 @@ export const Positions: React.FC = () => {
 
         for (const item of data?.results || []) {
             if (
-                values.type.value !== 'ALL' &&
+                values.type.value !== "ALL" &&
                 values.type.name.toString().toLowerCase() !== item.type.toLowerCase()
             ) {
                 continue;
             }
 
             if (
-                values.location.value !== 'ALL' &&
+                values.location.value !== "ALL" &&
                 values.location.name.toString().toLowerCase() !== item.location.toLowerCase()
             ) {
                 continue;
@@ -69,7 +69,7 @@ export const Positions: React.FC = () => {
                 <div className={css.wrapper}>
                     <div className={css.left}>
                         <h3 className={css.title}>
-                            <span>{t('positions.title')}</span>
+                            <span>{t("positions.title")}</span>
                             <Sprite.Default icon="arrow-right" />
                         </h3>
                     </div>
@@ -80,7 +80,7 @@ export const Positions: React.FC = () => {
                                 query="(min-width: 769px)"
                                 children={
                                     <div className={css.column_grow}>
-                                        <p className={css.column_text}>{t('positions.position')}</p>
+                                        <p className={css.column_text}>{t("positions.position")}</p>
                                     </div>
                                 }
                             />
@@ -88,18 +88,18 @@ export const Positions: React.FC = () => {
                             <div className={css.column_420}>
                                 <div className={css.column_item}>
                                     <TaikoSelect
-                                        text={t('positions.location')}
+                                        text={t("positions.location")}
                                         value={values.location}
                                         options={sortLocation}
-                                        onChange={(data) => data && setStateValue('location', data)}
+                                        onChange={(data) => data && setStateValue("location", data)}
                                     />
                                 </div>
                                 <div className={css.column_item}>
                                     <TaikoSelect
-                                        text={t('positions.type')}
+                                        text={t("positions.type")}
                                         value={values.type}
                                         options={sortTypes}
-                                        onChange={(data) => data && setStateValue('type', data)}
+                                        onChange={(data) => data && setStateValue("type", data)}
                                     />
                                 </div>
                             </div>

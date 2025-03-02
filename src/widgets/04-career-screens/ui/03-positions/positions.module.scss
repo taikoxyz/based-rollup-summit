@@ -13,8 +13,8 @@
 }
 
 .title {
-    font: 500 40px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
+    font: 500 40px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
     color: $kColorBlack;
 
     display: flex;
@@ -41,8 +41,8 @@
 
 .column_text {
     font: 600 12px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .3);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.3);
     text-transform: uppercase;
 }
 

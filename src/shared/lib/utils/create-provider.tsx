@@ -1,11 +1,5 @@
-import {
-    Dispatch,
-    SetStateAction,
-    createContext,
-    useContext,
-    useState,
-} from 'react';
-import { Optional } from './typescript';
+import { Dispatch, SetStateAction, createContext, useContext, useState } from "react";
+import { Optional } from "./typescript";
 
 interface Children<T extends object> {
     children: React.ReactNode;
@@ -44,11 +38,7 @@ export const createProvider = function <T extends object>(initialState: T) {
     const WrapProvider: React.FC<Children<T>> = ({ children, params = {} }) => {
         const value = useState({ ...initialState, ...params });
 
-        return (
-            <ProviderContext.Provider value={value}>
-                {children}
-            </ProviderContext.Provider>
-        );
+        return <ProviderContext.Provider value={value}>{children}</ProviderContext.Provider>;
     };
 
     return {

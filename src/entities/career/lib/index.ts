@@ -1,1 +1,1 @@
-export { getCareerURL } from './getCareerUrl';
+export { getCareerURL } from "./getCareerUrl";

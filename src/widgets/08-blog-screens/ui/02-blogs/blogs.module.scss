@@ -1,6 +1,6 @@
 .blogs {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .list {
@@ -20,10 +20,10 @@
     margin: 28px auto 0;
     padding: 10px;
     border-radius: 100px;
-    background: #EFEFEF;
+    background: #efefef;
 
     font: 500 14px/1 $kFontPublicSans;
-    color: #444A55;
+    color: #444a55;
 }
 
 .viewMore {

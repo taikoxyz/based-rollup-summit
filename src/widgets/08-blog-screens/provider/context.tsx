@@ -1,14 +1,19 @@
-import { createContext, useContext, useState } from 'react';
-import { IBlogFilter, IBlogFilterContext } from './types';
-import { Optional } from 'shared/lib/utils/typescript';
-import { useTranslationObject } from 'shared/lib/hooks/use-translation-object';
-import { IBlogDate, IBlogDateDefault, transformCategory, transformDate } from '../lib/transform-filters';
+import { createContext, useContext, useState } from "react";
+import {
+    IBlogDate,
+    IBlogDateDefault,
+    transformCategory,
+    transformDate,
+} from "../lib/transform-filters";
+import { useTranslationObject } from "shared/lib/hooks/use-translation-object";
+import { Optional } from "shared/lib/utils/typescript";
+import { IBlogFilter, IBlogFilterContext } from "./types";
 
 export const createBlogFilter = (
     dateRange: IBlogDate = {
-        title: 'All time',
+        title: "All time",
         value: {},
-        key: 'all'
+        key: "all",
     }
 ): IBlogFilter => ({
     dateRange,
@@ -33,7 +38,7 @@ const useBlogFilterInitial = (dateRange?: IBlogDate) => {
 export const useBlogFilter = () => useContext(BlogFilterContext);
 
 export const WithBlogFilter: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const date = useTranslationObject<IBlogDateDefault[]>('date', 'blog');
+    const date = useTranslationObject<IBlogDateDefault[]>("date", "blog");
     const context = useBlogFilterInitial(transformDate(date)[0]);
 
     return <BlogFilterContext.Provider value={context}>{children}</BlogFilterContext.Provider>;

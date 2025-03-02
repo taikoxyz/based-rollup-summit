@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import { useObjectState } from './use-object-state';
+import { useRef } from "react";
+import { useObjectState } from "./use-object-state";
 
 interface useInputProps {
     defaultValue?: string;
@@ -8,21 +8,21 @@ interface useInputProps {
 
 export const useInput = (props?: useInputProps) => {
     const [state, , { setStateValue }] = useObjectState({
-        value: props?.defaultValue ?? '',
+        value: props?.defaultValue ?? "",
         isTyping: false,
     });
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const handleValue = (value: string) => {
-        setStateValue('value', value);
+        setStateValue("value", value);
 
         if (props?.unblockTimeout) {
             if (timeoutRef.current) {
                 clearTimeout(timeoutRef.current);
             }
-            setStateValue('isTyping', true);
+            setStateValue("isTyping", true);
             timeoutRef.current = setTimeout(() => {
-                setStateValue('isTyping', false);
+                setStateValue("isTyping", false);
                 clearTimeout(timeoutRef.current!);
             }, props.unblockTimeout);
         }

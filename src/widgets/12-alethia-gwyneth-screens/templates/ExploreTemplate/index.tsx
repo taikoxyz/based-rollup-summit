@@ -19,11 +19,13 @@ export const ExploreTemplate: React.FC<Props> = ({ background, suptitle, text, t
                         <p
                             className={css.explore_suptitle}
                             dangerouslySetInnerHTML={{ __html: suptitle }}
-                        /><br/>
+                        />
+                        <br />
                         <h2
                             className={css.explore_title}
                             dangerouslySetInnerHTML={{ __html: title }}
-                        /><br/>
+                        />
+                        <br />
                         <p
                             className={css.explore_text}
                             dangerouslySetInnerHTML={{ __html: text }}

@@ -1,21 +1,21 @@
-import React, { useMemo, useState } from 'react';
-import { useTranslationObject } from 'shared/lib/hooks/use-translation-object';
+import React, { useMemo, useState } from "react";
+import { useTranslation } from "next-i18next";
+import { BlogFilter } from "../blog-filter";
+import clsx from "clsx";
+import dayjs from "dayjs";
 import {
     IBlogDate,
     IBlogDateDefault,
     transformDate,
-} from 'widgets/08-blog-screens/lib/transform-filters';
-import { BlogFilter } from '../blog-filter';
-import { useTranslation } from 'next-i18next';
-import { useBlogFilter } from 'widgets/08-blog-screens/provider';
-import { RangeCalendar } from 'shared/components/range-calendar';
-import clsx from 'clsx';
-import dayjs from 'dayjs';
-import css from './filter-date.module.scss';
+} from "widgets/08-blog-screens/lib/transform-filters";
+import { useBlogFilter } from "widgets/08-blog-screens/provider";
+import { RangeCalendar } from "shared/components/range-calendar";
+import { useTranslationObject } from "shared/lib/hooks/use-translation-object";
+import css from "./filter-date.module.scss";
 
 export const FilterDate: React.FC = () => {
     const [active, setActive] = useState(false);
-    const date = useTranslationObject<IBlogDateDefault[]>('date', 'blog');
+    const date = useTranslationObject<IBlogDateDefault[]>("date", "blog");
     const { t } = useTranslation();
     const { state, setState } = useBlogFilter();
 
@@ -24,7 +24,7 @@ export const FilterDate: React.FC = () => {
     const onChange = (item: IBlogDate) => {
         setState({ dateRange: item });
 
-        if (item.key !== 'period') {
+        if (item.key !== "period") {
             setActive(false);
         }
     };
@@ -48,23 +48,23 @@ export const FilterDate: React.FC = () => {
     };
 
     const formatDate = useMemo(() => {
-        if (state.dateRange.key !== 'period') {
+        if (state.dateRange.key !== "period") {
             return state.dateRange.title;
         }
         const { from, to } = state.dateRange.value;
 
         if (!to || !from) {
-            return `From – To, ${dayjs().format('YYYY')}`;
+            return `From – To, ${dayjs().format("YYYY")}`;
         }
 
         const years = new Set([
-            dayjs(from).get('year').toString(),
-            dayjs(to).get('year').toString(),
+            dayjs(from).get("year").toString(),
+            dayjs(to).get("year").toString(),
         ]);
 
-        const fromString = dayjs(from).format('MMM DD');
-        const toString = dayjs(to).format('MMM DD');
-        const yearString = [...years].join(' – ');
+        const fromString = dayjs(from).format("MMM DD");
+        const toString = dayjs(to).format("MMM DD");
+        const yearString = [...years].join(" – ");
 
         return `${fromString} – ${toString}, ${yearString}`;
     }, [state.dateRange]);
@@ -74,7 +74,7 @@ export const FilterDate: React.FC = () => {
             <BlogFilter
                 active={active}
                 setActive={setActive}
-                title={t('time')}
+                title={t("time")}
                 placeholder={formatDate}
                 children={
                     <div className={css.content}>
@@ -91,12 +91,12 @@ export const FilterDate: React.FC = () => {
                             </div>
                         ))}
 
-                        {state.dateRange.key === 'period' && (
+                        {state.dateRange.key === "period" && (
                             <div className={css.calendar}>
-                                <RangeCalendar 
+                                <RangeCalendar
                                     value={[state.dateRange.value.from, state.dateRange.value.to]}
-                                    onApply={onApply} 
-                                    onCancel={onCancel} 
+                                    onApply={onApply}
+                                    onCancel={onCancel}
                                 />
                             </div>
                         )}

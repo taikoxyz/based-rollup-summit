@@ -16,7 +16,7 @@
     }
     @include -screen-lg {
         .ownerless-block {
-            animation: ownerlessTransform 4s ease infinite
+            animation: ownerlessTransform 4s ease infinite;
         }
     }
 }

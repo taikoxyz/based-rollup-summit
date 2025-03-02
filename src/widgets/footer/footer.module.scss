@@ -2,7 +2,7 @@
     padding-bottom: 12px;
 }
 .footer_wrapper {
-    background: #FFF;
+    background: #fff;
     padding: 24px 24px 30px;
     border-radius: 25px;
     display: flex;
@@ -50,14 +50,12 @@
     align-self: flex-start;
 }
 .footer_nav_inner {
-
     display: flex;
     justify-content: space-between;
     gap: 24px;
 
     max-width: 925px;
     width: 100%;
-
 }
 .footer_copyright {
     position: absolute;
@@ -111,7 +109,7 @@
     @include setFontPublicSans400(12px, 1.25, 0.01em, #444a55);
 }
 .footer_nav_link_dsb {
-    @include setFontClashGrotest500(12px, 1.255, -0.02em, #FFF);
+    @include setFontClashGrotest500(12px, 1.255, -0.02em, #fff);
     height: 2.1em;
     padding: 0 0.9375em;
     border-radius: 100px;

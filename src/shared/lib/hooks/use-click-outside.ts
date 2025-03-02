@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-export const useClickOutside = function<T extends HTMLDivElement>(handler: () => any) {
+export const useClickOutside = function <T extends HTMLDivElement>(handler: () => any) {
     const ref = useRef<T>(null);
 
     const onClickOutside = (ev: MouseEvent) => {
@@ -11,8 +11,8 @@ export const useClickOutside = function<T extends HTMLDivElement>(handler: () =>
     };
 
     useEffect(() => {
-        window.addEventListener('mousedown', onClickOutside);
-        return () => window.removeEventListener('mousedown', onClickOutside);
+        window.addEventListener("mousedown", onClickOutside);
+        return () => window.removeEventListener("mousedown", onClickOutside);
     });
 
     return ref;

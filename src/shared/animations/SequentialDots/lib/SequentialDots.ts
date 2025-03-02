@@ -1,10 +1,10 @@
+import { getRandomBetween } from "shared/lib/utils/numbers";
 import { SequentialDotsGroup } from "./SequentialDotsGroup";
 import { SequentialDotsOptions } from "./types";
-import { getRandomBetween } from "shared/lib/utils/numbers";
 
 type CustomSequentialDotsOptions = {
     [K in keyof SequentialDotsOptions]?: SequentialDotsOptions[K];
-}
+};
 
 export class SequentialDots {
     canvas: HTMLCanvasElement;
@@ -16,13 +16,10 @@ export class SequentialDots {
     canvasWidth: number;
     canvasHeight: number;
 
-    constructor(
-        canvas: HTMLCanvasElement,
-        options: CustomSequentialDotsOptions = {},
-    ) {
+    constructor(canvas: HTMLCanvasElement, options: CustomSequentialDotsOptions = {}) {
         this.canvas = canvas;
         const ctx = canvas.getContext("2d");
-        if(!ctx) {
+        if (!ctx) {
             throw new Error("Not support 2d context");
         }
         this.ctx = ctx;
@@ -36,8 +33,8 @@ export class SequentialDots {
                 margin: 30,
                 fadeSpeed: 0.02,
                 moveSpeed: 0.02,
-                colors: ["blue", "red", "greed"]
-            } as SequentialDotsOptions, 
+                colors: ["blue", "red", "greed"],
+            } as SequentialDotsOptions,
             options
         );
 
@@ -60,35 +57,30 @@ export class SequentialDots {
     setup() {
         window.addEventListener("resize", this.resize);
 
-        for(let i = 0; i < this.options.cols; i++) {
+        for (let i = 0; i < this.options.cols; i++) {
             const dotSize = Array.isArray(this.options.dotSize)
                 ? this.options.dotSize[getRandomBetween(0, this.options.dotSize.length - 1)]
                 : this.options.dotSize;
             const x = i * (dotSize + this.options.margin);
-            const color = this.options.colors[
-                Math.floor(this.options.colors.length * Math.random())
-            ];
+            const color =
+                this.options.colors[Math.floor(this.options.colors.length * Math.random())];
 
             this.group.push(
-                new SequentialDotsGroup(
-                    this.ctx,
-                    this.canvas,
-                    {
-                        dotsCount: this.options.countDots,
-                        dotGapY: this.options.dotGapY,
-                        dotSize: dotSize,
-                        fadeSpeed: this.options.fadeSpeed,
-                        moveSpeed: getRandomBetween(
-                            this.options.moveSpeed - 0.15,
-                            this.options.moveSpeed + 0.15,
-                            10
-                        ),
-                        color: color,
-                        offsetAlpha: -Math.random(),
-                        offsetX: x - dotSize,
-                        offsetY: Math.random() * this.canvasHeight * -1
-                    }
-                )
+                new SequentialDotsGroup(this.ctx, this.canvas, {
+                    dotsCount: this.options.countDots,
+                    dotGapY: this.options.dotGapY,
+                    dotSize: dotSize,
+                    fadeSpeed: this.options.fadeSpeed,
+                    moveSpeed: getRandomBetween(
+                        this.options.moveSpeed - 0.15,
+                        this.options.moveSpeed + 0.15,
+                        10
+                    ),
+                    color: color,
+                    offsetAlpha: -Math.random(),
+                    offsetX: x - dotSize,
+                    offsetY: Math.random() * this.canvasHeight * -1,
+                })
             );
         }
     }
@@ -96,7 +88,7 @@ export class SequentialDots {
     destroy() {
         this.stop();
         this.group = [];
-        this.ctx.clearRect(0,0, this.canvasWidth, this.canvasHeight);
+        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
 
         window.removeEventListener("resize", this.resize);
     }
@@ -109,13 +101,13 @@ export class SequentialDots {
     }
 
     animate() {
-        this.ctx.clearRect(0,0, this.canvasWidth, this.canvasHeight);
+        this.ctx.clearRect(0, 0, this.canvasWidth, this.canvasHeight);
         this.draw();
         this.raf = requestAnimationFrame(this.animate);
     }
 
     stop() {
-        if(this.raf) {
+        if (this.raf) {
             cancelAnimationFrame(this.raf);
             this.raf = null;
         }

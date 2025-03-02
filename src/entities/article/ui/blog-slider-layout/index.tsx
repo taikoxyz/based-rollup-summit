@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import SwiperCore, { SwiperOptions } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { ArrowButton } from 'shared/components/@buttons/arrow-button';
-import { IBlog } from 'shared/lib/types';
-import { BlogItem } from '../blog-item';
-import { MediaQuery } from 'shared/ui/media-query';
-import css from './blog-slider-layout.module.scss';
-import clsx from 'clsx';
+import React, { useState } from "react";
+import { BlogItem } from "../blog-item";
+import clsx from "clsx";
+import SwiperCore, { SwiperOptions } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { ArrowButton } from "shared/components/@buttons/arrow-button";
+import { IBlog } from "shared/lib/types";
+import { MediaQuery } from "shared/ui/media-query";
+import css from "./blog-slider-layout.module.scss";
 
 interface Props {
     title: string;
@@ -14,33 +14,29 @@ interface Props {
     animated?: boolean;
 }
 
-export const BlogSliderLayout: React.FC<Props> = ({
-    data,
-    title,
-    animated
-}) => {
+export const BlogSliderLayout: React.FC<Props> = ({ data, title, animated }) => {
     const [swiperCore, setSwiperCore] = useState<SwiperCore>();
     const [, setActiveIndex] = useState(0);
 
     const options: SwiperOptions = {
-        slidesPerView: 'auto',
+        slidesPerView: "auto",
         allowTouchMove: false,
         breakpoints: {
             1366: {
-                slidesPerView: 4
-            }
-        }
+                slidesPerView: 4,
+            },
+        },
     };
 
     const Controls = () => (
         <div className={css.controls}>
-            <ArrowButton 
+            <ArrowButton
                 className={css.controls_btn}
                 onClick={() => swiperCore?.slidePrev()}
-                disabled={swiperCore?.isBeginning} 
-                variant="prev" 
+                disabled={swiperCore?.isBeginning}
+                variant="prev"
             />
-            <ArrowButton 
+            <ArrowButton
                 className={css.controls_btn}
                 onClick={() => swiperCore?.slideNext()}
                 disabled={swiperCore?.isEnd}
@@ -49,33 +45,25 @@ export const BlogSliderLayout: React.FC<Props> = ({
     );
 
     return (
-        <div className={clsx(css.root, animated && 'aos')} data-aos-offset="40%">
+        <div className={clsx(css.root, animated && "aos")} data-aos-offset="40%">
             <div className="container">
                 <div className={css.wrapper}>
                     <div className={css.header}>
-                        <h2 className={css.title}>
-                            {title}
-                        </h2>
+                        <h2 className={css.title}>{title}</h2>
 
-                        <MediaQuery 
-                            query="(min-width: 769px)"
-                            children={<Controls />}
-                        />
+                        <MediaQuery query="(min-width: 769px)" children={<Controls />} />
                     </div>
 
                     <div className={css.slider}>
-                        <Swiper 
-                            {...options} 
+                        <Swiper
+                            {...options}
                             className={css.swiper}
                             onInit={setSwiperCore}
                             onSlideChange={(s) => setActiveIndex(s.activeIndex)}
                         >
                             {data.map((item) => (
-                                <SwiperSlide 
-                                    className={css.swiper_slide} 
-                                    key={item.id}
-                                >
-                                    <BlogItem 
+                                <SwiperSlide className={css.swiper_slide} key={item.id}>
+                                    <BlogItem
                                         imageSrc={item.image.url}
                                         title={item.title}
                                         categoryName={item.category.name}
@@ -89,12 +77,9 @@ export const BlogSliderLayout: React.FC<Props> = ({
                         </Swiper>
                     </div>
 
-                    <MediaQuery 
-                        query="(max-width: 768px)"
-                        children={<Controls />}
-                    />
+                    <MediaQuery query="(max-width: 768px)" children={<Controls />} />
                 </div>
             </div>
         </div>
     );
-}
+};
