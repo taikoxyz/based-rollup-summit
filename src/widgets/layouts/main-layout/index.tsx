@@ -3,8 +3,8 @@ import Head from "next/head";
 import clsx from "clsx";
 import css from "./main-layout.module.scss";
 
-const metaTitle = "";
-const metaDescription = "";
+const metaTitle = "Based Rollup Summit";
+const metaDescription = "Based Rollup Summit 2025 is the first-ever gathering dedicated to truly decentralized scaling solutions for Ethereum.";
 
 // const isDev = process.env.NODE_ENV === 'development';
 
