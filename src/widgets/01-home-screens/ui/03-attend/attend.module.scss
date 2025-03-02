@@ -1,12 +1,13 @@
 .attend {
-    height: 80vh;
-    overflow: hidden;
+    padding: 60px 0;
     background-color: #f8f8f8;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    width: 100%;
 
     &._animated {
         .attend_grid {
@@ -21,11 +22,9 @@
 .attend_wrapper {
     max-width: 1120px;
     width: 100%;
-    padding: 0 40px;
+    padding: 0 20px;
     margin: 0 auto;
-
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +36,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 1512px;
-
     mask: linear-gradient(to right, transparent, black 2%, black, black 98%, transparent);
 
     svg {
@@ -76,116 +74,40 @@
 }
 
 .attend_label {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 110%;
-
-    @include setFontPublicSans600(14px, 1.2, 0.04em, getColorPink());
-    text-transform: uppercase;
-}
-
-.attend_title {
-    max-width: 14.5em;
-    text-align: center;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
     color: #c8047d;
-    @include setFontClashGrotest500(55px, 0.9, -0.02em);
-}
-
-.attend_text {
+    text-transform: uppercase;
+    margin-bottom: 30px;
     text-align: center;
-    @include setFontClashGrotest500(55px, 1.255, -0.01em, getColorBlack());
-}
-
-@include -screen-xxxl {
-    .attend_grid {
-        width: 1360px;
-    }
-    .attend_title {
-        font-size: 56px;
-    }
-    .attend_label {
-        bottom: 137%;
-    }
-}
-
-@include -screen-lg {
-    .attend_grid {
-        width: 1100px;
-    }
-    .attend_title {
-        font-size: 48px;
-    }
-    .attend_label {
-        bottom: 131%;
-    }
-    .attend_text {
-        margin-top: 20px;
-    }
-}
-
-@include -screen-md {
-    .attend_grid {
-        width: 133%;
-
-        svg {
-            display: none;
-        }
-        img {
-            display: block;
-            width: 100%;
-        }
-    }
-    .attend_label {
-        position: relative;
-        inset: auto;
-        text-align: center;
-        transform: none;
-    }
-    .attend_title {
-        margin-top: 24px;
-    }
-}
-
-@include -screen-sm {
-    .attend_title {
-        font-size: 44px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .attend_title {
-        font-size: 36px;
-    }
-    .attend_text {
-        font-size: 14px;
-    }
 }
 
 .cards_container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
-    padding: 2rem;
-
-    @media (min-width: 1400px) {
-        flex-direction: row;
-        justify-content: center;
-    }
+    width: 100%;
+    max-width: 1400px;
 }
 
 .card {
     background: #fff;
     border-radius: 20px;
     padding: 1.5rem;
-    width: 463px;
-    height: 270px;
+    width: 100%;
+    max-width: 463px;
+    height: auto;
+    min-height: 270px;
     text-align: left;
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
     &:hover {
         transform: translateY(-5px);
     }
@@ -194,53 +116,147 @@
 .topHeading {
     display: flex;
     align-items: center;
-    margin-bottom: 3rem;
-    gap: 5px;
+    margin-bottom: 1.5rem;
+    gap: 8px;
 }
 
 .icon {
     height: 16px;
     width: 16px;
+    flex-shrink: 0;
 }
 
 .card_title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    display: flex;
-    @include setFontClashGrotest500(35px, 0.9, -0.02em);
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #191e28;
 }
 
 .card_description {
-    color: #444a55; // Tailwind's gray-600
-    @include setFontPublicSans400(16px, 1.2, 0.04em);
-    margin-top: 0.5rem; // Added slight margin-top for additional spacing
+    color: #444a55;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    margin: 0;
 }
 
-@media (max-width: 560px) {
-    .card {
-        width: 90%; // Adjust width for smaller screens
-        height: auto; // Allow dynamic height
-        padding: 1rem; // Reduce padding
+// Large screens
+@media (min-width: 1200px) {
+    .cards_container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
 
-        &:hover {
-            transform: none; // Disable hover effect for small screens
-        }
+    .card {
+        flex: 1;
+        max-width: 463px;
+    }
+}
+
+// Medium screens
+@media (min-width: 768px) and (max-width: 1199px) {
+    .attend {
+        padding: 50px 0;
+    }
+
+    .cards_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(50% - 1.5rem);
+        min-height: 250px;
+    }
+}
+
+// Small tablet and large mobile
+@media (min-width: 561px) and (max-width: 767px) {
+    .attend {
+        padding: 40px 0;
+        min-height: auto;
+    }
+
+    .cards_container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 500px;
+        min-height: 200px;
     }
 
     .card_title {
-        font-size: 1.1rem; // Reduce title size
+        font-size: 24px;
+    }
+}
+
+// Mobile
+@media (max-width: 560px) {
+    .attend {
+        padding: 30px 0;
+        min-height: auto;
     }
 
-    .card_description {
-        font-size: 0.9rem; // Reduce description size
+    .attend_wrapper {
+        padding: 0 15px;
+    }
+
+    .attend_label {
+        margin-bottom: 20px;
+    }
+
+    .cards_container {
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        padding: 1.25rem;
+        min-height: auto;
+
+        &:hover {
+            transform: none;
+        }
     }
 
     .topHeading {
-        margin-bottom: 2rem; // Adjust spacing
+        margin-bottom: 1rem;
+    }
+
+    .card_title {
+        font-size: 20px;
+    }
+
+    .card_description {
+        font-size: 14px;
+        line-height: 1.4;
     }
 
     .icon {
-        height: 12px; // Decrease icon size
-        width: 12px;
+        height: 14px;
+        width: 14px;
+    }
+}
+
+// Extra small mobile
+@media (max-width: 359px) {
+    .card {
+        padding: 1rem;
+    }
+
+    .card_title {
+        font-size: 18px;
+    }
+
+    .card_description {
+        font-size: 13px;
     }
 }

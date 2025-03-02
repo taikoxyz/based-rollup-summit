@@ -1,12 +1,13 @@
 .schedule {
-    height: 60vh;
-    overflow: hidden;
+    min-height: 600px;
+    width: 100%;
+    padding: 80px 0;
     background-color: #f8f8f8;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 
     &._animated {
         .schedule_grid {
@@ -23,142 +24,22 @@
     width: 100%;
     padding: 0 40px;
     margin: 0 auto;
-
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.schedule_grid {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 1512px;
-
-    mask: linear-gradient(to right, transparent, black 2%, black, black 98%, transparent);
-
-    svg {
-        stroke: rgba(#000, 0.12);
-        path {
-            stroke-dasharray: 2000;
-            stroke-dashoffset: 2000;
-        }
-    }
-
-    img {
-        display: none;
-    }
-
-    &::after,
-    &::before {
-        content: "";
-        display: block;
-        width: 7.87%;
-        aspect-ratio: 1 / 3.235;
-        position: absolute;
-        background: url("/img/home-new/schedule-lines.svg");
-        opacity: 0.12;
-        transition: transform 1500ms ease 1000ms;
-    }
-    &::before {
-        top: 50%;
-        left: 0;
-        transform: translate(-100%, -51%);
-    }
-    &::after {
-        top: 50%;
-        right: 0;
-        transform: translate(100%, -51%);
-    }
-}
-
 .schedule_label {
-    @include setFontPublicSans600(14px, 1.2, 0.04em, getColorPink());
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #c8047d;
     text-transform: uppercase;
     margin-bottom: 50px;
-    // position: absolute;
-    // left: 50%;
-    // transform: translateX(-50%);
-}
-
-.schedule_title {
-    max-width: 14.5em;
     text-align: center;
-    color: #c8047d;
-    @include setFontClashGrotest500(55px, 0.9, -0.02em);
-}
-
-.schedule_text {
-    text-align: center;
-    @include setFontClashGrotest500(55px, 1.255, -0.01em, getColorBlack());
-}
-
-@include -screen-xxxl {
-    .schedule_grid {
-        width: 1360px;
-    }
-    .schedule_title {
-        font-size: 56px;
-    }
-    .schedule_label {
-        bottom: 137%;
-    }
-}
-
-@include -screen-lg {
-    .schedule_grid {
-        width: 1100px;
-    }
-    .schedule_title {
-        font-size: 48px;
-    }
-    .schedule_label {
-        bottom: 131%;
-    }
-    .schedule_text {
-        margin-top: 20px;
-    }
-}
-
-@include -screen-md {
-    .schedule_grid {
-        width: 133%;
-
-        svg {
-            display: none;
-        }
-        img {
-            display: block;
-            width: 100%;
-        }
-    }
-    .schedule_label {
-        position: relative;
-        inset: auto;
-        text-align: center;
-        transform: none;
-    }
-    .schedule_title {
-        margin-top: 24px;
-    }
-}
-
-@include -screen-sm {
-    .schedule_title {
-        font-size: 44px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .schedule_title {
-        font-size: 36px;
-    }
-    .schedule_text {
-        font-size: 14px;
-    }
 }
 
 .timeline {
@@ -167,13 +48,15 @@
     justify-content: center;
     position: relative;
     width: 100%;
+    max-width: 900px;
 }
 
 .timeline_marker {
     width: 1px;
     background: #ccc;
-    height: 485px;
+    height: 320px;
     position: relative;
+    margin: 0 30px;
 
     &::before,
     &::after {
@@ -183,7 +66,7 @@
         transform: translateX(-50%) rotate(45deg);
         width: 12px;
         height: 12px;
-        background: #ff0080;
+        background: #c8047d;
     }
 
     &::before {
@@ -195,42 +78,125 @@
     }
 }
 
-.timeline_item1 {
-    bottom: 17%;
+.timeline_item1,
+.timeline_item2 {
     padding: 20px;
     position: relative;
+    width: calc(50% - 60px);
+    max-width: 380px;
+}
+
+.timeline_item1 {
+    align-self: flex-start;
+    margin-top: -40px;
 }
 
 .timeline_item2 {
-    top: 31%;
-    padding: 20px;
-    position: relative;
+    align-self: flex-end;
+    margin-top: 60px;
 }
 
 .left {
-    text-align: left;
-    margin-right: 60px;
+    text-align: right;
 }
 
 .right {
     text-align: left;
-    margin-left: 60px;
 }
 
 .content {
     h2 {
         color: #191e28;
-        @include setFontClashGrotest500(35px, 1.255, -0.01em);
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        margin-bottom: 16px;
     }
 
     ul {
         list-style-type: disc;
-        padding: 0;
+        padding-left: 20px;
 
         li {
             color: #444a55;
+            font-family: "Public Sans", sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.4;
+            letter-spacing: 0.01em;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+// Media queries for responsive design
+@media screen and (max-width: 992px) {
+    .timeline_marker {
+        height: 280px;
+    }
+
+    .content {
+        h2 {
+            font-size: 30px;
+        }
+
+        ul li {
             font-size: 16px;
-            @include setFontPublicSans400(18px, 1.2, 0.04em);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .schedule {
+        padding: 60px 0;
+    }
+
+    .timeline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline_marker {
+        width: 1px;
+        height: 60px;
+        margin: 20px 0 20px 20px;
+    }
+
+    .timeline_item1,
+    .timeline_item2 {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+        padding: 10px 0;
+    }
+
+    .left,
+    .right {
+        text-align: left;
+        margin: 0;
+    }
+
+    .content {
+        h2 {
+            font-size: 26px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .schedule_wrapper {
+        padding: 0 20px;
+    }
+
+    .content {
+        h2 {
+            font-size: 22px;
+        }
+
+        ul li {
+            font-size: 14px;
         }
     }
 }
