@@ -1,5 +1,5 @@
-import React from "react";
-import { HOME_PAG, useHomeData } from "widgets/01-home-screens/lib";
+import React, { useEffect } from "react";
+import { HOME_PAG } from "widgets/01-home-screens/lib";
 import css from "./attend.module.scss";
 
 export const Attend: React.FC = () => {
@@ -8,7 +8,7 @@ export const Attend: React.FC = () => {
             title: "Developers",
             iconColor: "pink",
             description:
-                "Get hands-on insight with the latest zkEVM advancements, interoperability solutions, and AI. Connect directly with other pioneers and position yourself at the forefront of Ethereum’s scaling revolution.",
+                "Get hands-on insight with the latest zkEVM advancements, interoperability solutions, and AI. Connect directly with other pioneers and position yourself at the forefront of Ethereum's scaling revolution.",
             star: "/img/stars/pink.svg",
         },
         {
@@ -26,7 +26,26 @@ export const Attend: React.FC = () => {
             star: "/img/stars/purple.svg",
         },
     ];
+
     const attendRef = React.useRef<HTMLDivElement>(null);
+
+    // Add animation class on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            if (attendRef.current) {
+                const rect = attendRef.current.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.75) {
+                    attendRef.current.classList.add(css._animated);
+                }
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        // Check once on mount
+        handleScroll();
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <section className={css.attend} ref={attendRef} id={HOME_PAG.ATTEND}>
@@ -34,15 +53,13 @@ export const Attend: React.FC = () => {
                 <p className={css.attend_label}>WHO SHOULD ATTEND?</p>
                 <div className={css.cards_container}>
                     {cards.map((card, index) => (
-                        <>
-                            <div key={index} className={css.card}>
-                                <div className={css.topHeading}>
-                                    <img className={css.icon} src={card.star} />
-                                    <h3 className={css.card_title}>{card.title}</h3>
-                                </div>
-                                <p className={css.card_description}>{card.description}</p>
+                        <div key={index} className={css.card}>
+                            <div className={css.topHeading}>
+                                <img className={css.icon} src={card.star} alt="" />
+                                <h3 className={css.card_title}>{card.title}</h3>
                             </div>
-                        </>
+                            <p className={css.card_description}>{card.description}</p>
+                        </div>
                     ))}
                 </div>
             </div>
