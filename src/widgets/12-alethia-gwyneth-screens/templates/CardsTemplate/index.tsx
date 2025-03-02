@@ -1,8 +1,8 @@
 import React from "react";
 import clsx from "clsx";
+import ArrowLinkIcon from "shared/icons/ArrowLink.icon";
 import { NextLink } from "shared/ui/NextLink";
 import Image from "shared/ui/image";
-import ArrowLinkIcon from "shared/icons/ArrowLink.icon";
 import css from "./CardsTemplate.module.scss";
 
 interface Props {

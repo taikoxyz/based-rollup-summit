@@ -1,10 +1,10 @@
-import React from 'react';
-import clsx from 'clsx';
-import Head from 'next/head';
-import css from './main-layout.module.scss';
+import React from "react";
+import Head from "next/head";
+import clsx from "clsx";
+import css from "./main-layout.module.scss";
 
-const metaTitle = '';
-const metaDescription = '';
+const metaTitle = "";
+const metaDescription = "";
 
 // const isDev = process.env.NODE_ENV === 'development';
 
@@ -46,20 +46,83 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                     <meta property="og:title" content={meta.title || metaTitle} />
                     <meta property="og:description" content={meta.description || metaDescription} />
                     <meta property="twitter:title" content={meta.title || metaTitle} />
-                    <meta property="twitter:description" content={meta.description || metaDescription} />
-                    
-                    <link rel="preload" href="/fonts/ClashDisplay-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/ClashDisplay-Semibold.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/ClashGrotesk-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/ClashGrotesk-Semibold.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/HelveticaNeueCyr-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/Onest-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/PublicSans-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/PublicSans-Regular.woff2" as="font" type="font/woff2" crossOrigin="" />
-                    <link rel="preload" href="/fonts/PublicSans-SemiBold.woff2" as="font" type="font/woff2" crossOrigin="" />
+                    <meta
+                        property="twitter:description"
+                        content={meta.description || metaDescription}
+                    />
 
-                    <meta property="og:url" content={'https://...' + (meta.url || '')} />
+                    <link
+                        rel="preload"
+                        href="/fonts/ClashDisplay-Medium.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/ClashDisplay-Semibold.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/ClashGrotesk-Medium.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/ClashGrotesk-Semibold.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/Gilroy-Medium.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/HelveticaNeueCyr-Medium.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/Onest-Medium.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/PublicSans-Medium.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/PublicSans-Regular.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/PublicSans-SemiBold.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin=""
+                    />
+
+                    <meta property="og:url" content={"https://..." + (meta.url || "")} />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     <link rel="canonical" href="https://..." />
                     <meta property="og:type" content="business.business" />
@@ -67,7 +130,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                         name="keywords"
                         content={
                             keywords ||
-                            'Agency, Design, QClay, UI/UX, UI, UX, Figma, Development, Web, Front-end, Back-End, Mobile, Flutter'
+                            "Agency, Design, QClay, UI/UX, UI, UX, Figma, Development, Web, Front-end, Back-End, Mobile, Flutter"
                         }
                     />
                 </Head>

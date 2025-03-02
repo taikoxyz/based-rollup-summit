@@ -1,10 +1,10 @@
-import clsx from 'clsx';
-import dayjs from 'dayjs';
-import Link from 'next/link';
-import Image from 'shared/ui/image';
-import React from 'react';
-import Sprite from 'shared/ui/sprite';
-import css from './blog-item.module.scss';
+import React from "react";
+import Link from "next/link";
+import clsx from "clsx";
+import dayjs from "dayjs";
+import Image from "shared/ui/image";
+import Sprite from "shared/ui/sprite";
+import css from "./blog-item.module.scss";
 
 interface Props {
     imageSrc: string;
@@ -23,25 +23,14 @@ export const BlogItem: React.FC<Props> = ({
     createdAt,
     timeToRead,
     className,
-    url
+    url,
 }) => {
-    const Tag = url ? Link : 'div';
+    const Tag = url ? Link : "div";
 
     return (
-        <Tag 
-            className={clsx(css.root, className)}
-            href={url!}
-            data-class="blog"
-            target="_blank"
-        >
+        <Tag className={clsx(css.root, className)} href={url!} data-class="blog" target="_blank">
             <div className={css.image}>
-                <Image 
-                    src={imageSrc}
-                    loader={() => imageSrc}
-                    width={640}
-                    height={460}
-                    alt=""
-                />
+                <Image src={imageSrc} loader={() => imageSrc} width={640} height={460} alt="" />
                 <p className={css.tag}>{categoryName}</p>
             </div>
 
@@ -52,27 +41,17 @@ export const BlogItem: React.FC<Props> = ({
 
                 <ul className={css.info}>
                     <li className={css.info_item}>
-                        <Sprite.Default 
-                            className={css.info_icon} 
-                            icon="calendar" 
-                        />
+                        <Sprite.Default className={css.info_icon} icon="calendar" />
 
-                        <p className={css.info_value}>
-                            {dayjs(createdAt).format('DD MMM YYYY')}
-                        </p>
+                        <p className={css.info_value}>{dayjs(createdAt).format("DD MMM YYYY")}</p>
                     </li>
                     <li className={css.info_item}>
-                        <Sprite.Default 
-                            className={css.info_icon} 
-                            icon="timer" 
-                        />
+                        <Sprite.Default className={css.info_icon} icon="timer" />
 
-                        <p className={css.info_value}>
-                            {timeToRead}
-                        </p>
+                        <p className={css.info_value}>{timeToRead}</p>
                     </li>
                 </ul>
             </div>
         </Tag>
     );
-}
+};

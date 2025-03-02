@@ -1,14 +1,14 @@
-import React from 'react';
-import { useTranslation } from 'next-i18next';
-import { IGrantFaq } from 'widgets/11-grant-screens/lib/types';
-import { useTranslationObject } from 'shared/lib/hooks/use-translation-object';
-import css from './support.module.scss';
-import Sprite from 'shared/ui/sprite';
-import { Accordeon } from 'shared/components/accordeon';
+import React from "react";
+import { useTranslation } from "next-i18next";
+import { IGrantFaq } from "widgets/11-grant-screens/lib/types";
+import { Accordeon } from "shared/components/accordeon";
+import { useTranslationObject } from "shared/lib/hooks/use-translation-object";
+import Sprite from "shared/ui/sprite";
+import css from "./support.module.scss";
 
 export const Support: React.FC = () => {
-    const faqs = useTranslationObject<IGrantFaq[]>('support.faqs', 'grant-program');
-    const { t } = useTranslation('grant-program');
+    const faqs = useTranslationObject<IGrantFaq[]>("support.faqs", "grant-program");
+    const { t } = useTranslation("grant-program");
 
     return (
         <section className={css.support}>
@@ -18,16 +18,16 @@ export const Support: React.FC = () => {
                         <h2 className={css.title}>
                             <span
                                 dangerouslySetInnerHTML={{
-                                    __html: t('support.title'),
+                                    __html: t("support.title"),
                                 }}
                             />
-                            <Sprite.Default icon="arrow-right" /> 
+                            <Sprite.Default icon="arrow-right" />
                         </h2>
 
                         <p
                             className={css.text}
                             dangerouslySetInnerHTML={{
-                                __html: t('support.text'),
+                                __html: t("support.text"),
                             }}
                         />
                     </div>
@@ -35,14 +35,8 @@ export const Support: React.FC = () => {
                     <div className={css.content_right}>
                         <ul className={css.list}>
                             {faqs.map((faq) => (
-                                <li 
-                                    className={css.list_item} 
-                                    key={faq.q}
-                                >
-                                    <Accordeon 
-                                        question={faq.q} 
-                                        answer={faq.a}
-                                    />
+                                <li className={css.list_item} key={faq.q}>
+                                    <Accordeon question={faq.q} answer={faq.a} />
                                 </li>
                             ))}
                         </ul>

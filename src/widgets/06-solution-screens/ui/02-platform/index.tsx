@@ -1,25 +1,22 @@
-import { useTranslation } from 'next-i18next';
-import React from 'react';
-import { Button } from 'shared/components/@buttons/button';
-import { useTranslationObject } from 'shared/lib/hooks/use-translation-object';
-import { ISolution } from 'widgets/06-solution-screens/lib/types';
-import css from './platform.module.scss';
+import React from "react";
+import { useTranslation } from "next-i18next";
+import { ISolution } from "widgets/06-solution-screens/lib/types";
+import { Button } from "shared/components/@buttons/button";
+import { useTranslationObject } from "shared/lib/hooks/use-translation-object";
+import css from "./platform.module.scss";
 
 export const Platform: React.FC = () => {
-    const { t } = useTranslation('solutions');
-    const solutions = useTranslationObject<ISolution[]>('platform.items', 'solutions');
+    const { t } = useTranslation("solutions");
+    const solutions = useTranslationObject<ISolution[]>("platform.items", "solutions");
 
     return (
         <section className={css.platform}>
-
             <div className={css.row}>
-                <p className={css.suptitle}>
-                    {t('platform.suptitle')}
-                </p>
-                
-                <Button 
+                <p className={css.suptitle}>{t("platform.suptitle")}</p>
+
+                <Button
                     className={css.button}
-                    text={t('platform.learnMore')}
+                    text={t("platform.learnMore")}
                     component="a"
                     href="/about"
                     variant="pink-outlined"
@@ -28,28 +25,17 @@ export const Platform: React.FC = () => {
 
             <ul className={css.list}>
                 {solutions.map((item) => (
-                    <li 
-                        className={css.list_item}
-                        key={item.title}
-                    >
+                    <li className={css.list_item} key={item.title}>
                         <div className={css.list_content}>
-                            <img 
-                                className={css.list_icon} 
-                                src={item.icon} 
-                                alt="" 
-                            />
+                            <img className={css.list_icon} src={item.icon} alt="" />
 
-                            <h3 className={css.list_title}>
-                                {item.title}
-                            </h3>
+                            <h3 className={css.list_title}>{item.title}</h3>
 
-                            <p className={css.list_text}>
-                                {item.text}
-                            </p>
+                            <p className={css.list_text}>{item.text}</p>
 
-                            <Button 
+                            <Button
                                 className={css.list_button}
-                                text={`${t('platform.goTo')} ${item.title}`}
+                                text={`${t("platform.goTo")} ${item.title}`}
                                 variant="pink-outlined"
                                 component="a"
                                 href={item.url}
@@ -67,4 +53,4 @@ export const Platform: React.FC = () => {
             </ul>
         </section>
     );
-}
+};

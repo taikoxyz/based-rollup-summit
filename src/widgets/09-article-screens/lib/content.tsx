@@ -1,5 +1,5 @@
-import { BlocksContent } from '@strapi/blocks-react-renderer';
-import React from 'react';
+import React from "react";
+import { BlocksContent } from "@strapi/blocks-react-renderer";
 
 interface HeadingProps {
     children: React.ReactNode;
@@ -12,39 +12,32 @@ interface Anchor {
 }
 
 export const getArticleAnchor = (title: string) => {
-    return title.toLowerCase().replace(/([\._-]|\s)/gi, '-')
-}
+    return title.toLowerCase().replace(/([\._-]|\s)/gi, "-");
+};
 
 export const getArticleLinks = (data: BlocksContent) => {
     const links: Anchor[] = [];
 
-    for(const { type, children } of data) {
-        if(type === 'heading') {
-            for(const item of children) {
-                if(item.type === 'text') {
+    for (const { type, children } of data) {
+        if (type === "heading") {
+            for (const item of children) {
+                if (item.type === "text") {
                     links.push({
                         name: item.text,
-                        hash: getArticleAnchor(item.text)
-                    })
+                        hash: getArticleAnchor(item.text),
+                    });
                 }
             }
         }
     }
 
     return links;
-}
+};
 
 export const Heading: any = ({ children, level }: HeadingProps) => {
-    const lvl = Math.max(2, level) as HeadingProps['level'];
+    const lvl = Math.max(2, level) as HeadingProps["level"];
     const Tag = `h${lvl}` as any;
-    const [text] = (React.Children.map(
-        children,
-        (child: any) => child.props.text
-    ) || []);
+    const [text] = React.Children.map(children, (child: any) => child.props.text) || [];
 
-    return (
-        <Tag id={getArticleAnchor(text)}>
-            {children}
-        </Tag>
-    )
-}
+    return <Tag id={getArticleAnchor(text)}>{children}</Tag>;
+};

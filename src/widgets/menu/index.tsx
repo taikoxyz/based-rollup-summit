@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll";
 import { CSSTransition } from "react-transition-group";
 import { useTranslation } from "next-i18next";
 import { useApp } from "app/providers/withApp";
-import { useNavigation } from "widgets/header/lib";
 import { IFooterSocial } from "widgets/old/footer/lib/types";
 import { useTranslationObject } from "shared/lib/hooks/use-translation-object";
 import Image from "shared/ui/image";
@@ -15,7 +15,36 @@ export const Menu: React.FC = () => {
     const socials = useTranslationObject<IFooterSocial[]>("socials", "footer");
     const { t } = useTranslation("footer");
     const [{ menuActive }, , { setStateValue }] = useApp();
-    const navigation = useNavigation();
+    const navigation = [
+        {
+            id: 1,
+            name: "About",
+            href: "about",
+            rank: 0,
+            createdAt: "2025-02-05T16:52:03.933Z",
+            updatedAt: "2025-02-26T16:36:55.421Z",
+            publishedAt: "2025-02-05T16:52:10.864Z",
+            media: {
+                url: "",
+                alternativeText: "",
+            },
+            links: [],
+        },
+        {
+            id: 2,
+            name: "Speakers",
+            href: "speakers",
+            rank: 1,
+            createdAt: "",
+            updatedAt: "",
+            publishedAt: "",
+            media: {
+                url: "",
+                alternativeText: "",
+            },
+            links: [],
+        },
+    ];
 
     useEffect(() => {
         document.body.style.overflow = menuActive ? "hidden" : "";

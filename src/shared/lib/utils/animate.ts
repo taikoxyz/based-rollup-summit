@@ -5,12 +5,7 @@ interface AnimateProps {
     onComplete?: () => void;
 }
 
-export function animate({ 
-    timing, 
-    draw, 
-    duration, 
-    onComplete = () => null
-}: AnimateProps) {
+export function animate({ timing, draw, duration, onComplete = () => null }: AnimateProps) {
     const start = performance.now();
     let raf: number | null = null;
 
@@ -30,6 +25,6 @@ export function animate({
     });
 
     return {
-        destroy: () => raf && cancelAnimationFrame(raf)
-    }
+        destroy: () => raf && cancelAnimationFrame(raf),
+    };
 }

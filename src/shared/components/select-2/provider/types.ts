@@ -9,9 +9,9 @@ export interface ISelectContextRefs {
     valueContainer: RefObject<HTMLDivElement>;
 }
 
-export type ISelectContextValueOptional = { 
+export type ISelectContextValueOptional = {
     [K in keyof ISelectContextValue]?: ISelectContextValue[K];
-}
+};
 
 export interface ISelectContextType {
     state: ISelectContextValue;

@@ -33,7 +33,7 @@
 
         &::after,
         &::before {
-            content: '';
+            content: "";
             display: block;
             background: $kColorBlack;
             position: absolute;
@@ -65,7 +65,7 @@
     z-index: 1;
 
     &::before {
-        content: '';
+        content: "";
         display: block;
         width: 100%;
         height: calc(100% + 10px);
@@ -144,7 +144,6 @@
 
         transition: color 0.3s ease;
     }
-
 }
 .dropdown_svg {
     width: 18px;

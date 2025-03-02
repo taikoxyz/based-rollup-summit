@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import clsx from 'clsx';
-import { useClickOutside } from 'shared/lib/hooks/use-click-outside';
-import Sprite from '../sprite';
-import css from './select.module.scss';
+import React, { useEffect, useMemo, useState } from "react";
+import clsx from "clsx";
+import { useClickOutside } from "shared/lib/hooks/use-click-outside";
+import Sprite from "../sprite";
+import css from "./select.module.scss";
 
 export interface SelectItem {
     name: string | number;
@@ -44,28 +44,28 @@ export const Select = function <T extends SelectItem>({
     onChangeInput,
 }: SelectProps<T>) {
     const [active, setActive] = useState(false);
-    const [search, setSearch] = useState(typeof value?.name === 'string' ? value.name : '');
+    const [search, setSearch] = useState(typeof value?.name === "string" ? value.name : "");
     const ref = useClickOutside(() => setActive(false));
 
     const changeInput = (ev: React.ChangeEvent<HTMLInputElement>) => {
         const val = ev.target.value;
         // if (value) val = '';
         setSearch(val);
-        if(onChangeInput) {
+        if (onChangeInput) {
             onChangeInput(val);
         }
-        if(onChange && !val) {
-            onChange(null)
+        if (onChange && !val) {
+            onChange(null);
         }
     };
 
     const changeItem = (item: T) => {
         setSearch(item.name.toString());
         setActive(false);
-        if(onChangeInput) {
+        if (onChangeInput) {
             onChangeInput(item.value.toString());
         }
-        if(onChange) {
+        if (onChange) {
             onChange(item);
         }
     };
@@ -75,7 +75,7 @@ export const Select = function <T extends SelectItem>({
 
         const controlValue = inputValue || search;
 
-        if (controlValue.trim() === '') return options;
+        if (controlValue.trim() === "") return options;
         if (controlValue === value?.name) return options;
 
         return options.filter((o) =>
@@ -84,7 +84,7 @@ export const Select = function <T extends SelectItem>({
     }, [inputValue, search, options, disableInput, active, value]);
 
     useEffect(() => {
-        if (value === null) setSearch('');
+        if (value === null) setSearch("");
     }, [value]);
 
     return (
@@ -104,16 +104,14 @@ export const Select = function <T extends SelectItem>({
                 data-class="select-container"
             >
                 {defaultText && (
-                    <p className={clsx(css.defaultText, classNames?.defaultText)}>
-                        {defaultText}
-                    </p>
+                    <p className={clsx(css.defaultText, classNames?.defaultText)}>{defaultText}</p>
                 )}
                 {!disableInput && (
                     <input
                         className={clsx(css.input, classNames?.input)}
                         value={search}
                         onChange={changeInput}
-                        placeholder={placeholder || 'Value...'}
+                        placeholder={placeholder || "Value..."}
                         disabled={disabled}
                         data-class="select-input"
                         type="text"
@@ -123,12 +121,10 @@ export const Select = function <T extends SelectItem>({
                 {disableInput && (
                     <>
                         {value?.value && (
-                            <p className={clsx(css.value, classNames?.value)}>
-                                {value.name}
-                            </p>
+                            <p className={clsx(css.value, classNames?.value)}>{value.name}</p>
                         )}
                         {!value?.value && (
-                            <p className={css.placeholder}>{placeholder || 'Select...'}</p>
+                            <p className={css.placeholder}>{placeholder || "Select..."}</p>
                         )}
                     </>
                 )}

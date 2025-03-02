@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { IModalContext, IModalObject } from './../types';
+import { useState } from "react";
+import { IModalContext, IModalObject } from "./../types";
 
 export const useModalInitial = (): IModalContext => {
     const [modals, setModals] = useState<IModalObject[]>([]);

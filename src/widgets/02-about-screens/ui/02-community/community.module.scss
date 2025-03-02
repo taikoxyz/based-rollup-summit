@@ -77,20 +77,20 @@
     text-align: center;
 
     opacity: 0;
-    transition: opacity .5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .image_counter {
     width: 1.85em;
     font: 500 65px/1.2 $kFontClashGrotesk;
-    letter-spacing: -.01em;
+    letter-spacing: -0.01em;
     color: $kColorBlack;
 }
 
 .image_dapps {
     font: 600 16px/1.2 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .4);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.4);
     text-transform: uppercase;
 }
 

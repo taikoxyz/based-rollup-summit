@@ -1,3 +1,3 @@
 export enum CareerApiEnum {
-    ALL_POSITIONS = "all-positions"
-};
+    ALL_POSITIONS = "all-positions",
+}

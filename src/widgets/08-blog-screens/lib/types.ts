@@ -1,3 +1,3 @@
 export enum BlogApiKeys {
-    ALL_BLOGS = "all-blogs"
-};
+    ALL_BLOGS = "all-blogs",
+}

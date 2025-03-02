@@ -10,13 +10,13 @@
     height: 27px;
     flex-shrink: 0;
     border-radius: 50%;
-    background: #F2F2F2;
+    background: #f2f2f2;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    transition: background .1s ease;
+    transition: background 0.1s ease;
 
     svg {
         width: 13px;
@@ -28,19 +28,19 @@
     }
 
     &:hover {
-        background: darken(#F2F2F2, 5%);
+        background: darken(#f2f2f2, 5%);
     }
 }
 
 .monthBtn {
     font: 500 20px/1.02 $kFontClashGrotesk;
-    color: #4F4F4F;
+    color: #4f4f4f;
     padding: 4px 6px;
     border-radius: 4px;
 
-    transition: background .1s ease;
+    transition: background 0.1s ease;
 
     &:hover {
-        background: rgba(#4F4F4F, .05);
+        background: rgba(#4f4f4f, 0.05);
     }
 }

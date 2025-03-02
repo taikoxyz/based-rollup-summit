@@ -1,7 +1,7 @@
 .career {
     padding: 40px 36px;
     border-radius: 20px;
-    background: #FFF;
+    background: #fff;
 
     display: flex;
     align-items: center;
@@ -40,8 +40,8 @@
 
 .text {
     font: 400 16px/1.72 $kFontPublicSans;
-    letter-spacing: -.02em;
-    color: rgba($kColorBlack, .6);
+    letter-spacing: -0.02em;
+    color: rgba($kColorBlack, 0.6);
 }
 
 .link {
@@ -105,7 +105,7 @@
                     width: 5px;
                     height: 5px;
                     border-radius: 50%;
-                    background: rgba(#3C4049, .2);
+                    background: rgba(#3c4049, 0.2);
                 }
             }
         }

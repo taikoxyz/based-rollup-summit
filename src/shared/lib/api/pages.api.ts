@@ -17,4 +17,4 @@ export const pagesApi = {
         const { data } = await instance.get<AlethiaGwynethData>("/gwyneth-page");
         return data;
     },
-}
+};

@@ -1,7 +1,7 @@
 .wrapper {
     padding: 115px 22px 46px;
     border-radius: 20px;
-    background: #FFF;
+    background: #fff;
     display: flex;
 }
 
@@ -22,14 +22,13 @@
 
 .title {
     max-width: 550px;
-    font: 500 55px/.9 $kFontClashGrotesk;
-    color: #22282B;
+    font: 500 55px/0.9 $kFontClashGrotesk;
+    color: #22282b;
 }
 
 .button {
     white-space: nowrap;
 }
-
 
 @media screen and (max-width: $kLaptopM) {
     .title {
@@ -89,7 +88,7 @@
     }
 
     .wrapper {
-        gap: 28px;;
+        gap: 28px;
     }
 
     .right {

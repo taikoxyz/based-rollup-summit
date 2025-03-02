@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
-import { HydrationBoundary, QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { appWithTranslation } from 'next-i18next';
-import { withApp } from 'app/providers/withApp';
-import type { AppProps } from 'next/app';
-import { withModal } from 'shared/ui/modal2';
-import { animateOnScroll } from 'shared/lib/utils/aos';
-import 'swiper/css';
-import 'app/scss/index.scss';
+import { useEffect, useState } from "react";
+import { appWithTranslation } from "next-i18next";
+import type { AppProps } from "next/app";
+import { HydrationBoundary, QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { withApp } from "app/providers/withApp";
+import "app/scss/index.scss";
+import { animateOnScroll } from "shared/lib/utils/aos";
+import { withModal } from "shared/ui/modal2";
+import "swiper/css";
 
 const App = ({ Component, pageProps }: AppProps) => {
     const [queryClient] = useState(
@@ -23,8 +23,8 @@ const App = ({ Component, pageProps }: AppProps) => {
     useEffect(() => {
         const animate = animateOnScroll({
             activeClass: "--animate",
-            triggerClass: 'aos',
-            triggerOnce: true
+            triggerClass: "aos",
+            triggerOnce: true,
         });
 
         return () => animate.destroy();

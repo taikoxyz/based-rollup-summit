@@ -42,7 +42,7 @@
 .banner {
     margin-top: 44px;
 
-    [data-class='banner'] {
+    [data-class="banner"] {
         @include setStrokeGradient(
             linear-gradient(#fff, #fff),
             linear-gradient(to right, #ea36a4, #f997d0)

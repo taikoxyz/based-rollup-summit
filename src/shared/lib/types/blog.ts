@@ -23,12 +23,12 @@ export interface IBlogShort {
 export type IBlogsNear = {
     prev: IBlogShort | null;
     next: IBlogShort | null;
-}
+};
 
 export type IBlogCategory = {
     id: number;
     name: string;
-}
+};
 
 export type IBlogCategoryResponse = IServerResponse<IBlogCategory>;
 

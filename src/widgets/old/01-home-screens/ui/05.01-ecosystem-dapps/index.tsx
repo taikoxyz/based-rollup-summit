@@ -1,39 +1,33 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from "gsap"
-import { useTranslation } from 'next-i18next';
-import { useAos } from 'shared/lib/hooks/use-aos';
-import css from './ecosystem-dapps.module.scss';
-import clsx from 'clsx';
-import Image from 'shared/ui/image';
+import React, { useEffect, useRef } from "react";
+import { useTranslation } from "next-i18next";
+import clsx from "clsx";
+import gsap from "gsap";
+import { useAos } from "shared/lib/hooks/use-aos";
+import Image from "shared/ui/image";
+import css from "./ecosystem-dapps.module.scss";
 
-const EcosystemDapps: React.FC= () => {
+const EcosystemDapps: React.FC = () => {
     const { ref, inView } = useAos();
     const spanRef = useRef<HTMLSpanElement>(null);
-    const { t } = useTranslation('home');
+    const { t } = useTranslation("home");
 
     useEffect(() => {
-        if(spanRef.current && inView) {
+        if (spanRef.current && inView) {
             const current = { var: +(spanRef.current.textContent || 0) };
 
             gsap.to(current, 2, {
                 var: 100,
-                onUpdate: function() {
+                onUpdate: function () {
                     spanRef.current!.innerHTML = `${Math.ceil(current.var)}`;
-                }
+                },
             });
         }
     }, [inView]);
 
     return (
-        <div 
-            className={clsx(
-                css.dapps,
-                inView && css.dappsActive
-            )} 
-            ref={ref}
-        >
+        <div className={clsx(css.dapps, inView && css.dappsActive)} ref={ref}>
             <div className={css.logos}>
-                {[1,2,3,4].map((id) => (
+                {[1, 2, 3, 4].map((id) => (
                     <Image.Default
                         loading="lazy"
                         className={css.logos_item}
@@ -48,12 +42,10 @@ const EcosystemDapps: React.FC= () => {
                 <h3 className={css.title}>
                     <span ref={spanRef}>60</span>+
                 </h3>
-                <p className={css.text}>
-                    {t('ecosystem.dapps')}
-                </p>
+                <p className={css.text}>{t("ecosystem.dapps")}</p>
             </div>
         </div>
     );
-}
+};
 
 export default EcosystemDapps;

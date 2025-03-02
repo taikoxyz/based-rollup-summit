@@ -173,12 +173,9 @@ export const getOneLevelLinks = (group = false) => {
         .map((item) => {
             const links: INavItemLink[] = [];
 
-            if(group) {
-
+            if (group) {
                 links.push(...item.links);
-
             } else {
-
                 for (const { children, ...child } of item.links) {
                     if (children) {
                         links.push(...(children as any));
@@ -186,7 +183,6 @@ export const getOneLevelLinks = (group = false) => {
                         links.push(child);
                     }
                 }
-
             }
 
             return {

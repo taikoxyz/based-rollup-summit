@@ -1,10 +1,10 @@
 import React from "react";
 import { RangeCalendarProps } from "../../lib/types";
 import { WithCalendar } from "../../provider";
-import { CalendarHead } from "../calendar-head";
 import { CalendarBody } from "../calendar-body";
-import css from "./range-calendar.module.scss";
+import { CalendarHead } from "../calendar-head";
 import { CalendarTooltips } from "../calendar-tooltips";
+import css from "./range-calendar.module.scss";
 
 export const RangeCalendar: React.FC<RangeCalendarProps> = ({
     onApply,

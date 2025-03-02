@@ -1,8 +1,17 @@
+import { Schedule } from "../ui";
+
 export const HOME_PAG = {
     HERO: "hero",
+    ABOUT: "about",
+    ATTEND: "attend",
+    TOPICS: "topics",
+    SPEAKERS: "speakers",
+    SCHEDULE: "schedule",
+    FUTURE: "future",
+    CLOUD: "cloud",
+
     SCALING: "scaling",
     EXPLORE: "explore",
-    ABOUT: "about",
     JOURNEY: "journey",
-    GOVERNANCE: "governance"
+    GOVERNANCE: "governance",
 } as const;

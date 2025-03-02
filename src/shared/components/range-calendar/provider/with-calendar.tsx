@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { CalendarContext, createCalendarState } from "./context";
 import { RangeCalendarValue } from "../lib/types";
+import { CalendarContext, createCalendarState } from "./context";
 
 interface Props {
     value?: RangeCalendarValue;
@@ -11,14 +11,12 @@ export const WithCalendar: React.FC<Props> = ({ children, value }) => {
     const [state, setState] = useState(createCalendarState(value));
 
     useEffect(() => {
-        if(value) {
+        if (value) {
             setState({ ...state });
         }
     }, [value]);
 
     return (
-        <CalendarContext.Provider value={{ state, setState }}>
-            {children}
-        </CalendarContext.Provider>
-    )
-}
+        <CalendarContext.Provider value={{ state, setState }}>{children}</CalendarContext.Provider>
+    );
+};

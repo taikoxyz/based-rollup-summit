@@ -18,7 +18,7 @@
 .box {
     padding: 40px 32px 55px;
     border-radius: 31px;
-    background: #FFF;
+    background: #fff;
 
     position: relative;
     z-index: 2;
@@ -62,8 +62,8 @@
 
 .content_text {
     font: 400 16px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .8);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.8);
 
     p {
     }
@@ -159,7 +159,7 @@
     .box {
         padding: 40px 24px;
     }
-    
+
     .content {
         margin-top: 32px;
     }

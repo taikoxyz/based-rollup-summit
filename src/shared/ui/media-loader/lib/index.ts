@@ -1,1 +1,1 @@
-export { default as mediaLoader } from './loader';
+export { default as mediaLoader } from "./loader";

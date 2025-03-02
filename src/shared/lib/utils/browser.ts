@@ -3,6 +3,6 @@ export function css<T extends HTMLElement>(element: T, styles: Partial<CSSStyleD
 }
 
 export const executeOnReadyPage = (fn: () => any) => {
-    if (document.readyState === 'complete') fn();
-    else window.addEventListener('load', () => fn());
+    if (document.readyState === "complete") fn();
+    else window.addEventListener("load", () => fn());
 };

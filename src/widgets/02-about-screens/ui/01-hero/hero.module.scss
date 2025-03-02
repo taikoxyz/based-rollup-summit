@@ -7,8 +7,8 @@
     margin: 0 auto;
     max-width: 900px;
 
-    font: 500 60px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
+    font: 500 60px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
     color: #000;
 
     span {
@@ -18,7 +18,7 @@
 }
 
 @media screen and (max-width: $kLaptopSM) {
-    .hero {    
+    .hero {
         padding-top: 35px;
     }
 

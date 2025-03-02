@@ -1,9 +1,9 @@
-import { IBlog, IBlogsNear, IBlogsResponse } from "../types";
 import { instance } from "../utils/instance";
+import { IBlog, IBlogsNear, IBlogsResponse } from "../types";
 
 export const blogApi = {
     async getAll(query?: string) {
-        const { data } = await instance.get<IBlogsResponse>('/blogs' + (query ? `?${query}` : ''));
+        const { data } = await instance.get<IBlogsResponse>("/blogs" + (query ? `?${query}` : ""));
         return data;
     },
 
@@ -15,5 +15,5 @@ export const blogApi = {
     async near(id: number) {
         const { data } = await instance.get<IBlogsNear>(`/blogs/${id}/near`);
         return data;
-    }
+    },
 };

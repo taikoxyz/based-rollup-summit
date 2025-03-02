@@ -1,39 +1,37 @@
 import React, { useMemo } from "react";
-import dayjs from "dayjs";
 import { Week, createCalendar } from "../../lib";
+import { RangeCalendarProps, RangeCalendarValue } from "../../lib/types";
 import { useCalendarActions, useCalendarState } from "../../provider";
 import { CalendarDay } from "../calendar-day";
-import { RangeCalendarProps, RangeCalendarValue } from "../../lib/types";
+import dayjs from "dayjs";
 import css from "./calendar-body.module.scss";
 
-type Props = Omit<RangeCalendarProps, 'value' | 'onApply' | 'onCancel'>;
+type Props = Omit<RangeCalendarProps, "value" | "onApply" | "onCancel">;
 
-export const CalendarBody: React.FC<Props> = ({
-    onChange
-}) => {
-    const { currentDate, value: [fromDate, toDate] } = useCalendarState();
+export const CalendarBody: React.FC<Props> = ({ onChange }) => {
+    const {
+        currentDate,
+        value: [fromDate, toDate],
+    } = useCalendarState();
     const { changeValue } = useCalendarActions();
 
-    const calendar = useMemo(
-        () => createCalendar(currentDate),
-        [currentDate]
-    );
+    const calendar = useMemo(() => createCalendar(currentDate), [currentDate]);
 
     const range = useMemo(
         () => ({
             from: fromDate ? dayjs(fromDate) : null,
-            to: toDate ? dayjs(toDate) : null
+            to: toDate ? dayjs(toDate) : null,
         }),
         [fromDate, toDate]
     );
 
     const handleClickDay = (date: string) => {
         const day = dayjs(date);
-        const dayFormat = day.format('YYYY-MM-DD');
+        const dayFormat = day.format("YYYY-MM-DD");
 
         let val: RangeCalendarValue;
 
-        if(fromDate && !toDate && dayFormat !== fromDate && dayjs(fromDate) < day) {
+        if (fromDate && !toDate && dayFormat !== fromDate && dayjs(fromDate) < day) {
             val = [fromDate, dayFormat];
         } else {
             val = [dayFormat, null];
@@ -41,33 +39,33 @@ export const CalendarBody: React.FC<Props> = ({
 
         onChange?.(val);
         changeValue(val);
-    }
+    };
 
     const checkInRange = (date: string) => {
-        if(!range.from || !range.to) return false;
-        
+        if (!range.from || !range.to) return false;
+
         const day = dayjs(date);
 
         return day <= range.to && day >= range.from;
-    }
+    };
 
     const checkStartRange = (date: string) => {
-        if(!range.from) return false;
+        if (!range.from) return false;
 
-        return range.from.format('YYYY-MM-DD') === dayjs(date).format('YYYY-MM-DD');
-    }
+        return range.from.format("YYYY-MM-DD") === dayjs(date).format("YYYY-MM-DD");
+    };
 
     const checkEndRange = (date: string) => {
-        if(!range.to) return false;
+        if (!range.to) return false;
 
-        return range.to.format('YYYY-MM-DD') === dayjs(date).format('YYYY-MM-DD');
-    }
+        return range.to.format("YYYY-MM-DD") === dayjs(date).format("YYYY-MM-DD");
+    };
 
     return (
         <div className={`calendar-body ${css.body}`}>
             <ul className={`calendar-row calendar-row-title ${css.row} ${css.rowTitle}`}>
                 {Week.map((item) => (
-                    <li 
+                    <li
                         className={`calendar-row-item calendar-row-item-title ${css.row_item} ${css.row_itemTitle}`}
                         key={item}
                     >
@@ -76,16 +74,10 @@ export const CalendarBody: React.FC<Props> = ({
                 ))}
             </ul>
             {calendar.map((week, id) => (
-                <ul 
-                    className={`calendar-row ${css.row}`}
-                    key={id}
-                >
+                <ul className={`calendar-row ${css.row}`} key={id}>
                     {week.map((day) => (
-                        <li 
-                            className={`calendar-row-item ${css.row_item}`}
-                            key={day.date}
-                        >
-                            <CalendarDay 
+                        <li className={`calendar-row-item ${css.row_item}`} key={day.date}>
+                            <CalendarDay
                                 date={day.date}
                                 day={day.day}
                                 isToday={day.isToday}

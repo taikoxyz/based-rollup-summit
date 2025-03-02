@@ -12,8 +12,8 @@
 }
 
 .title {
-    font: 500 40px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
+    font: 500 40px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
     color: $kColorBlack;
 
     display: flex;
@@ -22,7 +22,7 @@
 
     span {
         max-width: 240px;
-    
+
         span {
             color: $kColorPink;
         }
@@ -41,8 +41,8 @@
     max-width: 270px;
 
     font: 400 16px/1.2 $kFontPublicSans;
-    letter-spacing: -.02em;
-    color: rgba($kColorBlack, .6);
+    letter-spacing: -0.02em;
+    color: rgba($kColorBlack, 0.6);
 }
 
 .list {

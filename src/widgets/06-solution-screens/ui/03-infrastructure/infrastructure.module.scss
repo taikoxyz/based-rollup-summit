@@ -15,7 +15,7 @@
 .list_item {
     padding: 40px 24px 24px 32px;
     border-radius: 30px;
-    background: #FFF;
+    background: #fff;
 
     display: flex;
     flex-direction: column;
@@ -37,9 +37,9 @@
 
 .list_title {
     margin-top: 36px;
-    font: 500 52px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: #22282B;
+    font: 500 52px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
+    color: #22282b;
 }
 
 .list_spacer {
@@ -58,10 +58,10 @@
 .list_text {
     margin-top: 36px;
     padding-right: 214px;
-    
+
     font: 500 16px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .6);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.6);
 }
 
 .list_controls {
@@ -135,7 +135,7 @@
 
         &::before,
         &::after {
-            display: none
+            display: none;
         }
     }
 }
@@ -148,8 +148,8 @@
 
     .list_index {
         font: 600 20px/1.4 $kFontClashGrotesk;
-        letter-spacing: -.03em;
-        color: rgba(#000, .2);
+        letter-spacing: -0.03em;
+        color: rgba(#000, 0.2);
     }
 
     .list_text {

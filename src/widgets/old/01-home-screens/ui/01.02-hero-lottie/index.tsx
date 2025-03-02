@@ -16,7 +16,7 @@ const HeroLottie: React.FC = () => {
                         className={css.lottie}
                         src="/img/intro-loop.json"
                         rendererSettings={{
-                            preserveAspectRatio: 'xMidYMid slice',
+                            preserveAspectRatio: "xMidYMid slice",
                         }}
                         autoplay
                         loop
@@ -31,7 +31,7 @@ const HeroLottie: React.FC = () => {
                         className={css.lottie}
                         src="/img/intro-loop-mob.json"
                         rendererSettings={{
-                            preserveAspectRatio: 'xMidYMid slice',
+                            preserveAspectRatio: "xMidYMid slice",
                         }}
                         autoplay
                         loop
@@ -46,7 +46,7 @@ const HeroLottie: React.FC = () => {
                         className={css.lottie}
                         src="/img/intro-loop-mob.v3.json"
                         rendererSettings={{
-                            preserveAspectRatio: 'xMidYMid slice',
+                            preserveAspectRatio: "xMidYMid slice",
                         }}
                         autoplay
                         loop

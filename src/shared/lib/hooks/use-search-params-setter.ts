@@ -1,5 +1,5 @@
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const useSearchParamsSetter = () => {
     const searchParams = useSearchParams();
@@ -7,11 +7,10 @@ const useSearchParamsSetter = () => {
     const router = useRouter();
 
     const pushSearchParams = useCallback(
-        (params: URLSearchParams | ((current: URLSearchParams) => URLSearchParams | null),
-        ) => {
+        (params: URLSearchParams | ((current: URLSearchParams) => URLSearchParams | null)) => {
             let next: URLSearchParams | null;
             const current = new URLSearchParams((searchParams as any) || undefined);
-            if (typeof params === 'function') {
+            if (typeof params === "function") {
                 next = params(current);
             } else {
                 next = params;
@@ -22,42 +21,47 @@ const useSearchParamsSetter = () => {
             const nextUrl = pathname + "?" + next.toString();
             router.push(nextUrl, { scroll: false });
             return { nextUrl, next };
-        }, [searchParams, pathname]);
+        },
+        [searchParams, pathname]
+    );
 
-    const pushSearchParamsKeyValue = useCallback((key: string, value: ParamValue, { deleteKeys }: CallbackOptions = {}) => {
-        return pushSearchParams((current) => {
-            switch (typeof deleteKeys) {
-                case 'string':
-                    if (deleteKeys === 'all') {
-                        current = new URLSearchParams();
-                    }
-                    break;
-                case 'object':
-                    if (Array.isArray(deleteKeys)) {
-                        for (const deleteKey of deleteKeys) {
-                            current.delete(deleteKey);
+    const pushSearchParamsKeyValue = useCallback(
+        (key: string, value: ParamValue, { deleteKeys }: CallbackOptions = {}) => {
+            return pushSearchParams((current) => {
+                switch (typeof deleteKeys) {
+                    case "string":
+                        if (deleteKeys === "all") {
+                            current = new URLSearchParams();
                         }
-                    }
-                    break;
-            }
-            return setParam(current, key, value);
-        });
-    }, [pushSearchParams]);
+                        break;
+                    case "object":
+                        if (Array.isArray(deleteKeys)) {
+                            for (const deleteKey of deleteKeys) {
+                                current.delete(deleteKey);
+                            }
+                        }
+                        break;
+                }
+                return setParam(current, key, value);
+            });
+        },
+        [pushSearchParams]
+    );
 
     return { pushSearchParams, pushSearchParamsKeyValue, searchParams: searchParams };
 };
 
 const setParam = (params: URLSearchParams, key: string, value: ParamValue, append = false) => {
-    if (value === null || value === '') {
+    if (value === null || value === "") {
         params.delete(key);
         return params;
     }
     // Normalize the tags parameter to lowercase
-    if (key === 'tags' && typeof value === 'string') {
+    if (key === "tags" && typeof value === "string") {
         value = value.toLowerCase();
     }
     switch (typeof value) {
-        case 'object':
+        case "object":
             if (Array.isArray(value)) {
                 params.delete(key);
                 for (const vv of value) {
@@ -79,12 +83,12 @@ type ParamValue = SerializableParamValue | SerializableParamValue[] | null;
 type SerializableParamValue = string | number | boolean;
 const _serializeParam = (value: SerializableParamValue): string => {
     switch (typeof value) {
-        case 'string':
+        case "string":
             return value;
-        case 'number':
+        case "number":
             return value.toString();
-        case 'boolean':
-            return value ? 'y' : 'n';
+        case "boolean":
+            return value ? "y" : "n";
     }
 };
 
@@ -96,7 +100,7 @@ const _serializeParam = (value: SerializableParamValue): string => {
 // };
 
 type CallbackOptions = {
-    deleteKeys?: 'all' | string[]
+    deleteKeys?: "all" | string[];
 };
 
 export default useSearchParamsSetter;

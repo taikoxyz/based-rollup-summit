@@ -13,8 +13,8 @@
 }
 
 .title {
-    font: 500 75px/.84 $kFontClashGrotesk;
-    color: #22282B;
+    font: 500 75px/0.84 $kFontClashGrotesk;
+    color: #22282b;
 }
 
 .filterBtn {
@@ -26,8 +26,8 @@
     gap: 0.5em;
 
     svg {
-        width: .875em;
-        height: .875em;
+        width: 0.875em;
+        height: 0.875em;
         stroke: $kColorBlack;
         transform: rotate(90deg);
     }

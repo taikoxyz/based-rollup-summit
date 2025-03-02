@@ -1,11 +1,11 @@
-import dayjs from 'dayjs';
-import { ICalendarContext, ICalendarState, Optional } from './types';
-import { createContext, useContext } from 'react';
-import { RangeCalendarValue } from '../lib/types';
+import { createContext, useContext } from "react";
+import { RangeCalendarValue } from "../lib/types";
+import dayjs from "dayjs";
+import { ICalendarContext, ICalendarState, Optional } from "./types";
 
 export const createCalendarState = (value?: RangeCalendarValue): ICalendarState => ({
-    currentDate: dayjs().format('YYYY-MM-DD'),
-    value: value || [null, null]
+    currentDate: dayjs().format("YYYY-MM-DD"),
+    value: value || [null, null],
 });
 
 export const CalendarContext = createContext<ICalendarContext>({
@@ -18,11 +18,11 @@ export const useCalendarState = () => useContext(CalendarContext).state;
 export const useCalendarActions = () => {
     const { state, setState: setStateDefault } = useContext(CalendarContext);
 
-    const setState = (values: Optional<ICalendarState>) => setStateDefault({ ...state, ...values })
+    const setState = (values: Optional<ICalendarState>) => setStateDefault({ ...state, ...values });
 
     const resetState = () => setStateDefault(createCalendarState());
 
-    const changeDate = (currentDate: typeof state.currentDate) => setState({ currentDate }); 
+    const changeDate = (currentDate: typeof state.currentDate) => setState({ currentDate });
 
     const changeValue = (value: RangeCalendarValue) => setState({ value });
 
@@ -30,6 +30,6 @@ export const useCalendarActions = () => {
         setState,
         resetState,
         changeDate,
-        changeValue
+        changeValue,
     };
-}
+};

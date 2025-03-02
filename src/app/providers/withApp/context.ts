@@ -1,5 +1,5 @@
-import { createAppState } from './state';
 import { createContext } from "react";
+import { createAppState } from "./state";
 import { IAppContext } from "./types";
 
 export const AppContext = createContext<IAppContext>([
@@ -7,6 +7,6 @@ export const AppContext = createContext<IAppContext>([
     () => null,
     {
         resetState: () => null,
-        setStateValue: () => null
-    }
-])
+        setStateValue: () => null,
+    },
+]);

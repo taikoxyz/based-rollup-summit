@@ -1,5 +1,5 @@
-import { IFileObject } from './file';
-import { IBaseFields, IServerResponse } from './global';
+import { IFileObject } from "./file";
+import { IBaseFields, IServerResponse } from "./global";
 
 export interface IProject extends IBaseFields {
     icon: IFileObject;
@@ -8,13 +8,13 @@ export interface IProject extends IBaseFields {
     description: string;
     type: "Testnet" | "Coming Soon" | "Mainnet";
     project_categories: IProjectCategory[];
-} 
+}
 
 export interface IProjectCategory extends IBaseFields {
     name: string;
     projects?: {
         count: number;
-    }
+    };
 }
 
 export type IProjectCategoriesResponse = IServerResponse<IProject>;

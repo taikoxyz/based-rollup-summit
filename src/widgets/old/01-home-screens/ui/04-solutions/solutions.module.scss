@@ -26,7 +26,7 @@
 
     &::before,
     &::after {
-        content: '';
+        content: "";
         display: block;
         width: 35px;
         height: 35px;
@@ -70,7 +70,9 @@
     letter-spacing: -0.02em;
     color: #22282b;
 
-    b, strong, span {
+    b,
+    strong,
+    span {
         font-weight: 600;
     }
 }
@@ -172,7 +174,10 @@
     color: rgba(#22282b, 0.3);
     width: 320px;
     max-width: calc(100% - 103px);
-    transition: color 0.3s ease, opacity 0.75s ease, transform 0.75s ease;
+    transition:
+        color 0.3s ease,
+        opacity 0.75s ease,
+        transform 0.75s ease;
     transform: translateX(20px);
     opacity: 0;
 

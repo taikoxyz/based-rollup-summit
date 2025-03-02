@@ -27,7 +27,7 @@ export class SequentialDotsGroup {
 
     constructor(
         context: CanvasRenderingContext2D,
-        canvas: HTMLCanvasElement, 
+        canvas: HTMLCanvasElement,
         options: GroupOptions
     ) {
         this.ctx = context;
@@ -62,7 +62,7 @@ export class SequentialDotsGroup {
                 dot.alpha = alpha;
                 dot.y += this.options.moveSpeed;
 
-                if(dot.y + this.options.dotSize > this.canvas.height) {
+                if (dot.y + this.options.dotSize > this.canvas.height) {
                     dot.y = -this.options.dotSize;
                 }
             } else {

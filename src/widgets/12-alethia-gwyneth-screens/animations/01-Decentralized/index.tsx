@@ -22,7 +22,15 @@ export const Decentralized: React.FC<Props> = ({ className }) => {
             <rect x="122" y="123" width="60" height="60" stroke="#E4E4E4" strokeWidth="4" />
             <rect x="122" y="183" width="60" height="60" stroke="#E4E4E4" strokeWidth="4" />
             <rect x="182" y="183" width="60" height="60" stroke="#E4E4E4" strokeWidth="4" />
-            <rect x="2" y="2" width="60" height="60" stroke="#0B101B" strokeWidth="4" opacity="0.15" />
+            <rect
+                x="2"
+                y="2"
+                width="60"
+                height="60"
+                stroke="#0B101B"
+                strokeWidth="4"
+                opacity="0.15"
+            />
             <g className="adec-block">
                 <path
                     d="M92.438 143.645V164.357"
@@ -38,14 +46,7 @@ export const Decentralized: React.FC<Props> = ({ className }) => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                 />
-                <rect 
-                    x="62" 
-                    y="123" 
-                    width="60" 
-                    height="60" 
-                    stroke="#6438D6" 
-                    strokeWidth="4"
-                />
+                <rect x="62" y="123" width="60" height="60" stroke="#6438D6" strokeWidth="4" />
             </g>
             <g className="adec-block">
                 <path

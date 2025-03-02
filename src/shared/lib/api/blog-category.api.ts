@@ -1,9 +1,9 @@
-import { IBlogCategoryResponse } from '../types';
-import { instance } from '../utils/instance';
+import { instance } from "../utils/instance";
+import { IBlogCategoryResponse } from "../types";
 
 export const blogCategoryApi = {
     async getAll() {
-        const { data } = await instance<IBlogCategoryResponse>('/blog-categories');
+        const { data } = await instance<IBlogCategoryResponse>("/blog-categories");
         return data;
     },
 };

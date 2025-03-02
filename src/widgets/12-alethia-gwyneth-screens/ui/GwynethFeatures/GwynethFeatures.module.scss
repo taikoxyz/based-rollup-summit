@@ -15,7 +15,7 @@
 }
 
 .features_item {
-    background: #FFF;
+    background: #fff;
     border-radius: 10px;
 
     padding: 28px 28px 36px;
@@ -30,12 +30,12 @@
             grid-column: 1 / span 1;
             grid-row: 1 / span 2;
         }
-    
+
         &:nth-child(2) {
             grid-column: 2 / span 1;
             grid-row: 1 / span 1;
         }
-    
+
         &:nth-child(3) {
             grid-column: 3 / span 1;
             grid-row: 1 / span 2;

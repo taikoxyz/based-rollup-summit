@@ -1,2 +1,2 @@
-export { FooterNav } from './footer-nav';
-export { FooterSocials } from './footer-socials';
+export { FooterNav } from "./footer-nav";
+export { FooterSocials } from "./footer-socials";

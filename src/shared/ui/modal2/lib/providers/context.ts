@@ -8,6 +8,6 @@ export const ModalContext = createContext<IModalContext>({
     getModal: () => null,
     addToList: () => null,
     removeFromList: () => null,
-    closeModal: () => null,  
-    closeAllModals: () => null
+    closeModal: () => null,
+    closeAllModals: () => null,
 });

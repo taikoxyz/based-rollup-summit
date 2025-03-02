@@ -1,15 +1,15 @@
-import React from 'react';
-import { useTranslation } from 'next-i18next';
-import css from './footer.module.scss';
-import { FooterNav, FooterSocials } from './ui';
+import React from "react";
+import { useTranslation } from "next-i18next";
+import { FooterNav, FooterSocials } from "./ui";
+import css from "./footer.module.scss";
 
 interface Props {
     subscribeBar?: boolean;
 }
 
 export const Footer: React.FC<Props> = () => {
-    const { t } = useTranslation('footer');
-    
+    const { t } = useTranslation("footer");
+
     return (
         <div className={css.footer}>
             <div className="container">
@@ -17,9 +17,9 @@ export const Footer: React.FC<Props> = () => {
                     {/* {subscribeBar && <FooterSubscribe />} */}
 
                     <div className={css.box}>
-                        <p 
-                            className={css.title} 
-                            dangerouslySetInnerHTML={{ __html: t('joinTaiko') }} 
+                        <p
+                            className={css.title}
+                            dangerouslySetInnerHTML={{ __html: t("joinTaiko") }}
                         />
                         <FooterSocials />
                         <FooterNav />
@@ -28,4 +28,4 @@ export const Footer: React.FC<Props> = () => {
             </div>
         </div>
     );
-}
+};

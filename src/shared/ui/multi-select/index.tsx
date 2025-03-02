@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import React from 'react';
-import css from './multi-select.module.scss';
+import React from "react";
+import clsx from "clsx";
+import css from "./multi-select.module.scss";
 
 export interface SelectItem {
     value: string | number | object;
@@ -12,18 +12,20 @@ interface MultiSelectProps<T> {
     values: T[];
     options: T[];
     onChange: (data: T[], current: T) => void;
-    className?: string | {
-        root?: string;
-        list?: string;
-        item?: string;
-        itemDeactivate?: string;
-        itemActive?: string;
-    };
+    className?:
+        | string
+        | {
+              root?: string;
+              list?: string;
+              item?: string;
+              itemDeactivate?: string;
+              itemActive?: string;
+          };
     disabled?: boolean;
     renderElement?: (item: T, active?: boolean) => JSX.Element;
 }
 
-export const MultiSelect = function<T extends SelectItem>({
+export const MultiSelect = function <T extends SelectItem>({
     onChange,
     options,
     values,
@@ -31,27 +33,23 @@ export const MultiSelect = function<T extends SelectItem>({
     disabled,
     renderElement,
 }: MultiSelectProps<T>) {
-    const clss = typeof className === 'object' ? className : { root: className };
+    const clss = typeof className === "object" ? className : { root: className };
 
-    const inList = (item: T) => values.findIndex(o => o.value === item.value) !== -1;
+    const inList = (item: T) => values.findIndex((o) => o.value === item.value) !== -1;
 
     const changeValues = (item: T) => {
-        const data = inList(item) 
-            ? values.filter(o => o.value !== item.value)
+        const data = inList(item)
+            ? values.filter((o) => o.value !== item.value)
             : [...values, item];
 
         onChange(data, item);
-    }
+    };
 
     return (
-        <div className={clsx(
-                css.root, 
-                clss.root,
-                disabled && css.root_disabled
-            )}>
+        <div className={clsx(css.root, clss.root, disabled && css.root_disabled)}>
             <ul className={clsx(css.list, clss.list)}>
                 {options.map((item) => (
-                    <li 
+                    <li
                         className={clsx(
                             css.list_item,
                             clss.item,
@@ -59,14 +57,16 @@ export const MultiSelect = function<T extends SelectItem>({
                             inList(item) && [css.list_itemActive, clss.itemActive]
                         )}
                         onClick={() => !disabled && !item.deactivated && changeValues(item)}
-                        key={typeof item.value === 'object' ? item.name : item.value}
+                        key={typeof item.value === "object" ? item.name : item.value}
                     >
-                        {renderElement 
-                            ? renderElement(item, inList(item)) 
-                            : <span>{item.name}</span>}
+                        {renderElement ? (
+                            renderElement(item, inList(item))
+                        ) : (
+                            <span>{item.name}</span>
+                        )}
                     </li>
                 ))}
             </ul>
         </div>
     );
-}
+};

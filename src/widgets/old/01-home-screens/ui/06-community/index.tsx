@@ -1,9 +1,9 @@
-import React from 'react';
-import { useTranslation } from 'next-i18next';
-import { Button } from 'shared/components/@buttons/button';
-import { Banner } from 'shared/components/banner';
-import { HomeScreensEnum } from 'widgets/old/01-home-screens/lib/types';
-import css from './community.module.scss';
+import React from "react";
+import { useTranslation } from "next-i18next";
+import { HomeScreensEnum } from "widgets/old/01-home-screens/lib/types";
+import { Button } from "shared/components/@buttons/button";
+import { Banner } from "shared/components/banner";
+import css from "./community.module.scss";
 
 const Community: React.FC = () => {
     const { t } = useTranslation();
@@ -13,10 +13,10 @@ const Community: React.FC = () => {
             <div className="container">
                 <Banner
                     icon="star"
-                    text={t('applyOurGrantsProgram')}
+                    text={t("applyOurGrantsProgram")}
                     button={
                         <Button
-                            text={t('learnMore')}
+                            text={t("learnMore")}
                             href="/grant-program"
                             target="_target"
                             component="a"

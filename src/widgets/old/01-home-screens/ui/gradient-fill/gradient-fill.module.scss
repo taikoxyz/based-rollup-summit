@@ -27,13 +27,12 @@
     border-radius: 50%;
     filter: blur(15px);
 
-    transition: 
-        transform .75s ease,
-        opacity .1s ease .75s;
+    transition:
+        transform 0.75s ease,
+        opacity 0.1s ease 0.75s;
 }
 
 .content {
     position: relative;
     z-index: 2;
 }
-

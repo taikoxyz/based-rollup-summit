@@ -10,16 +10,13 @@ interface Props {
 export const TextSplitter: React.FC<Props> = ({
     text,
     className,
-    tagName: Tag = 'p',
-    splitter = ''
+    tagName: Tag = "p",
+    splitter = "",
 }) => {
     return (
         <Tag className={className}>
             {text.split(splitter).map((letter, id) => (
-                <span 
-                    dangerouslySetInnerHTML={{ __html: letter + splitter }} 
-                    key={letter + id} 
-                />
+                <span dangerouslySetInnerHTML={{ __html: letter + splitter }} key={letter + id} />
             ))}
         </Tag>
     );

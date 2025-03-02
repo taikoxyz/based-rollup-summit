@@ -1,7 +1,7 @@
-import { useCallback } from 'react';
-import { useFormState } from './use-form-state';
-import { UseFormEventElements, UseFormProps } from './types';
-import { validate } from './utils';
+import { useCallback } from "react";
+import { useFormState } from "./use-form-state";
+import { UseFormEventElements, UseFormProps } from "./types";
+import { validate } from "./utils";
 
 export function useForm<F extends object>(props: UseFormProps<F>) {
     const {
@@ -67,18 +67,18 @@ export function useForm<F extends object>(props: UseFormProps<F>) {
                             window.pageYOffset +
                             element.getBoundingClientRect().top -
                             window.innerHeight / 2;
-                        window.scrollTo({ top, behavior: 'smooth' });
+                        window.scrollTo({ top, behavior: "smooth" });
                     }, 300);
                 }
             }
 
-            if(hasErrors) return
+            if (hasErrors) return;
         }
 
         setSubmitting(true);
         const result = props.onSubmit(data.values, { clearValues }, ev);
 
-        if (result && typeof result?.then === 'function' && typeof result?.finally === 'function') {
+        if (result && typeof result?.then === "function" && typeof result?.finally === "function") {
             result.then(() => setSubmitted(true)).finally(() => setSubmitting(false));
         } else {
             setSubmitted(true);

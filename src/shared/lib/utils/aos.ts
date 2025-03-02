@@ -16,11 +16,11 @@ type StrongProps = {
 };
 
 const getDefaultProps = (): StrongProps => ({
-    triggerClass: 'animation',
-    defaultClass: '',
-    activeClass: 'active',
+    triggerClass: "animation",
+    defaultClass: "",
+    activeClass: "active",
     triggerOnce: true,
-    offset: '0',
+    offset: "0",
     onUpdate: () => null,
 });
 
@@ -30,7 +30,7 @@ export const animateOnScroll = (props: Props = {}) => {
 
     const $this = {
         destroy() {
-            window.removeEventListener('scroll', scroll);
+            window.removeEventListener("scroll", scroll);
 
             if (params.defaultClass) {
                 elements.forEach((el) => el.classList.remove(params.defaultClass));
@@ -39,7 +39,7 @@ export const animateOnScroll = (props: Props = {}) => {
     };
 
     const getOffset = (offset: string | number) => {
-        const bps = offset.toString().split('|');
+        const bps = offset.toString().split("|");
 
         let ofs = bps[0];
 
@@ -49,7 +49,7 @@ export const animateOnScroll = (props: Props = {}) => {
             ofs = bps[1];
         }
 
-        if (ofs.includes('%')) {
+        if (ofs.includes("%")) {
             return window.innerHeight * (parseFloat(ofs) / 100);
         }
 
@@ -72,11 +72,11 @@ export const animateOnScroll = (props: Props = {}) => {
 
     const init = () => {
         const els = Array.from(
-            typeof params.triggerClass === 'string'
+            typeof params.triggerClass === "string"
                 ? document.querySelectorAll(`.${params.triggerClass}`)
                 : [params.triggerClass]
         ) as HTMLElement[];
-        
+
         elements.push(...els);
 
         if (params.defaultClass) {
@@ -85,7 +85,7 @@ export const animateOnScroll = (props: Props = {}) => {
 
         scroll();
 
-        window.addEventListener('scroll', scroll);
+        window.addEventListener("scroll", scroll);
     };
 
     setTimeout(() => init(), 300);

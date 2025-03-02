@@ -11,14 +11,14 @@
     align-items: center;
     justify-content: center;
 
-    transition: filter .1s ease;
+    transition: filter 0.1s ease;
 
     font-size: 0;
 
     svg {
         width: 23px;
         height: 23px;
-        fill: #FFF;
+        fill: #fff;
     }
 
     &_prev {
@@ -35,6 +35,6 @@
     }
 
     &:hover:not(:disabled) {
-        filter: brightness(.95);
+        filter: brightness(0.95);
     }
 }

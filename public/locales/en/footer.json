@@ -14,38 +14,45 @@
         {
             "title": "About",
             "list": [
-                { 
-                    "name": "Blog", 
+                {
+                    "name": "Blog",
                     "url": "/blog"
-                }, {
+                },
+                {
                     "name": "Careers",
                     "url": "/careers"
-                }, {
+                },
+                {
                     "name": "Brand kit",
                     "url": "/brand-assets"
                 }
             ]
-        }, {
+        },
+        {
             "title": "Developers",
             "list": [
                 {
                     "name": "Get started",
                     "url": "https://docs.taiko.xyz/start-here/getting-started"
-                }, {
+                },
+                {
                     "name": "GitHub",
                     "url": "https://github.com/taikoxyz"
                 }
             ]
-        }, {
+        },
+        {
             "title": "Solutions",
             "list": [
                 {
                     "name": "Bridge",
                     "url": "https://bridge.taiko.xyz/"
-                }, {
+                },
+                {
                     "name": "Documentation",
                     "url": "https://docs.taiko.xyz/"
-                }, {
+                },
+                {
                     "name": "Explorer",
                     "url": "https://taikoscan.io/"
                 }
@@ -57,19 +64,23 @@
             "icon": "gsocial:discord",
             "name": "discord",
             "url": "https://discord.com/invite/taikoxyz"
-        }, {
+        },
+        {
             "icon": "gsocial:twitter",
             "name": "twitter",
             "url": "https://twitter.com/taikoxyz"
-        }, {
+        },
+        {
             "icon": "gsocial:mirror",
             "name": "mirror",
             "url": "https://taiko.mirror.xyz/"
-        }, {
+        },
+        {
             "icon": "gsocial:taiko",
             "name": "forum",
             "url": "https://community.taiko.xyz/"
-        }, {
+        },
+        {
             "icon": "gsocial:youtube",
             "name": "youtube",
             "url": "https://www.youtube.com/@taikoxyz"

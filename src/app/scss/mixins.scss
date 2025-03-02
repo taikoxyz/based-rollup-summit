@@ -5,13 +5,17 @@
         font-style: $style;
         font-display: swap;
         @if $ttf {
-            src: url('#{$url}.woff2') format('woff2'), url('#{$url}.woff') format('woff'),
-                url('#{$url}.ttf') format('truetype'),
-                url('#{$url}.eot') format('embedded-opentype');
+            src:
+                url("#{$url}.woff2") format("woff2"),
+                url("#{$url}.woff") format("woff"),
+                url("#{$url}.ttf") format("truetype"),
+                url("#{$url}.eot") format("embedded-opentype");
         } @else {
-            src: url('#{$url}.woff2') format('woff2'), url('#{$url}.woff') format('woff'),
-                url('#{$url}.otf') format('opentype'),
-                url('#{$url}.eot') format('embedded-opentype');
+            src:
+                url("#{$url}.woff2") format("woff2"),
+                url("#{$url}.woff") format("woff"),
+                url("#{$url}.otf") format("opentype"),
+                url("#{$url}.eot") format("embedded-opentype");
         }
     }
 }
@@ -107,7 +111,6 @@
     }
 }
 
-
 /* Queries */
 @mixin screen-xs {
     @media screen and (min-width: $xs) {
@@ -150,7 +153,6 @@
         @content;
     }
 }
-
 
 /* Queries min */
 
@@ -223,12 +225,7 @@
 
 // Fonts
 
-@mixin setFontDefault(
-    $font-size: 16px,
-    $leading: 1.25,
-    $letterSpacing: normal,
-    $color: false
-) {
+@mixin setFontDefault($font-size: 16px, $leading: 1.25, $letterSpacing: normal, $color: false) {
     font: 700 $font-size/#{$leading} $default-font;
     letter-spacing: $letterSpacing;
     @if ($color) {
@@ -288,12 +285,7 @@
     }
 }
 
-@mixin setFontOnest500(
-    $font-size: 16px,
-    $leading: 1.25,
-    $letterSpacing: normal,
-    $color: false
-) {
+@mixin setFontOnest500($font-size: 16px, $leading: 1.25, $letterSpacing: normal, $color: false) {
     font: 500 $font-size/#{$leading} $kFontOnest;
     letter-spacing: $letterSpacing;
     @if ($color) {
@@ -301,12 +293,7 @@
     }
 }
 
-@mixin setFontGilroy500(
-    $font-size: 16px,
-    $leading: 1.25,
-    $letterSpacing: normal,
-    $color: false
-) {
+@mixin setFontGilroy500($font-size: 16px, $leading: 1.25, $letterSpacing: normal, $color: false) {
     font: 500 $font-size/#{$leading} $kFontGilroy;
     letter-spacing: $letterSpacing;
     @if ($color) {

@@ -13,9 +13,9 @@
 }
 
 .title {
-    font: 500 75px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: #22282B;
+    font: 500 75px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
+    color: #22282b;
 
     max-width: 7em;
 
@@ -31,8 +31,8 @@
     flex-direction: column;
 
     font: 500 18px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .5);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.5);
 
     span + span {
         margin-top: 1.255em;

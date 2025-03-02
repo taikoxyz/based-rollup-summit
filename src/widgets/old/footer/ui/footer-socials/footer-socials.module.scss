@@ -14,8 +14,8 @@
         width: 34px;
         height: 34px;
         flex-shrink: 0;
-        fill: rgba(#ACACAC, 0.5);
-        transition: fill .2s ease;
+        fill: rgba(#acacac, 0.5);
+        transition: fill 0.2s ease;
     }
 
     .mirror_logo {
@@ -29,7 +29,7 @@
             width: 100%;
             height: auto;
             object-fit: contain;
-            transition: opacity .2s ease;
+            transition: opacity 0.2s ease;
             opacity: 0.3;
         }
     }
@@ -44,7 +44,7 @@
         border-color: $kColorPink;
 
         &:nth-child(1) svg {
-            fill: #5765F1;
+            fill: #5765f1;
         }
         &:nth-child(2) svg {
             fill: black;
@@ -58,7 +58,7 @@
             fill: $kColorPink;
         }
         &:nth-child(5) svg {
-            fill: #FF0000;
+            fill: #ff0000;
         }
     }
 }
@@ -74,7 +74,8 @@
     .socials_link {
         gap: 8px;
 
-        svg, .mirror_logo {
+        svg,
+        .mirror_logo {
             width: 26px;
             height: 26px;
         }
@@ -97,7 +98,7 @@
             display: none;
         }
         svg {
-            fill: #ACACAC;
+            fill: #acacac;
         }
     }
 }

@@ -5,11 +5,11 @@
         .controls_btn {
             transform: scale(0);
             opacity: 0;
-            transition: .8s ease;
+            transition: 0.8s ease;
             transition-property: opacity, transform;
 
             &:nth-child(2) {
-                transition-delay: .15s;
+                transition-delay: 0.15s;
             }
         }
 
@@ -42,7 +42,7 @@
                 transform: translateY(0);
                 opacity: 1;
             }
-    
+
             .controls_btn {
                 transform: scale(1);
                 opacity: 1;
@@ -66,9 +66,9 @@
 }
 
 .title {
-    font: 500 55px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: #22282B;
+    font: 500 55px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
+    color: #22282b;
 }
 
 .controls {

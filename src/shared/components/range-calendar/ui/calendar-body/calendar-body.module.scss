@@ -22,13 +22,11 @@
         user-select: none;
     }
 
-
     &:first-child :global(.calendar-day-in-range)::before {
         border-radius: 76px 0 0 76px;
     }
 
     &:last-child :global(.calendar-day-in-range)::before {
         border-radius: 0 76px 76px 0;
-
     }
 }

@@ -1,0 +1,221 @@
+.speakers {
+    height: auto;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &._animated {
+        .speakers_grid {
+            &::after,
+            &::before {
+                transform: translate(0, -51%);
+            }
+        }
+    }
+}
+
+.speakers_wrapper {
+    max-width: 1120px;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.speakerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1120px;
+    margin: auto;
+    padding: 20px;
+}
+
+.speakers_label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    text-transform: uppercase;
+
+    @include setFontPublicSans600(14px, 1.2, 0.04em, getColorPink());
+}
+
+.speakers_title {
+    max-width: 14.5em;
+    text-align: center;
+    color: #c8047d;
+    @include setFontClashGrotest500(55px, 0.9, -0.02em);
+}
+
+.speakers_text {
+    text-align: center;
+    @include setFontClashGrotest500(55px, 1.255, -0.01em, getColorBlack());
+}
+
+@include -screen-xxxl {
+    .speakers_grid {
+        width: 1360px;
+    }
+    .speakers_title {
+        font-size: 56px;
+    }
+    .speakers_label {
+        bottom: 137%;
+    }
+}
+
+@include -screen-lg {
+    .speakers_grid {
+        width: 1100px;
+    }
+    .speakers_title {
+        font-size: 48px;
+    }
+    .speakers_label {
+        bottom: 131%;
+    }
+    .speakers_text {
+        margin-top: 20px;
+    }
+}
+
+@include -screen-md {
+    .speakers_grid {
+        width: 133%;
+
+        svg {
+            display: none;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .speakers_label {
+        position: relative;
+        inset: auto;
+        text-align: center;
+        transform: none;
+    }
+    .speakers_title {
+        margin-top: 24px;
+    }
+}
+
+@include -screen-sm {
+    .speakers_title {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .speakers_title {
+        font-size: 36px;
+    }
+    .speakers_text {
+        font-size: 14px;
+    }
+}
+
+.speakersText {
+    @include setFontClashGrotest500(55px, 1.255, -0.01em, #191e28);
+}
+
+.speakerGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns */
+    gap: 15px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.profileCard__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 257px;
+    height: 250px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #cacbce;
+    background-color: #e3e3e380;
+}
+
+.profileCard__image img {
+    width: 218px;
+    height: 218px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.profileCard__name {
+    margin-top: 12px;
+    @include setFontClashGrotest500(35px, 1.255, -0.01em, #191e28);
+}
+
+.profileCard__title {
+    @include setFontPublicSans600(18px, 1.2, 0.04em, getColorPink());
+}
+
+.profileCard__company {
+    @include setFontPublicSans400(18px, 1.2, 0.04em, getColorPink());
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .speakerGrid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .speakerGrid {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+    .speakersText {
+        font-size: 40px;
+    }
+    .profileCard__name {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .speakers_wrapper {
+        padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+    .profileCard__image {
+        width: 180px;
+        height: 180px;
+    }
+    .profileCard__image img {
+        width: 150px;
+        height: 150px;
+    }
+    .speakersText {
+        font-size: 32px;
+    }
+    .profileCard__name {
+        font-size: 24px;
+    }
+    .profileCard__title,
+    .profileCard__company {
+        font-size: 14px;
+    }
+}

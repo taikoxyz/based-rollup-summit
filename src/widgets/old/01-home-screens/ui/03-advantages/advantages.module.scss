@@ -18,9 +18,9 @@
         border-radius: 30px;
         flex-shrink: 1;
 
-        background: #EFEFEF;
+        background: #efefef;
 
-        transition: background .75s ease .45s;
+        transition: background 0.75s ease 0.45s;
 
         &:nth-child(even) {
             margin-top: 85px;
@@ -39,7 +39,7 @@
 
     &::before,
     &::after {
-        content: '';
+        content: "";
         display: block;
         width: 30px;
         height: 30px;
@@ -73,8 +73,8 @@
     align-items: center;
     justify-content: center;
 
-    background: #EFEFEF;
-    transition: background .75s ease .45s;
+    background: #efefef;
+    transition: background 0.75s ease 0.45s;
 
     svg {
         width: 16px;
@@ -115,12 +115,11 @@
     }
 }
 
-
 @media screen and (max-width: $kMobileXXL) {
     .advantages {
         padding-bottom: 20px;
     }
-    
+
     .list {
         @include setGrid(1, 32, 32);
 

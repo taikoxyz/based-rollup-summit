@@ -1,1 +1,1 @@
-export { getTextWidthMax } from './getTextWidthMax';
+export { getTextWidthMax } from "./getTextWidthMax";

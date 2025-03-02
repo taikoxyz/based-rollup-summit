@@ -5,8 +5,8 @@ import gsap from "gsap";
 const ExploreTaiko: React.FC<SVGProps<SVGSVGElement>> = (props) => {
     useGSAP(() => {
         gsap.to(".taiko-gradient", {
-            attr: { 
-                gradientTransform: "rotate(-360 190 190)"
+            attr: {
+                gradientTransform: "rotate(-360 190 190)",
             },
             repeat: -1,
             duration: 4,
@@ -14,12 +14,7 @@ const ExploreTaiko: React.FC<SVGProps<SVGSVGElement>> = (props) => {
         });
     });
     return (
-        <svg
-            {...props}
-            viewBox="0 0 325 304"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg {...props} viewBox="0 0 325 304" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="path-1-inside-1_2046_2303" fill="white">
                 <path
                     fillRule="evenodd"

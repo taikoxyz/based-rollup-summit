@@ -19,7 +19,8 @@
                     "webp": "/img/solutions/item-bridge.png"
                 },
                 "url": "https://bridge.taiko.xyz/"
-            }, {
+            },
+            {
                 "icon": "/img/solutions/icon-explorer.svg",
                 "title": "Explorer",
                 "text": "Search and analyze contracts and transactions on the Taiko blockchain.",
@@ -41,7 +42,8 @@
                 "iconLottie": "/img/laptop.json",
                 "text": "BCRs unlock a new paradigm in Ethereum scaling. By combining the superpowers of Ethereum sequencing and integrating a contestation mechanism with a multi-proof design, BCRs maximally reduce transaction costs and increase decentralization.",
                 "url": "https://taiko.mirror.xyz/Z4I5ZhreGkyfdaL5I9P0Rj0DNX4zaWFmcws-0CVMJ2A"
-            }, {
+            },
+            {
                 "title": "Based Booster Rollups — scale natively, compose synchronously",
                 "icon": "/img/solutions/icon-rocket.svg",
                 "iconLottie": "/img/rocket.json",

@@ -2,12 +2,7 @@ import React, { SVGProps } from "react";
 
 const JourneyPath: React.FC<SVGProps<SVGSVGElement>> = (props) => {
     return (
-        <svg
-            {...props}
-            viewBox="0 0 893 1065"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg {...props} viewBox="0 0 893 1065" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask
                 id="mask0_2072_2484"
                 style={{ maskType: "alpha" }}

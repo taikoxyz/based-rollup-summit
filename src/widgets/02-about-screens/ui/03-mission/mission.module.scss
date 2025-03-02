@@ -33,7 +33,7 @@
 .card {
     padding: 36px 32px 42px;
     border-radius: 31px;
-    background: #FFF;
+    background: #fff;
     position: relative;
     z-index: 1;
 }
@@ -49,9 +49,9 @@
     margin-top: 96px;
 
     max-width: 620px;
-    font: 500 75px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
-    color: #22282B;
+    font: 500 75px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
+    color: #22282b;
 }
 
 .card_text {
@@ -59,14 +59,14 @@
     max-width: 480px;
 
     font: 500 18px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .8);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.8);
 }
 
 .info {
     padding: 26px 16px 55px 32px;
     border-radius: 25px;
-    background: #EFEFEF;
+    background: #efefef;
 
     position: relative;
 }
@@ -107,7 +107,7 @@
     width: 52px;
     height: 52px;
     border-radius: 50px;
-    background: #EFEFEF;
+    background: #efefef;
     position: relative;
     z-index: 2;
 
@@ -124,8 +124,8 @@
 
 .info_suptitle {
     font: 600 12px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
-    color: rgba($kColorBlack, .6);
+    letter-spacing: -0.01em;
+    color: rgba($kColorBlack, 0.6);
     text-transform: uppercase;
 }
 
@@ -137,7 +137,7 @@
 
 .info_percent {
     font: 500 60px/1 $kFontClashGrotesk;
-    letter-spacing: -.01em;
+    letter-spacing: -0.01em;
     color: $kColorBlack;
     padding-right: 37px;
 
@@ -148,7 +148,7 @@
         display: block;
         width: 1px;
         height: 90%;
-        background: rgba(#000, .2);
+        background: rgba(#000, 0.2);
         position: absolute;
         right: 0;
         top: 50%;
@@ -169,7 +169,7 @@
     max-width: 395px;
 
     font: 500 14px/1.255 $kFontPublicSans;
-    letter-spacing: -.01em;
+    letter-spacing: -0.01em;
     color: $kColorBlack;
 
     opacity: 0.6;
@@ -204,7 +204,7 @@
     .card_title {
         font-size: 52px;
     }
-    
+
     .card_text {
         margin-top: 75px;
     }

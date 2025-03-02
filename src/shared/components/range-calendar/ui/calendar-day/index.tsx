@@ -1,6 +1,6 @@
 import React from "react";
-import css from "./calendar-day.module.scss";
 import clsx from "clsx";
+import css from "./calendar-day.module.scss";
 
 interface Props {
     date: string;
@@ -23,15 +23,15 @@ export const CalendarDay: React.FC<Props> = ({
     onClick,
 }) => {
     return (
-        <div 
+        <div
             className={clsx(
                 `calendar-day`,
                 css.day,
                 isToday && [`calendar-day-today`, css.dayToday],
-                !isCurrentYearAndMonth && ['calendar-day-other-month', css.dayOtherMonth],
-                inRange && ['calendar-day-in-range', css.dayInRange],
-                isStartRange && ['calendar-day-start-range', css.dayStartRange],
-                isEndRange && ['calendar-day-end-range', css.dayEndRange],
+                !isCurrentYearAndMonth && ["calendar-day-other-month", css.dayOtherMonth],
+                inRange && ["calendar-day-in-range", css.dayInRange],
+                isStartRange && ["calendar-day-start-range", css.dayStartRange],
+                isEndRange && ["calendar-day-end-range", css.dayEndRange]
             )}
             onClick={onClick}
         >

@@ -63,7 +63,7 @@
             width: 100%;
             height: 1.5px;
             border-radius: 1.5px;
-            background: #141B34;
+            background: #141b34;
             position: absolute;
             left: 0;
             transition: 200ms ease;
@@ -89,7 +89,6 @@
                 &:nth-child(1) {
                     top: 50%;
                     transform: translateY(-50%) rotate(45deg);
-
                 }
                 &:nth-child(3) {
                     top: 50%;

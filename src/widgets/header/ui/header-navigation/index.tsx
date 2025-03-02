@@ -1,17 +1,9 @@
 import React from "react";
-import { CSSTransition } from "react-transition-group";
+import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import clsx from "clsx";
-import { NavHeader, useNavigationHeader } from "widgets/header/lib";
-import ArrowDownIcon from "shared/icons/ArrowDown.icon";
-import ArrowLinkIcon from "shared/icons/ArrowLink.icon";
+import { NavHeader } from "widgets/header/lib";
 import { NavLink } from "shared/lib/types/navigation.types";
-import { executeOnReadyPage } from "shared/lib/utils/browser";
-import { fileServerPath } from "shared/lib/utils/file-server-path";
-import { loadImage } from "shared/lib/utils/loadImage";
-import { loadVideo } from "shared/lib/utils/loadVideo";
-import Accordion from "shared/ui/Accordion";
-import Image from "shared/ui/image";
 import css from "./header-navigation.module.scss";
 
 interface Props {
@@ -51,6 +43,7 @@ export const HeaderNavigation: React.FC<Props> = ({ className }) => {
         {
             id: 1,
             name: "About",
+            href: "about",
             rank: 0,
             createdAt: "2025-02-05T16:52:03.933Z",
             updatedAt: "2025-02-26T16:36:55.421Z",
@@ -64,6 +57,7 @@ export const HeaderNavigation: React.FC<Props> = ({ className }) => {
         {
             id: 2,
             name: "Speakers",
+            href: "speakers",
             rank: 1,
             createdAt: "",
             updatedAt: "",
@@ -79,12 +73,15 @@ export const HeaderNavigation: React.FC<Props> = ({ className }) => {
     return (
         <div className={clsx(css.nav, navActive && css._active, className)}>
             {navigation.map((item) => (
-                <button
-                    className={clsx(css.nav_item, item.name === navActive?.name && css._active)}
-                    key={item.name}
+                <ScrollLink
+                    key={item.id}
+                    to={item.href}
+                    smooth={true}
+                    duration={500}
+                    className={css.nav_item}
                 >
                     {item.name}
-                </button>
+                </ScrollLink>
             ))}
 
             <div className={css.menu}>

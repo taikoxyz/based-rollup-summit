@@ -3,11 +3,11 @@ import Link from "next/link";
 import clsx from "clsx";
 import ArrowDownIcon from "shared/icons/ArrowDown.icon";
 import ArrowLinkIcon from "shared/icons/ArrowLink.icon";
+import { NavLink } from "shared/lib/types/navigation.types";
+import { fileServerPath } from "shared/lib/utils/file-server-path";
 import Accordion from "shared/ui/Accordion";
 import Image from "shared/ui/image";
 import css from "./MenuLinkGroup.module.scss";
-import { NavLink } from "shared/lib/types/navigation.types";
-import { fileServerPath } from "shared/lib/utils/file-server-path";
 
 interface Props {
     name: string;
@@ -22,10 +22,7 @@ export const MenuLinkGroup: React.FC<Props> = ({ links, name, closeModal }) => {
 
     return (
         <div className={css.group}>
-            <button 
-                className={clsx(css.group_btn, active && css._active)}
-                onClick={toggleActive}
-            >
+            <button className={clsx(css.group_btn, active && css._active)} onClick={toggleActive}>
                 {name}
             </button>
             {active && (
@@ -54,7 +51,7 @@ export const MenuLinkGroup: React.FC<Props> = ({ links, name, closeModal }) => {
                                 >
                                     {content}
                                 </Link>
-                            )
+                            );
                         }
 
                         if (link.children.length > 0) {

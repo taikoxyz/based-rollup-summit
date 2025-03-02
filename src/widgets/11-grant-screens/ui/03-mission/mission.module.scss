@@ -1,7 +1,7 @@
 .title {
     margin-left: 20px;
-    font: 500 55px/.9 $kFontClashGrotesk;
-    letter-spacing: -.02em;
+    font: 500 55px/0.9 $kFontClashGrotesk;
+    letter-spacing: -0.02em;
     color: $kColorBlack;
     max-width: 6.2em;
 
@@ -18,7 +18,7 @@
 .list_item {
     padding: 22px 28px 38px;
     border-radius: 30px;
-    background: #FFF;
+    background: #fff;
 }
 
 .list_icon {
@@ -32,7 +32,7 @@
 .list_title {
     margin-top: 54px;
 
-    font: 500 28px/.95 $kFontClashGrotesk;
+    font: 500 28px/0.95 $kFontClashGrotesk;
     color: $kColorBlack;
 }
 
@@ -40,13 +40,13 @@
     margin-top: 32px;
 
     font: 400 16px/1.2 $kFontPublicSans;
-    letter-spacing: -.02em;
-    color: rgba($kColorBlack, .6);
+    letter-spacing: -0.02em;
+    color: rgba($kColorBlack, 0.6);
 }
 
 @media screen and (max-width: $kLaptopM) {
     .list {
-        @include setGrid(2, 20)
+        @include setGrid(2, 20);
     }
 }
 
@@ -84,7 +84,7 @@
         text-align: center;
         margin: 0 auto;
     }
-    
+
     .list_item {
         padding: 22px 20px 35px;
         border-radius: 20px;

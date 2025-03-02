@@ -1,11 +1,10 @@
-import clsx from 'clsx';
-import React, { useContext, useEffect } from 'react';
-import { CSSTransition } from 'react-transition-group';
-import { ModalContext } from '../../lib/providers/context';
-import css from './modal.module.scss';
+import React, { useContext, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
+import { ModalContext } from "../../lib/providers/context";
+import clsx from "clsx";
+import css from "./modal.module.scss";
 
-type DivProps = React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+type DivProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 type Props = {
     name: string;
@@ -31,21 +30,21 @@ export const Modal: React.FC<Props> = ({
     const { closeModal, getModal, addToList, removeFromList } = useContext(ModalContext);
 
     const onClick = (ev: React.MouseEvent<HTMLDivElement>) => {
-        if(props.onClick) {
+        if (props.onClick) {
             props.onClick(ev);
         }
 
-        if(!ev.defaultPrevented && ev.button !== 2 && ev.target === ev.currentTarget) {
+        if (!ev.defaultPrevented && ev.button !== 2 && ev.target === ev.currentTarget) {
             closeModal(name);
         }
-    }
+    };
 
     useEffect(() => {
         addToList(name);
         return () => removeFromList(name);
     }, []);
 
-    return ( 
+    return (
         <CSSTransition
             in={getModal(name)?.active}
             classNames={animation}
@@ -53,13 +52,9 @@ export const Modal: React.FC<Props> = ({
             mountOnEnter
             unmountOnExit
         >
-            <div 
-                {...props} 
-                onClick={onClick}
-                className={clsx(css.modal, className)}
-            >
+            <div {...props} onClick={onClick} className={clsx(css.modal, className)}>
                 {children}
             </div>
         </CSSTransition>
     );
-}
+};

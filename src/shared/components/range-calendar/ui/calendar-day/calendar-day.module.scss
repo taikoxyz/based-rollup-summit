@@ -26,7 +26,7 @@
     &:not(.dayOtherMonth) {
         &.dayInRange {
             &::before {
-                content: '';
+                content: "";
                 display: block;
                 position: absolute;
                 left: 0;
@@ -41,7 +41,7 @@
         &.dayStartRange {
             .day_inner {
                 background: #22282b;
-                color: #FFF;
+                color: #fff;
             }
             &::before {
                 width: 50%;
@@ -60,7 +60,7 @@
             }
         }
 
-        &:hover:not(.dayStartRange,.dayEndRange) {
+        &:hover:not(.dayStartRange, .dayEndRange) {
             .day_inner {
                 background: rgba(#000, 0.05);
             }

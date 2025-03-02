@@ -5,7 +5,7 @@
 
     overflow: hidden auto;
 
-    background: rgba($kColorBlack, .3);
+    background: rgba($kColorBlack, 0.3);
 
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     }
 }
 .enterActive {
-    background: rgba($kColorBlack, .3);
+    background: rgba($kColorBlack, 0.3);
     transition: background 0.35s ease-in-out;
 
     > * {
@@ -28,7 +28,7 @@
     }
 }
 .exit {
-    background: rgba($kColorBlack, .3);
+    background: rgba($kColorBlack, 0.3);
 
     > * {
         opacity: 1;

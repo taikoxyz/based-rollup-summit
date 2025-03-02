@@ -1,9 +1,11 @@
-import { IEvent, IEventLocation, IEventsResponse } from "../types";
 import { instance } from "../utils/instance";
+import { IEvent, IEventLocation, IEventsResponse } from "../types";
 
 export const eventApi = {
     async getAll(query?: string) {
-        const { data } = await instance.get<IEventsResponse>('/events' + (query ? `?${query}` : ''));
+        const { data } = await instance.get<IEventsResponse>(
+            "/events" + (query ? `?${query}` : "")
+        );
         return data;
     },
 
@@ -13,7 +15,7 @@ export const eventApi = {
     },
 
     async getLocations() {
-        const response = await instance.get<IEventLocation[]>('/events/locations');
+        const response = await instance.get<IEventLocation[]>("/events/locations");
         return response.data;
-    }
+    },
 };

@@ -1,7 +1,7 @@
 .project {
     padding: 31px;
     border-radius: 35px;
-    background: #FFF;
+    background: #fff;
 
     display: flex;
     flex-direction: column;
@@ -29,11 +29,11 @@
     border-radius: 100px;
 
     font: 700 14px/1 $kFontPublicSans;
-    color: #FFF;
+    color: #fff;
     background: $kColorPink;
 
     &Testnet {
-        background: #5D636F;
+        background: #5d636f;
     }
 }
 
@@ -47,7 +47,7 @@
     margin-top: 3px;
     font: 400 14px/1.25 $kFontPublicSans;
     letter-spacing: 0.01em;
-    color: #444A55;
+    color: #444a55;
 }
 
 .categories {
@@ -62,10 +62,10 @@
 .categories_item {
     padding: 5px 10px;
     border-radius: 100px;
-    background: #FFC6E9;
+    background: #ffc6e9;
 
     font: 500 14px/1.1 $kFontPublicSans;
-    color: #444A55;
+    color: #444a55;
 }
 
 @media screen and (max-width: $kTabletM) {

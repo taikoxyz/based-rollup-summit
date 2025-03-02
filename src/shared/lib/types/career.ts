@@ -1,5 +1,5 @@
-import { BlocksContent } from '@strapi/blocks-react-renderer';
-import { IBaseFields, IServerResponse } from './global';
+import { BlocksContent } from "@strapi/blocks-react-renderer";
+import { IBaseFields, IServerResponse } from "./global";
 
 export interface ICareer extends IBaseFields {
     title: string;

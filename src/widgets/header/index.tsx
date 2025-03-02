@@ -1,6 +1,6 @@
 import React from "react";
-import clsx from "clsx";
 import Link from "next/link";
+import clsx from "clsx";
 import { useApp } from "app/providers/withApp";
 import { Socials } from "shared/components/Socials";
 import { MediaQuery } from "shared/ui/media-query";

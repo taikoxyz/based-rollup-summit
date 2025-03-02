@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./next-i18next.config.js');
+const { i18n } = require("./next-i18next.config.js");
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-    enabled: process.env.ANALYZE === 'true',
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+    enabled: process.env.ANALYZE === "true",
 });
 
 const nextConfig = {
@@ -13,11 +13,11 @@ const nextConfig = {
           @import "app/scss/mixins.scss";
       `,
     },
-    experimental: { 
-        esmExternals: true 
+    experimental: {
+        esmExternals: true,
     },
     images: {
-        domains: ['*'],
+        domains: ["*"],
     },
     i18n,
 };

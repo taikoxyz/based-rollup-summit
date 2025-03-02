@@ -1,2 +1,2 @@
-export { getBlogQuery } from './getBlogQuery';
-export { flatBlogs } from './flatBlogs';
+export { getBlogQuery } from "./getBlogQuery";
+export { flatBlogs } from "./flatBlogs";

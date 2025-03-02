@@ -3,5 +3,5 @@ export enum AboutScreensEnum {
     COMMUNITY = "community",
     MISSION = "mission",
     BRAND = "brand",
-    CAREERS = "careers"
+    CAREERS = "careers",
 }
