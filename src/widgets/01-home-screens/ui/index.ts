@@ -11,4 +11,3 @@ export { Cloud } from "./08-cloud";
 // export { Journey } from "./05-journey";
 // export { Governance } from "./06-governance";
 export { Subscribe } from "./09-subscribe";
-export { GoogleAnalytics } from "./GoogleAnalytics";
