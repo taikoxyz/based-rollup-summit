@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 80px 0;
 
     &._animated {
         .speakers_grid {
@@ -27,25 +28,22 @@
     flex-direction: column;
     align-items: center;
 }
+
 .speakerGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    gap: 110px; /* Match the provided gap dimension */
     justify-items: center;
     width: 100%;
-    max-width: 1120px;
-    margin: auto;
-    padding: 20px;
+    max-width: 991px; /* Match the provided fixed width */
+    margin: 40px auto 0;
 }
 
 .speakers_label {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 100%;
+    position: relative;
     text-transform: uppercase;
-
     @include setFontPublicSans600(14px, 1.2, 0.04em, getColorPink());
+    margin-bottom: 20px;
 }
 
 .speakers_title {
@@ -55,86 +53,10 @@
     @include setFontClashGrotest500(55px, 0.9, -0.02em);
 }
 
-.speakers_text {
-    text-align: center;
-    @include setFontClashGrotest500(55px, 1.255, -0.01em, getColorBlack());
-}
-
-@include -screen-xxxl {
-    .speakers_grid {
-        width: 1360px;
-    }
-    .speakers_title {
-        font-size: 56px;
-    }
-    .speakers_label {
-        bottom: 137%;
-    }
-}
-
-@include -screen-lg {
-    .speakers_grid {
-        width: 1100px;
-    }
-    .speakers_title {
-        font-size: 48px;
-    }
-    .speakers_label {
-        bottom: 131%;
-    }
-    .speakers_text {
-        margin-top: 20px;
-    }
-}
-
-@include -screen-md {
-    .speakers_grid {
-        width: 133%;
-
-        svg {
-            display: none;
-        }
-        img {
-            display: block;
-            width: 100%;
-        }
-    }
-    .speakers_label {
-        position: relative;
-        inset: auto;
-        text-align: center;
-        transform: none;
-    }
-    .speakers_title {
-        margin-top: 24px;
-    }
-}
-
-@include -screen-sm {
-    .speakers_title {
-        font-size: 44px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .speakers_title {
-        font-size: 36px;
-    }
-    .speakers_text {
-        font-size: 14px;
-    }
-}
-
 .speakersText {
     @include setFontClashGrotest500(55px, 1.255, -0.01em, #191e28);
-}
-
-.speakerGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns */
-    gap: 15px;
-    justify-items: center;
-    padding: 20px;
+    text-align: center;
+    margin: 0;
 }
 
 .profileCard {
@@ -142,7 +64,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        .profileCard__image {
+            border: 3px solid #e81899;
+        }
+    }
 }
 
 .profileCard__image {
@@ -153,8 +82,9 @@
     height: 250px;
     border-radius: 30px;
     overflow: hidden;
-    border: 1px solid #cacbce;
+    border: 3px solid transparent;
     background-color: #e3e3e380;
+    transition: border-color 0.3s ease;
 }
 
 .profileCard__image img {
@@ -166,56 +96,98 @@
 
 .profileCard__name {
     margin-top: 12px;
+    margin-bottom: 4px;
     @include setFontClashGrotest500(35px, 1.255, -0.01em, #191e28);
 }
 
 .profileCard__title {
     @include setFontPublicSans600(18px, 1.2, 0.04em, getColorPink());
+    margin: 0;
 }
 
 .profileCard__company {
     @include setFontPublicSans400(18px, 1.2, 0.04em, getColorPink());
+    margin: 0;
 }
 
 /* Responsive Adjustments */
+@media screen and (max-width: 1280px) {
+    .speakerGrid {
+        gap: 80px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .speakerGrid {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 60px;
+    }
+
+    .speakersText {
+        font-size: 48px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .speakerGrid {
         grid-template-columns: 1fr; /* Single column for small screens */
+        gap: 40px;
     }
+
     .speakersText {
         font-size: 40px;
     }
+
     .profileCard__name {
         font-size: 28px;
+    }
+
+    .speakers_wrapper {
+        padding: 0 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .speakers_wrapper {
-        padding: 0 20px; /* Reduce padding for smaller screens */
+    .profileCard__image {
+        width: 200px;
+        height: 200px;
     }
+
+    .profileCard__image img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .speakersText {
+        font-size: 32px;
+    }
+
+    .profileCard__name {
+        font-size: 24px;
+    }
+
+    .profileCard__title,
+    .profileCard__company {
+        font-size: 14px;
+    }
+
+    .speakers {
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
     .profileCard__image {
         width: 180px;
         height: 180px;
     }
+
     .profileCard__image img {
         width: 150px;
         height: 150px;
     }
+
     .speakersText {
-        font-size: 32px;
-    }
-    .profileCard__name {
-        font-size: 24px;
-    }
-    .profileCard__title,
-    .profileCard__company {
-        font-size: 14px;
+        font-size: 28px;
     }
 }

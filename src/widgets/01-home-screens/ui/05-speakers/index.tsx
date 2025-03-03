@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HOME_PAG } from "widgets/01-home-screens/lib";
 import css from "./speakers.module.scss";
 
@@ -53,7 +53,6 @@ const speakers: Speaker[] = [
         title: "Co-founder & CEO",
         company: "Succinct",
     },
-
     {
         image: "/img/speakers/amir.png",
         name: "Amir Forouzani",
@@ -66,13 +65,29 @@ const speakers: Speaker[] = [
         title: "Engineer",
         company: "Taiko Gwyneth",
     },
-    { image: "/img/speakers/jeff.png", name: "Jeff Walsh", title: "Engineer", company: "Taiko" },
+    {
+        image: "/img/speakers/jeff.png",
+        name: "Jeff Walsh",
+        title: "Engineer",
+        company: "Taiko",
+    },
 ];
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, title, company }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
-        <div className={css.profileCard}>
-            <div className={css.profileCard__image}>
+        <div
+            className={css.profileCard}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div
+                className={css.profileCard__image}
+                style={{
+                    borderColor: isHovered ? "#e81899" : "transparent",
+                }}
+            >
                 <img src={image} alt={name} />
             </div>
             <h3 className={css.profileCard__name}>{name}</h3>
