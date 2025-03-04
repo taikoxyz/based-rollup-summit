@@ -45,8 +45,8 @@ function Home() {
                 <Screens.Topics />
                 <Screens.Speakers />
                 <Screens.Schedule />
+                <Screens.Media />
                 <Screens.Future />
-                <Screens.Cloud />
                 <Screens.Subscribe />
             </DefaultLayout>
         </MainLayout>
