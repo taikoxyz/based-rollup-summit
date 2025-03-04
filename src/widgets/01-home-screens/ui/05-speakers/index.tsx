@@ -54,6 +54,18 @@ const speakers: Speaker[] = [
         company: "Succinct",
     },
     {
+        image: "/img/speakers/harry.png",
+        name: "Harry Gao",
+        title: "Co-founder",
+        company: "Luban",
+    },
+    {
+        image: "/img/speakers/drew.png",
+        name: "Drew Van Der Werff",
+        title: "Shepherding Commit-",
+        company: "Boost and Fabric",
+    },
+    {
         image: "/img/speakers/amir.png",
         name: "Amir Forouzani",
         title: "Co-founder & CEO",
@@ -70,6 +82,49 @@ const speakers: Speaker[] = [
         name: "Jeff Walsh",
         title: "Engineer",
         company: "Taiko",
+    },
+    // New speakers added below
+    {
+        image: "/img/speakers/brecht.png",
+        name: "Brecht Devos",
+        title: "CTO",
+        company: "Taiko",
+    },
+    {
+        image: "/img/speakers/joaquin.png",
+        name: "Joaquin Mendes",
+        title: "COO",
+        company: "Taiko",
+    },
+    {
+        image: "/img/speakers/dan.png",
+        name: "Dan Park",
+        title: "Research Associate",
+        company: "Hashed",
+    },
+    {
+        image: "/img/speakers/keith.png",
+        name: "Keith Chen",
+        title: "Managing Partner",
+        company: "SNZ Holding",
+    },
+    {
+        image: "/img/speakers/kevin.png",
+        name: "Kevin Lee",
+        title: "Founder",
+        company: "L2IV",
+    },
+    {
+        image: "/img/speakers/kun.png",
+        name: "Kun Peng",
+        title: "Partner",
+        company: "Stanford Blockchain",
+    },
+    {
+        image: "/img/speakers/nick.png",
+        name: "Nick Shaheenn",
+        title: "Director of BD",
+        company: "BanklessHQ",
     },
 ];
 
