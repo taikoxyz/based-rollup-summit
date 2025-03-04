@@ -9,7 +9,7 @@ export const HOME_PAG = {
     SCHEDULE: "schedule",
     FUTURE: "future",
     CLOUD: "cloud",
-
+    MEDIA: "media",
     SCALING: "scaling",
     EXPLORE: "explore",
     JOURNEY: "journey",

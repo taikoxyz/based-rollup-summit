@@ -1,0 +1,238 @@
+.container {
+    background-color: #f8f8f8;
+    width: 100%;
+
+    &._animated {
+        .mediaItem,
+        .partnersLogo {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Event Partners Styles */
+.partners {
+    padding: 60px 0 30px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners_wrapper {
+    max-width: 1120px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.partners_label {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #c8047d;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.partnersLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+.partnerLogo {
+    width: 226px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Media Support Styles */
+.media {
+    padding: 30px 0 60px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media_wrapper {
+    max-width: 1120px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.media_label {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #c8047d;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.mediaGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+.mediaItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+    // Stagger the animation for each logo
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+            transition-delay: #{$i * 0.1}s;
+        }
+    }
+}
+
+.mediaLogo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Responsive styles */
+@media (min-width: 1200px) {
+    .partners {
+        padding-top: 70px;
+        padding-bottom: 35px;
+    }
+
+    .media {
+        padding-top: 35px;
+        padding-bottom: 70px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .partners {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    .media {
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+    .partners_label,
+    .media_label {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .partners {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .media {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .partners_label,
+    .media_label {
+        margin-bottom: 25px;
+    }
+
+    .partnerLogo {
+        width: 180px;
+        height: 80px;
+    }
+
+    .mediaLogo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners {
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+    .media {
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+
+    .partners_wrapper,
+    .media_wrapper {
+        padding: 0 15px;
+    }
+
+    .partners_label,
+    .media_label {
+        margin-bottom: 20px;
+    }
+
+    .partnerLogo {
+        width: 160px;
+        height: 70px;
+    }
+
+    .mediaLogo {
+        width: 70px;
+        height: 70px;
+    }
+}

@@ -4,7 +4,7 @@
     overflow: hidden;
     min-height: 500px;
     width: 100%;
-    background: linear-gradient(135deg, #ffffff 0%, #fff6fb 50%, #ffe9f5 100%);
+    background-color: (#f8f8f8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,8 +80,9 @@
     font-family: "Clash Grotesk", sans-serif;
     font-weight: 500;
     font-size: 55px;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
+    line-height: 57.2px;
+    letter-spacing: -0.02em; /* This is -2% */
+    text-align: center;
     color: #191e28;
     margin: 0;
     width: 100%;
@@ -99,6 +100,19 @@
 
 .button {
     margin-bottom: 20px;
+
+    :global {
+        .btn {
+            width: 170px;
+            height: 48px;
+            border-radius: 100px;
+            background: #e81899;
+
+            &__text {
+                padding-left: 20px;
+            }
+        }
+    }
 }
 
 /* Responsive styles */
@@ -145,18 +159,29 @@
     }
 
     .heading {
-        font-size: 36px;
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: -0.02em;
     }
 
     .text {
         font-size: 14px;
         margin: 10px 0 20px;
     }
+
+    .button {
+        :global {
+            .btn {
+                padding: 8px 8px 8px 20px;
+                gap: 12px;
+            }
+        }
+    }
 }
 
 @media (max-width: 350px) {
     .heading {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .text {

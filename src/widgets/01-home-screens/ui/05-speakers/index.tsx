@@ -87,12 +87,12 @@ const speakers: Speaker[] = [
     {
         image: "/img/speakers/brecht.png",
         name: "Brecht Devos",
-        title: "CTO",
+        title: "Cofounder and CTO",
         company: "Taiko",
     },
     {
         image: "/img/speakers/joaquin.png",
-        name: "Joaquin Mendes",
+        name: "Joaquin Mended",
         title: "COO",
         company: "Taiko",
     },
@@ -125,6 +125,12 @@ const speakers: Speaker[] = [
         name: "Nick Shaheenn",
         title: "Director of BD",
         company: "BanklessHQ",
+    },
+    {
+        image: "/img/speakers/jay.png",
+        name: "Jay Yu",
+        title: "Director of BD",
+        company: "Stanford Blockchain Club",
     },
 ];
 
