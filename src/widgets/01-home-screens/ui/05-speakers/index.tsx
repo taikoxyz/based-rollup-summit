@@ -87,12 +87,12 @@ const speakers: Speaker[] = [
     {
         image: "/img/speakers/brecht.png",
         name: "Brecht Devos",
-        title: "Cofounder and CTO",
+        title: "Co-founder and CTO",
         company: "Taiko",
     },
     {
         image: "/img/speakers/joaquin.png",
-        name: "Joaquin Mended",
+        name: "Joaquin Mendes",
         title: "COO",
         company: "Taiko",
     },
