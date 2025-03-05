@@ -4,7 +4,7 @@
 
     &._animated {
         .mediaItem,
-        .partnersLogo {
+        .partnerItem {
             opacity: 1;
             transform: translateY(0);
         }
@@ -46,7 +46,18 @@
     text-transform: uppercase;
 }
 
-.partnersLogo {
+.partnersGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partnerItem {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +66,18 @@
     transition:
         opacity 0.5s ease,
         transform 0.5s ease;
-    transition-delay: 0.1s;
+
+    &:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+        transition-delay: 0.3s;
+    }
 }
 
 .partnerLogo {
@@ -199,6 +221,10 @@
         height: 80px;
     }
 
+    .partnersGrid {
+        gap: 30px;
+    }
+
     .mediaLogo {
         width: 80px;
         height: 80px;
@@ -229,6 +255,10 @@
     .partnerLogo {
         width: 160px;
         height: 70px;
+    }
+
+    .partnersGrid {
+        gap: 20px;
     }
 
     .mediaLogo {
