@@ -7,6 +7,19 @@ interface MediaPartner {
     logo: string;
 }
 
+interface EventPartner {
+    name: string;
+    logo: string;
+    width: number;
+    height: number;
+}
+
+const eventPartners: EventPartner[] = [
+    { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
+    { name: "Columbia Blockchain", logo: "/img/media/columbia.png", width: 226, height: 100 },
+    { name: "Berkeley Blockchain", logo: "/img/media/berkeley.png", width: 226, height: 100 },
+];
+
 const mediaPartners: MediaPartner[] = [
     { name: "CoinNess", logo: "/img/media/coinness.png" },
     { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
@@ -46,14 +59,18 @@ export const Media: React.FC = () => {
             <div className={css.partners}>
                 <div className={css.partners_wrapper}>
                     <p className={css.partners_label}>EVENT PARTNERS</p>
-                    <div className={css.partnersLogo}>
-                        <img
-                            src="/img/media/stanford.png"
-                            alt="Stanford Blockchain"
-                            className={css.partnerLogo}
-                            width={226}
-                            height={100}
-                        />
+                    <div className={css.partnersGrid}>
+                        {eventPartners.map((partner, index) => (
+                            <div key={index} className={css.partnerItem}>
+                                <img
+                                    src={partner.logo}
+                                    alt={`${partner.name}`}
+                                    className={css.partnerLogo}
+                                    width={partner.width}
+                                    height={partner.height}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
