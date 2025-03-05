@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import clsx from "clsx";
 import ArrowLinkIcon from "shared/icons/ArrowLink.icon";
 import { NextLink } from "shared/ui/NextLink";
 import css from "./hero.module.scss";
@@ -14,7 +13,7 @@ const CardsTemplate1: React.FC<CardTemplateProps> = ({ isMobile }) => {
             href="https://lu.ma/37ykg387"
             target="_blank"
             rel="noopener noreferrer"
-            className={css.cards_link}
+            className={`${css.cards_link} ${isMobile ? css.mobile_card : ""}`}
         >
             <span
                 className={css.cards_link_text}
@@ -33,7 +32,7 @@ const CardsTemplate2: React.FC<CardTemplateProps> = ({ isMobile }) => {
             href="https://www.notion.so/taikoxyz/2025-Based-Rollup-Summit-Sponsor-Package-19e9673143d68087b018fd5c2679b937"
             target="_blank"
             rel="noopener noreferrer"
-            className={css.cards_link_type}
+            className={`${css.cards_link_type} ${isMobile ? css.mobile_card : ""}`}
         >
             <span
                 className={css.cards_link_text}
@@ -52,7 +51,7 @@ const CardsTemplate3: React.FC<CardTemplateProps> = ({ isMobile }) => {
             href="https://docs.google.com/forms/d/1g-FnXyQ2qAsWpJ0cPY_2BGE-1mwkxTP0N-RXDV4YZfg/"
             target="_blank"
             rel="noopener noreferrer"
-            className={css.cards_link_type}
+            className={`${css.cards_link_type} ${isMobile ? css.mobile_card : ""}`}
         >
             <span
                 className={css.cards_link_text}
@@ -67,17 +66,11 @@ const CardsTemplate3: React.FC<CardTemplateProps> = ({ isMobile }) => {
 
 export const Hero: React.FC = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
-    const [useShortVariant, setUseShortVariant] = useState<boolean>(false);
 
     useEffect(() => {
         const checkMobile = () => {
             const isMobileView = window.innerWidth <= 768;
             setIsMobile(isMobileView);
-
-            // Optional: Set variant based on height or other criteria
-            if (isMobileView) {
-                setUseShortVariant(window.innerHeight < 800);
-            }
         };
 
         // Initial check
@@ -92,21 +85,22 @@ export const Hero: React.FC = () => {
 
     return (
         <section className={css.hero}>
-            <video
-                className={css.hero_video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                style={{
-                    filter: "none", // Remove any filters that might be causing blur
-                    imageRendering: "crisp-edges", // Use a valid value for imageRendering
-                }}
-            >
-                <source src="/img/herosection/heroBlobby.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            {/* Background video - different sources for mobile and desktop */}
+            {!isMobile ? (
+                <video className={css.hero_video} autoPlay loop muted playsInline>
+                    <source src="/img/herosection/Desktop_Blobby.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            ) : (
+                <div className={css.mobile_background}>
+                    <video className={css.hero_video} autoPlay loop muted playsInline>
+                        <source src="/img/herosection/Mobile_Blobby.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            )}
 
+            {/* Top content */}
             <div className={css.container_top}>
                 <div className={css.hero_left}>
                     <p>Based</p>
@@ -123,29 +117,11 @@ export const Hero: React.FC = () => {
                         <p>Summit Dedicated to Truly Decentralized Scaling Solutions.</p>
                     </div>
                 )}
-
-                {isMobile && (
-                    <>
-                        <div className={css.mobile_description}>
-                            Join the brightest minds in the L2 ecosystem to explore, debate, and
-                            shape the future of Ethereum scalability
-                        </div>
-
-                        <div className={css.mobile_location_date}>
-                            <div className={css.location}>
-                                <span className={css.arrow}>→</span>
-                                <span>SAN FRANCISCO</span>
-                            </div>
-                            <div className={css.date}>
-                                <span>MARCH 10, 2025</span>
-                            </div>
-                        </div>
-                    </>
-                )}
             </div>
 
-            <div className={css.container_bottom}>
-                {!isMobile && (
+            {/* Desktop bottom section */}
+            {!isMobile && (
+                <div className={css.container_bottom}>
                     <div className={css.bottom_left}>
                         <div className={css.subheading}>
                             <p>
@@ -155,24 +131,46 @@ export const Hero: React.FC = () => {
                         </div>
 
                         <div className={css.venue}>
-                            <img src="/img/icons/nav-arrow-right.svg" alt="" />
+                            <div className={css.venue_arrow}>→</div>
                             <p>
                                 SAN FRANCISCO <span className={css.date}>MARCH 10, 2025</span>
                             </p>
                         </div>
                     </div>
-                )}
 
-                <div
-                    className={clsx(css.cardSection, {
-                        [css.mobile_card_variant]: useShortVariant && isMobile,
-                    })}
-                >
-                    <CardsTemplate1 isMobile={isMobile} />
-                    <CardsTemplate2 isMobile={isMobile} />
-                    <CardsTemplate3 isMobile={isMobile} />
+                    {/* Desktop card buttons */}
+                    <div className={css.desktop_cardSection}>
+                        <CardsTemplate1 isMobile={false} />
+                        <CardsTemplate2 isMobile={false} />
+                        <CardsTemplate3 isMobile={false} />
+                    </div>
                 </div>
-            </div>
+            )}
+
+            {/* Mobile bottom section */}
+            {isMobile && (
+                <div className={css.mobile_footer}>
+                    {/* Mobile location and date */}
+                    <div className={css.mobile_location_wrapper}>
+                        <div className={css.mobile_arrow}>→</div>
+                        <div className={css.mobile_location}>
+                            <span>SAN</span>
+                            <span>FRANCISCO</span>
+                        </div>
+                        <div className={css.mobile_date}>
+                            <span>MARCH 10,</span>
+                            <span>2025</span>
+                        </div>
+                    </div>
+
+                    {/* Mobile card buttons */}
+                    <div className={css.mobile_cardSection}>
+                        <CardsTemplate1 isMobile={true} />
+                        <CardsTemplate2 isMobile={true} />
+                        <CardsTemplate3 isMobile={true} />
+                    </div>
+                </div>
+            )}
         </section>
     );
 };
