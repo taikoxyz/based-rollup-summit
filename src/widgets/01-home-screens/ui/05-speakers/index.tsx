@@ -122,7 +122,7 @@ const speakers: Speaker[] = [
     },
     {
         image: "/img/speakers/nick.png",
-        name: "Nick Shaheenn",
+        name: "Nick Shaheen",
         title: "Director of BD",
         company: "BanklessHQ",
     },
