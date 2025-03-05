@@ -26,6 +26,11 @@ export const Future: React.FC = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Handle button click to redirect
+    const handleButtonClick = () => {
+        window.open("https://lu.ma/37ykg387", "_blank", "noopener,noreferrer");
+    };
+
     return (
         <section className={css.future} ref={futureRef} id={HOME_PAG.FUTURE}>
             <div className={css.future_wrapper}>
@@ -36,6 +41,7 @@ export const Future: React.FC = () => {
                     className={css.button}
                     text={t("Register here")}
                     animated={{ offset: "200px" }}
+                    onClick={handleButtonClick}
                 />
             </div>
         </section>
