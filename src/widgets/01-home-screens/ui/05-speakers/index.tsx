@@ -84,12 +84,6 @@ const speakers: Speaker[] = [
         company: "Stanford Blockchain Club",
     },
     {
-        image: "/img/speakers/keyao.png",
-        name: "Keyao Shen",
-        title: "Senior Lead Software Engineer",
-        company: "Espresso Systems",
-    },
-    {
         image: "/img/speakers/cecilia.png",
         name: "Cecilia Zhang",
         title: "Engineer",
