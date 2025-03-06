@@ -48,12 +48,6 @@ const speakers: Speaker[] = [
         company: "",
     },
     {
-        image: "/img/speakers/keyao.png",
-        name: "Keyao Shen",
-        title: "Senior Lead Software Engineer",
-        company: "Espresso Systems",
-    },
-    {
         image: "/img/speakers/alex.png",
         name: "Alex Skidanov",
         title: "Co-founder",
@@ -66,12 +60,6 @@ const speakers: Speaker[] = [
         company: "Succinct",
     },
     {
-        image: "/img/speakers/harry.png",
-        name: "Harry Gao",
-        title: "Co-founder",
-        company: "Luban",
-    },
-    {
         image: "/img/speakers/drew.png",
         name: "Drew Van Der Werff",
         title: "Shepherding Commit-",
@@ -82,6 +70,24 @@ const speakers: Speaker[] = [
         name: "Amir Forouzani",
         title: "Co-founder & CEO",
         company: "Puffer Finance",
+    },
+    {
+        image: "/img/speakers/harry.png",
+        name: "Harry Gao",
+        title: "Co-founder",
+        company: "Luban",
+    },
+    {
+        image: "/img/speakers/jay.png",
+        name: "Jay Yu",
+        title: "President",
+        company: "Stanford Blockchain Club",
+    },
+    {
+        image: "/img/speakers/keyao.png",
+        name: "Keyao Shen",
+        title: "Senior Lead Software Engineer",
+        company: "Espresso Systems",
     },
     {
         image: "/img/speakers/cecilia.png",
@@ -116,20 +122,14 @@ const speakers: Speaker[] = [
     {
         image: "/img/speakers/kun.png",
         name: "Kun Peng",
-        title: "Partner",
-        company: "Stanford Blockchain",
+        title: "Founder",
+        company: "Stanford Blockchain Accelerator",
     },
     {
         image: "/img/speakers/nick.png",
         name: "Nick Shaheen",
         title: "Director of BD",
         company: "BanklessHQ",
-    },
-    {
-        image: "/img/speakers/jay.png",
-        name: "Jay Yu",
-        title: "Director of BD",
-        company: "Stanford Blockchain Club",
     },
 ];
 
