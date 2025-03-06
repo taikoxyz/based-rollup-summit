@@ -5,15 +5,16 @@ import css from "./hero.module.scss";
 
 interface CardTemplateProps {
     isMobile: boolean;
+    className?: string;
 }
 
-const CardsTemplate1: React.FC<CardTemplateProps> = ({ isMobile }) => {
+const CardsTemplate1: React.FC<CardTemplateProps> = ({ isMobile, className }) => {
     return (
         <NextLink
             href="https://lu.ma/37ykg387"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${css.cards_link} ${isMobile ? css.mobile_card : ""}`}
+            className={`${css.cards_link} ${isMobile ? css.mobile_card : ""} ${className || ""}`}
         >
             <span
                 className={css.cards_link_text}
@@ -26,13 +27,13 @@ const CardsTemplate1: React.FC<CardTemplateProps> = ({ isMobile }) => {
     );
 };
 
-const CardsTemplate2: React.FC<CardTemplateProps> = ({ isMobile }) => {
+const CardsTemplate2: React.FC<CardTemplateProps> = ({ isMobile, className }) => {
     return (
         <NextLink
             href="https://www.notion.so/taikoxyz/2025-Based-Rollup-Summit-Sponsor-Package-19e9673143d68087b018fd5c2679b937"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${css.cards_link_type} ${isMobile ? css.mobile_card : ""}`}
+            className={`${css.cards_link_type} ${isMobile ? css.mobile_card : ""} ${className || ""}`}
         >
             <span
                 className={css.cards_link_text}
@@ -45,13 +46,13 @@ const CardsTemplate2: React.FC<CardTemplateProps> = ({ isMobile }) => {
     );
 };
 
-const CardsTemplate3: React.FC<CardTemplateProps> = ({ isMobile }) => {
+const CardsTemplate3: React.FC<CardTemplateProps> = ({ isMobile, className }) => {
     return (
         <NextLink
             href="https://docs.google.com/forms/d/1g-FnXyQ2qAsWpJ0cPY_2BGE-1mwkxTP0N-RXDV4YZfg/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${css.cards_link_type} ${isMobile ? css.mobile_card : ""}`}
+            className={`${css.cards_link_type} ${isMobile ? css.mobile_card : ""} ${className || ""}`}
         >
             <span
                 className={css.cards_link_text}
@@ -65,22 +66,29 @@ const CardsTemplate3: React.FC<CardTemplateProps> = ({ isMobile }) => {
 };
 
 export const Hero: React.FC = () => {
+    const [viewportWidth, setViewportWidth] = useState<number>(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
+    const [isTablet, setIsTablet] = useState<boolean>(false);
+    const [isLargeScreen, setIsLargeScreen] = useState<boolean>(false);
 
     useEffect(() => {
-        const checkMobile = () => {
-            const isMobileView = window.innerWidth <= 768;
-            setIsMobile(isMobileView);
+        // Initial viewport setup
+        const handleResize = () => {
+            const width = window.innerWidth;
+            setViewportWidth(width);
+            setIsMobile(width <= 768);
+            setIsTablet(width > 768 && width <= 1024);
+            setIsLargeScreen(width >= 1440);
         };
 
-        // Initial check
-        checkMobile();
+        // Set initial values
+        handleResize();
 
-        // Add event listener
-        window.addEventListener("resize", checkMobile);
+        // Add resize listener
+        window.addEventListener("resize", handleResize);
 
         // Cleanup
-        return () => window.removeEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return (
@@ -108,7 +116,7 @@ export const Hero: React.FC = () => {
                     <p>Summit</p>
                 </div>
 
-                {!isMobile && (
+                {(!isMobile || isTablet) && (
                     <div className={css.hero_right}>
                         <div className={css.hero_right_top}>
                             <img src="/img/stars/pink.svg" alt="" />
@@ -137,18 +145,17 @@ export const Hero: React.FC = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* Desktop card buttons */}
-                    <div className={css.desktop_cardSection}>
-                        <CardsTemplate1 isMobile={false} />
-                        <CardsTemplate2 isMobile={false} />
-                        <CardsTemplate3 isMobile={false} />
-                    </div>
                 </div>
             )}
 
-            {/* Mobile bottom section */}
-            {isMobile && (
+            {/* Card section - responsive positioning */}
+            {!isMobile ? (
+                <div className={css.desktop_cardSection}>
+                    <CardsTemplate1 isMobile={false} />
+                    <CardsTemplate2 isMobile={false} />
+                    <CardsTemplate3 isMobile={false} />
+                </div>
+            ) : (
                 <div className={css.mobile_footer}>
                     {/* Mobile location and date */}
                     <div className={css.mobile_location_wrapper}>
