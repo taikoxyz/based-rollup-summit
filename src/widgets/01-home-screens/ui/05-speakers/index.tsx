@@ -30,23 +30,22 @@ const speakers: Speaker[] = [
         company: "Stanford Blockchain Research",
     },
     {
+        image: "/img/speakers/brecht.png",
+        name: "Brecht Devos",
+        title: "Co-founder and CTO",
+        company: "Taiko",
+    },
+    {
         image: "/img/speakers/joaquin.png",
         name: "Joaquin Mendes",
         title: "COO",
         company: "Taiko",
     },
     {
-        image: "/img/speakers/brecht.png",
-        name: "Brecht Devos",
-        title: "Co-founder and CTO",
-        company: "Taiko",
-    },
-
-    {
         image: "/img/speakers/tomasz.png",
         name: "Tomasz Stanczak",
-        title: "CEO",
-        company: "Nethermind",
+        title: "Co-director",
+        company: "Ethereum Foundation",
     },
     {
         image: "/img/speakers/keyao.png",
