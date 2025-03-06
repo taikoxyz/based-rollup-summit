@@ -30,6 +30,19 @@ const speakers: Speaker[] = [
         company: "Stanford Blockchain Research",
     },
     {
+        image: "/img/speakers/joaquin.png",
+        name: "Joaquin Mendes",
+        title: "COO",
+        company: "Taiko",
+    },
+    {
+        image: "/img/speakers/brecht.png",
+        name: "Brecht Devos",
+        title: "Co-founder and CTO",
+        company: "Taiko",
+    },
+
+    {
         image: "/img/speakers/tomasz.png",
         name: "Tomasz Stanczak",
         title: "CEO",
@@ -81,19 +94,6 @@ const speakers: Speaker[] = [
         image: "/img/speakers/jeff.png",
         name: "Jeff Walsh",
         title: "Engineer",
-        company: "Taiko",
-    },
-    // New speakers added below
-    {
-        image: "/img/speakers/brecht.png",
-        name: "Brecht Devos",
-        title: "Co-founder and CTO",
-        company: "Taiko",
-    },
-    {
-        image: "/img/speakers/joaquin.png",
-        name: "Joaquin Mendes",
-        title: "COO",
         company: "Taiko",
     },
     {
