@@ -44,8 +44,8 @@ const speakers: Speaker[] = [
     {
         image: "/img/speakers/tomasz.png",
         name: "Tomasz Stanczak",
-        title: "Co-director",
-        company: "Ethereum Foundation",
+        title: "CEO Nethermind, Co-director Ethereum Foundation",
+        company: "",
     },
     {
         image: "/img/speakers/keyao.png",
