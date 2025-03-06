@@ -15,21 +15,21 @@ interface EventPartner {
 }
 
 const eventPartners: EventPartner[] = [
-    { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
-    { name: "Columbia Blockchain", logo: "/img/media/columbia.png", width: 226, height: 100 },
     { name: "Berkeley Blockchain", logo: "/img/media/berkeley.png", width: 226, height: 100 },
+    { name: "Columbia Blockchain", logo: "/img/media/columbia.png", width: 226, height: 100 },
+    { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
 ];
 
 const mediaPartners: MediaPartner[] = [
-    { name: "CoinNess", logo: "/img/media/coinness.png" },
-    { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
-    { name: "吴说", logo: "/img/media/logo.png" },
-    { name: "Block Beats", logo: "/img/media/block.png" },
-    { name: "ODAILY", logo: "/img/media/daily.png" },
-    { name: "CryptoNews", logo: "/img/media/cryptonews.png" },
-    { name: "Chain Catcher", logo: "/img/media/chaincatcher.png" },
-    { name: "TechFlow", logo: "/img/media/techflow.png" },
     { name: "BeInCrypto", logo: "/img/media/beincrypto.png" },
+    { name: "Block Beats", logo: "/img/media/block.png" },
+    { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
+    { name: "Chain Catcher", logo: "/img/media/chaincatcher.png" },
+    { name: "CoinNess", logo: "/img/media/coinness.png" },
+    { name: "CryptoNews", logo: "/img/media/cryptonews.png" },
+    { name: "ODAILY", logo: "/img/media/daily.png" },
+    { name: "TechFlow", logo: "/img/media/techflow.png" },
+    { name: "吴说", logo: "/img/media/logo.png" },
 ];
 
 export const Media: React.FC = () => {
