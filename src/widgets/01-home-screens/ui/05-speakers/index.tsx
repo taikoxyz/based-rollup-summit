@@ -84,6 +84,12 @@ const speakers: Speaker[] = [
         company: "Stanford Blockchain Club",
     },
     {
+        image: "/img/speakers/faction.png",
+        name: "Tim Khoury",
+        title: "Partner",
+        company: "Faction VC",
+    },
+    {
         image: "/img/speakers/cecilia.png",
         name: "Cecilia Zhang",
         title: "Engineer",

@@ -15,9 +15,10 @@ interface EventPartner {
 }
 
 const eventPartners: EventPartner[] = [
+    { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
+    { name: "Blockchain Builders Fund", logo: "/img/media/BBF.png", width: 226, height: 100 },
     { name: "Berkeley Blockchain", logo: "/img/media/berkeley.png", width: 226, height: 100 },
     { name: "Columbia Blockchain", logo: "/img/media/columbia.png", width: 226, height: 100 },
-    { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
 ];
 
 const mediaPartners: MediaPartner[] = [
