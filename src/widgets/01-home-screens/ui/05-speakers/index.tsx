@@ -96,6 +96,12 @@ const speakers: Speaker[] = [
         company: "Faction VC",
     },
     {
+        image: "/img/speakers/sasha.png",
+        name: "Sasha Mai",
+        title: "Co-Founder",
+        company: "Rise Labs",
+    },
+    {
         image: "/img/speakers/cecilia.png",
         name: "Cecilia Zhang",
         title: "Engineer",
@@ -106,6 +112,12 @@ const speakers: Speaker[] = [
         name: "Jeff Walsh",
         title: "Engineer",
         company: "Taiko",
+    },
+    {
+        image: "/img/speakers/keyao.png",
+        name: "Keyao Shen",
+        title: "Senior Lead Software Engineer",
+        company: "Espresso Systems",
     },
     {
         image: "/img/speakers/dan.png",
