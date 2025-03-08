@@ -19,12 +19,15 @@ const eventPartners: EventPartner[] = [
     { name: "Blockchain Builders Fund", logo: "/img/media/BBF.png", width: 226, height: 100 },
     { name: "Berkeley Blockchain", logo: "/img/media/berkeley.png", width: 226, height: 100 },
     { name: "Columbia Blockchain", logo: "/img/media/columbia.png", width: 226, height: 100 },
+    { name: "Openledger", logo: "/img/media/openledger.png", width: 226, height: 100 },
+    { name: "Spire Labs", logo: "/img/media/spire.png", width: 226, height: 100 },
 ];
 
 const mediaPartners: MediaPartner[] = [
     { name: "BeInCrypto", logo: "/img/media/beincrypto.png" },
     { name: "Block Beats", logo: "/img/media/block.png" },
     { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
+    { name: "Bloomingbit", logo: "/img/media/bloomingbit.png" },
     { name: "Chain Catcher", logo: "/img/media/chaincatcher.png" },
     { name: "CoinNess", logo: "/img/media/coinness.png" },
     { name: "CryptoNews", logo: "/img/media/cryptonews.png" },
