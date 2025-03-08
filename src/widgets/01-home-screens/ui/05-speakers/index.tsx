@@ -62,7 +62,7 @@ const speakers: Speaker[] = [
     {
         image: "/img/speakers/drew.png",
         name: "Drew Van Der Werff",
-        title: "Shepherding Commit-",
+        title: "Shepherding Commit",
         company: "Boost and Fabric",
     },
     {
@@ -76,6 +76,12 @@ const speakers: Speaker[] = [
         name: "Harry Gao",
         title: "Co-founder",
         company: "Luban",
+    },
+    {
+        image: "/img/speakers/ram.png",
+        name: "Ramkumar",
+        title: "Core Contributor",
+        company: "Openledger",
     },
     {
         image: "/img/speakers/jay.png",
