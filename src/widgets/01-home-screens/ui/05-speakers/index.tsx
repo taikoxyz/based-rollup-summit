@@ -78,7 +78,7 @@ const speakers: Speaker[] = [
         company: "Luban",
     },
     {
-        image: "/img/speakers/ram.png",
+        image: "/img/speakers/Ram.png",
         name: "Ramkumar",
         title: "Core Contributor",
         company: "Openledger",
