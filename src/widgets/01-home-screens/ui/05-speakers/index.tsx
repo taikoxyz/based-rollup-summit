@@ -103,12 +103,6 @@ const speakers: Speaker[] = [
         company: "Faction VC",
     },
     {
-        image: "/img/speakers/sasha.png",
-        name: "Sasha Mai",
-        title: "Co-Founder",
-        company: "Rise Labs",
-    },
-    {
         image: "/img/speakers/cecilia.png",
         name: "Cecilia Zhang",
         title: "Engineer",
@@ -133,10 +127,10 @@ const speakers: Speaker[] = [
         company: "Hashed",
     },
     {
-        image: "/img/speakers/apoorv.png",
-        name: "Apoorv Anand",
-        title: "Researcher/Advisor",
-        company: "RISE Labs",
+        image: "/img/speakers/nick.png",
+        name: "Nick Shaheen",
+        title: "Director of BD",
+        company: "BanklessHQ",
     },
     {
         image: "/img/speakers/keith.png",
@@ -157,10 +151,10 @@ const speakers: Speaker[] = [
         company: "Stanford Blockchain Accelerator",
     },
     {
-        image: "/img/speakers/nick.png",
-        name: "Nick Shaheen",
-        title: "Director of BD",
-        company: "BanklessHQ",
+        image: "/img/speakers/apoorv.png",
+        name: "Apoorv Anand",
+        title: "Researcher/Advisor",
+        company: "RISE Labs",
     },
 ];
 
