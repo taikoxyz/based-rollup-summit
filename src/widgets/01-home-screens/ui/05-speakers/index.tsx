@@ -133,6 +133,12 @@ const speakers: Speaker[] = [
         company: "Hashed",
     },
     {
+        image: "/img/speakers/apoorv.png",
+        name: "Apoorv Anand",
+        title: "Researcher/Advisor",
+        company: "RISE Labs",
+    },
+    {
         image: "/img/speakers/keith.png",
         name: "Keith Chen",
         title: "Managing Partner",
