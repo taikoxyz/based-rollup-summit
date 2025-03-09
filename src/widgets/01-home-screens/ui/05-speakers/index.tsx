@@ -66,12 +66,6 @@ const speakers: Speaker[] = [
         company: "Boost and Fabric",
     },
     {
-        image: "/img/speakers/mareko.png",
-        name: "Marek Olszewski",
-        title: "Co-Founder & CEO",
-        company: "Celo & cLabs ",
-    },
-    {
         image: "/img/speakers/amir.png",
         name: "Amir Forouzani",
         title: "Co-founder & CEO",
