@@ -19,6 +19,7 @@ const eventPartners: EventPartner[] = [
     { name: "Blockchain Builders Fund", logo: "/img/media/BBF.png", width: 226, height: 100 },
     { name: "Berkeley Blockchain", logo: "/img/media/berkeley.png", width: 226, height: 100 },
     { name: "Columbia Blockchain", logo: "/img/media/columbia.png", width: 226, height: 100 },
+    { name: "Interstate", logo: "/img/media/interstate.png", width: 226, height: 100 },
     { name: "Openledger", logo: "/img/media/openledger.png", width: 226, height: 100 },
     { name: "Spire Labs", logo: "/img/media/spire.png", width: 226, height: 100 },
     { name: "Rise Labs", logo: "/img/media/rise.png", width: 226, height: 100 },
