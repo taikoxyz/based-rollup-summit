@@ -71,12 +71,6 @@ const speakers: Speaker[] = [
         title: "Founder",
         company: "Interstate.so",
     },
-    {
-        image: "/img/speakers/amir.png",
-        name: "Amir Forouzani",
-        title: "Co-founder & CEO",
-        company: "Puffer Finance",
-    },
 
     {
         image: "/img/speakers/harry.png",
