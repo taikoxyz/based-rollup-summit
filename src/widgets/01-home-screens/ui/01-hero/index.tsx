@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
                     {/* Buttons section */}
                     <div className={css.button_container}>
                         <Button
-                            href="https://lu.ma/37ykg387"
+                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
                             text="Register now"
                             className={css.register_button}
                         />
@@ -74,7 +74,7 @@ export const Hero: React.FC = () => {
                                 className={css.sponsor_button}
                             />
                             <Button
-                                href="https://docs.google.com/forms/d/1g-FnXyQ2qAsWpJ0cPY_2BGE-1mwkxTP0N-RXDV4YZfg/"
+                                href="https://docsend.com/view/hmzw3drdr5tf3n3k"
                                 text="Apply as Speaker"
                                 className={css.sponsor_button}
                             />
