@@ -11,7 +11,7 @@ export function useNavigationOneLevel() {
     const data = useNavigation();
 
     const navigation = React.useMemo(() => {
-        return data.map((item) => {
+        return data ? data.map((item) => {
             const links: NavLink[] = [];
 
             for (const { children, ...data } of item.links) {
@@ -23,7 +23,7 @@ export function useNavigationOneLevel() {
             }
 
             return { ...item, links };
-        });
+        }) : []
     }, [data]);
 
     return navigation;
