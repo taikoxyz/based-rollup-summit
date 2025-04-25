@@ -16,7 +16,7 @@ export const Apply: React.FC = () => {
                 className={css.text}
                 content={howToApply}
                 blocks={{
-                    link: ({ children, url }) => (
+                    link: ({ children, url }: any) => (
                         <a href={url} target="_blank">
                             {children}
                         </a>

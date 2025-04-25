@@ -1,4 +1,3 @@
-import { BlocksContent } from "@strapi/blocks-react-renderer";
 import { IFileObject } from "./file";
 import { IBaseFields, IServerResponse } from "./global";
 
@@ -10,8 +9,8 @@ export interface IBlog extends IBaseFields {
     timeToRead: string;
     category: IBlogCategory;
     image: IFileObject;
-    content: BlocksContent;
-    howToApply: BlocksContent;
+    content: any;
+    howToApply: any;
 }
 
 export interface IBlogShort {

@@ -1,26 +1,20 @@
 import React from "react";
-import { transformContent } from "./lib/transformContent";
-import { BlocksContent, BlocksRenderer } from "@strapi/blocks-react-renderer";
 import clsx from "clsx";
 import css from "./rich-text.module.scss";
 
-type BlocksRendererProps = React.ComponentProps<typeof BlocksRenderer>;
+type BlocksRendererProps = React.ComponentProps<any>;
 
 interface Props {
-    content: BlocksContent;
     blocks?: BlocksRendererProps["blocks"];
     modifiers?: BlocksRendererProps["modifiers"];
     className?: string;
+    content:string
 }
 
-export const RichText: React.FC<Props> = ({ content, blocks, modifiers, className }) => {
+export const RichText: React.FC<Props> = ({ content, className }) => {
     return (
         <div className={clsx(css.text, className)}>
-            <BlocksRenderer
-                content={transformContent(content)}
-                blocks={blocks}
-                modifiers={modifiers}
-            />
+{content}
         </div>
     );
 };

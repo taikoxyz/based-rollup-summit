@@ -1,4 +1,3 @@
-import { BlocksContent } from "@strapi/blocks-react-renderer";
 import { IBaseFields, IServerResponse } from "./global";
 
 export interface ICareer extends IBaseFields {
@@ -6,8 +5,8 @@ export interface ICareer extends IBaseFields {
     slug: string;
     type: string;
     location: string;
-    content: BlocksContent;
-    howToApply: BlocksContent;
+    content: any;
+    howToApply: any;
 }
 
 export type ICareersResponse = IServerResponse<ICareer>;

@@ -1,5 +1,4 @@
 import { ImageData } from "./utils.types";
-import { BlocksContent } from "@strapi/blocks-react-renderer";
 
 export interface AlethiaGwynethData {
     id: number;
@@ -41,5 +40,5 @@ export interface CardsList {
 export interface FaqData {
     id: number;
     question: string;
-    answer: BlocksContent;
+    answer: any;
 }
