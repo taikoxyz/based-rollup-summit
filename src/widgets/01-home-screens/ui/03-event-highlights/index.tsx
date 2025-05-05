@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import { HOME_PAG } from "widgets/01-home-screens/lib";
-import css from "./attend.module.scss";
+import css from "./event-highlights.module.scss";
 
+interface IEntry {
+    title: string;
+    description: string;
+    image: string;
+}
 export const Attend: React.FC = () => {
     const cards = [
         {
@@ -27,6 +32,39 @@ export const Attend: React.FC = () => {
         },
     ];
 
+    const entries:IEntry[] = [
+        {
+            title: 'Technical Deep Dives',
+            description: 'Cutting-edge based rollup implementations and research',
+            image: ''
+        },
+        {
+            title: 'PRECONFIRMATIONS Showcase',
+            description: 'Next-generation transaction finality solutions',
+            image: ''
+        },
+        {
+            title: 'CROSS-L2 INTEROPERABILITY',
+            description: 'Building bridges across the Ethereum scaling ecosystem',
+            image: ''
+        },
+        {
+            title: 'ZERO-KNOWLEDGE INNOVATIONS',
+            description: 'Latest breakthroughs in ZK technology',
+            image: ''
+        },
+        {
+            title: 'AI INTEGRATION',
+            description: 'Exploring the convergence of AI and blockchain',
+            image: ''
+        },
+        {
+            title: 'ECOSYSTEM BUILDING',
+            description: 'Standards development for seamless scaling',
+            image: ''
+        },
+    ]
+
     const attendRef = React.useRef<HTMLDivElement>(null);
 
     // Add animation class on scroll
@@ -49,8 +87,14 @@ export const Attend: React.FC = () => {
 
     return (
         <section className={css.attend} ref={attendRef} id={HOME_PAG.ATTEND}>
+            <EventHighlightsBanner/>
+
+<div className={css.entry_wrapper}>
+            {entries.map((entry, index) => (
+                <HighlightEntry entry={entry} key={index} />
+            ))}</div>
+
             <div className={css.attend_wrapper}>
-                <p className={css.attend_label}>WHO SHOULD ATTEND?</p>
                 <div className={css.cards_container}>
                     {cards.map((card, index) => (
                         <div key={index} className={css.card}>
@@ -66,3 +110,31 @@ export const Attend: React.FC = () => {
         </section>
     );
 };
+
+const EventHighlightsBanner = () => {
+    const repeatCount = 10; // Adjust to ensure enough content for seamless scroll
+    const content = "EVENT HIGHLIGHTS";
+
+    return (
+      <div className={css.event_highlights_banner}>
+        <div className={css.event_highlights_banner__content}>
+          {Array.from({ length: repeatCount }).map((_, i) => (
+            <span key={i}>{content}</span>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const HighlightEntry = ({entry}: {entry: IEntry}) => {
+    return (
+        <div className={css.highlight_entry}>
+<img src="/img/rectangle.png" className={css.highlight_entry_image} alt=""/>
+<div className={css.highlight_entry_title}>
+    {entry.title} </div>
+    <div className={css.highlight_entry_description}>
+        {entry.description}
+        </div>
+            </div>
+    )
+  }

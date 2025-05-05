@@ -29,9 +29,6 @@ function Home() {
             className={clsx(css.root)}
             meta={{
                 title: t("Based Rollup Summit - Taiko"),
-                description: t(
-                    "Based Rollup Summit 2025 is the first-ever gathering dedicated to truly decentralized scaling solutions for Ethereum."
-                ),
                 image: "/img/og-image.png",
                 url: "https://brs.taiko.xyz/",
             }}

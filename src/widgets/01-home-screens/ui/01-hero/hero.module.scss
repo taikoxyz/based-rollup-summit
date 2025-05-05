@@ -31,7 +31,6 @@
 
     .content_wrapper {
         width: 100%;
-        border:1px solid black;
         height:100%;
         max-width: 1302px;
         padding: 0;
@@ -53,7 +52,6 @@
         width: min-content;
         margin: 0 auto;
         position: relative;
-        border:1px solid blue;
         padding-top:130px;
         display:flex;
         flex-direction:column;
@@ -64,7 +62,6 @@
     // Main heading
     .main_heading {
         width: max-content;
-        border:1px solid red;
         font-family: "Clash Grotesk", sans-serif;
         font-weight: 700;
         font-size: 120px;
@@ -78,7 +75,6 @@
     // Date and location container
     .date_location {
         width: auto;
-        border:1px solid red;
         display: flex;
         justify-content: space-between;
     }
