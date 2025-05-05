@@ -41,21 +41,16 @@ export const Hero: React.FC = () => {
 
     return (
         <section className={css.hero}>
-            {/* Background with grid and blob */}
-            <div className={css.hero_background}>
-                <img src="/img/herosection/glassmorph.png" alt="" className={css.hero_bg_image} />
-            </div>
-
             <div className={css.hero_content}>
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
-                            <h1 className={css.main_heading}>BASED ROLLUP SUMMIT</h1>
+                            <div className={css.main_heading}>BASED ROLLUP SUMMIT</div>
 
                             <div className={css.date_location}>
-                                <p className={css.date}>JULY 1, 2025</p>
-                                <p className={css.location}>CANNES, FRANCE</p>
+                                <div className={css.date}>JULY 1, 2025</div>
+                                <div className={css.location}>CANNES, FRANCE</div>
                             </div>
                         </div>
                     </div>
@@ -67,7 +62,6 @@ export const Hero: React.FC = () => {
                             text="Register now"
                             className={css.register_button}
                         />
-                        <div className={css.secondary_buttons}>
                             <Button
                                 href="https://docsend.com/view/hmzw3drdr5tf3n3k"
                                 text="Apply as Sponsor"
@@ -78,7 +72,6 @@ export const Hero: React.FC = () => {
                                 text="Apply as Speaker"
                                 className={css.sponsor_button}
                             />
-                        </div>
                     </div>
                 </div>
             </div>

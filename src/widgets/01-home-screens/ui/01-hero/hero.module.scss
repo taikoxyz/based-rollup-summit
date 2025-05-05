@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     background-color: #ffffff;
     display: flex;
@@ -13,27 +13,9 @@
     left: 0;
     right: 0;
 
-    // Background image positioning
-    .hero_background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100%;
-        z-index: 1;
-        overflow: hidden;
-    }
-
-    .hero_bg_image {
-        position: absolute;
-        width: 1741.29px;
-        height: 1048.39px;
-        top: -122.53px;
-        left: 50%;
-        transform: translateX(-50%);
-        object-fit: cover;
-        z-index: 1;
-    }
+    background-size:cover;
+    background-position:center;
+    background-image:url('/img/herosection/glassmorph.png');
 
     // Main content area
     .hero_content {
@@ -49,11 +31,14 @@
 
     .content_wrapper {
         width: 100%;
+        border:1px solid black;
+        height:100%;
         max-width: 1302px;
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content:space-between;
         margin: 0 auto;
     }
 
@@ -65,15 +50,21 @@
 
     // Heading and date/location wrapper
     .heading_wrapper {
-        width: 100%;
-        max-width: 1302px;
+        width: min-content;
         margin: 0 auto;
         position: relative;
+        border:1px solid blue;
+        padding-top:130px;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+
     }
 
     // Main heading
     .main_heading {
-        width: 100%;
+        width: max-content;
+        border:1px solid red;
         font-family: "Clash Grotesk", sans-serif;
         font-weight: 700;
         font-size: 120px;
@@ -82,18 +73,14 @@
         margin: 0;
         color: #000000;
         text-align: left;
-        margin-top: 130px;
-        margin-left: 105px;
     }
 
     // Date and location container
     .date_location {
-        width: 100%;
-        max-width: 1302px;
+        width: auto;
+        border:1px solid red;
         display: flex;
         justify-content: space-between;
-        margin-top: 10px;
-        margin-left: 105px;
     }
 
     // Date and location text styles
@@ -110,20 +97,11 @@
     // Button container
     .button_container {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
         width: 100%;
         max-width: 620px;
-        margin-top: 30px;
-    }
-
-    // Secondary buttons container
-    .secondary_buttons {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        gap: 8px;
+        padding-bottom:53px;
     }
 
     // Button styles
@@ -151,7 +129,6 @@
         background: #c8047d;
         color: #ffffff;
         width: 200px;
-        margin-bottom: 8px;
 
         &:hover {
             background: darken(#c8047d, 5%);
@@ -170,102 +147,21 @@
         }
     }
 
-    // Mobile styles
-    @media (max-width: 1200px) {
-        .main_heading {
-            font-size: 100px;
-            margin-left: 50px;
-        }
-
-        .date_location {
-            margin-left: 50px;
-        }
-
-        .date,
-        .location {
-            font-size: 32px;
-        }
+    // Mobile
+    @media (min-width: 391px) {
+        .main_heading{
+            font-size:70px;
+          }
+    }
+  // Tablet
+    @media (min-width: 391px) and (max-width: 1439px) {
+      .main_heading{
+        font-size:63px;
+      }
     }
 
-    @media (max-width: 768px) {
-        .content_wrapper {
-            padding: 0 20px;
-            width: 100vw;
-        }
-
-        .main_content {
-            margin-bottom: 40px;
-            width: 100%;
-        }
-
-        .heading_wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
-        }
-
-        .main_heading {
-            font-size: 60px;
-            margin-top: 40px;
-            text-align: left;
-            margin-left: 20px;
-            width: 100%;
-        }
-
-        .date_location {
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-            margin-top: 10px;
-            margin-left: 20px;
-            width: 100%;
-        }
-
-        .date,
-        .location {
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-
-        .button_container {
-            margin-top: 30px;
-            width: 100%;
-            padding: 0 20px;
-        }
-
-        .register_button,
-        .sponsor_button {
-            width: 100%;
-            max-width: 100%;
-        }
-
-        .hero_bg_image {
-            width: 1440px;
-            height: 867px;
-            top: -67px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: block;
-            object-fit: cover;
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .main_heading {
-            font-size: 50px;
-        }
-
-        .date,
-        .location {
-            font-size: 20px;
-        }
-
-        .secondary_buttons {
-            flex-direction: column;
-            gap: 8px;
-        }
+  // Desktop
+    @media (min-width: 1440px) {
+      display: block;
     }
 }
