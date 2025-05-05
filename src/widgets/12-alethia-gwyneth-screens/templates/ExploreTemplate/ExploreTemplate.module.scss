@@ -67,7 +67,7 @@
 }
 .explore_title {
     margin-top: 20px;
-    @include setFontClashGrotest500(60px, 1.1, -0.02em, #22282b);
+    font-family: "Clash Grotesk", sans-serif;
     padding-right: 24px;
     position: relative;
     z-index: 2;

@@ -12,9 +12,9 @@ import { DefaultLayout } from "widgets/layouts/default-layout";
 import MainLayout from "widgets/layouts/main-layout";
 import { pagesApi } from "shared/lib/api/pages.api";
 import { partialApi } from "shared/lib/api/partials.api";
+import { EventHighlightsBanner } from "shared/ui/HighlightBanner";
 import { MediaQuery } from "shared/ui/media-query";
 import css from "./home.module.scss";
-import { EventHighlightsBanner } from "shared/ui/HighlightBanner";
 
 gsap.registerPlugin(ScrollTrigger);
 

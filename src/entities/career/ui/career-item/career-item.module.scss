@@ -34,12 +34,16 @@
 
 .title {
     max-width: 440px;
-    font: 500 28px/1 $kFontClashGrotesk;
+    font:
+        500 28px/1 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
 }
 
 .text {
-    font: 400 16px/1.72 $kFontPublicSans;
+    font:
+        400 16px/1.72 "Open Sans",
+        sans-serif;
     letter-spacing: -0.02em;
     color: rgba($kColorBlack, 0.6);
 }
@@ -49,7 +53,9 @@
     align-items: center;
     gap: 8px;
 
-    font: 600 14px/1 $kFontPublicSans;
+    font:
+        600 14px/1 "Open Sans",
+        sans-serif;
     color: $kColorBlack;
 
     svg {

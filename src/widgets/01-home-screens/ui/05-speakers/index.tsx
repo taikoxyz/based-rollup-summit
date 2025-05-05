@@ -197,19 +197,27 @@ export const Speakers: React.FC = () => {
                             Our Cannes summit will feature leading voices in Ethereum scaling and L2
                             development, stay tuned.
                         </div>
-                        <Button noArrow
-                        onClick={() => window.open("https://docs.google.com/forms/d/1i0CKZpvVgtPXwGcrI9w4xBgyduGuCZLPHxRSRZLd5KA/edit", "_blank")}
-                        className={css.button} text="Apply as Speaker" />
+                        <Button
+                            noArrow
+                            onClick={() =>
+                                window.open(
+                                    "https://docs.google.com/forms/d/1i0CKZpvVgtPXwGcrI9w4xBgyduGuCZLPHxRSRZLd5KA/edit",
+                                    "_blank"
+                                )
+                            }
+                            className={css.button}
+                            text="Apply as Speaker"
+                        />
                     </div>
                 </div>
             </div>
 
             <div className={css.speakers_wrapper}>
                 <div className={css.speakers_text}>PREVIOUS SPEAKERS</div>
-                    {speakers.map((speaker, index) => (
-                        <ProfileCard key={index} {...speaker} />
-                    ))}
-                </div>
+                {speakers.map((speaker, index) => (
+                    <ProfileCard key={index} {...speaker} />
+                ))}
+            </div>
         </section>
     );
 };

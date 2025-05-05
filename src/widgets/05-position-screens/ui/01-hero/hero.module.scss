@@ -22,7 +22,9 @@
 
 .title {
     max-width: 550px;
-    font: 500 55px/0.9 $kFontClashGrotesk;
+    font:
+        500 55px/0.9 "Clash Grotesk",
+        open-sans;
     color: #22282b;
 }
 

@@ -6,7 +6,9 @@
     padding: 7px 10px;
     border-radius: 8px;
 
-    font: 500 18px/1.255 $kFontClashGrotesk;
+    font:
+        500 18px/1.255 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.01em;
     color: $kColorBlack;
 

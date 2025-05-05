@@ -23,11 +23,11 @@
     position: relative;
     width: 100%;
     height: 185px;
-    margin-bottom:414px;
+    margin-bottom: 414px;
     border-radius: 30px 50px 0px 0px;
     .title {
         color: #191e28;
-        @include setFontClashGrotest500(40px, 0.9, -0.02em);
+        font-family: "Clash Grotesk", sans-serif;
         font-weight: 700;
         font-size: 40px;
         line-height: 90%;
@@ -42,7 +42,7 @@
         padding: 80px 100px;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-margin-top:-69px;
+        margin-top: -69px;
         .button {
             padding-left: 32px;
             padding-right: 46px;
@@ -83,13 +83,13 @@ margin-top:-69px;
 .speakers_wrapper {
     max-width: 1120px;
     width: 100%;
-    gap:20px;
+    gap: 20px;
     padding: 0 40px;
     margin: 0 auto;
     position: relative;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    margin-bottom:100px;
+    margin-bottom: 100px;
 }
 
 .speakerGrid {
@@ -107,22 +107,21 @@ margin-top:-69px;
     grid-column: 2;
 }
 
-
 .speakers_title {
     max-width: 14.5em;
     text-align: center;
     color: #c8047d;
-    @include setFontClashGrotest500(55px, 0.9, -0.02em);
+    font-family: "Clash Grotesk", sans-serif;
 }
 
 .speakers_text {
     text-align: left;
     font-family: "Clash Grotesk", sans-serif;
-    font-size:40px;
-    font-weight:700;
-    line-height:90%;
-    letter-spacing:0%;
-    color:#191E28;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 90%;
+    letter-spacing: 0%;
+    color: #191e28;
     margin: 0;
     grid-column: span 5 / span 5;
 }
@@ -133,7 +132,6 @@ margin-top:-69px;
     align-items: profileCard;
     text-align: center;
     transition: all 0.3s ease;
-
 }
 
 .profileCard__image {
@@ -161,8 +159,8 @@ margin-top:-69px;
     line-height: 90%;
     letter-spacing: 0%;
     text-align: center;
-    color:#D60D89;
-    }
+    color: #d60d89;
+}
 
 .profileCard__title {
     font-family: Clash Grotesk;
@@ -171,7 +169,7 @@ margin-top:-69px;
     line-height: 90%;
     letter-spacing: 0%;
     text-align: center;
-    color:#444A55;
+    color: #444a55;
     margin: 0;
 }
 

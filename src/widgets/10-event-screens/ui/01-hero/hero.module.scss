@@ -38,7 +38,9 @@
 }
 
 .suptitle {
-    font: 600 14px/1.2 $kFontPublicSans;
+    font:
+        600 14px/1.2 "Open Sans",
+        sans-serif;
     letter-spacing: 0.04em;
     color: #fff;
     text-transform: uppercase;
@@ -46,7 +48,9 @@
 
 .title {
     margin-top: 44px;
-    font: 500 42px/1 $kFontClashGrotesk;
+    font:
+        500 42px/1 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #fff;
 }
@@ -68,7 +72,9 @@
 
 .card_text {
     margin-top: 20px;
-    font: 400 16px/1.255 $kFontPublicSans;
+    font:
+        400 16px/1.255 "Open Sans",
+        sans-serif;
     color: rgba($kColorBlack, 0.8);
 }
 

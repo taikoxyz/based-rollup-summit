@@ -19,7 +19,9 @@
     padding: 0 24px;
     flex-grow: 1;
 
-    font: 500 28px/1 $kFontClashGrotesk;
+    font:
+        500 28px/1 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
 
     @include setTextLinesOverflow(1);
@@ -33,7 +35,9 @@
 }
 
 .column_text {
-    font: 400 16px/1.72 $kFontPublicSans;
+    font:
+        400 16px/1.72 "Open Sans",
+        sans-serif;
     letter-spacing: -0.02em;
     color: rgba($kColorBlack, 0.6);
 
@@ -50,7 +54,9 @@
     align-items: center;
     gap: 8px;
 
-    font: 600 14px/1.1 $kFontPublicSans;
+    font:
+        600 14px/1.1 "Open Sans",
+        sans-serif;
     color: $kColorBlack;
 
     svg {

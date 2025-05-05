@@ -5,7 +5,9 @@
 }
 
 .suptitle {
-    font: 500 20px/0.915 $kFontClashGrotesk;
+    font:
+        500 20px/0.915 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #22282b;
     padding-bottom: 22px;

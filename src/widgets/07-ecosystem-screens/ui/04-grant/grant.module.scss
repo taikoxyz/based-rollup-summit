@@ -22,7 +22,9 @@
 
 .suptitle {
     max-width: 100px;
-    font: 600 14px/1.2 $kFontPublicSans;
+    font:
+        600 14px/1.2 "Open Sans",
+        sans-serif;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $kColorPink;
@@ -30,7 +32,9 @@
 
 .text {
     max-width: 630px;
-    font: 500 44px/1 $kFontClashGrotesk;
+    font:
+        500 44px/1 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: $kColorBlack;
 

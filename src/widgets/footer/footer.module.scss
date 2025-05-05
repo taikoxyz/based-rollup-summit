@@ -11,7 +11,9 @@
 }
 .footer_title {
     text-align: center;
-    font: 700 12px/1.455 $kFontPublicSans;
+    font:
+        700 12px/1.455 "Open Sans",
+        sans-serif;
     letter-spacing: 0.05em;
     color: $kColorBlack;
 
@@ -35,7 +37,7 @@
     flex-shrink: 0;
 }
 .footer_content_title {
-    @include setFontClashGrotest500(36px, 1.1, -0.015em, getColorBlack());
+    font-family: "Clash Grotesk", sans-serif;
 }
 .footer_content_text {
     margin-top: 16px;
@@ -109,7 +111,7 @@
     @include setFontPublicSans400(12px, 1.25, 0.01em, #444a55);
 }
 .footer_nav_link_dsb {
-    @include setFontClashGrotest500(12px, 1.255, -0.02em, #fff);
+    font-family: "Clash Grotesk", sans-serif;
     height: 2.1em;
     padding: 0 0.9375em;
     border-radius: 100px;

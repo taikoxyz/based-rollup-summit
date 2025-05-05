@@ -33,7 +33,9 @@
 }
 
 .monthBtn {
-    font: 500 20px/1.02 $kFontClashGrotesk;
+    font:
+        500 20px/1.02 "Clash Grotesk",
+        open-sans;
     color: #4f4f4f;
     padding: 4px 6px;
     border-radius: 4px;

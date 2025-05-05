@@ -10,7 +10,9 @@
 }
 
 .title {
-    font: 500 75px/0.85 $kFontClashGrotesk;
+    font:
+        500 75px/0.85 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #22282b;
 

@@ -44,14 +44,18 @@
 }
 
 .content_suptitle {
-    font: 600 14px/1.2 $kFontPublicSans;
+    font:
+        600 14px/1.2 "Open Sans",
+        sans-serif;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $kColorPink;
 }
 
 .content_title {
-    font: 500 44px/1 $kFontClashGrotesk;
+    font:
+        500 44px/1 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: $kColorBlack;
 
@@ -61,7 +65,9 @@
 }
 
 .content_text {
-    font: 400 16px/1.255 $kFontPublicSans;
+    font:
+        400 16px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.8);
 

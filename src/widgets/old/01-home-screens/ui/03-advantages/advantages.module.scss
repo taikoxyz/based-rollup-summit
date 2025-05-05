@@ -90,14 +90,18 @@
 
 .list_title {
     padding-left: 56px;
-    font: 500 20px/1.255 $kFontClashGrotesk;
+    font:
+        500 20px/1.255 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #fff;
 }
 
 .list_text {
     margin-top: 40px;
-    font: 400 14px/1.255 $kFontPublicSans;
+    font:
+        400 14px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: #fff;
     opacity: 0.8;

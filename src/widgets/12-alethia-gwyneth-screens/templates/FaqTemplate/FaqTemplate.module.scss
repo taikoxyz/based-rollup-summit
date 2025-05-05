@@ -11,7 +11,7 @@
     flex-shrink: 0;
 }
 .faq_title {
-    @include setFontClashGrotest500(60px, 0.95, -0.02em, #22282b);
+    font-family: "Clash Grotesk", sans-serif;(60px, 0.95, -0.02em, #22282b);
 }
 .faq_text {
     max-width: 340px;
@@ -33,7 +33,7 @@
 .question_button {
     width: 100%;
     padding: 24px;
-    @include setFontClashGrotest500(20px, 0.95, normal, getColorBlack());
+    font-family: "Clash Grotesk", sans-serif;(20px, 0.95, normal, getColorBlack());
     text-align: left;
 
     display: flex;

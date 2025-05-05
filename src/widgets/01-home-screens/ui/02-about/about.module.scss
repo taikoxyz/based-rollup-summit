@@ -87,14 +87,14 @@
     max-width: 14.5em;
     text-align: center;
     color: #c8047d;
-    @include setFontClashGrotest500(55px, 0.5, -0.02em);
+    font-family: "Clash Grotesk", sans-serif;
     letter-spacing: -2%;
     line-height: 57px;
 }
 
 .about_text {
     text-align: center;
-    @include setFontClashGrotest500(55px, 1, -0.01em, getColorBlack());
+    font-family: "Clash Grotesk", sans-serif;
     letter-spacing: -2%;
     line-height: 57px;
 }

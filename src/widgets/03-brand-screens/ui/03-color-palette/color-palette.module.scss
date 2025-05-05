@@ -1,5 +1,7 @@
 .suptitle {
-    font: 500 20px/0.915 $kFontClashGrotesk;
+    font:
+        500 20px/0.915 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #22282b;
     padding-bottom: 22px;
@@ -51,7 +53,9 @@
 }
 
 .colors_title {
-    font: 500 28px/1.05 $kFontClashGrotesk;
+    font:
+        500 28px/1.05 "Clash Grotesk",
+        open-sans;
     color: #fff;
 }
 
@@ -59,7 +63,9 @@
     padding-top: 25px;
     margin-top: auto;
 
-    font: 500 20px/1.05 $kFontClashGrotesk;
+    font:
+        500 20px/1.05 "Clash Grotesk",
+        open-sans;
     color: rgba(#fff, 0.9);
 }
 

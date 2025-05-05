@@ -38,7 +38,9 @@
     }
 
     span {
-        font: 500 16px/1.2 $kFontPublicSans;
+        font:
+            500 16px/1.2 "Open Sans",
+            sans-serif;
         letter-spacing: -0.01em;
         color: $kColorBlack;
     }
@@ -46,7 +48,9 @@
 
 .links_name {
     margin-top: 26px;
-    font: 500 24px/1 $kFontClashGrotesk;
+    font:
+        500 24px/1 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.01em;
     color: $kColorBlack;
 

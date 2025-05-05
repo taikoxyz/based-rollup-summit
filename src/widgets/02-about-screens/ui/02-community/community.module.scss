@@ -39,14 +39,18 @@
 
 .title {
     margin-top: 85px;
-    font: 500 55px/0.9 $kFontClashGrotesk;
+    font:
+        500 55px/0.9 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #000;
 }
 
 .text {
     margin-top: 31px;
-    font: 400 16px/1.255 $kFontPublicSans;
+    font:
+        400 16px/1.255 "Open Sans",
+        sans-serif;
     color: rgba($kColorBlack, 0.8);
 }
 
@@ -82,13 +86,17 @@
 
 .image_counter {
     width: 1.85em;
-    font: 500 65px/1.2 $kFontClashGrotesk;
+    font:
+        500 65px/1.2 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.01em;
     color: $kColorBlack;
 }
 
 .image_dapps {
-    font: 600 16px/1.2 $kFontPublicSans;
+    font:
+        600 16px/1.2 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.4);
     text-transform: uppercase;

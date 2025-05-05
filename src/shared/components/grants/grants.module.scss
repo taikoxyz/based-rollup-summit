@@ -36,7 +36,7 @@
                     font-size: 75px;
                     font-weight: 500;
                     line-height: 58px;
-                    font-family: $kFontClashGrotesk;
+                    font-family: "Clash Grotesk", open-sans;
                 }
             }
 
@@ -53,7 +53,9 @@
 
                     .text {
                         max-width: 350px;
-                        font: 500 16px/24px $kFontClashGrotesk;
+                        font:
+                            500 16px/24px "Clash Grotesk",
+                            open-sans;
                         letter-spacing: -0.01em;
                         color: #ff6fc8;
                     }

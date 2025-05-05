@@ -67,14 +67,18 @@
 }
 
 .title {
-    font: 500 60px/0.95 $kFontClashGrotesk;
+    font:
+        500 60px/0.95 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #22282b;
 }
 
 .text {
     max-width: 350px;
-    font: 400 16px/1.255 $kFontPublicSans;
+    font:
+        400 16px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.8);
 }

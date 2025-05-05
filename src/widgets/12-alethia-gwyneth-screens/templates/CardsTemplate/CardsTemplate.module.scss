@@ -41,7 +41,7 @@
 .cards_link_title {
     margin-top: auto;
     padding-top: 24px;
-    @include setFontClashGrotest500(32px, 0.95, normal, getColorBlack());
+    font-family: "Clash Grotesk", sans-serif;
 }
 .cards_link_text {
     margin-top: 24px;
@@ -60,7 +60,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    @include setFontClashGrotest500(16px, 1.255, -0.02em, #fff);
+    font-family: "Clash Grotesk", sans-serif;
 }
 .cards_link_link {
     position: absolute;

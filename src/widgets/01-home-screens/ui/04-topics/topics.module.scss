@@ -65,7 +65,7 @@
     align-items: center;
     white-space: nowrap;
     transition: transform 0.2s ease-in-out;
-    @include setFontClashGrotest500(35px, 1.255, -0.01em, getColorBlack());
+    font-family: "Clash Grotesk", sans-serif;
 
     &:hover {
         transform: scale(0.9);

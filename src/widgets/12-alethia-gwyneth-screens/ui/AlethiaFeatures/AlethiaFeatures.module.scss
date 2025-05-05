@@ -39,7 +39,7 @@
 .features_item_title {
     max-width: 300px;
     margin-top: 24px;
-    @include setFontClashGrotest500(50px, 0.9, normal, #191e28);
+    font-family: "Clash Grotesk", sans-serif;
 }
 .features_item_text {
     padding-top: 28px;
@@ -48,7 +48,7 @@
 .features_item_disabled {
     margin-top: 16px;
     height: 34px;
-    @include setFontClashGrotest500(16px, 1.255, -0.02em, #fff);
+    font-family: "Clash Grotesk", sans-serif;
     background: getColorPink();
     padding: 2px 12px;
     border-radius: 100px;

@@ -4,7 +4,9 @@
 }
 
 .sort_text {
-    font: 600 12px/1.255 $kFontPublicSans;
+    font:
+        600 12px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.3);
     text-transform: uppercase;
@@ -19,7 +21,9 @@
 .sort_value {
     margin-left: 12px;
     margin-right: 5px;
-    font: 600 12px/1.255 $kFontPublicSans;
+    font:
+        600 12px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: $kColorBlack;
 }
@@ -35,7 +39,9 @@
 }
 
 .select_text {
-    font: 600 12px/1.255 $kFontPublicSans;
+    font:
+        600 12px/1.255 "Open Sans",
+        sans-serif;
     text-transform: uppercase;
 }
 
@@ -49,7 +55,9 @@
 }
 
 .select_value {
-    font: 600 12px/1.255 $kFontPublicSans;
+    font:
+        600 12px/1.255 "Open Sans",
+        sans-serif;
     text-transform: uppercase;
 
     white-space: nowrap;
@@ -64,7 +72,9 @@
     padding: 8px 15px;
     border-radius: 8px;
 
-    font: 500 16px/1 $kFontPublicSans;
+    font:
+        500 16px/1 "Open Sans",
+        sans-serif;
     color: #444a55;
 
     white-space: nowrap;

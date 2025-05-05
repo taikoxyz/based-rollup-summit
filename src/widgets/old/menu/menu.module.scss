@@ -36,7 +36,9 @@
 
 .menu_title {
     padding-left: 8px;
-    font: 600 14px/1.2 $kFontPublicSans;
+    font:
+        600 14px/1.2 "Open Sans",
+        sans-serif;
     letter-spacing: 0.04em;
     color: rgba($kColorBlack, 0.6);
     text-transform: uppercase;
@@ -55,7 +57,9 @@
 
     text-align: center;
 
-    font: 700 12px/1.455 $kFontPublicSans;
+    font:
+        700 12px/1.455 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: $kColorBlack;

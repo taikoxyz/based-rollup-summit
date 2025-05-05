@@ -18,7 +18,9 @@
 .title {
     padding-left: 20px;
 
-    font: 500 40px/0.9 $kFontClashGrotesk;
+    font:
+        500 40px/0.9 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: $kColorBlack;
 
@@ -54,7 +56,9 @@
 .head_event {
     flex-grow: 1;
 
-    font: 600 12px/1.255 $kFontPublicSans;
+    font:
+        600 12px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.3);
     text-transform: uppercase;

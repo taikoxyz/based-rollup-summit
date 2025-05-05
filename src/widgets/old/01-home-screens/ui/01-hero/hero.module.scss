@@ -75,7 +75,9 @@
 }
 
 .title {
-    font: 500 160px/0.75 $kFontClashGrotesk;
+    font:
+        500 160px/0.75 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
     letter-spacing: -0.02em;
 
@@ -100,7 +102,9 @@
     }
 
     span {
-        font: 500 18px/1.255 $kFontPublicSans;
+        font:
+            500 18px/1.255 "Open Sans",
+            sans-serif;
         letter-spacing: -0.01em;
         color: $kColorBlack;
 
@@ -123,7 +127,9 @@
 }
 
 .taikoIs {
-    font: 500 36px/0.75 $kFontClashGrotesk;
+    font:
+        500 36px/0.75 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: $kColorBlack;
     text-transform: lowercase;
@@ -160,7 +166,9 @@
     transition: 0.7s cubic-bezier(0.16, 1.62, 0.66, 1.04);
     transition-property: opacity, transform;
 
-    font: 600 12px/1.255 $kFontPublicSans;
+    font:
+        600 12px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.6);
     text-transform: uppercase;

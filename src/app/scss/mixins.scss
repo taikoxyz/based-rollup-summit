@@ -239,7 +239,9 @@
     $letterSpacing: normal,
     $color: false
 ) {
-    font: 400 $font-size/#{$leading} $kFontPublicSans;
+    font:
+        400 $font-size/#{$leading} "Open Sans",
+        sans-serif;
     letter-spacing: $letterSpacing;
     @if ($color) {
         color: $color;
@@ -252,7 +254,9 @@
     $letterSpacing: normal,
     $color: false
 ) {
-    font: 500 $font-size/#{$leading} $kFontPublicSans;
+    font:
+        500 $font-size/#{$leading} "Open Sans",
+        sans-serif;
     letter-spacing: $letterSpacing;
     @if ($color) {
         color: $color;
@@ -265,7 +269,9 @@
     $letterSpacing: normal,
     $color: false
 ) {
-    font: 600 $font-size/#{$leading} $kFontPublicSans;
+    font:
+        600 $font-size/#{$leading} "Open Sans",
+        sans-serif;
     letter-spacing: $letterSpacing;
     @if ($color) {
         color: $color;
@@ -307,7 +313,9 @@
     $letterSpacing: normal,
     $color: false
 ) {
-    font: 500 $font-size/#{$leading} $kFontClashGrotesk;
+    font:
+        500 $font-size/#{$leading} "Clash Grotesk",
+        open-sans;
     letter-spacing: $letterSpacing;
     @if ($color) {
         color: $color;
@@ -320,7 +328,9 @@
     $letterSpacing: normal,
     $color: false
 ) {
-    font: 600 $font-size/#{$leading} $kFontClashGrotesk;
+    font:
+        600 $font-size/#{$leading} "Clash Grotesk",
+        open-sans;
     letter-spacing: $letterSpacing;
     @if ($color) {
         color: $color;

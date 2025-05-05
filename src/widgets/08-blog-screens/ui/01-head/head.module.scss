@@ -13,12 +13,16 @@
 }
 
 .title {
-    font: 500 75px/0.84 $kFontClashGrotesk;
+    font:
+        500 75px/0.84 "Clash Grotesk",
+        open-sans;
     color: #22282b;
 }
 
 .filterBtn {
-    font: 600 16px/1.2 $kFontPublicSans;
+    font:
+        600 16px/1.2 "Open Sans",
+        sans-serif;
     color: $kColorBlack;
 
     display: flex;

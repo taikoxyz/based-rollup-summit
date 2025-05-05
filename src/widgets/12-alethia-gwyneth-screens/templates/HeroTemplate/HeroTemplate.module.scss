@@ -108,7 +108,7 @@
 }
 .hero_title {
     max-width: 10.25em;
-    @include setFontClashGrotest500(80px, 1, -0.02em, #191e28);
+    font-family: "Clash Grotesk", sans-serif;
 }
 .hero_text {
     margin-top: 32px;

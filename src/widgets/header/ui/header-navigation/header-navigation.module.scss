@@ -79,7 +79,11 @@
     gap: 22px;
     width: 170px;
     flex-shrink: 0;
-
+    font-family: "Public Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -2%;
     &:last-child {
         width: 100%;
     }
@@ -124,7 +128,7 @@
     height: 27px;
     border-radius: 100px;
     background: getColorPink();
-    @include setFontClashGrotest500(12px, 1.255, -0.02em, #fff);
+    font-family: "Clash Grotesk", sans-serif;
     padding: 2px 10px;
     display: flex;
     justify-content: center;
