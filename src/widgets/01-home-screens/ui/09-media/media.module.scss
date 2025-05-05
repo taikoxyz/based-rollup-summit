@@ -1,10 +1,9 @@
 .container {
     background-color: #f8f8f8;
     width: 100%;
-
     &._animated {
         .mediaItem,
-        .partnerItem {
+        .partner_item {
             opacity: 1;
             transform: translateY(0);
         }
@@ -13,12 +12,14 @@
 
 /* Event Partners Styles */
 .partners {
-    padding: 60px 0 30px;
+    padding: 60px 0 0px;
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top:-69px;
+    background-color: #f8f8f8;
 }
 
 .partners_wrapper {
@@ -35,34 +36,41 @@
 }
 
 .partners_label {
-    font-family: "Public Sans", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16.8px;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: #c8047d;
-    margin-bottom: 40px;
+    text-align: left;
+    color: #191E28;
     text-transform: uppercase;
+
+
+    font-family: "Clash Grotesk";
+font-weight: 700;
+font-size: 40px;
+line-height: 90%;
+letter-spacing: 0%;
+margin-bottom:40px;
+padding:40px;
+padding-bottom:109px;
+width:100%;
+    border-radius:50px 50px 0px 0px;
+    background-color: #FF6FC8;
 }
 
-.partnersGrid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+.partners_grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: 100%;
+margin-top:-106px;
 }
 
-.partnerItem {
+.partner_item {
+    border:1px solid #CACBCE;
     display: flex;
+    background-color:white;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: translateY(20px);
+    height:274px;
+    border-radius:30px;
+    width:100%;
     transition:
         opacity 0.5s ease,
         transform 0.5s ease;
@@ -166,99 +174,59 @@
     object-fit: contain;
 }
 
-/* Responsive styles */
-@media (min-width: 1200px) {
-    .partners {
-        padding-top: 70px;
-        padding-bottom: 35px;
-    }
 
-    .media {
-        padding-top: 35px;
-        padding-bottom: 70px;
-    }
+.media_support{
+    padding: 60px 0 30px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:-69px;
+    background-color: #f8f8f8;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
-    .partners {
-        padding-top: 50px;
-        padding-bottom: 25px;
-    }
 
-    .media {
-        padding-top: 25px;
-        padding-bottom: 50px;
-    }
 
-    .partners_label,
-    .media_label {
-        margin-bottom: 30px;
-    }
+
+.media_grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+        width: 100%;
+margin-top:-106px;
+
+
+
+
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .partners {
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
-
-    .media {
-        padding-top: 20px;
-        padding-bottom: 40px;
-    }
-
-    .partners_label,
-    .media_label {
-        margin-bottom: 25px;
-    }
-
-    .partnerLogo {
-        width: 180px;
-        height: 80px;
-    }
-
-    .partnersGrid {
-        gap: 30px;
-    }
-
-    .mediaLogo {
-        width: 80px;
-        height: 80px;
-    }
+.media_item {
+    border:1px solid #CACBCE;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:274px;
+    border-radius:30px;
+    width:100%;
 }
 
-@media (max-width: 480px) {
-    .partners {
-        padding-top: 30px;
-        padding-bottom: 15px;
-    }
+.media_label{
 
-    .media {
-        padding-top: 15px;
-        padding-bottom: 30px;
-    }
+    text-align: left;
+    color: #191E28;
+    text-transform: uppercase;
 
-    .partners_wrapper,
-    .media_wrapper {
-        padding: 0 15px;
-    }
 
-    .partners_label,
-    .media_label {
-        margin-bottom: 20px;
-    }
+    font-family: "Clash Grotesk";
+font-weight: 700;
+font-size: 40px;
+line-height: 90%;
+letter-spacing: 0%;
 
-    .partnerLogo {
-        width: 160px;
-        height: 70px;
-    }
-
-    .partnersGrid {
-        gap: 20px;
-    }
-
-    .mediaLogo {
-        width: 70px;
-        height: 70px;
-    }
+padding:40px;
+padding-bottom:109px;
+width:100%;
+    border-radius:50px 50px 0px 0px;
+    background-color: #C480FE;
 }

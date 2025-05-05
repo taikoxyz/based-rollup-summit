@@ -60,14 +60,15 @@ export const Media: React.FC = () => {
     }, []);
 
     return (
+
         <section className={css.container} ref={mediaRef} id={HOME_PAG.MEDIA}>
             {/* Event Partners Section */}
+            <div className={css.partners_label}>PAST PARTNERS</div>
+
             <div className={css.partners}>
-                <div className={css.partners_wrapper}>
-                    <p className={css.partners_label}>EVENT PARTNERS</p>
-                    <div className={css.partnersGrid}>
+            <div className={css.partners_grid}>
                         {eventPartners.map((partner, index) => (
-                            <div key={index} className={css.partnerItem}>
+                            <div key={index} className={css.partner_item}>
                                 <img
                                     src={partner.logo}
                                     alt={`${partner.name}`}
@@ -78,13 +79,32 @@ export const Media: React.FC = () => {
                             </div>
                         ))}
                     </div>
-                </div>
             </div>
 
             {/* Media Support Section */}
+            <div className={css.media_label}>MEDIA SUPPORT</div>
+
+            <div className={css.media_support}>
+            <div className={css.media_grid}>
+                        {mediaPartners.map((partner, index) => (
+                            <div key={index} className={css.media_item}>
+                                <img
+                                    src={partner.logo}
+                                    alt={`${partner.name} logo`}
+                                    className={css.mediaLogo}
+                                    width={100}
+                                    height={100}
+                                />
+                            </div>
+                        ))}
+                    </div>
+            </div>
+
+
+
             <div className={css.media}>
                 <div className={css.media_wrapper}>
-                    <p className={css.media_label}>MEDIA SUPPORT</p>
+                    <p className={css.media_label}></p>
                     <div className={css.mediaGrid}>
                         <div className={css.mediaRow}>
                             {mediaPartners.slice(0, 6).map((partner, index) => (
