@@ -14,6 +14,7 @@ import { pagesApi } from "shared/lib/api/pages.api";
 import { partialApi } from "shared/lib/api/partials.api";
 import { MediaQuery } from "shared/ui/media-query";
 import css from "./home.module.scss";
+import { EventHighlightsBanner } from "shared/ui/HighlightBanner";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,8 +40,8 @@ function Home() {
                 <Screens.Hero />
                 <Screens.About />
                 <Screens.Attend />
-                <Screens.Topics />
                 <Screens.Speakers />
+                <EventHighlightsBanner content={"WHY ATTEND?"} />
                 <Screens.Schedule />
                 <Screens.Media />
                 <Screens.Future />

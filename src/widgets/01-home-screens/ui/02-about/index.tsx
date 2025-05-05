@@ -25,8 +25,8 @@ export const About: React.FC = () => {
                     The inaugural Based Rollup Summit in San Francisco united 450+ attendees from 12
                     countries, including Vitalik Buterin, Professor Dan Boneh, and leaders from
                     major L2 projects. With AI, ZK, preconfirmations, composability and
-                    unprecedented technical talks and panels, we&apos;re raising the bar even higher in
-                    Cannes.{" "}
+                    unprecedented technical talks and panels, we&apos;re raising the bar even higher
+                    in Cannes.{" "}
                 </div>
             </div>
         </section>
