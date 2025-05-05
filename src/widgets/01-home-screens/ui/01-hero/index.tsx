@@ -62,16 +62,16 @@ export const Hero: React.FC = () => {
                             text="Register now"
                             className={css.register_button}
                         />
-                            <Button
-                                href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                                text="Apply as Sponsor"
-                                className={css.sponsor_button}
-                            />
-                            <Button
-                                href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                                text="Apply as Speaker"
-                                className={css.sponsor_button}
-                            />
+                        <Button
+                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                            text="Apply as Sponsor"
+                            className={css.sponsor_button}
+                        />
+                        <Button
+                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                            text="Apply as Speaker"
+                            className={css.sponsor_button}
+                        />
                     </div>
                 </div>
             </div>

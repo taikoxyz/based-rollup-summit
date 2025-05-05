@@ -8,13 +8,9 @@ interface Props {
     blocks?: BlocksRendererProps["blocks"];
     modifiers?: BlocksRendererProps["modifiers"];
     className?: string;
-    content:string
+    content: string;
 }
 
 export const RichText: React.FC<Props> = ({ content, className }) => {
-    return (
-        <div className={clsx(css.text, className)}>
-{content}
-        </div>
-    );
+    return <div className={clsx(css.text, className)}>{content}</div>;
 };

@@ -1,4 +1,3 @@
-
 export const transformContent = (content: any) => {
     const data = JSON.parse(JSON.stringify(content)) as any;
 

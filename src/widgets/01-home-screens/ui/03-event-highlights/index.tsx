@@ -32,38 +32,38 @@ export const Attend: React.FC = () => {
         },
     ];
 
-    const entries:IEntry[] = [
+    const entries: IEntry[] = [
         {
-            title: 'Technical Deep Dives',
-            description: 'Cutting-edge based rollup implementations and research',
-            image: ''
+            title: "Technical Deep Dives",
+            description: "Cutting-edge based rollup implementations and research",
+            image: "",
         },
         {
-            title: 'PRECONFIRMATIONS Showcase',
-            description: 'Next-generation transaction finality solutions',
-            image: ''
+            title: "PRECONFIRMATIONS Showcase",
+            description: "Next-generation transaction finality solutions",
+            image: "",
         },
         {
-            title: 'CROSS-L2 INTEROPERABILITY',
-            description: 'Building bridges across the Ethereum scaling ecosystem',
-            image: ''
+            title: "CROSS-L2 INTEROPERABILITY",
+            description: "Building bridges across the Ethereum scaling ecosystem",
+            image: "",
         },
         {
-            title: 'ZERO-KNOWLEDGE INNOVATIONS',
-            description: 'Latest breakthroughs in ZK technology',
-            image: ''
+            title: "ZERO-KNOWLEDGE INNOVATIONS",
+            description: "Latest breakthroughs in ZK technology",
+            image: "",
         },
         {
-            title: 'AI INTEGRATION',
-            description: 'Exploring the convergence of AI and blockchain',
-            image: ''
+            title: "AI INTEGRATION",
+            description: "Exploring the convergence of AI and blockchain",
+            image: "",
         },
         {
-            title: 'ECOSYSTEM BUILDING',
-            description: 'Standards development for seamless scaling',
-            image: ''
+            title: "ECOSYSTEM BUILDING",
+            description: "Standards development for seamless scaling",
+            image: "",
         },
-    ]
+    ];
 
     const attendRef = React.useRef<HTMLDivElement>(null);
 
@@ -87,12 +87,13 @@ export const Attend: React.FC = () => {
 
     return (
         <section className={css.attend} ref={attendRef} id={HOME_PAG.ATTEND}>
-            <EventHighlightsBanner/>
+            <EventHighlightsBanner />
 
-<div className={css.entry_wrapper}>
-            {entries.map((entry, index) => (
-                <HighlightEntry entry={entry} key={index} />
-            ))}</div>
+            <div className={css.entry_wrapper}>
+                {entries.map((entry, index) => (
+                    <HighlightEntry entry={entry} key={index} />
+                ))}
+            </div>
 
             <div className={css.attend_wrapper}>
                 <div className={css.cards_container}>
@@ -116,25 +117,22 @@ const EventHighlightsBanner = () => {
     const content = "EVENT HIGHLIGHTS";
 
     return (
-      <div className={css.event_highlights_banner}>
-        <div className={css.event_highlights_banner__content}>
-          {Array.from({ length: repeatCount }).map((_, i) => (
-            <span key={i}>{content}</span>
-          ))}
+        <div className={css.event_highlights_banner}>
+            <div className={css.event_highlights_banner__content}>
+                {Array.from({ length: repeatCount }).map((_, i) => (
+                    <span key={i}>{content}</span>
+                ))}
+            </div>
         </div>
-      </div>
     );
-  };
+};
 
-  const HighlightEntry = ({entry}: {entry: IEntry}) => {
+const HighlightEntry = ({ entry }: { entry: IEntry }) => {
     return (
         <div className={css.highlight_entry}>
-<img src="/img/rectangle.png" className={css.highlight_entry_image} alt=""/>
-<div className={css.highlight_entry_title}>
-    {entry.title} </div>
-    <div className={css.highlight_entry_description}>
-        {entry.description}
+            <img src="/img/rectangle.png" className={css.highlight_entry_image} alt="" />
+            <div className={css.highlight_entry_title}>{entry.title} </div>
+            <div className={css.highlight_entry_description}>{entry.description}</div>
         </div>
-            </div>
-    )
-  }
+    );
+};

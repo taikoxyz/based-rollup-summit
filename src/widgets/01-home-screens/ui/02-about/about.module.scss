@@ -4,7 +4,7 @@
     background-color: #f8f8f8;
     display: flex;
     justify-content: center;
-    gap:150px;
+    gap: 150px;
     align-items: center;
     flex-direction: column;
     padding: 40px 0;
@@ -166,7 +166,6 @@
         line-height: 1.4;
         margin-top: 0;
     }
-
 }
 
 @include -screen-sm {
@@ -204,35 +203,34 @@
 }
 
 .section_title,
-.section_body{
-    width:75%;
+.section_body {
+    width: 75%;
 }
 
-
-.section_title{
+.section_title {
     font-family: "Clash Grotesk", sans-serif;
     font-weight: 700;
-font-size: 40px;
-line-height: 100%;
-letter-spacing: 0%;
-color:#191E28;
-align-self: flex-start;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #191e28;
+    align-self: flex-start;
 }
 
-.section_body{
+.section_body {
     font-family: "Public Sans", sans-serif;
     font-weight: 400;
-font-size: 22px;
-line-height: 28px;
-letter-spacing: 0%;
-color: #444A55;
-align-self: flex-end;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: #444a55;
+    align-self: flex-end;
 }
 
-.section_wrapper{
-    width:100%;
-    gap:40px;
-    max-width:706px;
-    display:flex;
-    flex-direction:column;
+.section_wrapper {
+    width: 100%;
+    gap: 40px;
+    max-width: 706px;
+    display: flex;
+    flex-direction: column;
 }

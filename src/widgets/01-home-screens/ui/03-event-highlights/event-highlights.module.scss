@@ -263,12 +263,12 @@
 }
 .event_highlights_banner {
     height: 60px;
-    background-color: #D4FF00;
-    color: #E81899;
+    background-color: #d4ff00;
+    color: #e81899;
     font-family: "Clash Grotesk", sans-serif;
-    font-weight:700;
-    font-size:20px;
-    line-height:100%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
     letter-spacing: 0%;
     overflow: hidden;
     white-space: nowrap;
@@ -276,61 +276,61 @@
     position: relative;
 
     &__content {
-      display: flex;
-      width: max-content;
-      animation: scroll-left 15s linear infinite;
+        display: flex;
+        width: max-content;
+        animation: scroll-left 15s linear infinite;
 
-      span {
-        flex: 0 0 auto;
-        padding: 0 2rem;
-        font-size: 1.25rem;
-        line-height: 60px;
-      }
+        span {
+            flex: 0 0 auto;
+            padding: 0 2rem;
+            font-size: 1.25rem;
+            line-height: 60px;
+        }
     }
-  }
+}
 
-  @keyframes scroll-left {
+@keyframes scroll-left {
     0% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
-  }
+}
 
-.entry_wrapper{
-    width:100%;
+.entry_wrapper {
+    width: 100%;
     display: grid;
-    gap:20px;
-    padding:20px 40px;
+    gap: 20px;
+    padding: 20px 40px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-  .highlight_entry{
+.highlight_entry {
     width: 464;
-height: 456;
-justify-content: space-between;
-border-radius: 30px;
-padding: 30px;
-background-color:#FFFFFF;
+    height: 456;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 30px;
+    background-color: #ffffff;
 
-.highlight_entry_title{
-    font-family: "Clash Grotesk", sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    width:100%;
-    line-height: 90%;
-    letter-spacing: 0%;
-    text-transform: uppercase;
-    padding-top:30px;
-    color:#191E28;}
-.highlight_entry_description{
-    font-family: "Public Sans", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: 0%;
-    padding-top:118px;
-    color:#444A55;}
-
-  }
-
+    .highlight_entry_title {
+        font-family: "Clash Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        width: 100%;
+        line-height: 90%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        padding-top: 30px;
+        color: #191e28;
+    }
+    .highlight_entry_description {
+        font-family: "Public Sans", sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0%;
+        padding-top: 118px;
+        color: #444a55;
+    }
+}
