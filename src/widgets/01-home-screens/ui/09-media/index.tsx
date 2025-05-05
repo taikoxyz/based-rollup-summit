@@ -100,41 +100,10 @@ export const Media: React.FC = () => {
                     </div>
             </div>
 
-
-
-            <div className={css.media}>
-                <div className={css.media_wrapper}>
-                    <p className={css.media_label}></p>
-                    <div className={css.mediaGrid}>
-                        <div className={css.mediaRow}>
-                            {mediaPartners.slice(0, 6).map((partner, index) => (
-                                <div key={`top-${index}`} className={css.mediaItem}>
-                                    <img
-                                        src={partner.logo}
-                                        alt={`${partner.name} logo`}
-                                        className={css.mediaLogo}
-                                        width={100}
-                                        height={100}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                        <div className={css.mediaRow}>
-                            {mediaPartners.slice(6).map((partner, index) => (
-                                <div key={`bottom-${index}`} className={css.mediaItem}>
-                                    <img
-                                        src={partner.logo}
-                                        alt={`${partner.name} logo`}
-                                        className={css.mediaLogo}
-                                        width={100}
-                                        height={100}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
+ {/* San Francisco Highlights Section */}
+ <div className={css.partners_label}>SAN FRANCISCO HIGHLIGHTS</div>
+<video poster="/img/video.png" className={css.video} controls>
+</video>
         </section>
     );
 };

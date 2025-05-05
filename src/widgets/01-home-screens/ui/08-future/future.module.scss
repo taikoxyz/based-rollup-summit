@@ -1,190 +1,70 @@
-.future {
-    padding: 60px 0;
-    position: relative;
-    overflow: hidden;
-    min-height: 500px;
-    width: 100%;
-    background-color: (#f8f8f8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &._animated {
-        .future_grid {
-            &::after,
-            &::before {
-                transform: translate(0, -51%);
-            }
-        }
-    }
-}
-
-.future_wrapper {
-    max-width: 1120px;
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
+.gallery{
+    width:100%;
+    display:flex;
     flex-direction: column;
+}
+.gallery_wrapper{
+    display:grid;
+    gap:20px;
+    padding:20px;
+    padding-top:150px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.gallery_item{
+    border-radius:30px;
+    width:100%;
+    height:300px;
+}
+
+.button_container {
+    display: flex;
     align-items: center;
-    text-align: center;
-    z-index: 2;
-}
-
-.future_grid {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 1512px;
-
-    mask: linear-gradient(to right, transparent, black 2%, black, black 98%, transparent);
-
-    svg {
-        stroke: rgba(#000, 0.12);
-        path {
-            stroke-dasharray: 2000;
-            stroke-dashoffset: 2000;
-        }
-    }
-
-    img {
-        display: none;
-    }
-
-    &::after,
-    &::before {
-        content: "";
-        display: block;
-        width: 7.87%;
-        aspect-ratio: 1 / 3.235;
-        position: absolute;
-        background: url("/img/home-new/future-lines.svg");
-        opacity: 0.12;
-        transition: transform 1500ms ease 1000ms;
-    }
-    &::before {
-        top: 50%;
-        left: 0;
-        transform: translate(-100%, -51%);
-    }
-    &::after {
-        top: 50%;
-        right: 0;
-        transform: translate(100%, -51%);
-    }
-}
-
-.heading {
-    font-family: "Clash Grotesk", sans-serif;
-    font-weight: 500;
-    font-size: 55px;
-    line-height: 57.2px;
-    letter-spacing: -0.02em; /* This is -2% */
-    text-align: center;
-    color: #191e28;
-    margin: 0;
+    gap: 10px;
     width: 100%;
+    padding:150px 0px;
+    justify-content: center;
 }
 
-.text {
+// Button styles
+.register_button,
+.sponsor_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 1000px;
+    height: 48px;
     font-family: "Public Sans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    color: #444a55;
-    margin: 15px 0 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    transition: all 200ms ease;
+    cursor: pointer;
+    padding: 8px 20px;
 }
 
-.button {
-    margin-bottom: 20px;
+// Register button specific styles
+.register_button {
+    background: #c8047d;
+    color: #ffffff;
+    width: 200px;
 
-    :global {
-        .btn {
-            width: 170px;
-            height: 48px;
-            border-radius: 100px;
-            background: #e81899;
-
-            &__text {
-                padding-left: 20px;
-            }
-        }
+    &:hover {
+        background: darken(#c8047d, 5%);
     }
 }
 
-/* Responsive styles */
-@media (min-width: 1200px) {
-    .heading {
-        font-size: 60px;
-    }
-}
+// Sponsor/Speaker button specific styles
+.sponsor_button {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #c8047d;
+    width: 200px;
 
-@media (min-width: 768px) and (max-width: 1199px) {
-    .future {
-        padding: 50px 0;
-    }
-
-    .heading {
-        font-size: 48px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .future {
-        padding: 40px 0;
-        min-height: 450px;
-    }
-
-    .heading {
-        font-size: 42px;
-    }
-
-    .text {
-        font-size: 16px;
-        margin: 12px 0 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .future {
-        padding: 30px 0;
-        min-height: 400px;
-    }
-
-    .future_wrapper {
-        padding: 0 15px;
-    }
-
-    .heading {
-        font-size: 30px;
-        line-height: 30px;
-        letter-spacing: -0.02em;
-    }
-
-    .text {
-        font-size: 14px;
-        margin: 10px 0 20px;
-    }
-
-    .button {
-        :global {
-            .btn {
-                padding: 8px 8px 8px 20px;
-                gap: 12px;
-            }
-        }
-    }
-}
-
-@media (max-width: 350px) {
-    .heading {
-        font-size: 28px;
-    }
-
-    .text {
-        font-size: 13px;
+    &:hover {
+        background: rgba(200, 4, 125, 0.05);
     }
 }

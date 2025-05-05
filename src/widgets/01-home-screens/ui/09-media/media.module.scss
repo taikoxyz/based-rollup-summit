@@ -176,7 +176,7 @@ margin-top:-106px;
 
 
 .media_support{
-    padding: 60px 0 30px;
+    padding: 60px 0 150px;
     position: relative;
     width: 100%;
     display: flex;
@@ -229,4 +229,11 @@ padding-bottom:109px;
 width:100%;
     border-radius:50px 50px 0px 0px;
     background-color: #C480FE;
+}
+
+.video{
+    width:100%;
+    height:auto;
+    border-radius:50px;
+    margin-top:-106px;
 }
