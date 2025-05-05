@@ -60,50 +60,48 @@ export const Media: React.FC = () => {
     }, []);
 
     return (
-
         <section className={css.container} ref={mediaRef} id={HOME_PAG.MEDIA}>
             {/* Event Partners Section */}
             <div className={css.partners_label}>PAST PARTNERS</div>
 
             <div className={css.partners}>
-            <div className={css.partners_grid}>
-                        {eventPartners.map((partner, index) => (
-                            <div key={index} className={css.partner_item}>
-                                <img
-                                    src={partner.logo}
-                                    alt={`${partner.name}`}
-                                    className={css.partnerLogo}
-                                    width={partner.width}
-                                    height={partner.height}
-                                />
-                            </div>
-                        ))}
-                    </div>
+                <div className={css.partners_grid}>
+                    {eventPartners.map((partner, index) => (
+                        <div key={index} className={css.partner_item}>
+                            <img
+                                src={partner.logo}
+                                alt={`${partner.name}`}
+                                className={css.partnerLogo}
+                                width={partner.width}
+                                height={partner.height}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {/* Media Support Section */}
             <div className={css.media_label}>MEDIA SUPPORT</div>
 
             <div className={css.media_support}>
-            <div className={css.media_grid}>
-                        {mediaPartners.map((partner, index) => (
-                            <div key={index} className={css.media_item}>
-                                <img
-                                    src={partner.logo}
-                                    alt={`${partner.name} logo`}
-                                    className={css.mediaLogo}
-                                    width={100}
-                                    height={100}
-                                />
-                            </div>
-                        ))}
-                    </div>
+                <div className={css.media_grid}>
+                    {mediaPartners.map((partner, index) => (
+                        <div key={index} className={css.media_item}>
+                            <img
+                                src={partner.logo}
+                                alt={`${partner.name} logo`}
+                                className={css.mediaLogo}
+                                width={100}
+                                height={100}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
 
- {/* San Francisco Highlights Section */}
- <div className={css.partners_label}>SAN FRANCISCO HIGHLIGHTS</div>
-<video poster="/img/video.png" className={css.video} controls>
-</video>
+            {/* San Francisco Highlights Section */}
+            <div className={css.partners_label}>SAN FRANCISCO HIGHLIGHTS</div>
+            <video poster="/img/video.png" className={css.video} controls></video>
         </section>
     );
 };

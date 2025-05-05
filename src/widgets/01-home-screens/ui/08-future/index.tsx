@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import { HOME_PAG } from "widgets/01-home-screens/lib";
 import css from "./future.module.scss";
+
 // Define type for Button props
 interface ButtonProps {
     href: string;
@@ -48,80 +49,79 @@ export const Future: React.FC = () => {
 
     const gallery = [
         {
-            src: '/img/gallery/1.png',
-            colSpan: 2
+            src: "/img/gallery/1.png",
+            colSpan: 2,
         },
         {
-            src: '/img/gallery/2.png',
-            colSpan:1
+            src: "/img/gallery/2.png",
+            colSpan: 1,
         },
         {
-            src: '/img/gallery/3.png',
-            colSpan: 3
+            src: "/img/gallery/3.png",
+            colSpan: 3,
         },
         {
-            src: '/img/gallery/4.png',
-            colSpan: 2
+            src: "/img/gallery/4.png",
+            colSpan: 2,
         },
         {
-            src: '/img/gallery/5.png',
-            colSpan: 1
+            src: "/img/gallery/5.png",
+            colSpan: 1,
         },
         {
-            src: '/img/gallery/6.png',
-            colSpan: 1
+            src: "/img/gallery/6.png",
+            colSpan: 1,
         },
         {
-            src: '/img/gallery/7.png',
-            colSpan: 2
+            src: "/img/gallery/7.png",
+            colSpan: 2,
         },
         {
-            src: '/img/gallery/8.png',
-            colSpan: 3
+            src: "/img/gallery/8.png",
+            colSpan: 3,
         },
         {
-            src: '/img/gallery/9.png',
-            colSpan: 2
+            src: "/img/gallery/9.png",
+            colSpan: 2,
         },
         {
-            src: '/img/gallery/10.png',
-            colSpan: 1
+            src: "/img/gallery/10.png",
+            colSpan: 1,
         },
-    ]
+    ];
     return (
         <section className={css.gallery} ref={futureRef} id={HOME_PAG.FUTURE}>
             <div className={css.gallery_wrapper}>
-
-            {gallery.map((item, index) => (
-                <div key={index} className={css.gallery_item}
-                    style={{
-                        backgroundImage: `url(${item.src})`,
-                        gridColumn: `span ${item.colSpan} / span ${item.colSpan}` }}
-                >
-                </div>
-
-            ))}
+                {gallery.map((item, index) => (
+                    <div
+                        key={index}
+                        className={css.gallery_item}
+                        style={{
+                            backgroundImage: `url(${item.src})`,
+                            gridColumn: `span ${item.colSpan} / span ${item.colSpan}`,
+                        }}
+                    ></div>
+                ))}
             </div>
 
-
-                    {/* Buttons section */}
-                    <div className={css.button_container}>
-                        <Button
-                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                            text="Register now"
-                            className={css.register_button}
-                        />
-                        <Button
-                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                            text="Apply as Sponsor"
-                            className={css.sponsor_button}
-                        />
-                        <Button
-                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                            text="Apply as Speaker"
-                            className={css.sponsor_button}
-                        />
-                    </div>
+            {/* Buttons section */}
+            <div className={css.button_container}>
+                <Button
+                    href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                    text="Register now"
+                    className={css.register_button}
+                />
+                <Button
+                    href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                    text="Apply as Sponsor"
+                    className={css.sponsor_button}
+                />
+                <Button
+                    href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                    text="Apply as Speaker"
+                    className={css.sponsor_button}
+                />
+            </div>
         </section>
     );
 };
