@@ -118,7 +118,13 @@ export const Schedule: React.FC = () => {
                 </div>
 
                 <div className={css.button_wrapper}>
-                    <Button noArrow text="View sponsorship deck" />
+                    <Button
+                        onClick={() =>
+                            window.open("https://docsend.com/view/hmzw3drdr5tf3n3k", "_blank")
+                        }
+                        noArrow
+                        text="View sponsorship deck"
+                    />
                 </div>
             </div>
         </section>
