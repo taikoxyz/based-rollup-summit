@@ -25,6 +25,7 @@
     height: 185px;
     margin-bottom: 414px;
     border-radius: 30px 50px 0px 0px;
+
     .title {
         color: #191e28;
         font-family: "Clash Grotesk", sans-serif;
@@ -36,11 +37,8 @@
     }
 
     .body {
-        border-radius: 50px;
         background-color: #191e28;
-        padding: 80px 100px;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
         margin-top: -69px;
         .button {
             padding-left: 32px;
@@ -78,12 +76,9 @@
 
 .speakers_wrapper {
     width: 100%;
-    gap: 20px;
-    padding: 0 40px;
     margin: 0 auto;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
     margin-bottom: 100px;
 }
 
@@ -124,7 +119,7 @@
 .profileCard {
     display: flex;
     flex-direction: column;
-    align-items: profileCard;
+    align-items: center;
     text-align: center;
     width: 100%;
     transition: all 0.3s ease;
@@ -322,6 +317,18 @@
             font-size: 18px;
             line-height: 24px;
         }
+
+        .body {
+            padding: 80px 100px;
+            border-radius: 50px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    .speakers_wrapper {
+        grid-template-columns: repeat(6, 1fr); /* 3 columns for desktop */
+        gap: 20px;
+        padding: 0 40px;
     }
 }
 @include tablet {
@@ -331,22 +338,50 @@
             font-size: 32px;
         }
 
-        .left_body {
-            font-size: 16px;
-            line-height: 24px;
-        }
-    }
-}
-@include mobile {
-    .speakers_entry_row {
-        .title,
-        .left_title {
-            font-size: 32px;
+        .body {
+            padding: 40px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            border-radius: 30px;
         }
 
         .left_body {
             font-size: 16px;
             line-height: 24px;
         }
+    }
+
+    .speakers_wrapper {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        padding: 0 40px;
+    }
+}
+@include mobile {
+    .speakers_entry_row {
+        .body {
+            padding: 40px 24px;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            border-radius: 30px;
+            gap: 70px;
+        }
+
+        .title,
+        .left_title {
+            max-width: 272px;
+            font-size: 32px;
+        }
+
+        .left_body {
+            max-width: 272px;
+
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .speakers_wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0;
     }
 }

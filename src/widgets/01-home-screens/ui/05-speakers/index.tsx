@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HOME_PAG } from "widgets/01-home-screens/lib";
 import { Button } from "shared/components/@buttons/button";
 import css from "./speakers.module.scss";
@@ -178,6 +178,24 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, title, company }
 };
 
 export const Speakers: React.FC = () => {
+    const [isDesktop, setIDesktop] = useState<boolean>(false);
+
+    useEffect(() => {
+        // Initial viewport setup
+        const handleResize = () => {
+            setIDesktop(window.innerWidth >= 1440);
+        };
+
+        // Set initial values
+        handleResize();
+
+        // Add resize listener
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <section className={css.speakers} id={HOME_PAG.SPEAKERS}>
             <div className={css.speakers_entry_row}>
@@ -189,8 +207,7 @@ export const Speakers: React.FC = () => {
                             Speakers will be announced starting May 15th, 2025
                         </div>
                     </div>
-
-                    <div></div>
+                    {isDesktop && <div></div>}
 
                     <div>
                         <div className={css.right_title}>
@@ -211,9 +228,8 @@ export const Speakers: React.FC = () => {
                     </div>
                 </div>
             </div>
-
+            <div className={css.speakers_text}>PREVIOUS SPEAKERS</div>
             <div className={css.speakers_wrapper}>
-                <div className={css.speakers_text}>PREVIOUS SPEAKERS</div>
                 {speakers.map((speaker, index) => (
                     <ProfileCard key={index} {...speaker} />
                 ))}
