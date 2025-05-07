@@ -31,14 +31,10 @@
 .entries_wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 20px;
-    margin-bottom: 150px;
 }
 
 .entry {
     width: 100%;
-    height: 230px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,14 +91,12 @@
     width: 100%;
     display: grid;
     gap: 1px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .location_image {
     padding-left: 35px;
     padding-bottom: 52px;
     width: 100%;
-    aspect-ratio: 1 / 1;
     border-radius: 30px;
     display: flex;
     gap: 30px;
@@ -119,9 +113,6 @@
 .location_map {
     border-radius: 30px;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    display: flex;
 }
 
 .become_sponsor_wrapper {
@@ -172,4 +163,95 @@
 
 .button_wrapper {
     align-self: flex-end;
+}
+
+@include desktop {
+    .entry {
+        height: 230px;
+    }
+    .entries_wrapper {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 20px;
+        margin-bottom: 150px;
+    }
+
+    .location_wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .location_image {
+        aspect-ratio: 1 / 1;
+    }
+
+    .location_map {
+        img {
+            width: 100%;
+        }
+    }
+
+    .schedule_wrapper {
+        gap: 150px;
+    }
+}
+
+@include tablet {
+    .entry {
+        height: 164px;
+    }
+
+    .entries_wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .location_wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .location_image {
+        aspect-ratio: 1 / 1;
+    }
+    .location_map {
+        img {
+            width: 100%;
+        }
+    }
+    .schedule_wrapper {
+        gap: 110px;
+    }
+}
+
+@include mobile {
+    .entry {
+        height: 164px;
+    }
+
+    .entries_wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+
+    .location_wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .location_image,
+    .location_map {
+        aspect-ratio: 1/2;
+    }
+
+    .location_map {
+        img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .schedule_wrapper {
+        gap: 150px;
+    }
 }
