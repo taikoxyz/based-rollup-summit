@@ -1,5 +1,6 @@
 @include fontCreate("Clash Grotesk", 500, "/fonts/ClashGrotesk-Medium");
 @include fontCreate("Clash Grotesk", 600, "/fonts/ClashGrotesk-Semibold");
+@include fontCreate("Clash Grotesk", 700, "/fonts/ClashGrotesk-Bold");
 @include fontCreate($kFontGilroy, 500, "/fonts/Gilroy-Medium");
 @include fontCreate($kFontOnest, 500, "/fonts/Onest-Medium");
 @include fontCreate($kFontHelveticaNeue, 500, "/fonts/HelveticaNeueCyr-Medium");

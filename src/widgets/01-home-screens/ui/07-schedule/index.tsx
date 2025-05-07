@@ -92,7 +92,15 @@ export const Schedule: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className={css.location_map}>a fancy map</div>
+                    <div className={css.location_map}>
+                        <a
+                            href="https://g.co/kgs/ob2HYaU"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src="/img/map.png" alt="Map" />
+                        </a>
+                    </div>
                 </div>
             </div>
 

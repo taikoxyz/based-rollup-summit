@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
         const handleResize = () => {
             const width = window.innerWidth;
             setViewportWidth(width);
-            setIsMobile(width <= 768);
+            setIsMobile(width < 768);
         };
 
         // Set initial values
@@ -39,6 +39,8 @@ export const Hero: React.FC = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const titleParts = ["BASED", "ROLLUP", "SUMMIT"];
+
     return (
         <section className={css.hero}>
             <div className={css.hero_content}>
@@ -46,8 +48,13 @@ export const Hero: React.FC = () => {
                 <div className={css.content_wrapper}>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
-                            <div className={css.main_heading}>BASED ROLLUP SUMMIT</div>
-
+                            <div className={css.main_heading}>
+                                {isMobile
+                                    ? // Mobile version with line breaks
+                                      titleParts.map((part, index) => <div key={index}>{part}</div>)
+                                    : // Desktop version with spaces
+                                      titleParts.join(" ")}
+                            </div>
                             <div className={css.date_location}>
                                 <div className={css.date}>JULY 1, 2025</div>
                                 <div className={css.location}>CANNES, FRANCE</div>
@@ -57,21 +64,27 @@ export const Hero: React.FC = () => {
 
                     {/* Buttons section */}
                     <div className={css.button_container}>
-                        <Button
-                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                            text="Register now"
-                            className={css.register_button}
-                        />
-                        <Button
-                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                            text="Apply as Sponsor"
-                            className={css.sponsor_button}
-                        />
-                        <Button
-                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                            text="Apply as Speaker"
-                            className={css.sponsor_button}
-                        />
+                        <div className={css.register_button_wrapper}>
+                            <Button
+                                href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                                text="Register now"
+                                className={css.register_button}
+                            />
+                        </div>
+                        <div className={css.sponsor_button_wrapper}>
+                            <Button
+                                href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                                text="Apply as Sponsor"
+                                className={css.sponsor_button}
+                            />
+                        </div>
+                        <div className={css.sponsor_button_wrapper}>
+                            <Button
+                                href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                                text="Apply as Speaker"
+                                className={css.sponsor_button}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

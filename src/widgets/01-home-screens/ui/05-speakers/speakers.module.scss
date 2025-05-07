@@ -81,14 +81,13 @@
 }
 
 .speakers_wrapper {
-    max-width: 1120px;
     width: 100%;
     gap: 20px;
     padding: 0 40px;
     margin: 0 auto;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     margin-bottom: 100px;
 }
 
@@ -123,7 +122,7 @@
     letter-spacing: 0%;
     color: #191e28;
     margin: 0;
-    grid-column: span 5 / span 5;
+    grid-column: span 6 / span 6;
 }
 
 .profileCard {
@@ -131,6 +130,7 @@
     flex-direction: column;
     align-items: profileCard;
     text-align: center;
+    width: 100%;
     transition: all 0.3s ease;
 }
 
@@ -232,10 +232,6 @@
 
     .profileCard__name {
         font-size: 22px;
-    }
-
-    .speakers_wrapper {
-        padding: 0 15px;
     }
 
     .profileCard__image {

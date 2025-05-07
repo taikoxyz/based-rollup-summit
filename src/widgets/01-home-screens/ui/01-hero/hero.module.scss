@@ -49,23 +49,19 @@
 
     // Heading and date/location wrapper
     .heading_wrapper {
-        width: min-content;
         margin: 0 auto;
         position: relative;
         padding-top: 130px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
     }
 
     // Main heading
     .main_heading {
-        width: max-content;
         font-family: "Clash Grotesk", sans-serif;
         font-weight: 700;
-        font-size: 120px;
         line-height: 90%;
-        letter-spacing: -2px;
+        letter-spacing: -2%;
         margin: 0;
         color: #000000;
         text-align: left;
@@ -75,7 +71,6 @@
     .date_location {
         width: auto;
         display: flex;
-        justify-content: space-between;
     }
 
     // Date and location text styles
@@ -83,15 +78,13 @@
     .location {
         font-family: "Clash Grotesk", sans-serif;
         font-weight: 700;
-        font-size: 40px;
         line-height: 100%;
-        margin: 0;
+        letter-spacing: 0s;
         color: #000000;
     }
 
     // Button container
     .button_container {
-        display: flex;
         align-items: center;
         gap: 10px;
         width: 100%;
@@ -117,6 +110,7 @@
         transition: all 200ms ease;
         cursor: pointer;
         padding: 8px 20px;
+        width: 200px;
     }
 
     // Register button specific styles
@@ -141,22 +135,108 @@
             background: rgba(200, 4, 125, 0.05);
         }
     }
+}
 
-    // Mobile
-    @media (min-width: 391px) {
-        .main_heading {
-            font-size: 70px;
-        }
-    }
-    // Tablet
-    @media (min-width: 391px) and (max-width: 1439px) {
-        .main_heading {
-            font-size: 63px;
-        }
+@include desktop {
+    .main_heading {
+        width: max-content;
+
+        font-size: 120px;
     }
 
-    // Desktop
-    @media (min-width: 1440px) {
-        display: block;
+    .heading_wrapper {
+        width: min-content;
+        gap: 10px;
     }
+
+    .date_location {
+        justify-content: space-between;
+    }
+
+    .date,
+    .location {
+        font-size: 40px;
+    }
+
+    // Button container
+    .button_container {
+        display: flex;
+    }
+}
+
+@include tablet {
+    .main_heading {
+        width: max-content;
+
+        font-size: 63px;
+    }
+
+    .heading_wrapper {
+        gap: 10px;
+        width: min-content;
+    }
+
+    .date_location {
+        justify-content: space-between;
+    }
+
+    .date,
+    .location {
+        font-size: 26px;
+    }
+
+    // Button container
+    .button_container {
+        display: flex;
+    }
+}
+
+@include mobile {
+    .main_heading {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heading_wrapper {
+        width: 100%;
+        font-size: 70px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .date_location {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .date,
+    .location {
+        font-size: 26px;
+    }
+
+    // Button container
+    .button_container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+.sponsor_button_wrapper,
+.register_button_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register_button_wrapper {
+    grid-column: span 2 / span 2;
 }

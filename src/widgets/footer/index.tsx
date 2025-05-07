@@ -6,7 +6,119 @@ import { NextLink } from "shared/ui/NextLink";
 import css from "./footer.module.scss";
 
 export const Footer: React.FC = () => {
-    const navigation = useNavigationOneLevel();
+    const navigation = [
+        {
+            name: "Alethia",
+            links: [
+                {
+                    name: "About",
+                    href: "https://taiko.xyz/alethia",
+                },
+                {
+                    name: "Apps",
+                    href: "https://taiko.xyz/ecosystem",
+                },
+                {
+                    name: "Taiko Takeoff",
+                    href: "https://takeoff.taiko.xyz/",
+                },
+                {
+                    name: "Docs",
+                    href: "https://docs.taiko.xyz/start-here/getting-started",
+                },
+                {
+                    name: "Bridge",
+                    href: "https://bridge.taiko.xyz/",
+                },
+                {
+                    name: "Taikoscan.io",
+                    href: "https://taikoscan.io/",
+                    desc: "By Etherscan",
+                },
+                {
+                    name: "Taikoexplorer.com",
+                    href: "https://taikoexplorer.com/",
+                    desc: "By Routescan",
+                },
+            ],
+        },
+        {
+            name: "Gwyneth",
+            links: [
+                {
+                    name: "About",
+                    href: "https://taiko.xyz/gwyneth",
+                },
+                {
+                    name: "Apps",
+                    href: "https://taiko.xyz/gwyneth/apps",
+                },
+                {
+                    name: "Docs",
+                    href: "https://docs.taiko.xyz/start-here/getting-started",
+                },
+            ],
+        },
+        {
+            name: "Governance",
+            links: [
+                {
+                    name: "Learn",
+                    href: "https://taiko.xyz/dao",
+                },
+                {
+                    name: "DAO App",
+                    href: "https://hekla.dao.taiko.xyz/",
+                },
+                {
+                    name: "Docs",
+                    href: "https://docs.taiko.xyz/start-here/getting-started",
+                },
+            ],
+        },
+        {
+            name: "Learn",
+            links: [
+                {
+                    name: "About",
+                    href: "https://taiko.xyz/about",
+                },
+                {
+                    name: "Blog",
+                    href: "https://taiko.xyz/blog",
+                },
+                {
+                    name: "Brand Kit",
+                    href: "https://taiko.xyz/brand-assets",
+                },
+                {
+                    name: "Careers",
+                    href: "https://taiko.xyz/careers",
+                },
+                {
+                    name: "Grants",
+                    href: "https://taiko.xyz/grant-program",
+                },
+            ],
+        },
+        {
+            name: "Engage",
+            links: [
+                {
+                    name: "Trailblazer",
+                    href: "https://trailblazers.taiko.xyz/",
+                },
+                {
+                    name: "Snaefell NFT",
+                    href: "https://snaefellnft.taiko.xyz/",
+                },
+                {
+                    name: "Taikoons NFT",
+                    href: "https://taikoons.taiko.xyz/",
+                },
+            ],
+        },
+    ];
 
     return (
         <footer className={css.footer} id="footer">

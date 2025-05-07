@@ -68,17 +68,22 @@ export const Attend: React.FC = () => {
 
             <div className={css.entry_wrapper}>
                 {entries.map((entry, index) => (
-                    <HighlightEntry entry={entry} key={index} />
+                    <HighlightEntry entry={entry} index={index} key={index} />
                 ))}
             </div>
         </section>
     );
 };
 
-const HighlightEntry = ({ entry }: { entry: IEntry }) => {
+const HighlightEntry = ({ entry, index }: { entry: IEntry; index: number }) => {
+    console.log({ index });
     return (
         <div className={css.highlight_entry}>
-            <img src="/img/rectangle.png" className={css.highlight_entry_image} alt="" />
+            <img
+                src={`/img/event-highlights/${index}.png`}
+                className={css.highlight_entry_image}
+                alt=""
+            />
             <div className={css.highlight_entry_title}>{entry.title} </div>
             <div className={css.highlight_entry_description}>{entry.description}</div>
         </div>
