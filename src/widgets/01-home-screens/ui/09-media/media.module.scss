@@ -55,7 +55,6 @@
 
 .partners_grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
     width: 100%;
     margin-top: -106px;
 }
@@ -70,9 +69,7 @@
     height: 274px;
     border-radius: 30px;
     width: 100%;
-    transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
+    transition: 0.5s ease;
 
     &:nth-child(1) {
         transition-delay: 0.1s;
@@ -84,6 +81,10 @@
 
     &:nth-child(3) {
         transition-delay: 0.3s;
+    }
+
+    &:hover {
+        background-color: #f3f3f3;
     }
 }
 
@@ -186,7 +187,6 @@
 
 .media_grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
     width: 100%;
     margin-top: -106px;
 }
@@ -200,6 +200,11 @@
     height: 274px;
     border-radius: 30px;
     width: 100%;
+    transition: 0.5s ease;
+
+    &:hover {
+        background-color: #f3f3f3;
+    }
 }
 
 .media_label {
@@ -225,4 +230,27 @@
     height: auto;
     border-radius: 50px;
     margin-top: -106px;
+}
+
+@include desktop {
+    .partners_grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .media_grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+@include tablet {
+    .media_grid,
+    .partners_grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@include mobile {
+    .media_grid,
+    .partners_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
