@@ -76,16 +76,17 @@ export const Attend: React.FC = () => {
 };
 
 const HighlightEntry = ({ entry, index }: { entry: IEntry; index: number }) => {
-    console.log({ index });
     return (
-        <div className={css.highlight_entry}>
-            <img
-                src={`/img/event-highlights/${index}.png`}
-                className={css.highlight_entry_image}
-                alt=""
-            />
-            <div className={css.highlight_entry_title}>{entry.title} </div>
-            <div className={css.highlight_entry_description}>{entry.description}</div>
+        <div className={css.highlight_cell_wrapper}>
+            <div className={css.highlight_entry}>
+                <img
+                    src={`/img/event-highlights/${index}.png`}
+                    className={css.highlight_entry_image}
+                    alt=""
+                />
+                <div className={css.highlight_entry_title}>{entry.title} </div>
+                <div className={css.highlight_entry_description}>{entry.description}</div>
+            </div>
         </div>
     );
 };
