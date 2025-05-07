@@ -21,6 +21,27 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
 // todo: rename to picture-gallery
 export const Future: React.FC = () => {
     const futureRef = React.useRef<HTMLDivElement>(null);
+    const [isMobile, setIsMobile] = React.useState(false);
+    const [isTablet, setIsTablet] = React.useState(false);
+    const [isDesktop, setIsDesktop] = React.useState(false);
+
+    useEffect(() => {
+        // Initial viewport setup
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+            setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
+            setIsDesktop(window.innerWidth >= 1024);
+        };
+
+        // Set initial values
+        handleResize();
+
+        // Add resize listener
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     // Add animation class on scroll
     useEffect(() => {
@@ -43,45 +64,96 @@ export const Future: React.FC = () => {
     const gallery = [
         {
             src: "/img/gallery/1.png",
-            colSpan: 2,
+            colSpan: {
+                desktop: 2,
+                tablet: 4,
+                mobile: 4,
+            },
         },
         {
             src: "/img/gallery/2.png",
-            colSpan: 1,
+            colSpan: {
+                desktop: 1,
+                tablet: 2,
+                mobile: 2,
+            },
         },
         {
             src: "/img/gallery/3.png",
-            colSpan: 3,
+            colSpan: {
+                desktop: 3,
+                tablet: 6,
+                mobile: 6,
+            },
         },
         {
             src: "/img/gallery/4.png",
-            colSpan: 2,
+            colSpan: {
+                desktop: 2,
+                tablet: 4,
+                mobile: 6,
+            },
         },
         {
             src: "/img/gallery/5.png",
-            colSpan: 1,
+            colSpan: {
+                desktop: 1,
+                tablet: 2,
+                mobile: 3,
+            },
         },
         {
             src: "/img/gallery/6.png",
-            colSpan: 1,
+            colSpan: {
+                desktop: 1,
+                tablet: 2,
+                mobile: 3,
+            },
         },
         {
             src: "/img/gallery/7.png",
-            colSpan: 2,
+            colSpan: {
+                desktop: 2,
+                tablet: 4,
+                mobile: 6,
+            },
         },
         {
             src: "/img/gallery/8.png",
-            colSpan: 3,
+            colSpan: {
+                desktop: 3,
+                tablet: 3,
+                mobile: 6,
+            },
         },
         {
             src: "/img/gallery/9.png",
-            colSpan: 2,
+            colSpan: {
+                desktop: 2,
+                tablet: 2,
+                mobile: 6,
+            },
         },
         {
             src: "/img/gallery/10.png",
-            colSpan: 1,
+            colSpan: {
+                desktop: 1,
+                tablet: 1,
+                mobile: 6,
+            },
         },
     ];
+
+    function getItemColSpan(index: number) {
+        if (isDesktop) {
+            return gallery[index].colSpan.desktop;
+        } else if (isTablet) {
+            return gallery[index].colSpan.tablet;
+        } else if (isMobile) {
+            return gallery[index].colSpan.mobile;
+        }
+        return 1; // Default value
+    }
     return (
         <section className={css.gallery} ref={futureRef} id={HOME_PAG.FUTURE}>
             <div className={css.gallery_wrapper}>
@@ -91,7 +163,7 @@ export const Future: React.FC = () => {
                         className={css.gallery_item}
                         style={{
                             backgroundImage: `url(${item.src})`,
-                            gridColumn: `span ${item.colSpan} / span ${item.colSpan}`,
+                            gridColumn: `span ${getItemColSpan(index)} / span ${getItemColSpan(index)}`,
                         }}
                     ></div>
                 ))}

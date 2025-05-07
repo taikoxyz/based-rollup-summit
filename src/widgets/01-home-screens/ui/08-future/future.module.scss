@@ -14,7 +14,6 @@
 .gallery_item {
     border-radius: 30px;
     width: 100%;
-    height: 300px;
 }
 
 .button_container {
@@ -66,5 +65,27 @@
 
     &:hover {
         background: rgba(200, 4, 125, 0.05);
+    }
+}
+
+@include desktop {
+    .gallery_item {
+        height: 300px;
+    }
+}
+
+@include tablet {
+    .gallery_item {
+        height: 300px;
+    }
+}
+
+@include mobile {
+    .gallery_item {
+        height: 240px;
+    }
+
+    .button_container {
+        flex-direction: column;
     }
 }
