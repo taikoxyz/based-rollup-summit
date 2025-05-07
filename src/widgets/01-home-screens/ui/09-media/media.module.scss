@@ -39,17 +39,11 @@
     text-align: left;
     color: #191e28;
     text-transform: uppercase;
-
     font-family: "Clash Grotesk";
     font-weight: 700;
-    font-size: 40px;
     line-height: 90%;
     letter-spacing: 0%;
-    margin-bottom: 40px;
-    padding: 40px;
-    padding-bottom: 109px;
     width: 100%;
-    border-radius: 50px 50px 0px 0px;
     background-color: #ff6fc8;
 }
 
@@ -115,18 +109,6 @@
     align-items: center;
     text-align: center;
     z-index: 2;
-}
-
-.media_label {
-    font-family: "Public Sans", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16.8px;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: #c8047d;
-    margin-bottom: 40px;
-    text-transform: uppercase;
 }
 
 .mediaGrid {
@@ -214,21 +196,14 @@
 
     font-family: "Clash Grotesk";
     font-weight: 700;
-    font-size: 40px;
-    line-height: 90%;
-    letter-spacing: 0%;
 
-    padding: 40px;
-    padding-bottom: 109px;
     width: 100%;
-    border-radius: 50px 50px 0px 0px;
     background-color: #c480fe;
 }
 
 .video {
     width: 100%;
     height: auto;
-    border-radius: 50px;
     margin-top: -106px;
 }
 
@@ -239,6 +214,30 @@
     .media_grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
+
+    .video {
+        border-radius: 50px;
+    }
+
+    .partners_label {
+        font-size: 40px;
+        line-height: 90%;
+        letter-spacing: 0%;
+        margin-bottom: 40px;
+        padding: 40px;
+        padding-bottom: 109px;
+        border-radius: 50px 50px 0px 0px;
+    }
+
+    .media_label {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 90%;
+        letter-spacing: 0%;
+        padding: 40px;
+        padding-bottom: 109px;
+        border-radius: 50px 50px 0px 0px;
+    }
 }
 
 @include tablet {
@@ -246,11 +245,52 @@
     .partners_grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
+
+    .video {
+        border-radius: 30px;
+    }
+
+    .partners_label {
+        font-size: 32px;
+        line-height: 90%;
+        letter-spacing: 0%;
+        margin-bottom: 40px;
+        padding: 24px 40px;
+        padding-bottom: 90px;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .media_label {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 90%;
+        letter-spacing: 0%;
+        margin-bottom: 40px;
+        padding: 24px 40px;
+        padding-bottom: 90px;
+        border-radius: 30px 30px 0px 0px;
+    }
 }
 
 @include mobile {
     .media_grid,
     .partners_grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .video {
+        border-radius: 30px;
+        aspect-ratio: 1/2;
+        background-color: #c480fe;
+    }
+
+    .partners_label {
+        font-size: 32px;
+        line-height: 90%;
+        letter-spacing: 0%;
+        margin-bottom: 40px;
+        padding: 40px;
+        padding-bottom: 109px;
+        border-radius: 30px 30px 0px 0px;
     }
 }
