@@ -1,5 +1,3 @@
-import { Schedule } from "../ui";
-
 export const HOME_PAG = {
     HERO: "hero",
     ABOUT: "about",

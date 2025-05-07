@@ -16,7 +16,7 @@ export const Attend: React.FC = () => {
             image: "",
         },
         {
-            title: "PRECONFIRMATIONS Showcase",
+            title: "Preconfirmation Development",
             description: "Next-generation transaction finality solutions",
             image: "",
         },

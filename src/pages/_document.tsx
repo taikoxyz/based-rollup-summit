@@ -1,14 +1,15 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
     return (
         <Html lang="en">
             <Head>
                 {/* Google Analytics */}
-                <script
+                <Script
                     async
                     src="https://www.googletagmanager.com/gtag/js?id=G-K0GQVSTT0J"
-                ></script>
+                ></Script>
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `

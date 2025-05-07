@@ -7,7 +7,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { withTranslation } from "app/providers/withTranslation";
 import { Screens } from "widgets/01-home-screens";
-import { WrapSVG } from "widgets/01-home-screens/components/WrapSVG";
 import { DefaultLayout } from "widgets/layouts/default-layout";
 import MainLayout from "widgets/layouts/main-layout";
 import { pagesApi } from "shared/lib/api/pages.api";

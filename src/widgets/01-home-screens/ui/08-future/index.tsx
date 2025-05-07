@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useTranslation } from "next-i18next";
 import { HOME_PAG } from "widgets/01-home-screens/lib";
 import css from "./future.module.scss";
 
@@ -22,7 +21,6 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
 // todo: rename to picture-gallery
 export const Future: React.FC = () => {
     const futureRef = React.useRef<HTMLDivElement>(null);
-    const { t } = useTranslation("footer");
 
     // Add animation class on scroll
     useEffect(() => {
@@ -41,11 +39,6 @@ export const Future: React.FC = () => {
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-    // Handle button click to redirect
-    const handleButtonClick = () => {
-        window.open("https://lu.ma/37ykg387", "_blank", "noopener,noreferrer");
-    };
 
     const gallery = [
         {

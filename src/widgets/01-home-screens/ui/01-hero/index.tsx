@@ -18,15 +18,12 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
 };
 
 export const Hero: React.FC = () => {
-    const [viewportWidth, setViewportWidth] = useState<number>(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
         // Initial viewport setup
         const handleResize = () => {
-            const width = window.innerWidth;
-            setViewportWidth(width);
-            setIsMobile(width < 768);
+            setIsMobile(window.innerWidth < 768);
         };
 
         // Set initial values
