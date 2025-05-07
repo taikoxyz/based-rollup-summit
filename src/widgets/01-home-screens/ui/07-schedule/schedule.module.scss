@@ -118,7 +118,6 @@
 .become_sponsor_wrapper {
     padding: 150px 0px;
     width: 100%;
-    max-width: 706px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -140,7 +139,6 @@
     line-height: 28px;
     letter-spacing: 0%;
     color: #444a55;
-    align-self: flex-end;
 }
 
 .become_sponsor_alert {
@@ -157,12 +155,7 @@
 .become_sponsor_body,
 .button_wrapper,
 .become_sponsor_alert {
-    max-width: 523px;
     width: 100%;
-}
-
-.button_wrapper {
-    align-self: flex-end;
 }
 
 @include desktop {
@@ -192,6 +185,17 @@
     .schedule_wrapper {
         gap: 150px;
     }
+
+    .become_sponsor_body,
+    .become_sponsor_alert,
+    .button_wrapper {
+        max-width: 523px;
+        align-self: flex-end;
+    }
+
+    .become_sponsor_wrapper {
+        max-width: 706px;
+    }
 }
 
 @include tablet {
@@ -219,6 +223,10 @@
     }
     .schedule_wrapper {
         gap: 110px;
+    }
+
+    .become_sponsor_wrapper {
+        max-width: 404px;
     }
 }
 
@@ -253,5 +261,10 @@
 
     .schedule_wrapper {
         gap: 150px;
+    }
+
+    .become_sponsor_wrapper {
+        padding: 0px 12px;
+        margin: 100px 0px;
     }
 }
