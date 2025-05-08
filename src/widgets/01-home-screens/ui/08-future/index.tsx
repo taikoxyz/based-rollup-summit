@@ -172,7 +172,7 @@ export const Future: React.FC = () => {
             {/* Buttons section */}
             <div className={css.button_container}>
                 <Button
-                    href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                    href="https://lu.ma/37ykg387"
                     text="Register now"
                     className={css.register_button}
                 />
@@ -182,7 +182,7 @@ export const Future: React.FC = () => {
                     className={css.sponsor_button}
                 />
                 <Button
-                    href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                    href="https://docs.google.com/forms/d/1i0CKZpvVgtPXwGcrI9w4xBgyduGuCZLPHxRSRZLd5KA/edit"
                     text="Apply as Speaker"
                     className={css.sponsor_button}
                 />

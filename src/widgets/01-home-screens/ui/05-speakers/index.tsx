@@ -212,9 +212,6 @@ export const Speakers: React.FC = () => {
                 <div className={css.body}>
                     <div>
                         <div className={css.left_title}>Now Accepting Speaker Applications</div>
-                        <div className={css.left_body}>
-                            Speakers will be announced starting May 15th, 2025
-                        </div>
                     </div>
                     {isDesktop && <div></div>}
 

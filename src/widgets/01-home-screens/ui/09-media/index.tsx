@@ -15,6 +15,7 @@ interface EventPartner {
 }
 
 const eventPartners: EventPartner[] = [
+    { name: "OpenZeppelin", logo: "/img/media/openzeppelin.png", width: 226, height: 100 },
     { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
     { name: "Blockchain Builders Fund", logo: "/img/media/BBF.png", width: 226, height: 100 },
     { name: "Berkeley Blockchain", logo: "/img/media/berkeley.png", width: 226, height: 100 },
@@ -27,15 +28,16 @@ const eventPartners: EventPartner[] = [
 
 const mediaPartners: MediaPartner[] = [
     { name: "BeInCrypto", logo: "/img/media/beincrypto.png" },
+    { name: "CryptoNews", logo: "/img/media/cryptonews.png" },
+    /*
     { name: "Block Beats", logo: "/img/media/block.png" },
     { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
     { name: "Bloomingbit", logo: "/img/media/bloomingbit.png" },
     { name: "Chain Catcher", logo: "/img/media/chaincatcher.png" },
     { name: "CoinNess", logo: "/img/media/coinness.png" },
-    { name: "CryptoNews", logo: "/img/media/cryptonews.png" },
     { name: "ODAILY", logo: "/img/media/daily.png" },
     { name: "TechFlow", logo: "/img/media/techflow.png" },
-    { name: "吴说", logo: "/img/media/logo.png" },
+    { name: "吴说", logo: "/img/media/logo.png" },*/
 ];
 
 export const Media: React.FC = () => {
@@ -62,7 +64,7 @@ export const Media: React.FC = () => {
     return (
         <section className={css.container} ref={mediaRef} id={HOME_PAG.MEDIA}>
             {/* Event Partners Section */}
-            <div className={css.partners_label}>PAST PARTNERS</div>
+            <div className={css.partners_label}>SPONSORS</div>
 
             <div className={css.partners}>
                 <div className={css.partners_grid}>
