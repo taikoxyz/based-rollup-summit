@@ -69,7 +69,7 @@ export const Schedule: React.FC = () => {
                     ))}
                 </div>
 
-                <div className={css.venue_title}>VENUE</div>
+                <div className={css.venue_section_title}>VENUE</div>
                 <div className={css.text_row}>
                     The Based Rollup Summit will be held at the iconic Majestic Cannes, a five-star
                     temple to French elegance that gazes out to sea on the Croisette, just a few
@@ -94,7 +94,7 @@ export const Schedule: React.FC = () => {
 
                     <div className={css.location_map}>
                         <a
-                            href="https://g.co/kgs/ob2HYaU"
+                            href="https://maps.app.goo.gl/6yovuvMdwzS8KZqd8"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

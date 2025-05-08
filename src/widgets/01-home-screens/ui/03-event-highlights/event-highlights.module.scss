@@ -314,7 +314,7 @@
     .entry_wrapper {
         padding: 20px 40px;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-
+        max-width: 1432px;
         .highlight_entry {
             width: 464px;
             height: 456px;

@@ -196,6 +196,15 @@ export const Speakers: React.FC = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const initialVisibleElements = 12;
+    const [maxVisibleElements, setMaxVisibleElements] = useState<number>(initialVisibleElements);
+    function handleViewMoreClick() {
+        console.log("setting more viewable elements", speakers.length);
+        setMaxVisibleElements(
+            maxVisibleElements === initialVisibleElements ? speakers.length : initialVisibleElements
+        );
+    }
+
     return (
         <section className={css.speakers} id={HOME_PAG.SPEAKERS}>
             <div className={css.speakers_entry_row}>
@@ -230,9 +239,17 @@ export const Speakers: React.FC = () => {
             </div>
             <div className={css.speakers_text}>PREVIOUS SPEAKERS</div>
             <div className={css.speakers_wrapper}>
-                {speakers.map((speaker, index) => (
+                {speakers.slice(0, maxVisibleElements).map((speaker, index) => (
                     <ProfileCard key={index} {...speaker} />
                 ))}
+            </div>
+            <div className={css.speakers_more_wrapper}>
+                <Button
+                    noArrow
+                    className={css.speakers_more}
+                    onClick={() => handleViewMoreClick()}
+                    text={maxVisibleElements === initialVisibleElements ? "View more" : "View less"}
+                />
             </div>
         </section>
     );

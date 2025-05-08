@@ -23,7 +23,6 @@
 .schedule_wrapper {
     width: 100%;
     background-color: #191e28;
-    padding: 37px;
     padding-top: 107px;
     border-radius: 0px 0px 50px 50px;
 }
@@ -66,7 +65,8 @@
     }
 }
 
-.venue_title {
+.venue_title,
+.venue_section_title {
     padding-top: 10px;
     color: #f3f3f3;
     font-family: "Clash Grotesk", sans-serif;
@@ -184,6 +184,8 @@
 
     .schedule_wrapper {
         gap: 150px;
+        padding: 32px;
+        padding-top: 107px;
     }
 
     .become_sponsor_body,
@@ -195,6 +197,10 @@
 
     .become_sponsor_wrapper {
         max-width: 706px;
+    }
+
+    .venue_section_title {
+        padding-top: 150px;
     }
 }
 
@@ -223,10 +229,16 @@
     }
     .schedule_wrapper {
         gap: 110px;
+        padding: 40px;
+        padding-top: 47px;
     }
 
     .become_sponsor_wrapper {
         max-width: 404px;
+    }
+
+    .venue_section_title {
+        padding-top: 110px;
     }
 }
 
@@ -261,10 +273,16 @@
 
     .schedule_wrapper {
         gap: 150px;
+        padding: 12px;
+        padding-top: 107px;
     }
 
     .become_sponsor_wrapper {
         padding: 0px 12px;
         margin: 100px 0px;
+    }
+
+    .venue_section_title {
+        padding-top: 150px;
     }
 }
