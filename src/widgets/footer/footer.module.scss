@@ -93,6 +93,7 @@
     }
 }
 .footer_nav_link_left {
+    position:relative;
     display: flex;
     flex-direction: column;
 }
@@ -152,4 +153,21 @@
     .footer_nav_group {
         min-width: 180px;
     }
+}
+
+
+.coming_soon {
+    height: 27px;
+    color:white;
+    border-radius: 100px;
+    background: getColorPink();
+    font-family: "Clash Grotesk", sans-serif;
+    padding: 6px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    position:absolute;
+    left:calc(100% + 8px);
+    font-size:12px;
 }

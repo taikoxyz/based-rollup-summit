@@ -4,8 +4,18 @@ import ArrowLinkIcon from "shared/icons/ArrowLink.icon";
 import { NextLink } from "shared/ui/NextLink";
 import css from "./footer.module.scss";
 
+interface FooterLinkGroup {
+    name: string;
+    links: {
+        name: string;
+        href: string;
+        desc?: string;
+        comingSoon?: boolean;
+    }[]
+}
+
 export const Footer: React.FC = () => {
-    const navigation = [
+    const navigation:FooterLinkGroup[] = [
         {
             name: "Alethia",
             links: [
@@ -50,6 +60,7 @@ export const Footer: React.FC = () => {
                 },
                 {
                     name: "Apps",
+                    comingSoon: true,
                     href: "https://taiko.xyz/gwyneth/apps",
                 },
                 {
@@ -167,6 +178,12 @@ export const Footer: React.FC = () => {
                                                             >
                                                                 {link.desc}
                                                             </span>
+                                                        )}
+
+                                                        {link.comingSoon && (
+                                                            <span className={css.coming_soon}>
+                                                                Coming soon 
+                                                                </span>
                                                         )}
                                                     </span>
                                                 </NextLink>
