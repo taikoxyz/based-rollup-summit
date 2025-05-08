@@ -11,11 +11,11 @@ interface FooterLinkGroup {
         href: string;
         desc?: string;
         comingSoon?: boolean;
-    }[]
+    }[];
 }
 
 export const Footer: React.FC = () => {
-    const navigation:FooterLinkGroup[] = [
+    const navigation: FooterLinkGroup[] = [
         {
             name: "Alethia",
             links: [
@@ -182,8 +182,8 @@ export const Footer: React.FC = () => {
 
                                                         {link.comingSoon && (
                                                             <span className={css.coming_soon}>
-                                                                Coming soon 
-                                                                </span>
+                                                                Coming soon
+                                                            </span>
                                                         )}
                                                     </span>
                                                 </NextLink>

@@ -88,20 +88,21 @@ export const Media: React.FC = () => {
 
             {/* Media Support Section */}
             <div className={css.media_label}>MEDIA SUPPORT</div>
-
-            <div className={css.media_support}>
-                <div className={css.media_grid}>
-                    {mediaPartners.map((partner, index) => (
-                        <div key={index} className={css.media_item}>
-                            <img
-                                src={partner.logo}
-                                alt={`${partner.name} logo`}
-                                className={css.mediaLogo}
-                                width={100}
-                                height={100}
-                            />
-                        </div>
-                    ))}
+            <div className={css.partners}>
+                <div className={css.media_support}>
+                    <div className={css.media_grid}>
+                        {mediaPartners.map((partner, index) => (
+                            <div key={index} className={css.media_item}>
+                                <img
+                                    src={partner.logo}
+                                    alt={`${partner.name} logo`}
+                                    className={css.mediaLogo}
+                                    width={100}
+                                    height={100}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 

@@ -93,7 +93,7 @@
     }
 }
 .footer_nav_link_left {
-    position:relative;
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -155,10 +155,9 @@
     }
 }
 
-
 .coming_soon {
     height: 27px;
-    color:white;
+    color: white;
     border-radius: 100px;
     background: getColorPink();
     font-family: "Clash Grotesk", sans-serif;
@@ -167,7 +166,7 @@
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-    position:absolute;
-    left:calc(100% + 8px);
-    font-size:12px;
+    position: absolute;
+    left: calc(100% + 8px);
+    font-size: 12px;
 }
