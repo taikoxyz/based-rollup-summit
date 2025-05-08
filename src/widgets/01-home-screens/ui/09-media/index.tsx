@@ -16,6 +16,9 @@ interface EventPartner {
 
 const eventPartners: EventPartner[] = [
     { name: "OpenZeppelin", logo: "/img/media/openzeppelin.png", width: 226, height: 100 },
+    { name: "Izumi", logo: "/img/media/izumi.svg", width: 226, height: 100 },
+    { name: "Goldsky", logo: "/img/media/goldsky.png", width: 226, height: 100 },
+    /*
     { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
     { name: "Blockchain Builders Fund", logo: "/img/media/BBF.png", width: 226, height: 100 },
     { name: "Berkeley Blockchain", logo: "/img/media/berkeley.png", width: 226, height: 100 },
@@ -24,6 +27,7 @@ const eventPartners: EventPartner[] = [
     { name: "Openledger", logo: "/img/media/openledger.png", width: 226, height: 100 },
     { name: "Spire Labs", logo: "/img/media/spire.png", width: 226, height: 100 },
     { name: "Rise Labs", logo: "/img/media/rise.png", width: 226, height: 100 },
+     */
 ];
 
 const mediaPartners: MediaPartner[] = [
