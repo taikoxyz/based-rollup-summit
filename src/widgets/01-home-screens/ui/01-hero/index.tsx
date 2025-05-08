@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
                     <div className={css.button_container}>
                         <div className={css.register_button_wrapper}>
                             <Button
-                                href="https://lu.ma/37ykg387"
+                                href="https://lu.ma/mvkcbx5k"
                                 text="Register now"
                                 className={css.register_button}
                             />

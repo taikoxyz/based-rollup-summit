@@ -172,7 +172,7 @@ export const Future: React.FC = () => {
             {/* Buttons section */}
             <div className={css.button_container}>
                 <Button
-                    href="https://lu.ma/37ykg387"
+                    href="https://lu.ma/mvkcbx5k"
                     text="Register now"
                     className={css.register_button}
                 />
