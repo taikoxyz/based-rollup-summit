@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Application } from "@splinetool/runtime";
 import css from "./hero.module.scss";
 
 // Define type for Button props
@@ -19,6 +20,13 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
 
 export const Hero: React.FC = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
+
+    useEffect(() => {
+        const canvas = document.getElementById("spline") as HTMLCanvasElement;
+        if (!canvas) return;
+        const app = new Application(canvas);
+        app.load("/spline/scene.splinecode");
+    }, []);
 
     useEffect(() => {
         // Initial viewport setup
@@ -44,6 +52,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
+                        <canvas id="spline"></canvas>
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
