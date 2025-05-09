@@ -2,7 +2,6 @@ import React from "react";
 import { useTranslation } from "next-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { HomeApiKeys, HomeScreensEnum } from "widgets/old/01-home-screens/lib/types";
-import { BlogSliderLayout } from "entities/article";
 import { IBlogsResponse } from "shared/lib/types";
 import css from "./blog.module.scss";
 
@@ -12,7 +11,6 @@ const Blog: React.FC = () => {
 
     return (
         <section className={css.blog} id={HomeScreensEnum.BLOG}>
-            <BlogSliderLayout title={t("blog.title")} data={data?.results || []} animated />
         </section>
     );
 };
