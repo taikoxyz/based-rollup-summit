@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Spline from '@splinetool/react-spline/next';
+import Spline from "@splinetool/react-spline";
 import css from "./hero.module.scss";
 
 // Define type for Button props
