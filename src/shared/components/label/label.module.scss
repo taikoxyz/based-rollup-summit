@@ -9,7 +9,9 @@
         rgba(255, 255, 255, 0) 74.18%
     );
 
-    font: 500 20px/1.255 $kFontClashGrotesk;
+    font:
+        500 20px/1.255 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
     letter-spacing: -0.02em;
 }

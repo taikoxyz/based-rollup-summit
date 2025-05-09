@@ -35,7 +35,9 @@
     }
 
     span {
-        font: 500 24px/1.255 $kFontClashGrotesk;
+        font:
+            500 24px/1.255 "Clash Grotesk",
+            open-sans;
         letter-spacing: -0.02em;
         color: #000;
     }

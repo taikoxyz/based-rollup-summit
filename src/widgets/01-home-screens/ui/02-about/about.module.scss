@@ -4,6 +4,7 @@
     background-color: #f8f8f8;
     display: flex;
     justify-content: center;
+    gap: 150px;
     align-items: center;
     flex-direction: column;
     padding: 40px 0;
@@ -86,14 +87,14 @@
     max-width: 14.5em;
     text-align: center;
     color: #c8047d;
-    @include setFontClashGrotest500(55px, 0.5, -0.02em);
+    font-family: "Clash Grotesk", sans-serif;
     letter-spacing: -2%;
     line-height: 57px;
 }
 
 .about_text {
     text-align: center;
-    @include setFontClashGrotest500(55px, 1, -0.01em, getColorBlack());
+    font-family: "Clash Grotesk", sans-serif;
     letter-spacing: -2%;
     line-height: 57px;
 }
@@ -198,5 +199,99 @@
     .about_text {
         font-size: 14px;
         line-height: 1.5;
+    }
+}
+
+.section_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section_title {
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #191e28;
+}
+
+.section_body {
+    font-family: "Public Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0%;
+    color: #444a55;
+}
+
+@include desktop {
+    .section_wrapper {
+        max-width: 706px;
+        gap: 40px;
+    }
+
+    .section_title,
+    .section_body {
+        width: 75%;
+    }
+
+    .section_title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #191e28;
+        align-self: flex-start;
+    }
+
+    .section_body {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0%;
+        color: #444a55;
+        align-self: flex-end;
+    }
+}
+
+@include tablet {
+    .section_wrapper {
+        max-width: 404px;
+        gap: 40px;
+    }
+    .section_title,
+    .section_body {
+        width: 100%;
+    }
+
+    .section_title {
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    .section_body {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0%;
+    }
+}
+
+@include mobile {
+    .section_wrapper {
+        gap: 24px;
+        padding: 0px 12px;
+    }
+    .section_title,
+    .section_body {
+        width: 100%;
+    }
+
+    .section_title {
+        font-size: 32px;
+    }
+
+    .section_body {
+        font-size: 16px;
+        line-height: 24px;
     }
 }

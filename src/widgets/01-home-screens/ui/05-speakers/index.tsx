@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HOME_PAG } from "widgets/01-home-screens/lib";
+import { Button } from "shared/components/@buttons/button";
 import css from "./speakers.module.scss";
 
 interface ProfileCardProps {
@@ -25,9 +26,15 @@ const speakers: Speaker[] = [
     },
     {
         image: "/img/speakers/dan-boneh.png",
-        name: "Dan Boneh",
+        name: "Professor Dan Boneh",
         title: "Co-director",
         company: "Stanford Blockchain Research",
+    },
+    {
+        image: "/img/speakers/joaquin.png",
+        name: "Joaquin Mendes",
+        title: "Chief Operating Officer",
+        company: "Taiko",
     },
     {
         image: "/img/speakers/brecht.png",
@@ -36,22 +43,10 @@ const speakers: Speaker[] = [
         company: "Taiko",
     },
     {
-        image: "/img/speakers/joaquin.png",
-        name: "Joaquin Mendes",
-        title: "COO",
-        company: "Taiko",
-    },
-    {
         image: "/img/speakers/tomasz.png",
         name: "Tomasz Stanczak",
         title: "CEO",
-        company: "Nethermind",
-    },
-    {
-        image: "/img/speakers/alex.png",
-        name: "Alex Skidanov",
-        title: "Co-founder",
-        company: "Near",
+        company: "Nethermind & incoming EF Co-Executive Director",
     },
     {
         image: "/img/speakers/uma.png",
@@ -66,41 +61,34 @@ const speakers: Speaker[] = [
         company: "Boost and Fabric",
     },
     {
-        image: "/img/speakers/irfan.png",
-        name: "Irfan Shaik",
-        title: "Founder",
-        company: "Interstate.so",
-    },
-
-    {
         image: "/img/speakers/harry.png",
         name: "Harry Gao",
         title: "Co-founder",
         company: "Luban",
     },
     {
-        image: "/img/speakers/Ram.png",
-        name: "Ramkumar",
-        title: "Core Contributor",
-        company: "Openledger",
+        image: "/img/speakers/irfan.png",
+        name: "Irfan Shaik",
+        title: "Founder",
+        company: "Interstate.so",
     },
     {
-        image: "/img/speakers/jay.png",
-        name: "Jay Yu",
-        title: "President",
-        company: "Stanford Blockchain Club",
-    },
-    {
-        image: "/img/speakers/faction.png",
-        name: "Tim Khoury",
-        title: "Partner",
-        company: "Faction VC",
+        image: "/img/speakers/keyao.png",
+        name: "Keyao Shen",
+        title: "Senior Lead Software Engineer",
+        company: "Espresso Systems",
     },
     {
         image: "/img/speakers/cecilia.png",
         name: "Cecilia Zhang",
         title: "Engineer",
-        company: "Taiko Gwyneth",
+        company: "Taiko",
+    },
+    {
+        image: "/img/speakers/jay.png",
+        name: "Jay Yu",
+        title: "President",
+        company: "Stanford Blockchain Club & Associate at Pantera",
     },
     {
         image: "/img/speakers/jeff.png",
@@ -109,10 +97,23 @@ const speakers: Speaker[] = [
         company: "Taiko",
     },
     {
-        image: "/img/speakers/keyao.png",
-        name: "Keyao Shen",
-        title: "Senior Lead Software Engineer",
-        company: "Espresso Systems",
+        image: "/img/speakers/alex.png",
+        name: "Alex Skidanov",
+        title: "Co-founder",
+        company: "Near",
+    },
+    {
+        image: "/img/speakers/Ram.png",
+        name: "Ramkumar",
+        title: "Core Contributor",
+        company: "Openledger",
+    },
+
+    {
+        image: "/img/speakers/faction.png",
+        name: "Tim Khoury",
+        title: "Partner",
+        company: "Faction VC",
     },
     {
         image: "/img/speakers/dan.png",
@@ -171,22 +172,81 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, title, company }
             </div>
             <h3 className={css.profileCard__name}>{name}</h3>
             <p className={css.profileCard__title}>{title}</p>
-            <p className={css.profileCard__company}>{company}</p>
+            <p className={css.profileCard__title}>{company}</p>
         </div>
     );
 };
 
 export const Speakers: React.FC = () => {
+    const [isDesktop, setIDesktop] = useState<boolean>(false);
+
+    useEffect(() => {
+        // Initial viewport setup
+        const handleResize = () => {
+            setIDesktop(window.innerWidth >= 1440);
+        };
+
+        // Set initial values
+        handleResize();
+
+        // Add resize listener
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const initialVisibleElements = 12;
+    const [maxVisibleElements, setMaxVisibleElements] = useState<number>(initialVisibleElements);
+    function handleViewMoreClick() {
+        console.log("setting more viewable elements", speakers.length);
+        setMaxVisibleElements(
+            maxVisibleElements === initialVisibleElements ? speakers.length : initialVisibleElements
+        );
+    }
+
     return (
         <section className={css.speakers} id={HOME_PAG.SPEAKERS}>
-            <div className={css.speakers_wrapper}>
-                <p className={css.speakers_label}>MEET INDUSTRY LEADERS</p>
-                <p className={css.speakersText}>Our speakers</p>
-                <div className={css.speakerGrid}>
-                    {speakers.map((speaker, index) => (
-                        <ProfileCard key={index} {...speaker} />
-                    ))}
+            <div className={css.speakers_entry_row}>
+                <div className={css.title}>SPEAKERS</div>
+                <div className={css.body}>
+                    <div>
+                        <div className={css.left_title}>Now Accepting Speaker Applications</div>
+                    </div>
+                    {isDesktop && <div></div>}
+
+                    <div>
+                        <div className={css.right_title}>
+                            Our Cannes summit will feature leading voices in Ethereum scaling and L2
+                            development, stay tuned.
+                        </div>
+                        <Button
+                            noArrow
+                            onClick={() =>
+                                window.open(
+                                    "https://docs.google.com/forms/d/1i0CKZpvVgtPXwGcrI9w4xBgyduGuCZLPHxRSRZLd5KA/edit",
+                                    "_blank"
+                                )
+                            }
+                            className={css.button}
+                            text="Apply as Speaker"
+                        />
+                    </div>
                 </div>
+            </div>
+            <div className={css.speakers_text}>PREVIOUS SPEAKERS</div>
+            <div className={css.speakers_wrapper}>
+                {speakers.slice(0, maxVisibleElements).map((speaker, index) => (
+                    <ProfileCard key={index} {...speaker} />
+                ))}
+            </div>
+            <div className={css.speakers_more_wrapper}>
+                <Button
+                    noArrow
+                    className={css.speakers_more}
+                    onClick={() => handleViewMoreClick()}
+                    text={maxVisibleElements === initialVisibleElements ? "View more" : "View less"}
+                />
             </div>
         </section>
     );

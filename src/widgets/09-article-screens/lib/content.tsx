@@ -1,5 +1,4 @@
 import React from "react";
-import { BlocksContent } from "@strapi/blocks-react-renderer";
 
 interface HeadingProps {
     children: React.ReactNode;
@@ -15,7 +14,7 @@ export const getArticleAnchor = (title: string) => {
     return title.toLowerCase().replace(/([\._-]|\s)/gi, "-");
 };
 
-export const getArticleLinks = (data: BlocksContent) => {
+export const getArticleLinks = (data: any) => {
     const links: Anchor[] = [];
 
     for (const { type, children } of data) {

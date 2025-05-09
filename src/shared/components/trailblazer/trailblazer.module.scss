@@ -30,7 +30,9 @@
 
     .text {
         max-width: 350px;
-        font: 500 16px/24px $kFontPublicSans;
+        font:
+            500 16px/24px "Open Sans",
+            sans-serif;
         letter-spacing: -0.01em;
         color: #f3f3f3;
     }

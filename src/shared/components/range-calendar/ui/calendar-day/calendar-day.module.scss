@@ -1,7 +1,9 @@
 .day {
     width: 100%;
     height: 100%;
-    font: 400 16px/1.2 $kFontPublicSans;
+    font:
+        400 16px/1.2 "Open Sans",
+        sans-serif;
     color: #4f4f4f;
 
     display: flex;

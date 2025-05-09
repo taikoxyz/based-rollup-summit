@@ -39,7 +39,9 @@
     border-radius: 100px;
     background: #ffffff;
 
-    font: 600 0.75em/1.255 $kFontPublicSans;
+    font:
+        600 0.75em/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.4);
 
@@ -55,7 +57,9 @@
 }
 
 .title {
-    font: 500 1.75em/1 $kFontClashGrotesk;
+    font:
+        500 1.75em/1 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.01em;
     color: #22282b;
 
@@ -87,7 +91,9 @@
 }
 
 .info_value {
-    font: 500 1em/1.4 $kFontPublicSans;
+    font:
+        500 1em/1.4 "Open Sans",
+        sans-serif;
     letter-spacing: -0.02em;
     color: #909da2;
 }

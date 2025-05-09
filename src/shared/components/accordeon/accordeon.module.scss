@@ -18,7 +18,9 @@
 
     text-align: left;
 
-    font: 500 28px/0.84 $kFontClashGrotesk;
+    font:
+        500 28px/0.84 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
 
     display: flex;
@@ -43,6 +45,8 @@
 .content_inner {
     padding: 0 36px 36px;
 
-    font: 400 18px/1.2 $kFontPublicSans;
+    font:
+        400 18px/1.2 "Open Sans",
+        sans-serif;
     color: rgba($kColorBlack, 0.6);
 }

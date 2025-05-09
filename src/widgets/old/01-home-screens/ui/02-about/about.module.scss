@@ -42,14 +42,18 @@
 }
 
 .content_suptitle {
-    font: 600 14px/1.2 $kFontPublicSans;
+    font:
+        600 14px/1.2 "Open Sans",
+        sans-serif;
     color: rgba(#fff, 0.5);
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
 
 .content_title {
-    font: 500 75px/0.9 $kFontClashGrotesk;
+    font:
+        500 75px/0.9 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #fff;
 
@@ -61,7 +65,9 @@
 }
 
 .content_text {
-    font: 500 18px/1.255 $kFontPublicSans;
+    font:
+        500 18px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba(#fff, 0.95);
 }
@@ -121,7 +127,9 @@
 .list_title {
     margin-top: 38px;
 
-    font: 500 28px/1.15 $kFontClashGrotesk;
+    font:
+        500 28px/1.15 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #fff;
 }
@@ -129,7 +137,9 @@
 .list_text {
     margin-top: 20px;
 
-    font: 500 18px/1.3 $kFontPublicSans;
+    font:
+        500 18px/1.3 "Open Sans",
+        sans-serif;
     letter-spacing: -0.02em;
     color: rgba(#fff, 0.8);
 }

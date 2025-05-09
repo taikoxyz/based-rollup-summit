@@ -6,7 +6,9 @@
 }
 
 .cancel {
-    font: 600 16px/1.255 $kFontPublicSans;
+    font:
+        600 16px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.02em;
     color: rgba(#000, 0.4);
 }

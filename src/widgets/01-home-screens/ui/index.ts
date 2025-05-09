@@ -2,7 +2,7 @@ export { Hero } from "./01-hero";
 // export { Scaling } from "./02-scaling";
 // export { Explore } from "./03-explore";
 export { About } from "./02-about";
-export { Attend } from "./03-attend";
+export { Attend } from "./03-event-highlights";
 export { Topics } from "./04-topics";
 export { Speakers } from "./05-speakers";
 export { Schedule } from "./07-schedule";

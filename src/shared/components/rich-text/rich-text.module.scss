@@ -1,5 +1,7 @@
 .text {
-    font: 400 16px/1.255 $kFontPublicSans;
+    font:
+        400 16px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.9);
 
@@ -20,7 +22,9 @@
 
     h4,
     h5 {
-        font: 500 26px/1.2 $kFontClashGrotesk;
+        font:
+            500 26px/1.2 "Clash Grotesk",
+            open-sans;
         letter-spacing: -0.02em;
         color: rgba($kColorBlack, 0.9);
     }

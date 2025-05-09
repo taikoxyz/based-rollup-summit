@@ -22,7 +22,7 @@ export const Content: React.FC = () => {
                 className={css.text}
                 content={content}
                 blocks={{
-                    link: ({ children, url }) => (
+                    link: ({ children, url }: any) => (
                         <a href={url} target="_blank">
                             {children}
                         </a>

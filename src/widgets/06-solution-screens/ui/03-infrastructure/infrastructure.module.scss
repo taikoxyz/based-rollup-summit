@@ -1,7 +1,9 @@
 .suptitle {
     padding-left: 35px;
 
-    font: 600 14px/1.2 $kFontPublicSans;
+    font:
+        600 14px/1.2 "Open Sans",
+        sans-serif;
     letter-spacing: 0.04em;
     color: $kColorPink;
     text-transform: uppercase;
@@ -30,14 +32,18 @@
 }
 
 .list_index {
-    font: 600 14px/1.2 $kFontPublicSans;
+    font:
+        600 14px/1.2 "Open Sans",
+        sans-serif;
     letter-spacing: 0.04em;
     color: $kColorPink;
 }
 
 .list_title {
     margin-top: 36px;
-    font: 500 52px/0.9 $kFontClashGrotesk;
+    font:
+        500 52px/0.9 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: #22282b;
 }
@@ -59,7 +65,9 @@
     margin-top: 36px;
     padding-right: 214px;
 
-    font: 500 16px/1.255 $kFontPublicSans;
+    font:
+        500 16px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.6);
 }
@@ -147,7 +155,9 @@
     }
 
     .list_index {
-        font: 600 20px/1.4 $kFontClashGrotesk;
+        font:
+            600 20px/1.4 "Clash Grotesk",
+            open-sans;
         letter-spacing: -0.03em;
         color: rgba(#000, 0.2);
     }

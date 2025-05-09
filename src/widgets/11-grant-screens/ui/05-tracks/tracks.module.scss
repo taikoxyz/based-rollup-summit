@@ -2,7 +2,9 @@
     padding-left: 22px;
     max-width: 350px;
 
-    font: 500 75px/0.9 $kFontClashGrotesk;
+    font:
+        500 75px/0.9 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: $kColorBlack;
 }
@@ -65,7 +67,9 @@
 }
 
 .content_title {
-    font: 500 28px/1.05 $kFontClashGrotesk;
+    font:
+        500 28px/1.05 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
     max-width: 255px;
 }
@@ -73,7 +77,9 @@
 .content_track {
     margin-top: 4px;
 
-    font: 500 28px/1.05 $kFontClashGrotesk;
+    font:
+        500 28px/1.05 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
     opacity: 0.6;
 }
@@ -86,7 +92,9 @@
 
 .content_text {
     margin-top: 28px;
-    font: 400 16px/1.2 $kFontPublicSans;
+    font:
+        400 16px/1.2 "Open Sans",
+        sans-serif;
     color: rgba($kColorBlack, 0.6);
 
     b,
@@ -109,13 +117,17 @@
 }
 
 .footer_title {
-    font: 500 22px/0.95 $kFontClashGrotesk;
+    font:
+        500 22px/0.95 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
 }
 
 .footer_text {
     max-width: 420px;
-    font: 400 16px/1.2 $kFontPublicSans;
+    font:
+        400 16px/1.2 "Open Sans",
+        sans-serif;
     color: rgba($kColorBlack, 0.6);
 
     b,

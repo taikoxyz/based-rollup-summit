@@ -1,5 +1,4 @@
 import React from "react";
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import clsx from "clsx";
 import { FaqData } from "shared/lib/types/alethia-gwyneth.types";
 import Accordion from "shared/ui/Accordion";
@@ -43,7 +42,7 @@ export const FaqTemplate: React.FC<Props> = ({ questions, text, title }) => {
                                         </Accordion.Button>
                                         <Accordion.Content>
                                             <div className={css.question_content}>
-                                                <BlocksRenderer content={question.answer} />
+                                                <div>{question.answer}</div>
                                             </div>
                                         </Accordion.Content>
                                     </React.Fragment>

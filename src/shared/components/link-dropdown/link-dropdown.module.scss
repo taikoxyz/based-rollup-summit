@@ -16,7 +16,9 @@
 
     transition: filter 0.1s ease;
 
-    font: 500 16px/1.255 $kFontPublicSans;
+    font:
+        500 16px/1.255 "Open Sans",
+        sans-serif;
     color: $kColorBlack;
 
     display: flex;
@@ -90,7 +92,9 @@
 
 .suptitle {
     padding-top: 8px;
-    font: 600 16px/1.255 $kFontPublicSans;
+    font:
+        600 16px/1.255 "Open Sans",
+        sans-serif;
     color: #000;
 }
 
@@ -112,7 +116,9 @@
     }
 
     span {
-        font: 400 16px/1.255 $kFontPublicSans;
+        font:
+            400 16px/1.255 "Open Sans",
+            sans-serif;
         letter-spacing: -0.02em;
         color: rgba(#000, 0.95);
 
@@ -138,7 +144,9 @@
     }
 
     span {
-        font: 400 16px/1.255 $kFontPublicSans;
+        font:
+            400 16px/1.255 "Open Sans",
+            sans-serif;
         letter-spacing: -0.02em;
         color: rgba(#000, 0.95);
 

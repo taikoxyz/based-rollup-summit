@@ -14,13 +14,17 @@
 }
 
 .title {
-    font: 500 36px/1.15 $kFontClashGrotesk;
+    font:
+        500 36px/1.15 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.015em;
     color: $kColorBlack;
 }
 
 .text {
-    font: 400 16px/1.5 $kFontPublicSans;
+    font:
+        400 16px/1.5 "Open Sans",
+        sans-serif;
     color: $kColorGray;
 }
 
@@ -50,7 +54,9 @@
 }
 
 .nav_title {
-    font: 700 16px/1.5 $kFontPublicSans;
+    font:
+        700 16px/1.5 "Open Sans",
+        sans-serif;
     letter-spacing: 0.05em;
     color: #191e28;
     text-transform: uppercase;
@@ -59,7 +65,9 @@
 .nav_link {
     margin-top: 20px;
 
-    font: 400 16px/1.5 $kFontPublicSans;
+    font:
+        400 16px/1.5 "Open Sans",
+        sans-serif;
     letter-spacing: 0.05em;
     color: #444a55;
     transition: color 0.1s ease;
@@ -74,7 +82,9 @@
 }
 
 .copyright {
-    font: 400 16px/1.5 $kFontPublicSans;
+    font:
+        400 16px/1.5 "Open Sans",
+        sans-serif;
     color: #444a55;
     white-space: nowrap;
 }

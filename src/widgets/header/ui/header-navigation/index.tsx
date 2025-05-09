@@ -37,8 +37,8 @@ function RenderItem(link: NavLink) {
 }
 
 export const HeaderNavigation: React.FC<Props> = ({ className }) => {
-    const [navActive, setNavActive] = React.useState<NavHeader | null>(null);
-    const [active, setActive] = React.useState(false);
+    const [navActive] = React.useState<NavHeader | null>(null);
+
     const navigation = [
         {
             id: 1,

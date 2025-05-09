@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll";
 import { CSSTransition } from "react-transition-group";
 import { useTranslation } from "next-i18next";
 import { useApp } from "app/providers/withApp";

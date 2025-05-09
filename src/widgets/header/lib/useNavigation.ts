@@ -11,19 +11,21 @@ export function useNavigationOneLevel() {
     const data = useNavigation();
 
     const navigation = React.useMemo(() => {
-        return data.map((item) => {
-            const links: NavLink[] = [];
+        return data
+            ? data.map((item) => {
+                  const links: NavLink[] = [];
 
-            for (const { children, ...data } of item.links) {
-                if (children.length > 0) {
-                    links.push(...(children as NavLink[]));
-                } else {
-                    links.push(data as NavLink);
-                }
-            }
+                  for (const { children, ...data } of item.links) {
+                      if (children.length > 0) {
+                          links.push(...(children as NavLink[]));
+                      } else {
+                          links.push(data as NavLink);
+                      }
+                  }
 
-            return { ...item, links };
-        });
+                  return { ...item, links };
+              })
+            : [];
     }, [data]);
 
     return navigation;

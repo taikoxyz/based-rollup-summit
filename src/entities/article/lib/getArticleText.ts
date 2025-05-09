@@ -1,6 +1,4 @@
-import { BlocksContent } from "@strapi/blocks-react-renderer";
-
-type IBlocksToText = (data: BlocksContent) => string[];
+type IBlocksToText = (data: any) => string[];
 
 export const getArticleText: IBlocksToText = (data) => {
     const content: string[] = [];

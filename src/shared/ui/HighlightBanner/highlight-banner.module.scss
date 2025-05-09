@@ -1,0 +1,21 @@
+.event_highlights_banner {
+    height: 60px;
+    background-color: #d4ff00;
+    color: #e81899;
+    font-family: "Clash Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+
+    span {
+        flex: 0 0 auto;
+        padding: 0 2rem;
+        font-size: 1.25rem;
+        line-height: 60px;
+    }
+}

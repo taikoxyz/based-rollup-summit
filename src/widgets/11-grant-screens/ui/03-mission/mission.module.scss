@@ -1,6 +1,8 @@
 .title {
     margin-left: 20px;
-    font: 500 55px/0.9 $kFontClashGrotesk;
+    font:
+        500 55px/0.9 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.02em;
     color: $kColorBlack;
     max-width: 6.2em;
@@ -32,14 +34,18 @@
 .list_title {
     margin-top: 54px;
 
-    font: 500 28px/0.95 $kFontClashGrotesk;
+    font:
+        500 28px/0.95 "Clash Grotesk",
+        open-sans;
     color: $kColorBlack;
 }
 
 .list_text {
     margin-top: 32px;
 
-    font: 400 16px/1.2 $kFontPublicSans;
+    font:
+        400 16px/1.2 "Open Sans",
+        sans-serif;
     letter-spacing: -0.02em;
     color: rgba($kColorBlack, 0.6);
 }

@@ -87,7 +87,7 @@
 }
 .about_title {
     margin-top: 30px;
-    @include setFontClashGrotest500(85px, 0.9, -0.02em, #000);
+    font-family: "Clash Grotesk", sans-serif;
 }
 .about_right {
     position: relative;
@@ -96,7 +96,7 @@
     max-width: 320px;
 }
 .about_text {
-    @include setFontClashGrotest500(28px, 0.95, normal, getColorBlack());
+    font-family: "Clash Grotesk", sans-serif;
 }
 .about_subtext {
     margin-top: 28px;

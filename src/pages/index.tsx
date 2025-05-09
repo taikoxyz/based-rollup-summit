@@ -7,11 +7,11 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { withTranslation } from "app/providers/withTranslation";
 import { Screens } from "widgets/01-home-screens";
-import { WrapSVG } from "widgets/01-home-screens/components/WrapSVG";
 import { DefaultLayout } from "widgets/layouts/default-layout";
 import MainLayout from "widgets/layouts/main-layout";
 import { pagesApi } from "shared/lib/api/pages.api";
 import { partialApi } from "shared/lib/api/partials.api";
+import { EventHighlightsBanner } from "shared/ui/HighlightBanner";
 import { MediaQuery } from "shared/ui/media-query";
 import css from "./home.module.scss";
 
@@ -29,9 +29,6 @@ function Home() {
             className={clsx(css.root)}
             meta={{
                 title: t("Based Rollup Summit - Taiko"),
-                description: t(
-                    "Based Rollup Summit 2025 is the first-ever gathering dedicated to truly decentralized scaling solutions for Ethereum."
-                ),
                 image: "/img/og-image.png",
                 url: "https://brs.taiko.xyz/",
             }}
@@ -42,8 +39,8 @@ function Home() {
                 <Screens.Hero />
                 <Screens.About />
                 <Screens.Attend />
-                <Screens.Topics />
                 <Screens.Speakers />
+                <EventHighlightsBanner content={"WHY ATTEND?"} />
                 <Screens.Schedule />
                 <Screens.Media />
                 <Screens.Future />

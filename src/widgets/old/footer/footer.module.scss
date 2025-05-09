@@ -21,7 +21,9 @@
 
 .title {
     text-align: center;
-    font: 700 12px/1.455 $kFontPublicSans;
+    font:
+        700 12px/1.455 "Open Sans",
+        sans-serif;
     letter-spacing: 0.05em;
     color: $kColorBlack;
 

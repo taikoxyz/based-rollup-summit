@@ -47,7 +47,9 @@
 }
 
 .title {
-    font: 500 26px/1.255 $kFontClashGrotesk;
+    font:
+        500 26px/1.255 "Clash Grotesk",
+        open-sans;
     letter-spacing: -0.01em;
     color: $kColorBlack;
     width: 50px;
@@ -55,7 +57,9 @@
 
 .text {
     margin-top: 3px;
-    font: 600 12px/1.255 $kFontPublicSans;
+    font:
+        600 12px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.4);
 }

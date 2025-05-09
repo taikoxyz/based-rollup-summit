@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     background-color: #ffffff;
     display: flex;
@@ -13,34 +13,15 @@
     left: 0;
     right: 0;
 
-    // Background image positioning
-    .hero_background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100%;
-        z-index: 1;
-        overflow: hidden;
-    }
-
-    .hero_bg_image {
-        position: absolute;
-        width: 1741.29px;
-        height: 1048.39px;
-        top: -122.53px;
-        left: 50%;
-        transform: translateX(-50%);
-        object-fit: cover;
-        z-index: 1;
-    }
+    background-size: cover;
+    background-position: center;
 
     // Main content area
     .hero_content {
         position: relative;
         z-index: 2;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -49,51 +30,53 @@
 
     .content_wrapper {
         width: 100%;
+        height: 100vh;
         max-width: 1302px;
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         margin: 0 auto;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     // Main content layout
     .main_content {
-        width: 100%;
-        margin-bottom: 60px;
+        width: 100vw;
+        left: 0;
+        height: max-content;
+        top: 0;
+        position: absolute;
     }
 
     // Heading and date/location wrapper
     .heading_wrapper {
-        width: 100%;
-        max-width: 1302px;
         margin: 0 auto;
         position: relative;
+        padding-top: 130px;
+        display: flex;
+        flex-direction: column;
     }
 
     // Main heading
     .main_heading {
-        width: 100%;
         font-family: "Clash Grotesk", sans-serif;
         font-weight: 700;
-        font-size: 120px;
         line-height: 90%;
-        letter-spacing: -2px;
+        letter-spacing: -2%;
         margin: 0;
         color: #000000;
         text-align: left;
-        margin-top: 130px;
-        margin-left: 105px;
     }
 
     // Date and location container
     .date_location {
-        width: 100%;
-        max-width: 1302px;
+        width: auto;
         display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-        margin-left: 105px;
     }
 
     // Date and location text styles
@@ -101,29 +84,23 @@
     .location {
         font-family: "Clash Grotesk", sans-serif;
         font-weight: 700;
-        font-size: 40px;
         line-height: 100%;
-        margin: 0;
+        letter-spacing: 0s;
         color: #000000;
     }
 
     // Button container
     .button_container {
-        display: flex;
-        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        left: calc(50vw - 310px);
         align-items: center;
-        gap: 8px;
-        width: 100%;
-        max-width: 620px;
-        margin-top: 30px;
-    }
-
-    // Secondary buttons container
-    .secondary_buttons {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        gap: 8px;
+        justify-content: center;
+        gap: 10px;
+        width: 620px;
+        max-width: 100%;
+        padding-bottom: 53px;
+        z-index: 10;
     }
 
     // Button styles
@@ -144,6 +121,7 @@
         transition: all 200ms ease;
         cursor: pointer;
         padding: 8px 20px;
+        width: 200px;
     }
 
     // Register button specific styles
@@ -151,7 +129,6 @@
         background: #c8047d;
         color: #ffffff;
         width: 200px;
-        margin-bottom: 8px;
 
         &:hover {
             background: darken(#c8047d, 5%);
@@ -169,103 +146,139 @@
             background: rgba(200, 4, 125, 0.05);
         }
     }
+}
 
-    // Mobile styles
-    @media (max-width: 1200px) {
-        .main_heading {
-            font-size: 100px;
-            margin-left: 50px;
-        }
+@include desktop {
+    .main_heading {
+        width: max-content;
 
-        .date_location {
-            margin-left: 50px;
-        }
-
-        .date,
-        .location {
-            font-size: 32px;
-        }
+        font-size: 120px;
     }
 
-    @media (max-width: 768px) {
-        .content_wrapper {
-            padding: 0 20px;
-            width: 100vw;
-        }
-
-        .main_content {
-            margin-bottom: 40px;
-            width: 100%;
-        }
-
-        .heading_wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
-        }
-
-        .main_heading {
-            font-size: 60px;
-            margin-top: 40px;
-            text-align: left;
-            margin-left: 20px;
-            width: 100%;
-        }
-
-        .date_location {
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-            margin-top: 10px;
-            margin-left: 20px;
-            width: 100%;
-        }
-
-        .date,
-        .location {
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-
-        .button_container {
-            margin-top: 30px;
-            width: 100%;
-            padding: 0 20px;
-        }
-
-        .register_button,
-        .sponsor_button {
-            width: 100%;
-            max-width: 100%;
-        }
-
-        .hero_bg_image {
-            width: 1440px;
-            height: 867px;
-            top: -67px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: block;
-            object-fit: cover;
-            opacity: 1;
-            visibility: visible;
-        }
+    .heading_wrapper {
+        width: min-content;
+        gap: 10px;
     }
 
-    @media (max-width: 480px) {
-        .main_heading {
-            font-size: 50px;
-        }
-
-        .date,
-        .location {
-            font-size: 20px;
-        }
-
-        .secondary_buttons {
-            flex-direction: column;
-            gap: 8px;
-        }
+    .date_location {
+        justify-content: space-between;
     }
+
+    .date,
+    .location {
+        font-size: 40px;
+    }
+
+    // Button container
+    .button_container {
+        display: flex;
+    }
+}
+
+@include tablet {
+    .main_heading {
+        width: max-content;
+
+        font-size: 63px;
+    }
+
+    .heading_wrapper {
+        gap: 10px;
+        width: min-content;
+    }
+
+    .date_location {
+        justify-content: space-between;
+    }
+
+    .date,
+    .location {
+        font-size: 26px;
+    }
+
+    // Button container
+    .button_container {
+        display: flex;
+    }
+}
+
+@include mobile {
+    .main_heading {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heading_wrapper {
+        width: 100%;
+        font-size: 70px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .date_location {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .date,
+    .location {
+        font-size: 26px;
+    }
+
+    // Button container
+    .button_container {
+        display: grid;
+        left: 0 !important;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.sponsor_button_wrapper,
+.register_button_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register_button_wrapper {
+    grid-column: span 2 / span 2;
+}
+
+.spline_wrapper {
+    z-index: 1;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+}
+
+.spline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.static_spline {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/img/herosection/glassmorph.png");
 }

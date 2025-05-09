@@ -13,7 +13,9 @@
 }
 
 .text {
-    font: 500 40px/1.05 $kFontClashGrotesk;
+    font:
+        500 40px/1.05 "Clash Grotesk",
+        open-sans;
     color: $kColorPink;
 }
 

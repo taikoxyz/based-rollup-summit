@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {
+    useEffect, // useRef,
+    useState,
+} from "react";
+// import dynamic from "next/dynamic";
 import css from "./hero.module.scss";
 
 // Define type for Button props
@@ -16,17 +20,34 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
         </a>
     );
 };
+/*
+const SplineScene = () => {
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+
+    useEffect(() => {
+        import("@splinetool/runtime").then(({ Application }) => {
+            const canvas = canvasRef.current;
+            if (!canvas) return;
+
+            const app = new Application(canvas);
+            app.load("/spline/scene.splinecode");
+        });
+    }, []);
+
+    return <canvas id="spline" ref={canvasRef} />;
+};
+*/
+const StaticSplineScene = () => {
+    return <div className={css.static_spline}></div>;
+};
 
 export const Hero: React.FC = () => {
-    const [viewportWidth, setViewportWidth] = useState<number>(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
         // Initial viewport setup
         const handleResize = () => {
-            const width = window.innerWidth;
-            setViewportWidth(width);
-            setIsMobile(width <= 768);
+            setIsMobile(window.innerWidth < 768);
         };
 
         // Set initial values
@@ -39,42 +60,51 @@ export const Hero: React.FC = () => {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const titleParts = ["BASED", "ROLLUP", "SUMMIT"];
+
     return (
         <section className={css.hero}>
-            {/* Background with grid and blob */}
-            <div className={css.hero_background}>
-                <img src="/img/herosection/glassmorph.png" alt="" className={css.hero_bg_image} />
-            </div>
-
             <div className={css.hero_content}>
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
+                    <div className={css.spline}>
+                        <StaticSplineScene />
+                    </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
-                            <h1 className={css.main_heading}>BASED ROLLUP SUMMIT</h1>
-
+                            <div className={css.main_heading}>
+                                {isMobile
+                                    ? // Mobile version with line breaks
+                                      titleParts.map((part, index) => <div key={index}>{part}</div>)
+                                    : // Desktop version with spaces
+                                      titleParts.join(" ")}
+                            </div>
                             <div className={css.date_location}>
-                                <p className={css.date}>JULY 1, 2025</p>
-                                <p className={css.location}>CANNES, FRANCE</p>
+                                <div className={css.date}>JULY 1, 2025</div>
+                                <div className={css.location}>CANNES, FRANCE</div>
                             </div>
                         </div>
                     </div>
 
                     {/* Buttons section */}
                     <div className={css.button_container}>
-                        <Button
-                            href="https://docsend.com/view/hmzw3drdr5tf3n3k"
-                            text="Register now"
-                            className={css.register_button}
-                        />
-                        <div className={css.secondary_buttons}>
+                        <div className={css.register_button_wrapper}>
+                            <Button
+                                href="https://lu.ma/mvkcbx5k"
+                                text="Register now"
+                                className={css.register_button}
+                            />
+                        </div>
+                        <div className={css.sponsor_button_wrapper}>
                             <Button
                                 href="https://docsend.com/view/hmzw3drdr5tf3n3k"
                                 text="Apply as Sponsor"
                                 className={css.sponsor_button}
                             />
+                        </div>
+                        <div className={css.sponsor_button_wrapper}>
                             <Button
-                                href="https://docsend.com/view/hmzw3drdr5tf3n3k"
+                                href="https://docs.google.com/forms/d/1i0CKZpvVgtPXwGcrI9w4xBgyduGuCZLPHxRSRZLd5KA/edit"
                                 text="Apply as Speaker"
                                 className={css.sponsor_button}
                             />

@@ -55,7 +55,9 @@
     margin-top: 24px;
 
     text-align: center;
-    font: 500 28px/0.9 $kFontClashGrotesk;
+    font:
+        500 28px/0.9 "Clash Grotesk",
+        open-sans;
     color: #22282b;
 }
 
@@ -64,7 +66,9 @@
     max-width: 272px;
     width: 100%;
     text-align: center;
-    font: 400 16px/1.255 $kFontPublicSans;
+    font:
+        400 16px/1.255 "Open Sans",
+        sans-serif;
     letter-spacing: -0.01em;
     color: rgba($kColorBlack, 0.8);
 
@@ -104,7 +108,9 @@
     }
 
     &_placeholder {
-        font: 400 16px/1.15 $kFontPublicSans;
+        font:
+            400 16px/1.15 "Open Sans",
+            sans-serif;
         letter-spacing: -0.01em;
     }
 }
