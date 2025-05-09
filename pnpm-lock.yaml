@@ -19,6 +19,12 @@ importers:
             "@next/third-parties":
                 specifier: ^15.2.0
                 version: 15.3.2(next@14.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.87.0))(react@18.3.1)
+            "@splinetool/react-spline":
+                specifier: ^2.2.1
+                version: 2.2.6(@splinetool/runtime@1.9.92)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+            "@splinetool/runtime":
+                specifier: ^1.9.92
+                version: 1.9.92
             "@tanstack/react-query":
                 specifier: ^5.17.19
                 version: 5.75.6(react@18.3.1)
@@ -636,6 +642,22 @@ packages:
         resolution:
             {
                 integrity: sha512-zxnHvoMQVqewTJr/W4pKjF0bMGiKJv1WX7bSrkl46Hg0QjESbzBROWK0Wg4RphzSOS5Jiy7eFimmM3UgMrMZbQ==,
+            }
+
+    "@splinetool/react-spline@2.2.6":
+        resolution:
+            {
+                integrity: sha512-y9L2VEbnC6FNZZu8XMmWM9YTTTWal6kJVfP05Amf0QqDNzCSumKsJxZyGUODvuCmiAvy0PfIfEsiVKnSxvhsDw==,
+            }
+        peerDependencies:
+            "@splinetool/runtime": "*"
+            react: ">=17.0.0"
+            react-dom: ">=17.0.0"
+
+    "@splinetool/runtime@1.9.92":
+        resolution:
+            {
+                integrity: sha512-lzVMDQh+cWzitNvXID3lUCwZ6aMh+G+sNGLQorljXv9WzU+jEMuuRulTe/sXFnJBOBzyfIfq0QoiCbyuVSIOvQ==,
             }
 
     "@swc/helpers@0.5.2":
@@ -2321,6 +2343,12 @@ packages:
             }
         engines: { node: ">=10" }
 
+    lodash.debounce@4.0.8:
+        resolution:
+            {
+                integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==,
+            }
+
     lodash.merge@4.6.2:
         resolution:
             {
@@ -2533,6 +2561,13 @@ packages:
             }
         engines: { node: ">= 0.4" }
 
+    on-change@4.0.2:
+        resolution:
+            {
+                integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==,
+            }
+        engines: { node: ^12.20.0 || ^14.13.1 || >=16.0.0 }
+
     once@1.4.0:
         resolution:
             {
@@ -2734,6 +2769,12 @@ packages:
                 integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==,
             }
 
+    react-merge-refs@2.1.1:
+        resolution:
+            {
+                integrity: sha512-jLQXJ/URln51zskhgppGJ2ub7b2WFKGq3cl3NYKtlHoTG+dN2q7EzWrn3hN3EgPsTMvpR9tpq5ijdp7YwFZkag==,
+            }
+
     react-scroll@1.9.3:
         resolution:
             {
@@ -2862,6 +2903,12 @@ packages:
         resolution:
             {
                 integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==,
+            }
+
+    semver-compare@1.0.0:
+        resolution:
+            {
+                integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==,
             }
 
     semver@6.3.1:
@@ -3629,6 +3676,19 @@ snapshots:
     "@rtsao/scc@1.1.0": {}
 
     "@rushstack/eslint-patch@1.11.0": {}
+
+    "@splinetool/react-spline@2.2.6(@splinetool/runtime@1.9.92)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)":
+        dependencies:
+            "@splinetool/runtime": 1.9.92
+            lodash.debounce: 4.0.8
+            react: 18.3.1
+            react-dom: 18.3.1(react@18.3.1)
+            react-merge-refs: 2.1.1
+
+    "@splinetool/runtime@1.9.92":
+        dependencies:
+            on-change: 4.0.2
+            semver-compare: 1.0.0
 
     "@swc/helpers@0.5.2":
         dependencies:
@@ -4786,6 +4846,8 @@ snapshots:
         dependencies:
             p-locate: 5.0.0
 
+    lodash.debounce@4.0.8: {}
+
     lodash.merge@4.6.2: {}
 
     lodash.throttle@4.1.1: {}
@@ -4916,6 +4978,8 @@ snapshots:
             define-properties: 1.2.1
             es-object-atoms: 1.1.1
 
+    on-change@4.0.2: {}
+
     once@1.4.0:
         dependencies:
             wrappy: 1.0.2
@@ -5015,6 +5079,8 @@ snapshots:
 
     react-is@16.13.1: {}
 
+    react-merge-refs@2.1.1: {}
+
     react-scroll@1.9.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
         dependencies:
             lodash.throttle: 4.1.1
@@ -5113,6 +5179,8 @@ snapshots:
     scheduler@0.23.2:
         dependencies:
             loose-envify: 1.4.0
+
+    semver-compare@1.0.0: {}
 
     semver@6.3.1: {}
 
