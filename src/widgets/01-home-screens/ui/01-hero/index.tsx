@@ -1,5 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
+import React, {
+    useEffect, // useRef,
+    useState,
+} from "react";
+// import dynamic from "next/dynamic";
 import css from "./hero.module.scss";
 
 // Define type for Button props
@@ -17,12 +20,11 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
         </a>
     );
 };
-
+/*
 const SplineScene = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        // Only import and use Spline on the client side
         import("@splinetool/runtime").then(({ Application }) => {
             const canvas = canvasRef.current;
             if (!canvas) return;
@@ -33,6 +35,10 @@ const SplineScene = () => {
     }, []);
 
     return <canvas id="spline" ref={canvasRef} />;
+};
+*/
+const StaticSplineScene = () => {
+    return <div className={css.static_spline}></div>;
 };
 
 export const Hero: React.FC = () => {
@@ -62,7 +68,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <SplineScene />
+                        <StaticSplineScene />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
