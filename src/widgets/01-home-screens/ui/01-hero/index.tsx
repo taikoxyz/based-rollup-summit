@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
-import { Application } from "@splinetool/runtime";
 import css from "./hero.module.scss";
 
 // Define type for Button props
