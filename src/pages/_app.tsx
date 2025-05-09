@@ -6,7 +6,6 @@ import { withApp } from "app/providers/withApp";
 import "app/scss/index.scss";
 import { animateOnScroll } from "shared/lib/utils/aos";
 import { withModal } from "shared/ui/modal2";
-import "swiper/css";
 
 const App = ({ Component, pageProps }: AppProps) => {
     const [queryClient] = useState(
