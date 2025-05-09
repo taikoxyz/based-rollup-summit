@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { Application } from "@splinetool/runtime";
 import css from "./hero.module.scss";
 
@@ -18,15 +19,31 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
     );
 };
 
-export const Hero: React.FC = () => {
-    const [isMobile, setIsMobile] = useState<boolean>(false);
+const SplineScene = () => {
+    const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        const canvas = document.getElementById("spline") as HTMLCanvasElement;
-        if (!canvas) return;
-        const app = new Application(canvas);
-        app.load("/spline/scene.splinecode");
+        // Only import and use Spline on the client side
+        import("@splinetool/runtime").then(({ Application }) => {
+            const canvas = canvasRef.current;
+            if (!canvas) return;
+
+            const app = new Application(canvas);
+            app.load("/spline/scene.splinecode");
+        });
     }, []);
+
+    return <canvas id="spline" ref={canvasRef} />;
+};
+
+// Create a dynamic component with SSR disabled
+const DynamicSplineScene = dynamic(() => Promise.resolve(SplineScene), {
+    ssr: false,
+    loading: () => <div>Loading 3D scene...</div>,
+});
+
+export const Hero: React.FC = () => {
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useEffect(() => {
         // Initial viewport setup
@@ -52,7 +69,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <canvas id="spline"></canvas>
+                        <DynamicSplineScene />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
