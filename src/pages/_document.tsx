@@ -20,11 +20,6 @@ export default function Document() {
                         `,
                     }}
                 />
-                <script
-                    type="module"
-                    async
-                    src="https://unpkg.com/@splinetool/viewer@1.9.92/build/spline-viewer.js"
-                ></script>
             </Head>
             <body>
                 <Main />

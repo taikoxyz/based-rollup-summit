@@ -39,6 +39,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 0 auto;
+        z-index: 1;
     }
 
     // Main content layout
@@ -244,6 +245,7 @@
 }
 
 .spline_wrapper {
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
