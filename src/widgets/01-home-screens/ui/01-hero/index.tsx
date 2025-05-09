@@ -35,12 +35,6 @@ const SplineScene = () => {
     return <canvas id="spline" ref={canvasRef} />;
 };
 
-// Create a dynamic component with SSR disabled
-const DynamicSplineScene = dynamic(() => Promise.resolve(SplineScene), {
-    ssr: false,
-    loading: () => <div>Loading 3D scene...</div>,
-});
-
 export const Hero: React.FC = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -68,7 +62,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <DynamicSplineScene />
+                        <SplineScene />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
