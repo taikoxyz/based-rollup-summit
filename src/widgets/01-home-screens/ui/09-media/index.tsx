@@ -18,6 +18,8 @@ const eventPartners: EventPartner[] = [
     { name: "OpenZeppelin", logo: "/img/media/openzeppelin.png", width: 226, height: 100 },
     { name: "Izumi", logo: "/img/media/izumi.svg", width: 226, height: 100 },
     { name: "Goldsky", logo: "/img/media/goldsky.png", width: 226, height: 100 },
+    { name: "Prismacloud", logo: "/img/media/prismacloud.png", width: 226, height: 100 },
+
     /*
     { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
     { name: "Blockchain Builders Fund", logo: "/img/media/BBF.png", width: 226, height: 100 },
@@ -33,6 +35,7 @@ const eventPartners: EventPartner[] = [
 const mediaPartners: MediaPartner[] = [
     { name: "BeInCrypto", logo: "/img/media/beincrypto.png" },
     { name: "CryptoNews", logo: "/img/media/cryptonews.png" },
+    { name: "Mpost", logo: "/img/media/mpost.png" },
     /*
     { name: "Block Beats", logo: "/img/media/block.png" },
     { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
