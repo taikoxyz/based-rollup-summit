@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Spline from "@splinetool/react-spline";
 import css from "./hero.module.scss";
 
 // Define type for Button props
@@ -44,6 +45,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
+                        <Spline scene="/spline/scene.splinecode" />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
