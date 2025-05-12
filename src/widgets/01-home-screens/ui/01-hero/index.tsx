@@ -25,11 +25,15 @@ const SplineScene = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
+        try{
         const canvas = canvasRef.current;
             if (!canvas) return;
 
             const app = new Application(canvas);
             app.load("/spline/scene.splinecode");
+        } catch (error) {
+            console.warn('spline error', error);
+        }
     }, []);
 
     return <canvas id="spline" ref={canvasRef} />;
