@@ -1,10 +1,10 @@
 import React, {
-    useEffect, // useRef,
+    useEffect, useRef,
     useState,
 } from "react";
 // import dynamic from "next/dynamic";
 import css from "./hero.module.scss";
-
+import { Application } from "@splinetool/runtime";
 // Define type for Button props
 interface ButtonProps {
     href: string;
@@ -20,23 +20,21 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
         </a>
     );
 };
-/*
+
 const SplineScene = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        import("@splinetool/runtime").then(({ Application }) => {
-            const canvas = canvasRef.current;
+        const canvas = canvasRef.current;
             if (!canvas) return;
 
             const app = new Application(canvas);
             app.load("/spline/scene.splinecode");
-        });
     }, []);
 
     return <canvas id="spline" ref={canvasRef} />;
 };
-*/
+
 const StaticSplineScene = () => {
     return <div className={css.static_spline}></div>;
 };
@@ -68,7 +66,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <StaticSplineScene />
+                        <SplineScene />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
