@@ -1,5 +1,5 @@
 import React, {
-    useEffect, // useRef,
+    useEffect, useRef,
     useState,
 } from "react";
 // import dynamic from "next/dynamic";
@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
         </a>
     );
 };
-/*
+
 const SplineScene = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -36,10 +36,7 @@ const SplineScene = () => {
 
     return <canvas id="spline" ref={canvasRef} />;
 };
-*/
-const StaticSplineScene = () => {
-    return <div className={css.static_spline}></div>;
-};
+
 
 export const Hero: React.FC = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -68,7 +65,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <StaticSplineScene />
+                        <SplineScene />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
