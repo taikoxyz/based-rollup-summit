@@ -39,10 +39,10 @@ function Home() {
                 <Screens.Hero />
                 <Screens.About />
                 <Screens.Attend />
-                <Screens.Speakers />
+                <Screens.Media />
                 <EventHighlightsBanner content={"WHY ATTEND?"} />
                 <Screens.Schedule />
-                <Screens.Media />
+                <Screens.Speakers />
                 <Screens.Future />
                 <Screens.Subscribe />
             </DefaultLayout>
