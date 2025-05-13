@@ -301,3 +301,19 @@ $item-hover-color: #f3f3f3;
         margin-top: -76px;
     }
 }
+
+
+.diamond_partners_label {
+    @extend .partners_label;
+    background-color:#A9C4D6;
+}
+
+.gold_partners_label {
+    @extend .partners_label;
+    background-color:#FFD700;
+}
+
+.silver_partners_label {
+    @extend .partners_label;
+    background-color:#C0C0C0;
+}
