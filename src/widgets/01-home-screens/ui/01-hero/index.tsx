@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                    <spline-viewer url="https://prod.spline.design/qKvsOPQ5Rfm-J6FK/scene.splinecode"></spline-viewer>
+                    <iframe src='https://my.spline.design/brsblobbylandingpagecopy-CKuI3ckF5eo9uyyZhAowoGow/' frameBorder='0' width='100%' height='100%'></iframe>
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
