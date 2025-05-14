@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <Spline scene="/spline/scene.react.splinecode" />
+                        <Spline scene="/spline/scene.next.splinecode" />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
