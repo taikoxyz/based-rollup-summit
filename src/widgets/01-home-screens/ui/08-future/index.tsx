@@ -156,6 +156,19 @@ export const Future: React.FC = () => {
     }
     return (
         <section className={css.gallery} ref={futureRef} id={HOME_PAG.FUTURE}>
+            {/* San Francisco Highlights Section */}
+            <div className={css.partners_label}>SAN FRANCISCO HIGHLIGHTS</div>
+            <div className={css.video_wrapper}>
+                <iframe
+                    className={css.video}
+                    src="https://www.youtube.com/embed/kTwQUf3SnqE?si=VnlTSFuMSR04XiYX"
+                    title="YouTube video player"
+                    frameBorder={0}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                ></iframe>
+            </div>
             <div className={css.gallery_wrapper}>
                 {gallery.map((item, index) => (
                     <div

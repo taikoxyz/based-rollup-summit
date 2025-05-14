@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Application } from "@splinetool/runtime";
+// import dynamic from "next/dynamic";
 import css from "./hero.module.scss";
 
 // Define type for Button props
@@ -21,16 +23,22 @@ const SplineScene = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        import("@splinetool/runtime").then(({ Application }) => {
+        try {
             const canvas = canvasRef.current;
             if (!canvas) return;
 
             const app = new Application(canvas);
             app.load("/spline/scene.splinecode");
-        });
+        } catch (error) {
+            console.warn("spline error", error);
+        }
     }, []);
 
     return <canvas id="spline" ref={canvasRef} />;
+};
+
+const StaticSplineScene = () => {
+    return <div className={css.static_spline}></div>;
 };
 
 export const Hero: React.FC = () => {

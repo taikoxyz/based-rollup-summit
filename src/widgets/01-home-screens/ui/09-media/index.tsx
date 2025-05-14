@@ -14,22 +14,21 @@ interface EventPartner {
     height: number;
 }
 
-const eventPartners: EventPartner[] = [
+const diamondSponsors: EventPartner[] = [
+    { name: "Gattaca", logo: "/img/media/gattaca.png", width: 226, height: 100 },
+    { name: "Ethgas", logo: "/img/media/ethgas.svg", width: 226, height: 100 },
+];
+
+const goldSponsors: EventPartner[] = [
     { name: "OpenZeppelin", logo: "/img/media/openzeppelin.png", width: 226, height: 100 },
+];
+
+const silverSponsors: EventPartner[] = [
+    { name: "Fabric", logo: "/img/media/fabric.png", width: 226, height: 100 },
+    { name: "Commit - Boost", logo: "/img/media/commitboost.png", width: 226, height: 100 },
     { name: "Izumi", logo: "/img/media/izumi.svg", width: 226, height: 100 },
     { name: "Goldsky", logo: "/img/media/goldsky.png", width: 226, height: 100 },
     { name: "Prismacloud", logo: "/img/media/prismacloud.png", width: 226, height: 100 },
-
-    /*
-    { name: "Stanford Blockchain", logo: "/img/media/stanford.png", width: 226, height: 100 },
-    { name: "Blockchain Builders Fund", logo: "/img/media/BBF.png", width: 226, height: 100 },
-    { name: "Berkeley Blockchain", logo: "/img/media/berkeley.png", width: 226, height: 100 },
-    { name: "Columbia Blockchain", logo: "/img/media/columbia.png", width: 226, height: 100 },
-    { name: "Interstate", logo: "/img/media/interstate.png", width: 226, height: 100 },
-    { name: "Openledger", logo: "/img/media/openledger.png", width: 226, height: 100 },
-    { name: "Spire Labs", logo: "/img/media/spire.png", width: 226, height: 100 },
-    { name: "Rise Labs", logo: "/img/media/rise.png", width: 226, height: 100 },
-     */
 ];
 
 const mediaPartners: MediaPartner[] = [
@@ -71,11 +70,49 @@ export const Media: React.FC = () => {
     return (
         <section className={css.container} ref={mediaRef} id={HOME_PAG.MEDIA}>
             {/* Event Partners Section */}
-            <div className={css.partners_label}>SPONSORS</div>
+            <div className={css.diamond_partners_label}>DIAMOND SPONSORS</div>
 
             <div className={css.partners}>
                 <div className={css.partners_grid}>
-                    {eventPartners.map((partner, index) => (
+                    {diamondSponsors.map((partner, index) => (
+                        <div key={index} className={css.partner_item}>
+                            <img
+                                src={partner.logo}
+                                alt={`${partner.name}`}
+                                className={css.partnerLogo}
+                                width={partner.width}
+                                height={partner.height}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Event Partners Section */}
+            <div className={css.gold_partners_label}>GOLD SPONSORS</div>
+
+            <div className={css.partners}>
+                <div className={css.partners_grid}>
+                    {goldSponsors.map((partner, index) => (
+                        <div key={index} className={css.partner_item}>
+                            <img
+                                src={partner.logo}
+                                alt={`${partner.name}`}
+                                className={css.partnerLogo}
+                                width={partner.width}
+                                height={partner.height}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Event Partners Section */}
+            <div className={css.silver_partners_label}>SILVER SPONSORS</div>
+
+            <div className={css.partners}>
+                <div className={css.partners_grid}>
+                    {silverSponsors.map((partner, index) => (
                         <div key={index} className={css.partner_item}>
                             <img
                                 src={partner.logo}
@@ -107,20 +144,6 @@ export const Media: React.FC = () => {
                         ))}
                     </div>
                 </div>
-            </div>
-
-            {/* San Francisco Highlights Section */}
-            <div className={css.partners_label}>SAN FRANCISCO HIGHLIGHTS</div>
-            <div className={css.video_wrapper}>
-                <iframe
-                    className={css.video}
-                    src="https://www.youtube.com/embed/kTwQUf3SnqE?si=VnlTSFuMSR04XiYX"
-                    title="YouTube video player"
-                    frameBorder={0}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                ></iframe>
             </div>
         </section>
     );
