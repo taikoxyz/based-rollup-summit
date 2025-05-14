@@ -156,10 +156,9 @@ export const Future: React.FC = () => {
     }
     return (
         <section className={css.gallery} ref={futureRef} id={HOME_PAG.FUTURE}>
-           {/* San Francisco Highlights Section */}
-           <div className={css.partners_label}>SAN FRANCISCO HIGHLIGHTS</div>
+            {/* San Francisco Highlights Section */}
+            <div className={css.partners_label}>SAN FRANCISCO HIGHLIGHTS</div>
             <div className={css.video_wrapper}>
-                
                 <iframe
                     className={css.video}
                     src="https://www.youtube.com/embed/kTwQUf3SnqE?si=VnlTSFuMSR04XiYX"
