@@ -183,7 +183,6 @@ $item-hover-color: #f3f3f3;
     background-color: #c480fe;
 }
 
-
 /* Responsive styles */
 @include desktop {
     .partners_grid {
@@ -251,7 +250,6 @@ $item-hover-color: #f3f3f3;
         border-radius: 15px;
     }
 
-
     .partners_grid {
         margin-top: -106px;
     }
@@ -266,8 +264,6 @@ $item-hover-color: #f3f3f3;
     .partners_grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
-    
 
     .partners_label,
     .media_label {
@@ -302,18 +298,17 @@ $item-hover-color: #f3f3f3;
     }
 }
 
-
 .diamond_partners_label {
     @extend .partners_label;
-    background-color:#A9C4D6;
+    background-color: #a9c4d6;
 }
 
 .gold_partners_label {
     @extend .partners_label;
-    background-color:#FFD700;
+    background-color: #ffd700;
 }
 
 .silver_partners_label {
     @extend .partners_label;
-    background-color:#C0C0C0;
+    background-color: #c0c0c0;
 }

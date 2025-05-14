@@ -1,10 +1,8 @@
-import React, {
-    useEffect, useRef,
-    useState,
-} from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { Application } from "@splinetool/runtime";
 // import dynamic from "next/dynamic";
 import css from "./hero.module.scss";
-import { Application } from "@splinetool/runtime";
+
 // Define type for Button props
 interface ButtonProps {
     href: string;
@@ -25,14 +23,14 @@ const SplineScene = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        try{
-        const canvas = canvasRef.current;
+        try {
+            const canvas = canvasRef.current;
             if (!canvas) return;
 
             const app = new Application(canvas);
             app.load("/spline/scene.splinecode");
         } catch (error) {
-            console.warn('spline error', error);
+            console.warn("spline error", error);
         }
     }, []);
 
@@ -70,7 +68,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <SplineScene />
+                        <StaticSplineScene />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>

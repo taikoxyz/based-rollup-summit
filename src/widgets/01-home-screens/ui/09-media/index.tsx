@@ -15,14 +15,13 @@ interface EventPartner {
 }
 
 const diamondSponsors: EventPartner[] = [
-    { name: "Gattaca", logo: "", width: 226, height: 100 },
+    { name: "Gattaca", logo: "/img/media/gattaca.png", width: 226, height: 100 },
     { name: "Ethgas", logo: "/img/media/ethgas.svg", width: 226, height: 100 },
-]
+];
 
-const goldSponsors: EventPartner[] = [  
+const goldSponsors: EventPartner[] = [
     { name: "OpenZeppelin", logo: "/img/media/openzeppelin.png", width: 226, height: 100 },
-
-]
+];
 
 const silverSponsors: EventPartner[] = [
     { name: "Fabric", logo: "/img/media/fabric.png", width: 226, height: 100 },
@@ -30,9 +29,7 @@ const silverSponsors: EventPartner[] = [
     { name: "Izumi", logo: "/img/media/izumi.svg", width: 226, height: 100 },
     { name: "Goldsky", logo: "/img/media/goldsky.png", width: 226, height: 100 },
     { name: "Prismacloud", logo: "/img/media/prismacloud.png", width: 226, height: 100 },
-
-]
-
+];
 
 const mediaPartners: MediaPartner[] = [
     { name: "BeInCrypto", logo: "/img/media/beincrypto.png" },
@@ -72,45 +69,44 @@ export const Media: React.FC = () => {
 
     return (
         <section className={css.container} ref={mediaRef} id={HOME_PAG.MEDIA}>
-             {/* Event Partners Section */}
-             <div className={css.diamond_partners_label}>DIAMOND SPONSORS</div>
+            {/* Event Partners Section */}
+            <div className={css.diamond_partners_label}>DIAMOND SPONSORS</div>
 
-<div className={css.partners}>
-    <div className={css.partners_grid}>
-        {diamondSponsors.map((partner, index) => (
-            <div key={index} className={css.partner_item}>
-                <img
-                    src={partner.logo}
-                    alt={`${partner.name}`}
-                    className={css.partnerLogo}
-                    width={partner.width}
-                    height={partner.height}
-                />
+            <div className={css.partners}>
+                <div className={css.partners_grid}>
+                    {diamondSponsors.map((partner, index) => (
+                        <div key={index} className={css.partner_item}>
+                            <img
+                                src={partner.logo}
+                                alt={`${partner.name}`}
+                                className={css.partnerLogo}
+                                width={partner.width}
+                                height={partner.height}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-        ))}
-    </div>
-</div>
 
-{/* Event Partners Section */}
-<div className={css.gold_partners_label}>GOLD SPONSORS</div>
+            {/* Event Partners Section */}
+            <div className={css.gold_partners_label}>GOLD SPONSORS</div>
 
-<div className={css.partners}>
-    <div className={css.partners_grid}>
-        {goldSponsors.map((partner, index) => (
-            <div key={index} className={css.partner_item}>
-                <img
-                    src={partner.logo}
-                    alt={`${partner.name}`}
-                    className={css.partnerLogo}
-                    width={partner.width}
-                    height={partner.height}
-                />
+            <div className={css.partners}>
+                <div className={css.partners_grid}>
+                    {goldSponsors.map((partner, index) => (
+                        <div key={index} className={css.partner_item}>
+                            <img
+                                src={partner.logo}
+                                alt={`${partner.name}`}
+                                className={css.partnerLogo}
+                                width={partner.width}
+                                height={partner.height}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-        ))}
-    </div>
-</div>
 
-            
             {/* Event Partners Section */}
             <div className={css.silver_partners_label}>SILVER SPONSORS</div>
 
@@ -149,7 +145,6 @@ export const Media: React.FC = () => {
                     </div>
                 </div>
             </div>
-
         </section>
     );
 };
