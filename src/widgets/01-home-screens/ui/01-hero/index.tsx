@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Application } from "@splinetool/runtime";
+//import { Application } from "@splinetool/runtime";
 // import dynamic from "next/dynamic";
 import css from "./hero.module.scss";
 
@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
         </a>
     );
 };
-
+/*
 const SplineScene = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -35,7 +35,7 @@ const SplineScene = () => {
     }, []);
 
     return <canvas id="spline" ref={canvasRef} />;
-};
+};*/
 
 const StaticSplineScene = () => {
     return <div className={css.static_spline}></div>;
