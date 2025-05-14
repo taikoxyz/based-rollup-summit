@@ -20,6 +20,7 @@ export default function Document() {
                         `,
                     }}
                 />
+                <link rel="preload" href="/spline/scene.splinecode" as="fetch"></link>
             </Head>
             <body>
                 <Main />
