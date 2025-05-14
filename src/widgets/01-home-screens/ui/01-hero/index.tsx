@@ -1,6 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-//import { Application } from "@splinetool/runtime";
-// import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
 import css from "./hero.module.scss";
 
 // Define type for Button props
@@ -17,28 +15,6 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
             {text}
         </a>
     );
-};
-/*
-const SplineScene = () => {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
-
-    useEffect(() => {
-        try {
-            const canvas = canvasRef.current;
-            if (!canvas) return;
-
-            const app = new Application(canvas);
-            app.load("/spline/scene.splinecode");
-        } catch (error) {
-            console.warn("spline error", error);
-        }
-    }, []);
-
-    return <canvas id="spline" ref={canvasRef} />;
-};*/
-
-const StaticSplineScene = () => {
-    return <div className={css.static_spline}></div>;
 };
 
 export const Hero: React.FC = () => {
@@ -68,7 +44,12 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <StaticSplineScene />
+                        <iframe
+                            src="https://my.spline.design/brsblobbylandingpagecopy-CKuI3ckF5eo9uyyZhAowoGow/"
+                            frameBorder="0"
+                            width="100%"
+                            height="100%"
+                        ></iframe>
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
