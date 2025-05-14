@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Application } from "@splinetool/runtime";
+//import { Application } from "@splinetool/runtime";
 // import dynamic from "next/dynamic";
 import css from "./hero.module.scss";
-
+import Spline from '@splinetool/react-spline';
 // Define type for Button props
 interface ButtonProps {
     href: string;
@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({ href, text, className }) => {
         </a>
     );
 };
-
+/*
 const SplineScene = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -40,7 +40,7 @@ const SplineScene = () => {
 const StaticSplineScene = () => {
     return <div className={css.static_spline}></div>;
 };
-
+*/
 export const Hero: React.FC = () => {
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -68,7 +68,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        <SplineScene />
+                        <Spline scene="/spline/scene.react.splinecode" />
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
