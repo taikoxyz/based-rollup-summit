@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 //import { Application } from "@splinetool/runtime";
 // import dynamic from "next/dynamic";
 import css from "./hero.module.scss";
-import Spline from '@splinetool/react-spline';
 // Define type for Button props
 interface ButtonProps {
     href: string;
@@ -73,10 +72,7 @@ export const Hero: React.FC = () => {
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
-                        {isReady && (
-                        <Spline scene="/spline/scene.next.splinecode" />
-
-                        )}
+                    <spline-viewer url="https://prod.spline.design/qKvsOPQ5Rfm-J6FK/scene.splinecode"></spline-viewer>
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
