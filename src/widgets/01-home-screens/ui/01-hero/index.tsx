@@ -62,13 +62,21 @@ export const Hero: React.FC = () => {
 
     const titleParts = ["BASED", "ROLLUP", "SUMMIT"];
 
+    const [isReady, setIsReady] = useState(false);
+    useEffect(() => {
+        setIsReady(true);
+    }, []);
+
     return (
         <section className={css.hero}>
             <div className={css.hero_content}>
                 {/* Main heading and details */}
                 <div className={css.content_wrapper}>
                     <div className={css.spline}>
+                        {isReady && (
                         <Spline scene="/spline/scene.next.splinecode" />
+
+                        )}
                     </div>
                     <div className={css.main_content}>
                         <div className={css.heading_wrapper}>
