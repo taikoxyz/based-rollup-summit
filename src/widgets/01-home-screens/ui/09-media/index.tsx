@@ -38,6 +38,9 @@ const mediaPartners: MediaPartner[] = [
     { name: "BeInCrypto", logo: "/img/media/beincrypto.png" },
     { name: "CryptoNews", logo: "/img/media/cryptonews.png" },
     { name: "Mpost", logo: "/img/media/mpost.png" },
+    { name: "Block Media", logo: "/img/media/blockmedia.png" },
+    { name: "吴说", logo: "/img/media/吴说.png" },
+
     /*
     { name: "Block Beats", logo: "/img/media/block.png" },
     { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
