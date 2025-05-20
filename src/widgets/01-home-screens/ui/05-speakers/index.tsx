@@ -19,6 +19,61 @@ interface Speaker {
 
 const speakers: Speaker[] = [
     {
+        image: "/img/speakers/drew.jpeg",
+        name: "Drew Van Der Werff",
+        title: "Shepherding Commit",
+        company: "Boost and Fabric",
+    },
+    {
+        image: "/img/speakers/joaquin.png",
+        name: "Joaquin Mendes",
+        title: "Chief Operating Officer",
+        company: "Taiko",
+    },
+    {
+        image: "/img/speakers/brecht.png",
+        name: "Brecht Devos",
+        title: "Co-founder and CTO",
+        company: "Taiko",
+    },
+    {
+        image: "/img/speakers/daniel-wang.webp",
+        name: "Daniel Wang",
+        title: "CEO and Co-founder",
+        company: "Taiko",
+    },
+    {
+        image: "/img/speakers/justin-drake.jpeg",
+        name: "Justin Drake",
+        title: "Researcher",
+        company: "Ethereum",
+    },
+    {
+        image: "/img/speakers/kevin-lepsoe.png",
+        name: "Kevin Lepsoe",
+        title: "Founder & CEO",
+        company: "ETHGas",
+    },
+    {
+        image: "/img/speakers/kubi-mensah.jpeg",
+        name: "Kubi Mensah",
+        title: "CEO and Co-founder",
+        company: "Gattaca",
+    },
+    {
+        image: "/img/speakers/kyle-rojas.jpg",
+        name: "Kyle Rojas",
+        title: "Global Business Lead",
+        company: "Avail",
+    },
+    {
+        image: "/img/speakers/leila-stein.jpg",
+        name: "Leila Stein",
+        title: "Senior Communications Manager",
+        company: "Taiko",
+    },
+    /*
+    {
         image: "/img/speakers/vitalik.png",
         name: "Vitalik Buterin",
         title: "Co-founder",
@@ -150,7 +205,7 @@ const speakers: Speaker[] = [
         name: "Apoorv Anand",
         title: "Researcher/Advisor",
         company: "RISE Labs",
-    },
+    },*/
 ];
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, title, company }) => {
@@ -234,7 +289,7 @@ export const Speakers: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className={css.speakers_text}>PREVIOUS SPEAKERS</div>
+            <div className={css.speakers_text}>SPEAKERS</div>
             <div className={css.speakers_wrapper}>
                 {speakers.slice(0, maxVisibleElements).map((speaker, index) => (
                     <ProfileCard key={index} {...speaker} />
