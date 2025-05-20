@@ -19,16 +19,10 @@ interface Speaker {
 
 const speakers: Speaker[] = [
     {
-        image: "/img/speakers/vitalik.png",
-        name: "Vitalik Buterin",
-        title: "Co-founder",
-        company: "Ethereum Foundation",
-    },
-    {
-        image: "/img/speakers/dan-boneh.png",
-        name: "Professor Dan Boneh",
-        title: "Co-director",
-        company: "Stanford Blockchain Research",
+        image: "/img/speakers/drew.jpeg",
+        name: "Drew Van Der Werff",
+        title: "Shepherding Commit",
+        company: "Boost and Fabric",
     },
     {
         image: "/img/speakers/joaquin.png",
@@ -43,113 +37,40 @@ const speakers: Speaker[] = [
         company: "Taiko",
     },
     {
-        image: "/img/speakers/tomasz.png",
-        name: "Tomasz Stanczak",
-        title: "CEO",
-        company: "Nethermind & incoming EF Co-Executive Director",
-    },
-    {
-        image: "/img/speakers/uma.png",
-        name: "Uma Roy",
-        title: "Co-founder & CEO",
-        company: "Succinct",
-    },
-    {
-        image: "/img/speakers/drew.png",
-        name: "Drew Van Der Werff",
-        title: "Shepherding Commit",
-        company: "Boost and Fabric",
-    },
-    {
-        image: "/img/speakers/harry.png",
-        name: "Harry Gao",
-        title: "Co-founder",
-        company: "Luban",
-    },
-    {
-        image: "/img/speakers/irfan.png",
-        name: "Irfan Shaik",
-        title: "Founder",
-        company: "Interstate.so",
-    },
-    {
-        image: "/img/speakers/keyao.png",
-        name: "Keyao Shen",
-        title: "Senior Lead Software Engineer",
-        company: "Espresso Systems",
-    },
-    {
-        image: "/img/speakers/cecilia.png",
-        name: "Cecilia Zhang",
-        title: "Engineer",
+        image: "/img/speakers/daniel-wang.webp",
+        name: "Daniel Wang",
+        title: "CEO and Co-founder",
         company: "Taiko",
     },
     {
-        image: "/img/speakers/jay.png",
-        name: "Jay Yu",
-        title: "President",
-        company: "Stanford Blockchain Club & Associate at Pantera",
+        image: "/img/speakers/justin-drake.jpeg",
+        name: "Justin Drake",
+        title: "Researcher",
+        company: "Ethereum",
     },
     {
-        image: "/img/speakers/jeff.png",
-        name: "Jeff Walsh",
-        title: "Engineer",
+        image: "/img/speakers/kevin-lepsoe.png",
+        name: "Kevin Lepsoe",
+        title: "Founder & CEO",
+        company: "ETHGas",
+    },
+    {
+        image: "/img/speakers/kubi-mensah.jpeg",
+        name: "Kubi Mensah",
+        title: "CEO and Co-founder",
+        company: "Gattaca",
+    },
+    {
+        image: "/img/speakers/kyle-rojas.jpg",
+        name: "Kyle Rojas",
+        title: "Global Business Lead",
+        company: "Avail",
+    },
+    {
+        image: "/img/speakers/leila-stein.jpg",
+        name: "Leila Stein",
+        title: "Senior Communications Manager",
         company: "Taiko",
-    },
-    {
-        image: "/img/speakers/alex.png",
-        name: "Alex Skidanov",
-        title: "Co-founder",
-        company: "Near",
-    },
-    {
-        image: "/img/speakers/Ram.png",
-        name: "Ramkumar",
-        title: "Core Contributor",
-        company: "Openledger",
-    },
-
-    {
-        image: "/img/speakers/faction.png",
-        name: "Tim Khoury",
-        title: "Partner",
-        company: "Faction VC",
-    },
-    {
-        image: "/img/speakers/dan.png",
-        name: "Dan Park",
-        title: "Research Associate",
-        company: "Hashed",
-    },
-    {
-        image: "/img/speakers/nick.png",
-        name: "Nick Shaheen",
-        title: "Director of BD",
-        company: "BanklessHQ",
-    },
-    {
-        image: "/img/speakers/keith.png",
-        name: "Keith Chen",
-        title: "Managing Partner",
-        company: "SNZ Holding",
-    },
-    {
-        image: "/img/speakers/kevin.png",
-        name: "Kevin Lee",
-        title: "Founder",
-        company: "L2IV",
-    },
-    {
-        image: "/img/speakers/kun.png",
-        name: "Kun Peng",
-        title: "Founder",
-        company: "Stanford Blockchain Accelerator",
-    },
-    {
-        image: "/img/speakers/apoorv.png",
-        name: "Apoorv Anand",
-        title: "Researcher/Advisor",
-        company: "RISE Labs",
     },
 ];
 
@@ -234,19 +155,25 @@ export const Speakers: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className={css.speakers_text}>PREVIOUS SPEAKERS</div>
+            <div className={css.speakers_text}>SPEAKERS</div>
             <div className={css.speakers_wrapper}>
                 {speakers.slice(0, maxVisibleElements).map((speaker, index) => (
                     <ProfileCard key={index} {...speaker} />
                 ))}
             </div>
             <div className={css.speakers_more_wrapper}>
-                <Button
-                    noArrow
-                    className={css.speakers_more}
-                    onClick={() => handleViewMoreClick()}
-                    text={maxVisibleElements === initialVisibleElements ? "View more" : "View less"}
-                />
+                {speakers.length > maxVisibleElements && (
+                    <Button
+                        noArrow
+                        className={css.speakers_more}
+                        onClick={() => handleViewMoreClick()}
+                        text={
+                            maxVisibleElements === initialVisibleElements
+                                ? "View more"
+                                : "View less"
+                        }
+                    />
+                )}
             </div>
         </section>
     );
