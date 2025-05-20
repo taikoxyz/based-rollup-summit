@@ -44,11 +44,11 @@ const mediaPartners: MediaPartner[] = [
     { name: "Foresight News", logo: "/img/media/foresigh-news.png" },
     { name: "Bloomingbit", logo: "/img/media/bloomingbit.svg" },
     { name: "CoinNess", logo: "/img/media/coinness.png" },
+    { name: "Chain Catcher", logo: "/img/media/chaincatcher.png" },
 
     /*
     { name: "Block Beats", logo: "/img/media/block.png" },
     { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
-    { name: "Chain Catcher", logo: "/img/media/chaincatcher.png" },
     { name: "吴说", logo: "/img/media/logo.png" },*/
 ];
 
