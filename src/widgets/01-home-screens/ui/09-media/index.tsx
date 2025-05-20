@@ -21,6 +21,9 @@ const diamondSponsors: EventPartner[] = [
 
 const goldSponsors: EventPartner[] = [
     { name: "OpenZeppelin", logo: "/img/media/openzeppelin.png", width: 226, height: 100 },
+    { name: "Avail", logo: "/img/media/avail.svg", width: 226, height: 100 },
+    { name: "Nethermind", logo: "/img/media/nethermind.png", width: 226, height: 100 },
+
 ];
 
 const silverSponsors: EventPartner[] = [
