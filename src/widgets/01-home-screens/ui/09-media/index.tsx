@@ -39,15 +39,16 @@ const mediaPartners: MediaPartner[] = [
     { name: "Mpost", logo: "/img/media/mpost.png" },
     { name: "Block Media", logo: "/img/media/blockmedia.png" },
     { name: "吴说", logo: "/img/media/吴说.png" },
+    { name: "TechFlow", logo: "/img/media/techflow.png" },
+    { name: "ODAILY", logo: "/img/media/daily.png" },
+    { name: "Foresight News", logo: "/img/media/foresigh-news.png" },
+    { name: "Bloomingbit", logo: "/img/media/bloomingbit.svg" },
+    { name: "CoinNess", logo: "/img/media/coinness.png" },
 
     /*
     { name: "Block Beats", logo: "/img/media/block.png" },
     { name: "BlockMedia", logo: "/img/media/blockmedia.png" },
-    { name: "Bloomingbit", logo: "/img/media/bloomingbit.png" },
     { name: "Chain Catcher", logo: "/img/media/chaincatcher.png" },
-    { name: "CoinNess", logo: "/img/media/coinness.png" },
-    { name: "ODAILY", logo: "/img/media/daily.png" },
-    { name: "TechFlow", logo: "/img/media/techflow.png" },
     { name: "吴说", logo: "/img/media/logo.png" },*/
 ];
 
