@@ -19,22 +19,10 @@ interface Speaker {
 
 const speakers: Speaker[] = [
     {
-        image: "/img/speakers/drew.jpeg",
-        name: "Drew Van Der Werff",
-        title: "Shepherding Commit",
-        company: "Boost and Fabric",
-    },
-    {
-        image: "/img/speakers/joaquin.png",
-        name: "Joaquin Mendes",
-        title: "Chief Operating Officer",
-        company: "Taiko",
-    },
-    {
-        image: "/img/speakers/brecht.png",
-        name: "Brecht Devos",
-        title: "Co-founder and CTO",
-        company: "Taiko",
+        image: "/img/speakers/justin-drake.jpeg",
+        name: "Justin Drake",
+        title: "Researcher",
+        company: "Ethereum",
     },
     {
         image: "/img/speakers/daniel-wang.webp",
@@ -43,10 +31,10 @@ const speakers: Speaker[] = [
         company: "Taiko",
     },
     {
-        image: "/img/speakers/justin-drake.jpeg",
-        name: "Justin Drake",
-        title: "Researcher",
-        company: "Ethereum",
+        image: "/img/speakers/joaquin.png",
+        name: "Joaquin Mendes",
+        title: "Chief Operating Officer",
+        company: "Taiko",
     },
     {
         image: "/img/speakers/kevin-lepsoe.png",
@@ -61,10 +49,28 @@ const speakers: Speaker[] = [
         company: "Gattaca",
     },
     {
+        image: "/img/speakers/gustavo-gonzales.png",
+        name: "Gustavo Gonzales",
+        title: "Libraries & Tooling, Senior Manager",
+        company: "OpenZeppelin",
+    },
+    {
         image: "/img/speakers/kyle-rojas.jpg",
         name: "Kyle Rojas",
         title: "Global Business Lead",
         company: "Avail",
+    },
+    {
+        image: "/img/speakers/drew.jpeg",
+        name: "Drew Van Der Werff",
+        title: "Shepherding Commit",
+        company: "Boost and Fabric",
+    },
+    {
+        image: "/img/speakers/brecht.png",
+        name: "Brecht Devos",
+        title: "Co-founder and CTO",
+        company: "Taiko",
     },
     {
         image: "/img/speakers/leila-stein.jpg",
