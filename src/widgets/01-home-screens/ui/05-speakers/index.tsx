@@ -37,6 +37,12 @@ const speakers: Speaker[] = [
         company: "Taiko",
     },
     {
+        image: "/img/speakers/tomasz.png",
+        name: "Tomasz K. Stanczak",
+        title: "Co-Executive Director, Ethereum Foundation",
+        company: "Founder, Nethermind",
+    },
+    {
         image: "/img/speakers/kevin-lepsoe.png",
         name: "Kevin Lepsoe",
         title: "Founder & CEO",
