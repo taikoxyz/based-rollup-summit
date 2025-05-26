@@ -89,6 +89,11 @@ const speakers: Speaker[] = [
         name: "Conor McMenamin",
         title: "Protocol Researcher",
         company: "Nethermind",
+    },{
+        image: "/img/speakers/harry-gao.jpeg",
+        name: "Harry Gao",
+        title: "Co-founder",
+        company: "Luban",
     },
 ];
 
