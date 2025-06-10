@@ -23,8 +23,8 @@ const goldSponsors: EventPartner[] = [
     { name: "OpenZeppelin", logo: "/img/media/openzeppelin.png", width: 226, height: 100 },
     { name: "Avail", logo: "/img/media/avail.svg", width: 226, height: 100 },
     { name: "Nethermind", logo: "/img/media/nethermind.png", width: 226, height: 100 },
-    { name: 'Luban', logo: '/img/media/luban.jpeg', width: 226, height: 100 },
-    { name: 'SNZ', logo: '/img/media/snz.svg', width: 226, height: 100 },
+    { name: "Luban", logo: "/img/media/luban.jpeg", width: 226, height: 100 },
+    { name: "SNZ", logo: "/img/media/snz.svg", width: 226, height: 100 },
 ];
 
 const silverSponsors: EventPartner[] = [
@@ -33,6 +33,7 @@ const silverSponsors: EventPartner[] = [
     { name: "Izumi", logo: "/img/media/izumi.svg", width: 226, height: 100 },
     { name: "Goldsky", logo: "/img/media/goldsky.png", width: 226, height: 100 },
     { name: "Prismacloud", logo: "/img/media/prismacloud.png", width: 226, height: 100 },
+    { name: "Zerobase", logo: "/img/media/zerobase.svg", width: 226, height: 100 },
 ];
 
 const mediaPartners: MediaPartner[] = [
