@@ -79,12 +79,6 @@ const speakers: Speaker[] = [
         company: "Taiko",
     },
     {
-        image: "/img/speakers/leila-stein.jpg",
-        name: "Leila Stein",
-        title: "Senior Communications Manager",
-        company: "Taiko",
-    },
-    {
         image: "/img/speakers/conor.jpg",
         name: "Conor McMenamin",
         title: "Protocol Researcher",
