@@ -18,6 +18,8 @@ const diamondSponsors: EventPartner[] = [
     { name: "Gattaca", logo: "/img/media/gattaca.png", width: 226, height: 100 },
     { name: "Ethgas", logo: "/img/media/ethgas.svg", width: 226, height: 100 },
     { name: "SSV Network", logo: "/img/media/ssv-network.svg", width: 226, height: 100 },
+    { name: "Celo", logo: "/img/media/celo.png", width: 226, height: 100 },
+    { name: "cLabs", logo: "/img/media/clab.svg", width: 226, height: 100 },
 ];
 
 const goldSponsors: EventPartner[] = [
