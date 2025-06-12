@@ -43,6 +43,12 @@ const speakers: Speaker[] = [
         company: "Founder, Nethermind",
     },
     {
+        image: "/img/speakers/marek-olszwekski.jpg",
+        name: "Marek Olszwekski",
+        title: "Founder of Celo",
+        company: "CEO of cLabs",
+    },
+    {
         image: "/img/speakers/kevin-lepsoe.png",
         name: "Kevin Lepsoe",
         title: "Founder & CEO",
