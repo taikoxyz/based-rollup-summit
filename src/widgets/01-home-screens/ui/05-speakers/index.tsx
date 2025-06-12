@@ -90,6 +90,24 @@ const speakers: Speaker[] = [
         title: "Co-founder",
         company: "Luban",
     },
+    {
+        image: "/img/speakers/alon-muroch.jpg",
+        name: "Alon Muroch",
+        title: "Founder and CEO",
+        company: "SSV Labs",
+    },
+    {
+        image: "/img/speakers/shiv-sankar.jpeg",
+        name: "Shiv Sankar",
+        title: "CEO",
+        company: "Boundless Foundation",
+    },
+    {
+        image: "/img/speakers/gink-chen.png",
+        name: "Gink Chen",
+        title: "CMO",
+        company: "Zerobase",
+    },
 ];
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, title, company }) => {
