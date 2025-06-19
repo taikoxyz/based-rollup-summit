@@ -115,7 +115,7 @@ const speakers: Speaker[] = [
         company: "Zerobase",
     },
     {
-        image: "/img/speakers/ren-jang.jpeg",
+        image: "/img/speakers/ren-jang.png",
         name: "Ren Jang",
         title: "Advisor",
         company: "",
@@ -126,7 +126,7 @@ const speakers: Speaker[] = [
         title: "Holding Partner",
         company: "SNZ",
     },
- {
+    {
         image: "/img/speakers/brian.jpeg",
         name: "Brian McGleenon",
         title: "Global Head of News",
@@ -190,32 +190,7 @@ export const Speakers: React.FC = () => {
         <section className={css.speakers} id={HOME_PAG.SPEAKERS}>
             <div className={css.speakers_entry_row}>
                 <div className={css.title}>SPEAKERS</div>
-                <div className={css.body}>
-                    <div>
-                        <div className={css.left_title}>Now Accepting Speaker Applications</div>
-                    </div>
-                    {isDesktop && <div></div>}
-
-                    <div>
-                        <div className={css.right_title}>
-                            Our Cannes summit will feature leading voices in Ethereum scaling and L2
-                            development, stay tuned.
-                        </div>
-                        <Button
-                            noArrow
-                            onClick={() =>
-                                window.open(
-                                    "https://docs.google.com/forms/d/1i0CKZpvVgtPXwGcrI9w4xBgyduGuCZLPHxRSRZLd5KA/edit",
-                                    "_blank"
-                                )
-                            }
-                            className={css.button}
-                            text="Apply as Speaker"
-                        />
-                    </div>
-                </div>
             </div>
-            <div className={css.speakers_text}>SPEAKERS</div>
             <div className={css.speakers_wrapper}>
                 {speakers.slice(0, maxVisibleElements).map((speaker, index) => (
                     <ProfileCard key={index} {...speaker} />

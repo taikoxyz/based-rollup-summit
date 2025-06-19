@@ -12,3 +12,4 @@ export { Cloud } from "./08-cloud";
 // export { Governance } from "./06-governance";
 export { Subscribe } from "./09-subscribe";
 export { Media } from "./09-media";
+export { Agenda } from "./10-agenda";
