@@ -18,13 +18,20 @@
     margin: 10px 0px;
     width: 100%;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .itemTime {
-    width: 150px;
-    text-align: center;
+    width: 120px;
+    text-align: left;
+}
+
+.itemLabel {
+    width: calc(100% - 120px);
 }
 
 .itemTitle {
-    width: calc(100% - 150px);
+    opacity: 0.6;
+    padding-left: 40px;
 }
