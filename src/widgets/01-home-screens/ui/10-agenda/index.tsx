@@ -5,7 +5,7 @@ const agendaItems = [
     {
         time: "10:30 – 10:40",
         label: "Opening speech",
-        title: " Superpowers of Based Preconfirmations",
+        title: "Superpowers of Based Preconfirmations",
     },
     {
         time: "10:40 – 10:55",
@@ -26,8 +26,8 @@ const agendaItems = [
     { time: "12:20 – 13:10", label: "Lunch" },
     {
         time: "13:10 – 13:25",
-        label: "Keynote Taiko Gwyneth",
-        title: "Gwyneth: Generalised Synchronous Composability",
+        label: "Keynote Tomas Stanczak",
+        title: "Scaling Ethereum for Apps and Users",
     },
     {
         time: "13:25 – 14:00",
@@ -46,8 +46,8 @@ const agendaItems = [
     },
     {
         time: "14:50 – 15:05",
-        label: "Keynote Tomas Stanczak",
-        title: "Scaling Ethereum for Apps and Users",
+        label: "| Keynote Taiko Gwyneth",
+        title: "Gwyneth: Generalised Synchronous Composability",
     },
     {
         time: "15:05 – 15:40",
