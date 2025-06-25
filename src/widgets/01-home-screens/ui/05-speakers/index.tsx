@@ -138,6 +138,12 @@ const speakers: Speaker[] = [
         title: "Founding partner",
         company: "",
     },
+    {
+        name: "Victor Sizaret",
+        image: "/img/speakers/victor-sizaret.jpeg",
+        title: "Ecosystem Manager",
+        company: "Starkware",
+    },
 ];
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, title, company }) => {
