@@ -144,6 +144,12 @@ const speakers: Speaker[] = [
         title: "Ecosystem Manager",
         company: "Starkware",
     },
+    {
+        name: "Eric Nakagawa",
+        image: "/img/speakers/eric_nakagawa.jpeg",
+        title: "CEO and co-founder",
+        company: "Self",
+    },
 ];
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, title, company }) => {
