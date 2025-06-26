@@ -17,7 +17,11 @@ const agendaItems = [
         label: "Panel",
         title: "The Race to Real-Time: How to Ensure ZK Proofs Keep Up",
     },
-    { time: "11:30 – 11:45", label: "Keynote", title: "SSV" },
+    {
+        time: "11:30 – 11:45",
+        label: "SSV",
+        title: "DVT <> URC: Scaling Validator Support For Based Rollups",
+    },
     {
         time: "11:45 – 12:20",
         label: "Panel",
@@ -46,7 +50,7 @@ const agendaItems = [
     },
     {
         time: "14:50 – 15:05",
-        label: "| Keynote Taiko Gwyneth",
+        label: "Keynote Taiko Gwyneth",
         title: "Gwyneth: Generalised Synchronous Composability",
     },
     {
