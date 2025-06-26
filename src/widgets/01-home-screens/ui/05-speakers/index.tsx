@@ -150,6 +150,12 @@ const speakers: Speaker[] = [
         title: "CEO and co-founder",
         company: "Self",
     },
+    {
+        name: "Gabriella Sofia",
+        image: "/img/speakers/gabriella-sofia.jpeg",
+        title: "Strategic Initiatives Lead",
+        company: "Lido",
+    },
 ];
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ image, name, title, company }) => {
